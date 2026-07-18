@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  hunyuan3d-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hunyuan3d-asset-server
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - H3D_HOST=0.0.0.0
+      - H3D_PORT=8080
+      - H3D_MODEL=tencent/Hunyuan3D-2mini
+      - H3D_SUBFOLDER=hunyuan3d-dit-v2-mini
+      - H3D_TEXTURE=true
+      - H3D_OUTPUT_DIR=/app/generated_assets
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./generated_assets:/app/generated_assets
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped

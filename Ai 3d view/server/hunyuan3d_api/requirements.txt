@@ -1,0 +1,14 @@
+# Hunyuan3D-2 FastAPI server dependencies
+# Install Hunyuan3D-2 itself separately from its GitHub repo.
+# See README.md for full setup.
+
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+pydantic>=2.7.0
+pillow>=10.0.0
+numpy>=1.26.0
+trimesh>=4.0.0
+requests>=2.31.0
+aiofiles>=23.0.0
+python-dotenv>=1.0.0

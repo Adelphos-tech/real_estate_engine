@@ -31,8 +31,9 @@ REQUESTS_DIR = ROOT / "assets" / "requests"
 LIBRARY_DIR = ROOT / "assets" / "library"
 PREVIEWS_DIR = ROOT / "assets" / "previews"
 
-# Default Hunyuan3D-2 API server endpoint. Change this if you run it elsewhere.
-DEFAULT_API_URL = "http://localhost:8080"
+# Default Hunyuan3D-2 API server endpoint.
+# Override with env var H3D_API_URL or --api-url flag.
+DEFAULT_API_URL = os.getenv("H3D_API_URL", "http://localhost:8080")
 
 
 def ensure_dirs():
@@ -55,22 +56,65 @@ def log_request(prompt_or_image, output_path, method, params):
     print(f"[log] saved request metadata to {log_path}")
 
 
-def generate_via_local_api(prompt=None, image_path=None, api_url=DEFAULT_API_URL, turbo=False, texture=True):
-    """Call a local Hunyuan3D-2 FastAPI server to produce a GLB."""
-    import requests  # optional dependency, only needed in this path
+def generate_via_api(prompt=None, image_path=None, api_url=DEFAULT_API_URL, turbo=False,
+                     texture=True, target_height=None, async_mode=False):
+    """Call a remote Hunyuan3D-2 FastAPI server to produce a GLB.
 
-    endpoint = f"{api_url}/generate"
-    payload = {"turbo": turbo, "texture": texture}
-    if image_path:
-        with open(image_path, "rb") as f:
-            payload["image"] = base64.b64encode(f.read()).decode("utf-8")
-    if prompt:
-        payload["prompt"] = prompt
+    Supports both synchronous /generate and async /generate/async workflows.
+    """
+    import requests
 
-    print(f"[api] POST {endpoint}")
-    r = requests.post(endpoint, json=payload, timeout=600)
-    r.raise_for_status()
-    return r.content
+    if async_mode:
+        # Submit job
+        endpoint = f"{api_url}/generate/async"
+        payload = {"turbo": turbo, "texture": texture}
+        if image_path:
+            with open(image_path, "rb") as f:
+                payload["image_b64"] = base64.b64encode(f.read()).decode("utf-8")
+        if prompt:
+            payload["prompt"] = prompt
+        if target_height is not None:
+            payload["target_height"] = target_height
+
+        print(f"[api] POST {endpoint}")
+        r = requests.post(endpoint, json=payload, timeout=30)
+        r.raise_for_status()
+        job = r.json()
+        job_id = job["job_id"]
+        print(f"[api] job {job_id} submitted, polling...")
+
+        # Poll until done
+        status_url = f"{api_url}/status/{job_id}"
+        while True:
+            time.sleep(2)
+            sr = requests.get(status_url, timeout=30)
+            sr.raise_for_status()
+            state = sr.json()
+            if state["status"] == "completed":
+                download_url = f"{api_url}/download/{job_id}"
+                print(f"[api] downloading result from {download_url}")
+                dr = requests.get(download_url, timeout=600)
+                dr.raise_for_status()
+                return dr.content
+            elif state["status"] == "failed":
+                raise RuntimeError(f"Remote generation failed: {state.get('error', 'unknown')}")
+            print(f"[api] status: {state['status']}")
+    else:
+        # Synchronous
+        endpoint = f"{api_url}/generate"
+        payload = {"turbo": turbo, "texture": texture}
+        if image_path:
+            with open(image_path, "rb") as f:
+                payload["image_b64"] = base64.b64encode(f.read()).decode("utf-8")
+        if prompt:
+            payload["prompt"] = prompt
+        if target_height is not None:
+            payload["target_height"] = target_height
+
+        print(f"[api] POST {endpoint}")
+        r = requests.post(endpoint, json=payload, timeout=900)
+        r.raise_for_status()
+        return r.content
 
 
 def generate_via_native_pipeline(prompt=None, image_path=None, model_id="tencent/Hunyuan3D-2mini", turbo=False):
@@ -168,9 +212,12 @@ def main():
     parser.add_argument("--output", type=str, required=True, help="Output .glb path")
     parser.add_argument("--asset-type", type=str, required=True,
                         help="Furniture category, e.g. sofa, chair, bed")
-    parser.add_argument("--mode", choices=["api", "native"], default="native",
-                        help="Use local API server or native pipeline")
-    parser.add_argument("--api-url", type=str, default=DEFAULT_API_URL)
+    parser.add_argument("--mode", choices=["api", "native"], default="api",
+                        help="Use remote API server (default) or native pipeline")
+    parser.add_argument("--api-url", type=str, default=DEFAULT_API_URL,
+                        help="Remote Hunyuan3D-2 FastAPI server URL")
+    parser.add_argument("--async-mode", action="store_true",
+                        help="Submit async job to remote API and poll for result")
     parser.add_argument("--turbo", action="store_true", help="Use faster/turbo model variant")
     parser.add_argument("--no-texture", action="store_true", help="Skip texture generation")
     parser.add_argument("--target-height", type=float, default=None,
@@ -191,8 +238,10 @@ def main():
     log_request(prompt or str(image_path), output_path, args.mode, vars(args))
 
     if args.mode == "api":
-        glb_bytes = generate_via_local_api(
-            prompt=prompt, image_path=image_path, api_url=args.api_url, turbo=args.turbo, texture=texture
+        glb_bytes = generate_via_api(
+            prompt=prompt, image_path=image_path, api_url=args.api_url,
+            turbo=args.turbo, texture=texture, target_height=args.target_height,
+            async_mode=args.async_mode,
         )
         save_glb(glb_bytes, output_path)
     else:
