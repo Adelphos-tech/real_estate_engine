@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+backend/.venv/
+backend/venv/
+backend/env/
+backend/uploads/
+backend/storage/processed/*.jpg
+backend/storage/processed/*.png
+backend/models/*.pth
+*.egg-info/
+dist/
+build/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Large renders and binaries
+*.png
+*.jpg
+*.jpeg
+*.hdr
+*.exr
+*.glb
+*.gltf
+*.obj
+*.fbx
+*.blend
+*.mp4
+*.wav
+*.dwg
+
+# Directories with generated data
+exact_renders/
+test_renders/
+unified_renders_8k/
+assets/library/*.glb
+assets/previews/*.png
+assets/previews/*.jpg
+
+# Secrets
+.ssh_pass.txt
+
+# Logs (keep milestone log)
+*.log

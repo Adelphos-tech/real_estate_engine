@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APIL Properties — Premium 3D Virtual Walkthrough</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #0a0a0a; font-family: 'Segoe UI', system-ui, sans-serif; }
+    canvas { display: block; }
+
+    #topbar {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+      height: 58px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent);
+      display: flex; align-items: center; gap: 16px; padding: 0 24px;
+      pointer-events: none;
+    }
+    #logo {
+      font-size: 14px; font-weight: 700; letter-spacing: 0.12em;
+      color: #fff; text-transform: uppercase; pointer-events: none;
+    }
+    #room-label {
+      font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.95);
+      letter-spacing: 0.04em;
+    }
+    #loading-indicator {
+      margin-left: auto; font-size: 13px; color: rgba(255,255,255,0.65);
+      background: rgba(255,255,255,0.1); padding: 4px 12px;
+      border-radius: 20px; backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.15);
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    #fade {
+      position: absolute; inset: 0; z-index: 15;
+      background: #09090b; opacity: 0; pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    #fade.active { opacity: 1; }
+
+    /* Floor plan minimap */
+    #minimap {
+      position: absolute; bottom: 85px; right: 24px; z-index: 20;
+      width: 280px; background: rgba(15, 15, 20, 0.85);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      backdrop-filter: blur(12px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+    }
+    #minimap:hover { transform: scale(1.03) translateY(-4px); border-color: rgba(255,255,255,0.3); }
+    #minimap svg { display: block; width: 100%; height: auto; }
+    #minimap-title {
+      font-size: 9px; text-align: center; color: rgba(255,255,255,0.6); padding: 6px 0;
+      font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Bottom Room Nav strip */
+    #nav-strip {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 20;
+      height: 76px;
+      background: linear-gradient(to top, rgba(0,0,0,0.92), transparent);
+      display: flex; align-items: flex-end; justify-content: center;
+      gap: 10px; padding: 0 24px 16px;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px; padding: 8px 16px; cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      color: #fff; user-select: none;
+      backdrop-filter: blur(10px);
+    }
+    .nav-btn:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.35); transform: translateY(-3px); }
+    .nav-btn.active { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.85); box-shadow: 0 0 15px rgba(255,255,255,0.25); }
+    .nav-btn .icon { font-size: 16px; line-height: 1; }
+    .nav-btn .label { font-size: 10px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; }
+
+    /* Depth slider styling */
+    #depth-wrap {
+      position: absolute; left: 24px; bottom: 90px; z-index: 20;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      background: rgba(15, 15, 20, 0.85); border: 1px solid rgba(255,255,255,0.15);
+      padding: 14px 10px; border-radius: 12px; backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+    #depth-wrap label { font-size: 9px; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+    #depth-strength {
+      writing-mode: vertical-lr; direction: rtl;
+      height: 90px; width: 6px; accent-color: #fff; cursor: pointer;
+    }
+
+    /* Compass UI */
+    #compass {
+      position: absolute; top: 68px; right: 24px; z-index: 20;
+      width: 52px; height: 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+      border-radius: 50%;
+    }
+    #compass svg { width: 52px; height: 52px; display: block; }
+
+    #hint {
+      position: absolute; top: 72px; left: 50%; transform: translateX(-50%);
+      z-index: 20; font-size: 12px; color: rgba(255,255,255,0.5);
+      background: rgba(0,0,0,0.55); padding: 6px 16px; border-radius: 20px;
+      backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.1);
+      pointer-events: none; transition: opacity 0.8s ease;
+    }
+  </style>
+</head>
+<body>
+
+<div id="topbar">
+  <div id="logo">APIL Properties</div>
+  <div id="room-label">Living & Dining</div>
+  <div id="loading-indicator">Loading…</div>
+</div>
+
+<div id="fade"></div>
+
+<!-- Compass -->
+<div id="compass">
+  <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="22" cy="22" r="20" fill="rgba(10,10,12,0.85)" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+    <g id="compass-needle" transform-origin="22 22">
+      <polygon points="22,6 25,22 22,20 19,22" fill="#e74c3c"/>
+      <polygon points="22,38 25,22 22,24 19,22" fill="rgba(255,255,255,0.75)"/>
+    </g>
+    <text x="22" y="5" text-anchor="middle" font-size="6.5" fill="rgba(255,255,255,0.85)" font-family="system-ui" font-weight="bold">N</text>
+  </svg>
+</div>
+
+<!-- Depth Slider -->
+<div id="depth-wrap">
+  <input id="depth-strength" type="range" min="0" max="100" value="35" />
+  <label>Depth</label>
+</div>
+
+<div id="minimap">
+  <div id="minimap-title">Apartment Floor Plan</div>
+  <svg id="floorplan-svg" viewBox="0 0 1920 892" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <image href="floor.png" x="0" y="0" width="1920" height="892" opacity="0.85"/>
+
+    <!-- Room Hotspots (using matched apartment layout coordinates) -->
+    <circle id="hs-balcony"        cx="620" cy="180" r="22" fill="#e74c3c" stroke="#fff" stroke-width="3" style="cursor:pointer"/>
+    <circle id="hs-living_dining" cx="620" cy="440" r="24" fill="#e74c3c" stroke="#fff" stroke-width="3" style="cursor:pointer"/>
+    <circle id="hs-kitchen"       cx="760" cy="670" r="22" fill="#e74c3c" stroke="#fff" stroke-width="3" style="cursor:pointer"/>
+    <circle id="hs-wc_laundry"     cx="870" cy="810" r="20" fill="#e74c3c" stroke="#fff" stroke-width="3" style="cursor:pointer"/>
+    <circle id="hs-bedroom"       cx="960" cy="320" r="22" fill="#e74c3c" stroke="#fff" stroke-width="3" style="cursor:pointer"/>
+    <circle id="hs-bathroom"      cx="1060" cy="540" r="22" fill="#e74c3c" stroke="#fff" stroke-width="3" style="cursor:pointer"/>
+    <circle id="hs-study_maid"     cx="1050" cy="790" r="22" fill="#e74c3c" stroke="#fff" stroke-width="3" style="cursor:pointer"/>
+
+    <!-- Active Position Dot -->
+    <circle id="cam-dot" cx="620" cy="440" r="14" fill="#fff" stroke="#e74c3c" stroke-width="5" style="pointer-events:none"/>
+  </svg>
+</div>
+
+<div id="nav-strip">
+  <div class="nav-btn active" data-room="living_dining">
+    <span class="icon">🛋️</span><span class="label">Living & Dining</span>
+  </div>
+  <div class="nav-btn" data-room="kitchen">
+    <span class="icon">🍳</span><span class="label">Kitchen</span>
+  </div>
+  <div class="nav-btn" data-room="bedroom">
+    <span class="icon">🛏️</span><span class="label">Bedroom</span>
+  </div>
+  <div class="nav-btn" data-room="bathroom">
+    <span class="icon">🛁</span><span class="label">Bathroom</span>
+  </div>
+  <div class="nav-btn" data-room="study_maid">
+    <span class="icon">📚</span><span class="label">Study / Maid</span>
+  </div>
+  <div class="nav-btn" data-room="balcony">
+    <span class="icon">🌿</span><span class="label">Balcony</span>
+  </div>
+  <div class="nav-btn" data-room="wc_laundry">
+    <span class="icon">🧺</span><span class="label">W.C. / Laundry</span>
+  </div>
+</div>
+
+<div id="hint">Drag to look around · Scroll to zoom · Use depth slider for 3D parallax</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+  import * as THREE from 'three';
+
+  const ROOMS = [
+    { key: 'living_dining', label: 'Living & Dining',  startLon: 0 },
+    { key: 'kitchen',       label: 'Kitchen',            startLon: 0 },
+    { key: 'bedroom',       label: 'Bedroom',            startLon: 0 },
+    { key: 'bathroom',      label: 'Bathroom',           startLon: 0 },
+    { key: 'study_maid',    label: 'Study / Maid',       startLon: 0 },
+    { key: 'balcony',       label: 'Balcony',            startLon: 180 },
+    { key: 'wc_laundry',    label: 'W.C. / Laundry',     startLon: 0 },
+  ];
+
+  const MINIMAP_POS = {
+    balcony: [620, 180],
+    living_dining: [620, 440],
+    kitchen: [760, 670],
+    wc_laundry: [870, 810],
+    bedroom: [960, 320],
+    bathroom: [1060, 540],
+    study_maid: [1050, 790]
+  };
+
+  const RADIUS = 500;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 2000);
+  camera.position.set(0, 0, 0.1);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
+  renderer.setSize(innerWidth, innerHeight);
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  document.body.appendChild(renderer.domElement);
+
+  // Using fine segments to support smooth 3D displacement mapping
+  const geometry = new THREE.SphereGeometry(RADIUS, 256, 128);
+
+  // Create 1x1 dummy textures to force shader compilation with texture mapping and displacement support
+  const dummyColor = new THREE.DataTexture(new Uint8Array([255,255,255,255]), 1, 1);
+  dummyColor.needsUpdate = true;
+  const dummyDepth = new THREE.DataTexture(new Uint8Array([128,128,128,255]), 1, 1);
+  dummyDepth.needsUpdate = true;
+
+  // Standard MeshStandardMaterial to enable displacement mapping with full ambient lighting
+  const material = new THREE.MeshStandardMaterial({
+    side: THREE.BackSide,
+    map: dummyColor,
+    roughness: 1.0,
+    metalness: 0.0,
+    displacementMap: dummyDepth,
+    displacementScale: 0.0,
+    displacementBias: 0.0
+  });
+
+  const mesh = new THREE.Mesh(geometry, material);
+  scene.add(mesh);
+
+  // Add full ambient light to self-illuminate the standard material
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+  scene.add(ambientLight);
+
+  const loader = new THREE.TextureLoader();
+
+  let currentRoomIndex = 0;
+  let lon = 0, lat = 0;
+  let isDragging = false, startX = 0, startY = 0, startLon = 0, startLat = 0;
+  let touchStartX = 0, touchStartY = 0, touchStartLon = 0, touchStartLat = 0;
+  let isTransitioning = false;
+
+  const fade = document.getElementById('fade');
+  const roomLabel = document.getElementById('room-label');
+  const loadingInd = document.getElementById('loading-indicator');
+  const camDot = document.getElementById('cam-dot');
+  const depthSlider = document.getElementById('depth-strength');
+  const compassNeedle = document.getElementById('compass-needle');
+  const hintEl = document.getElementById('hint');
+
+  setTimeout(() => { hintEl.style.opacity = '0'; }, 6000);
+
+  // Bind vertical slider to depth displacement scale
+  function setDepthStrength(v) {
+    const s = (v / 100) * RADIUS * 0.09;
+    material.displacementScale = s;
+    material.displacementBias = -s / 2; // offset to stabilize viewpoint center
+    material.needsUpdate = true;
+  }
+  depthSlider.addEventListener('input', e => setDepthStrength(e.target.value));
+
+  function updateCamera() {
+    const phi = THREE.MathUtils.degToRad(90 - lat);
+    const theta = THREE.MathUtils.degToRad(lon);
+    camera.lookAt(
+      RADIUS * Math.sin(phi) * Math.cos(theta),
+      RADIUS * Math.cos(phi),
+      RADIUS * Math.sin(phi) * Math.sin(theta)
+    );
+
+    // Rotate compass needle based on lon angle
+    if (compassNeedle) {
+      compassNeedle.setAttribute('transform', `rotate(${-lon} 22 22)`);
+    }
+  }
+
+  function loadPanorama(key) {
+    loadingInd.textContent = 'Loading Walkthrough…';
+    loadingInd.style.opacity = '1';
+    fade.classList.add('active');
+
+    // Use version query parameter to bust browser image cache
+    const colorUrl = `unified_renders_8k/${key}_8k.png?v=27`;
+    const depthUrl = `unified_renders_8k/${key}_8k_depth.png?v=27`;
+
+    let colorTex = null, depthTex = null;
+    let colorDone = false, depthDone = false;
+
+    function applyTextures() {
+      // Color texture must be loaded to display the room
+      if (!colorDone) return;
+      
+      try {
+        material.map = colorTex;
+        if (depthDone && depthTex) {
+          material.displacementMap = depthTex;
+          setDepthStrength(depthSlider.value);
+        } else {
+          material.displacementMap = dummyDepth;
+          material.displacementScale = 0;
+          material.displacementBias = 0;
+        }
+        material.needsUpdate = true;
+      } catch (e) {
+        console.error("Failed to apply textures:", e);
+      }
+
+      loadingInd.style.opacity = '0';
+      fade.classList.remove('active');
+    }
+
+    // Load Color Map
+    loader.load(colorUrl, tex => {
+      try {
+        tex.colorSpace = THREE.SRGBColorSpace;
+        tex.minFilter = THREE.LinearFilter;
+        tex.magFilter = THREE.LinearFilter;
+        tex.wrapS = THREE.RepeatWrapping;
+        tex.wrapT = THREE.ClampToEdgeWrapping;
+      } catch(e) {}
+      colorTex = tex;
+      colorDone = true;
+      applyTextures();
+    }, undefined, err => {
+      console.error('Color load failed:', err);
+      fade.classList.remove('active');
+      loadingInd.style.opacity = '0';
+    });
+
+    // Load Compositor Depth Map
+    loader.load(depthUrl, tex => {
+      try {
+        tex.minFilter = THREE.LinearFilter;
+        tex.magFilter = THREE.LinearFilter;
+        tex.wrapS = THREE.RepeatWrapping;
+        tex.wrapT = THREE.ClampToEdgeWrapping;
+      } catch(e) {}
+      depthTex = tex;
+      depthDone = true;
+      applyTextures();
+    }, undefined, () => {
+      depthTex = dummyDepth;
+      depthDone = true;
+      applyTextures();
+    });
+  }
+
+  window.goToRoom = function(key) {
+    if (isTransitioning) return;
+    const idx = ROOMS.findIndex(r => r.key === key);
+    if (idx === -1 || idx === currentRoomIndex) return;
+    isTransitioning = true;
+
+    fade.classList.add('active');
+    setTimeout(() => {
+      currentRoomIndex = idx;
+      const room = ROOMS[idx];
+      lon = room.startLon; lat = 0;
+      updateCamera();
+
+      roomLabel.textContent = room.label;
+      document.querySelectorAll('.nav-btn').forEach(b =>
+        b.classList.toggle('active', b.dataset.room === key));
+
+      const pos = MINIMAP_POS[key];
+      if (pos) { camDot.setAttribute('cx', pos[0]); camDot.setAttribute('cy', pos[1]); }
+      Object.entries(MINIMAP_POS).forEach(([k]) => {
+        const el = document.getElementById('hs-' + k);
+        if (el) el.setAttribute('fill', k === key ? '#2ecc71' : '#e74c3c');
+      });
+
+      loadPanorama(key);
+      setTimeout(() => { isTransitioning = false; }, 600);
+    }, 420);
+  };
+
+  // Event listeners for UI navigation
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => goToRoom(btn.dataset.room));
+  });
+  document.querySelectorAll('#floorplan-svg circle[id^="hs-"]').forEach(el => {
+    el.addEventListener('click', () => goToRoom(el.id.replace('hs-', '')));
+  });
+
+  renderer.domElement.addEventListener('mousedown', e => {
+    isDragging = true; startX = e.clientX; startY = e.clientY;
+    startLon = lon; startLat = lat;
+  });
+  window.addEventListener('mouseup', () => isDragging = false);
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    lon = startLon - (e.clientX - startX) / innerWidth * 360;
+    lat = Math.max(-85, Math.min(85, startLat + (e.clientY - startY) / innerHeight * 180));
+    updateCamera();
+  });
+
+  renderer.domElement.addEventListener('touchstart', e => {
+    if (e.touches.length !== 1) return;
+    touchStartX = e.touches[0].clientX; touchStartY = e.touches[0].clientY;
+    touchStartLon = lon; touchStartLat = lat;
+  }, { passive: true });
+  renderer.domElement.addEventListener('touchmove', e => {
+    if (e.touches.length !== 1) return;
+    lon = touchStartLon - (e.touches[0].clientX - touchStartX) / innerWidth * 360;
+    lat = Math.max(-85, Math.min(85, touchStartLat + (e.touches[0].clientY - touchStartY) / innerHeight * 180));
+    updateCamera();
+  }, { passive: true });
+
+  window.addEventListener('wheel', e => {
+    camera.fov = Math.max(30, Math.min(100, camera.fov + e.deltaY * 0.04));
+    camera.updateProjectionMatrix();
+  }, { passive: true });
+
+  window.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      const next = (currentRoomIndex + 1) % ROOMS.length;
+      goToRoom(ROOMS[next].key);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      const prev = (currentRoomIndex - 1 + ROOMS.length) % ROOMS.length;
+      goToRoom(ROOMS[prev].key);
+    }
+  });
+
+  (function animate() { requestAnimationFrame(animate); renderer.render(scene, camera); })();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = innerWidth / innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth, innerHeight);
+  });
+
+  updateCamera();
+  fade.classList.add('active');
+  loadPanorama(ROOMS[0].key);
+  const el = document.getElementById('hs-' + ROOMS[0].key);
+  if (el) el.setAttribute('fill', '#2ecc71');
+</script>
+</body>
+</html>

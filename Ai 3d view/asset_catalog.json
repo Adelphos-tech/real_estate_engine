@@ -1,0 +1,87 @@
+{
+  "sofa": {
+    "default": "assets/library/sofa_modern_beige.glb",
+    "variants": [
+      "assets/library/sofa_modern_beige.glb",
+      "assets/library/sofa_l_shape_grey.glb",
+      "assets/library/sofa_minimal_fabric.glb"
+    ]
+  },
+  "armchair": {
+    "default": "assets/library/armchair_modern.glb",
+    "variants": ["assets/library/armchair_modern.glb"]
+  },
+  "coffee_table": {
+    "default": "assets/library/coffee_table_wood.glb",
+    "variants": ["assets/library/coffee_table_wood.glb", "assets/library/coffee_table_marble.glb"]
+  },
+  "dining_table": {
+    "default": "assets/library/dining_table_wood_4seater.glb",
+    "variants": ["assets/library/dining_table_wood_4seater.glb"]
+  },
+  "chair": {
+    "default": "assets/library/dining_chair_wood.glb",
+    "variants": ["assets/library/dining_chair_wood.glb", "assets/library/dining_chair_modern.glb"]
+  },
+  "tv_stand": {
+    "default": "assets/library/tv_stand_wood.glb",
+    "variants": ["assets/library/tv_stand_wood.glb"]
+  },
+  "tv": {
+    "default": "assets/library/flatscreen_tv.glb",
+    "variants": ["assets/library/flatscreen_tv.glb"]
+  },
+  "bed": {
+    "default": "assets/library/bed_queen_white.glb",
+    "variants": ["assets/library/bed_queen_white.glb", "assets/library/bed_king_wood.glb"]
+  },
+  "nightstand": {
+    "default": "assets/library/nightstand_wood.glb",
+    "variants": ["assets/library/nightstand_wood.glb"]
+  },
+  "wardrobe": {
+    "default": "assets/library/wardrobe_white.glb",
+    "variants": ["assets/library/wardrobe_white.glb"]
+  },
+  "desk": {
+    "default": "assets/library/desk_wood.glb",
+    "variants": ["assets/library/desk_wood.glb"]
+  },
+  "kitchen_counter": {
+    "default": "assets/library/kitchen_counter.glb",
+    "variants": ["assets/library/kitchen_counter.glb"]
+  },
+  "fridge": {
+    "default": "assets/library/fridge_stainless.glb",
+    "variants": ["assets/library/fridge_stainless.glb"]
+  },
+  "bathtub": {
+    "default": "assets/library/bathtub_white.glb",
+    "variants": ["assets/library/bathtub_white.glb"]
+  },
+  "toilet": {
+    "default": "assets/library/toilet_white.glb",
+    "variants": ["assets/library/toilet_white.glb"]
+  },
+  "sink_vanity": {
+    "default": "assets/library/sink_vanity.glb",
+    "variants": ["assets/library/sink_vanity.glb"]
+  },
+  "washing_machine": {
+    "default": "assets/library/washing_machine.glb",
+    "variants": ["assets/library/washing_machine.glb"]
+  },
+  "plant": {
+    "default": "assets/library/plant_potted.glb",
+    "variants": ["assets/library/plant_potted.glb"]
+  },
+  "floor_lamp": {
+    "default": "assets/library/floor_lamp.glb",
+    "variants": ["assets/library/floor_lamp.glb"]
+  },
+  "rug": {
+    "default": null,
+    "variants": [],
+    "note": "Rugs remain procedural planes; do not generate as 3D mesh"
+  }
+}
