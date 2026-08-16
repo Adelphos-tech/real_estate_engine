@@ -1,0 +1,1226 @@
+{
+  "profile": {},
+  "totalReadyMatches": 3575,
+  "totalOffplanMatches": 105,
+  "recommendations": [
+    {
+      "id": "3385",
+      "title": "Soto Grande | Studio Apartment",
+      "project": "Soto Grande",
+      "area": "Al Hamra",
+      "bedType": "Studio",
+      "askingPrice": 1000000.0,
+      "priceSqft": 2375,
+      "areaSqft": 421.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 300000,
+      "estimatedYield": 30.0,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 30.0,
+        "netROI": 26.37,
+        "annualRent": 300000,
+        "serviceChargeAnnual": 6315,
+        "vacancyRate": 0.05,
+        "managementFee": 15000,
+        "netAnnualIncome": 263685.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 9600,
+        "avgDaysOnMarket": 1
+      },
+      "communityScore": 82,
+      "developerScore": 50,
+      "projectScore": 67,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": -0.49,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 5,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 26.37% is above Dubai market average",
+        "Excellent resale liquidity \u2014 1 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:18.359899",
+      "propertyType": "ready"
+    },
+    {
+      "id": "3203",
+      "title": "Tarrad Dubailand Residences by Tarrad Development | Studio Apartment",
+      "project": "Tarrad Dubailand Residences.",
+      "area": "Dubai Land Residence Complex",
+      "bedType": "Studio",
+      "askingPrice": 550000.0,
+      "priceSqft": 1571,
+      "areaSqft": 350.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 95000,
+      "estimatedYield": 17.27,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 17.27,
+        "netROI": 14.59,
+        "annualRent": 95000,
+        "serviceChargeAnnual": 5250,
+        "vacancyRate": 0.05,
+        "managementFee": 4750,
+        "netAnnualIncome": 80250.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 99,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 3900,
+        "avgDaysOnMarket": 8
+      },
+      "communityScore": 85,
+      "developerScore": 50,
+      "projectScore": 66,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": 0.0,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 2,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 14.59% is above Dubai market average",
+        "Excellent resale liquidity \u2014 8 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:18.906713",
+      "propertyType": "ready"
+    },
+    {
+      "id": "1867",
+      "title": "Amazonia Residence | Studio Apartment",
+      "project": "Amazonia Residence",
+      "area": "Al Jadaf Waterfront",
+      "bedType": "Studio",
+      "askingPrice": 1070000.0,
+      "priceSqft": 2306,
+      "areaSqft": 464.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 180000,
+      "estimatedYield": 16.82,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 16.82,
+        "netROI": 14.49,
+        "annualRent": 180000,
+        "serviceChargeAnnual": 6960,
+        "vacancyRate": 0.05,
+        "managementFee": 9000,
+        "netAnnualIncome": 155040.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 3900,
+        "avgDaysOnMarket": 1
+      },
+      "communityScore": 80,
+      "developerScore": 50,
+      "projectScore": 82,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": 5.79,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 2,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 14.49% is above Dubai market average",
+        "Excellent resale liquidity \u2014 1 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:21.927458",
+      "propertyType": "ready"
+    },
+    {
+      "id": "1431",
+      "title": "Azizi Raffi | studio apartment | Al Furjan",
+      "project": "Azizi Raffi",
+      "area": "Al Furjan",
+      "bedType": "Studio",
+      "askingPrice": 571000.0,
+      "priceSqft": 1784,
+      "areaSqft": 320.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 115000,
+      "estimatedYield": 20.14,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 20.14,
+        "netROI": 17.29,
+        "annualRent": 115000,
+        "serviceChargeAnnual": 4800,
+        "vacancyRate": 0.05,
+        "managementFee": 5750,
+        "netAnnualIncome": 98700.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 4400,
+        "avgDaysOnMarket": 3
+      },
+      "communityScore": 82,
+      "developerScore": 50,
+      "projectScore": 67,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": 13.23,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 2,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 17.29% is above Dubai market average",
+        "Excellent resale liquidity \u2014 3 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:22.916650",
+      "propertyType": "ready"
+    },
+    {
+      "id": "1144",
+      "title": "Lucky Oasis Residence | studio apartment",
+      "project": "Lucky Oasis Residence",
+      "area": "Jumeirah village circle",
+      "bedType": "Studio",
+      "askingPrice": 666999.0,
+      "priceSqft": 1635,
+      "areaSqft": 408.0,
+      "comparablePrice": 664999,
+      "priceDifference": 0.3,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 105000,
+      "estimatedYield": 15.74,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 99,
+      "roi": {
+        "grossROI": 15.74,
+        "netROI": 13.25,
+        "annualRent": 105000,
+        "serviceChargeAnnual": 6120,
+        "vacancyRate": 0.05,
+        "managementFee": 5250,
+        "netAnnualIncome": 88380.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 4200,
+        "avgDaysOnMarket": 3
+      },
+      "communityScore": 82,
+      "developerScore": 50,
+      "projectScore": 76,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": -88.04,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 2,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 2
+        }
+      },
+      "reasons": [
+        "Net rental yield of 13.25% is above Dubai market average",
+        "Excellent resale liquidity \u2014 3 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:23.422340",
+      "propertyType": "ready"
+    },
+    {
+      "id": "4480",
+      "title": "Rotana Residences South Tower | Studio Apartment",
+      "project": "Rotana Residences South Tower",
+      "area": "Al Reem island",
+      "bedType": "Studio",
+      "askingPrice": 800000.0,
+      "priceSqft": 1961,
+      "areaSqft": 408.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 207567,
+      "estimatedYield": 25.95,
+      "readyScore": 90,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 25.95,
+        "netROI": 22.59,
+        "annualRent": 207567,
+        "serviceChargeAnnual": 6120,
+        "vacancyRate": 0.05,
+        "managementFee": 10378,
+        "netAnnualIncome": 180691.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 99,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 2000,
+        "avgDaysOnMarket": 7
+      },
+      "communityScore": 79,
+      "developerScore": 50,
+      "projectScore": 66,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": -4.3,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 18,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 1,
+          "developerRisk": 50,
+          "areaSaturationRisk": 40,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 22.59% is above Dubai market average",
+        "Excellent resale liquidity \u2014 7 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:15.903757",
+      "propertyType": "ready"
+    },
+    {
+      "id": "4467",
+      "title": "Sera Gardens | Studio Apartment",
+      "project": "Sera Gardens",
+      "area": "Dubai Production City",
+      "bedType": "Studio",
+      "askingPrice": 594000.0,
+      "priceSqft": 1424,
+      "areaSqft": 417.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 99000,
+      "estimatedYield": 16.67,
+      "readyScore": 90,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 16.67,
+        "netROI": 13.95,
+        "annualRent": 99000,
+        "serviceChargeAnnual": 6255,
+        "vacancyRate": 0.05,
+        "managementFee": 4950,
+        "netAnnualIncome": 82845.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 80000,
+        "avgDaysOnMarket": 0
+      },
+      "communityScore": 78,
+      "developerScore": 50,
+      "projectScore": 64,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": -0.24,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 20,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 40,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 13.95% is above Dubai market average",
+        "Excellent resale liquidity \u2014 0 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:16.078559",
+      "propertyType": "ready"
+    },
+    {
+      "projectName": "Hotel Edge by Rotana",
+      "slug": "hotel-edge-by-rotana",
+      "area": "Damac Hills 2",
+      "offplanScore": 68,
+      "recommendation": "HOLD",
+      "scoreLabel": "Review Carefully",
+      "developerName": "Independent / Other",
+      "developerScore": 50,
+      "locationScore": 80,
+      "futureSupply": {
+        "futureSupplyScore": 82,
+        "totalSupply": 179,
+        "riskLevel": "Low"
+      },
+      "launchPricing": {
+        "projectPriceSqft": 0,
+        "nearbyPriceSqft": 2285,
+        "discountToMarket": 0,
+        "launchPricingScore": 50
+      },
+      "growthForecast": {
+        "historicalGrowth12m": 0.0,
+        "communityGrowth12m": 711.57,
+        "predictedGrowth": 426.94,
+        "growthPotentialScore": 100
+      },
+      "paymentPlan": {
+        "paymentPlanScore": 50,
+        "planType": "Unknown"
+      },
+      "constructionProgress": {
+        "constructionProgressScore": 50,
+        "delayRisk": "Medium"
+      },
+      "risk": {
+        "overallRisk": 32,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer Independent / Other has below-average track record (score: 50)"
+        ]
+      },
+      "reasons": [
+        "Predicted capital growth of 426.94% based on area trends",
+        "Low future supply in area \u2014 favorable for price appreciation"
+      ],
+      "unitTypes": [],
+      "computedAt": "2026-08-05T17:37:33.917781",
+      "propertyType": "offplan"
+    },
+    {
+      "projectName": "ELO 2 and 3 Damac",
+      "slug": "elo-2-and-3-damac",
+      "area": "Damac Hills 2",
+      "offplanScore": 68,
+      "recommendation": "HOLD",
+      "scoreLabel": "Review Carefully",
+      "developerName": "Independent / Other",
+      "developerScore": 50,
+      "locationScore": 80,
+      "futureSupply": {
+        "futureSupplyScore": 82,
+        "totalSupply": 179,
+        "riskLevel": "Low"
+      },
+      "launchPricing": {
+        "projectPriceSqft": 0,
+        "nearbyPriceSqft": 2285,
+        "discountToMarket": 0,
+        "launchPricingScore": 50
+      },
+      "growthForecast": {
+        "historicalGrowth12m": 0.0,
+        "communityGrowth12m": 711.57,
+        "predictedGrowth": 426.94,
+        "growthPotentialScore": 100
+      },
+      "paymentPlan": {
+        "paymentPlanScore": 50,
+        "planType": "Unknown"
+      },
+      "constructionProgress": {
+        "constructionProgressScore": 50,
+        "delayRisk": "Medium"
+      },
+      "risk": {
+        "overallRisk": 32,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer Independent / Other has below-average track record (score: 50)"
+        ]
+      },
+      "reasons": [
+        "Predicted capital growth of 426.94% based on area trends",
+        "Low future supply in area \u2014 favorable for price appreciation"
+      ],
+      "unitTypes": [],
+      "computedAt": "2026-08-05T17:37:33.946352",
+      "propertyType": "offplan"
+    },
+    {
+      "projectName": "Anantara Mina",
+      "slug": "anantara-mina",
+      "area": "Mina Al Arab",
+      "offplanScore": 67,
+      "recommendation": "HOLD",
+      "scoreLabel": "Review Carefully",
+      "developerName": "Independent / Other",
+      "developerScore": 50,
+      "locationScore": 76,
+      "futureSupply": {
+        "futureSupplyScore": 79,
+        "totalSupply": 211,
+        "riskLevel": "Low"
+      },
+      "launchPricing": {
+        "projectPriceSqft": 0,
+        "nearbyPriceSqft": 2349,
+        "discountToMarket": 0,
+        "launchPricingScore": 50
+      },
+      "growthForecast": {
+        "historicalGrowth12m": 0.0,
+        "communityGrowth12m": 1085.37,
+        "predictedGrowth": 651.22,
+        "growthPotentialScore": 100
+      },
+      "paymentPlan": {
+        "paymentPlanScore": 50,
+        "planType": "Unknown"
+      },
+      "constructionProgress": {
+        "constructionProgressScore": 50,
+        "delayRisk": "Medium"
+      },
+      "risk": {
+        "overallRisk": 33,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer Independent / Other has below-average track record (score: 50)"
+        ]
+      },
+      "reasons": [
+        "Predicted capital growth of 651.22% based on area trends",
+        "Low future supply in area \u2014 favorable for price appreciation"
+      ],
+      "unitTypes": [],
+      "computedAt": "2026-08-05T17:37:33.915652",
+      "propertyType": "offplan"
+    }
+  ],
+  "topReady": [
+    {
+      "id": "3385",
+      "title": "Soto Grande | Studio Apartment",
+      "project": "Soto Grande",
+      "area": "Al Hamra",
+      "bedType": "Studio",
+      "askingPrice": 1000000.0,
+      "priceSqft": 2375,
+      "areaSqft": 421.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 300000,
+      "estimatedYield": 30.0,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 30.0,
+        "netROI": 26.37,
+        "annualRent": 300000,
+        "serviceChargeAnnual": 6315,
+        "vacancyRate": 0.05,
+        "managementFee": 15000,
+        "netAnnualIncome": 263685.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 9600,
+        "avgDaysOnMarket": 1
+      },
+      "communityScore": 82,
+      "developerScore": 50,
+      "projectScore": 67,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": -0.49,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 5,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 26.37% is above Dubai market average",
+        "Excellent resale liquidity \u2014 1 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:18.359899"
+    },
+    {
+      "id": "3203",
+      "title": "Tarrad Dubailand Residences by Tarrad Development | Studio Apartment",
+      "project": "Tarrad Dubailand Residences.",
+      "area": "Dubai Land Residence Complex",
+      "bedType": "Studio",
+      "askingPrice": 550000.0,
+      "priceSqft": 1571,
+      "areaSqft": 350.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 95000,
+      "estimatedYield": 17.27,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 17.27,
+        "netROI": 14.59,
+        "annualRent": 95000,
+        "serviceChargeAnnual": 5250,
+        "vacancyRate": 0.05,
+        "managementFee": 4750,
+        "netAnnualIncome": 80250.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 99,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 3900,
+        "avgDaysOnMarket": 8
+      },
+      "communityScore": 85,
+      "developerScore": 50,
+      "projectScore": 66,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": 0.0,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 2,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 14.59% is above Dubai market average",
+        "Excellent resale liquidity \u2014 8 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:18.906713"
+    },
+    {
+      "id": "1867",
+      "title": "Amazonia Residence | Studio Apartment",
+      "project": "Amazonia Residence",
+      "area": "Al Jadaf Waterfront",
+      "bedType": "Studio",
+      "askingPrice": 1070000.0,
+      "priceSqft": 2306,
+      "areaSqft": 464.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 180000,
+      "estimatedYield": 16.82,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 16.82,
+        "netROI": 14.49,
+        "annualRent": 180000,
+        "serviceChargeAnnual": 6960,
+        "vacancyRate": 0.05,
+        "managementFee": 9000,
+        "netAnnualIncome": 155040.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 3900,
+        "avgDaysOnMarket": 1
+      },
+      "communityScore": 80,
+      "developerScore": 50,
+      "projectScore": 82,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": 5.79,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 2,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 14.49% is above Dubai market average",
+        "Excellent resale liquidity \u2014 1 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:21.927458"
+    },
+    {
+      "id": "1431",
+      "title": "Azizi Raffi | studio apartment | Al Furjan",
+      "project": "Azizi Raffi",
+      "area": "Al Furjan",
+      "bedType": "Studio",
+      "askingPrice": 571000.0,
+      "priceSqft": 1784,
+      "areaSqft": 320.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 115000,
+      "estimatedYield": 20.14,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 20.14,
+        "netROI": 17.29,
+        "annualRent": 115000,
+        "serviceChargeAnnual": 4800,
+        "vacancyRate": 0.05,
+        "managementFee": 5750,
+        "netAnnualIncome": 98700.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 4400,
+        "avgDaysOnMarket": 3
+      },
+      "communityScore": 82,
+      "developerScore": 50,
+      "projectScore": 67,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": 13.23,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 2,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 17.29% is above Dubai market average",
+        "Excellent resale liquidity \u2014 3 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:22.916650"
+    },
+    {
+      "id": "1144",
+      "title": "Lucky Oasis Residence | studio apartment",
+      "project": "Lucky Oasis Residence",
+      "area": "Jumeirah village circle",
+      "bedType": "Studio",
+      "askingPrice": 666999.0,
+      "priceSqft": 1635,
+      "areaSqft": 408.0,
+      "comparablePrice": 664999,
+      "priceDifference": 0.3,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 105000,
+      "estimatedYield": 15.74,
+      "readyScore": 91,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 99,
+      "roi": {
+        "grossROI": 15.74,
+        "netROI": 13.25,
+        "annualRent": 105000,
+        "serviceChargeAnnual": 6120,
+        "vacancyRate": 0.05,
+        "managementFee": 5250,
+        "netAnnualIncome": 88380.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 4200,
+        "avgDaysOnMarket": 3
+      },
+      "communityScore": 82,
+      "developerScore": 50,
+      "projectScore": 76,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": -88.04,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 14,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 2,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 2
+        }
+      },
+      "reasons": [
+        "Net rental yield of 13.25% is above Dubai market average",
+        "Excellent resale liquidity \u2014 3 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:23.422340"
+    },
+    {
+      "id": "4480",
+      "title": "Rotana Residences South Tower | Studio Apartment",
+      "project": "Rotana Residences South Tower",
+      "area": "Al Reem island",
+      "bedType": "Studio",
+      "askingPrice": 800000.0,
+      "priceSqft": 1961,
+      "areaSqft": 408.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 207567,
+      "estimatedYield": 25.95,
+      "readyScore": 90,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 25.95,
+        "netROI": 22.59,
+        "annualRent": 207567,
+        "serviceChargeAnnual": 6120,
+        "vacancyRate": 0.05,
+        "managementFee": 10378,
+        "netAnnualIncome": 180691.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 99,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 2000,
+        "avgDaysOnMarket": 7
+      },
+      "communityScore": 79,
+      "developerScore": 50,
+      "projectScore": 66,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": -4.3,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 18,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 1,
+          "developerRisk": 50,
+          "areaSaturationRisk": 40,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 22.59% is above Dubai market average",
+        "Excellent resale liquidity \u2014 7 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:15.903757"
+    },
+    {
+      "id": "4467",
+      "title": "Sera Gardens | Studio Apartment",
+      "project": "Sera Gardens",
+      "area": "Dubai Production City",
+      "bedType": "Studio",
+      "askingPrice": 594000.0,
+      "priceSqft": 1424,
+      "areaSqft": 417.0,
+      "comparablePrice": 0,
+      "priceDifference": 0,
+      "marketPosition": "Fair Market Value",
+      "estimatedRent": 99000,
+      "estimatedYield": 16.67,
+      "readyScore": 90,
+      "recommendation": "STRONG BUY",
+      "scoreLabel": "Excellent Investment",
+      "priceScore": 100,
+      "roi": {
+        "grossROI": 16.67,
+        "netROI": 13.95,
+        "annualRent": 99000,
+        "serviceChargeAnnual": 6255,
+        "vacancyRate": 0.05,
+        "managementFee": 4950,
+        "netAnnualIncome": 82845.0
+      },
+      "roiScore": 100,
+      "liquidity": {
+        "liquidityScore": 100,
+        "liquidityLabel": "Excellent",
+        "absorptionRate": 80000,
+        "avgDaysOnMarket": 0
+      },
+      "communityScore": 78,
+      "developerScore": 50,
+      "projectScore": 64,
+      "developerName": "Independent / Other",
+      "growth3m": 0.0,
+      "growth6m": -0.24,
+      "growth12m": 0.0,
+      "risk": {
+        "overallRisk": 20,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer has below-average track record"
+        ],
+        "components": {
+          "futureSupplyRisk": 40,
+          "developerRisk": 50,
+          "areaSaturationRisk": 0,
+          "rentalRisk": 20,
+          "marketVolatilityRisk": 0,
+          "constructionDelayRisk": 5,
+          "pricePremiumRisk": 0
+        }
+      },
+      "reasons": [
+        "Net rental yield of 13.95% is above Dubai market average",
+        "Excellent resale liquidity \u2014 0 day average selling period",
+        "Asking price is aligned with verified DLD transactions",
+        "Low overall risk profile with balanced supply and sustained demand"
+      ],
+      "computedAt": "2026-08-05T17:37:16.078559"
+    }
+  ],
+  "topOffplan": [
+    {
+      "projectName": "Hotel Edge by Rotana",
+      "slug": "hotel-edge-by-rotana",
+      "area": "Damac Hills 2",
+      "offplanScore": 68,
+      "recommendation": "HOLD",
+      "scoreLabel": "Review Carefully",
+      "developerName": "Independent / Other",
+      "developerScore": 50,
+      "locationScore": 80,
+      "futureSupply": {
+        "futureSupplyScore": 82,
+        "totalSupply": 179,
+        "riskLevel": "Low"
+      },
+      "launchPricing": {
+        "projectPriceSqft": 0,
+        "nearbyPriceSqft": 2285,
+        "discountToMarket": 0,
+        "launchPricingScore": 50
+      },
+      "growthForecast": {
+        "historicalGrowth12m": 0.0,
+        "communityGrowth12m": 711.57,
+        "predictedGrowth": 426.94,
+        "growthPotentialScore": 100
+      },
+      "paymentPlan": {
+        "paymentPlanScore": 50,
+        "planType": "Unknown"
+      },
+      "constructionProgress": {
+        "constructionProgressScore": 50,
+        "delayRisk": "Medium"
+      },
+      "risk": {
+        "overallRisk": 32,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer Independent / Other has below-average track record (score: 50)"
+        ]
+      },
+      "reasons": [
+        "Predicted capital growth of 426.94% based on area trends",
+        "Low future supply in area \u2014 favorable for price appreciation"
+      ],
+      "unitTypes": [],
+      "computedAt": "2026-08-05T17:37:33.917781"
+    },
+    {
+      "projectName": "ELO 2 and 3 Damac",
+      "slug": "elo-2-and-3-damac",
+      "area": "Damac Hills 2",
+      "offplanScore": 68,
+      "recommendation": "HOLD",
+      "scoreLabel": "Review Carefully",
+      "developerName": "Independent / Other",
+      "developerScore": 50,
+      "locationScore": 80,
+      "futureSupply": {
+        "futureSupplyScore": 82,
+        "totalSupply": 179,
+        "riskLevel": "Low"
+      },
+      "launchPricing": {
+        "projectPriceSqft": 0,
+        "nearbyPriceSqft": 2285,
+        "discountToMarket": 0,
+        "launchPricingScore": 50
+      },
+      "growthForecast": {
+        "historicalGrowth12m": 0.0,
+        "communityGrowth12m": 711.57,
+        "predictedGrowth": 426.94,
+        "growthPotentialScore": 100
+      },
+      "paymentPlan": {
+        "paymentPlanScore": 50,
+        "planType": "Unknown"
+      },
+      "constructionProgress": {
+        "constructionProgressScore": 50,
+        "delayRisk": "Medium"
+      },
+      "risk": {
+        "overallRisk": 32,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer Independent / Other has below-average track record (score: 50)"
+        ]
+      },
+      "reasons": [
+        "Predicted capital growth of 426.94% based on area trends",
+        "Low future supply in area \u2014 favorable for price appreciation"
+      ],
+      "unitTypes": [],
+      "computedAt": "2026-08-05T17:37:33.946352"
+    },
+    {
+      "projectName": "Anantara Mina",
+      "slug": "anantara-mina",
+      "area": "Mina Al Arab",
+      "offplanScore": 67,
+      "recommendation": "HOLD",
+      "scoreLabel": "Review Carefully",
+      "developerName": "Independent / Other",
+      "developerScore": 50,
+      "locationScore": 76,
+      "futureSupply": {
+        "futureSupplyScore": 79,
+        "totalSupply": 211,
+        "riskLevel": "Low"
+      },
+      "launchPricing": {
+        "projectPriceSqft": 0,
+        "nearbyPriceSqft": 2349,
+        "discountToMarket": 0,
+        "launchPricingScore": 50
+      },
+      "growthForecast": {
+        "historicalGrowth12m": 0.0,
+        "communityGrowth12m": 1085.37,
+        "predictedGrowth": 651.22,
+        "growthPotentialScore": 100
+      },
+      "paymentPlan": {
+        "paymentPlanScore": 50,
+        "planType": "Unknown"
+      },
+      "constructionProgress": {
+        "constructionProgressScore": 50,
+        "delayRisk": "Medium"
+      },
+      "risk": {
+        "overallRisk": 33,
+        "riskLevel": "Low",
+        "riskFactors": [
+          "Developer Independent / Other has below-average track record (score: 50)"
+        ]
+      },
+      "reasons": [
+        "Predicted capital growth of 651.22% based on area trends",
+        "Low future supply in area \u2014 favorable for price appreciation"
+      ],
+      "unitTypes": [],
+      "computedAt": "2026-08-05T17:37:33.915652"
+    }
+  ],
+  "generatedAt": "2026-08-05T17:37:44.464738"
+}

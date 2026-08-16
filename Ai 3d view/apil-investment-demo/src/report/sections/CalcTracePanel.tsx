@@ -89,6 +89,20 @@ export function CalcTracePanel({ trace, section, title }: CalcTracePanelProps) {
         return <ScoreTrace trace={trace} />;
       case 'evidence':
         return <EvidenceTrace trace={trace} />;
+      case 'strategy':
+        return <StrategyTrace trace={trace} />;
+      case 'fit':
+        return <FitTrace trace={trace} />;
+      case 'property':
+        return <PropertyTrace trace={trace} />;
+      case 'paymentPlan':
+        return <PaymentPlanTrace trace={trace} />;
+      case 'construction':
+        return <ConstructionTrace trace={trace} />;
+      case 'market':
+        return <MarketTrace trace={trace} />;
+      case 'exitStrategy':
+        return <ExitStrategyTrace trace={trace} />;
       default:
         return <pre className="text-xs text-gray-600 overflow-x-auto">{JSON.stringify(trace, null, 2)}</pre>;
     }
@@ -119,32 +133,43 @@ export function CalcTracePanel({ trace, section, title }: CalcTracePanelProps) {
 
 function ValuationTrace({ trace }: { trace: any }) {
   const t = trace;
+  const inp = t.inputs || t;
+  const out = t.output || t;
+  const askingPrice = inp.asking_price ?? t.askingPrice;
+  const sizeSqft = inp.size_sqft ?? t.sizeSqft;
+  const medianPriceSqft = inp.median_price_sqft ?? t.medianPriceSqft;
+  const comparableCount = inp.comparable_count ?? t.comparableCount ?? 0;
+  const method = inp.method ?? t.method;
+  const fairValue = out.fairValuePointEstimate ?? t.fairValuePointEstimate;
+  const fairValueLow = out.fairValueLow ?? t.fairValueLow;
+  const fairValueHigh = out.fairValueHigh ?? t.fairValueHigh;
+  const priceDiffPct = t.priceDifferencePct ?? inp.price_difference_pct;
   return (
     <div>
       <TraceSection title="Input Values">
-        <TraceRow label="Asking Price (your purchase price)" value={fmtAED(t.askingPrice)} source="Qdrant listing" />
-        <TraceRow label="Property Size" value={`${fmtNum(t.sizeSqft, 0)} sqft`} source="Qdrant listing" />
-        <TraceRow label="Comparable Sales Count" value={`${t.comparableCount ?? 0} transactions`} source="DLD transaction records" />
-        <TraceRow label="Valuation Method" value={t.method || '—'} source={t.method === 'project_bedroom' ? 'Exact project + bedroom match' : 'Area-level match'} />
+        <TraceRow label="Asking Price (your purchase price)" value={fmtAED(askingPrice)} source="Qdrant listing" />
+        <TraceRow label="Property Size" value={`${fmtNum(sizeSqft, 0)} sqft`} source="Qdrant listing" />
+        <TraceRow label="Comparable Sales Count" value={`${comparableCount} transactions`} source="DLD transaction records" />
+        <TraceRow label="Valuation Method" value={method || '—'} source={method === 'project_bedroom' ? 'Exact project + bedroom match' : 'Area-level match'} />
       </TraceSection>
 
       <TraceSection title="Calculation Steps">
-        <TraceRow label="Step 1: Find comparable sales" value={`${t.comparableCount ?? 0} DLD sales`} source="Same project, same bedroom type" />
-        <TraceRow label="Step 2: Calculate price/sqft for each" value={`${fmtNum(t.medianPriceSqft)} AED/sqft (median)`} source="price ÷ area for each transaction" />
-        <TraceRow label="Step 3: Fair Value = median price/sqft × your size" value={fmtAED(t.fairValuePointEstimate)} source={`${fmtNum(t.medianPriceSqft)} × ${fmtNum(t.sizeSqft, 0)} sqft`} />
-        <TraceRow label="Step 4: Range (±20%)" value={`${fmtAED(t.fairValueLow)} – ${fmtAED(t.fairValueHigh)}`} source="Fair value × (1 ± 0.20)" />
-        <TraceRow label="Step 5: Your discount/premium" value={`${fmtNum(t.priceDifferencePct)}%`} source={`(${fmtAED(t.askingPrice)} − ${fmtAED(t.fairValuePointEstimate)}) ÷ ${fmtAED(t.fairValuePointEstimate)} × 100`} />
+        <TraceRow label="Step 1: Find comparable sales" value={`${comparableCount} DLD sales`} source="Same project, same bedroom type" />
+        <TraceRow label="Step 2: Calculate price/sqft for each" value={`${fmtNum(medianPriceSqft)} AED/sqft (median)`} source="price ÷ area for each transaction" />
+        <TraceRow label="Step 3: Fair Value = median price/sqft × your size" value={fmtAED(fairValue)} source={`${fmtNum(medianPriceSqft)} × ${fmtNum(sizeSqft, 0)} sqft`} />
+        <TraceRow label="Step 4: Range (±20%)" value={`${fmtAED(fairValueLow)} – ${fmtAED(fairValueHigh)}`} source="Fair value × (1 ± 0.20)" />
+        <TraceRow label="Step 5: Your discount/premium" value={`${fmtNum(priceDiffPct)}%`} source={`(${fmtAED(askingPrice)} − ${fmtAED(fairValue)}) ÷ ${fmtAED(fairValue)} × 100`} />
       </TraceSection>
 
       <LaymanExplanation>
-        <strong>In plain English:</strong> We found <strong>{t.comparableCount}</strong> actual DLD-registered sales for the same project ({t.method === 'project_bedroom' ? 'exact same building and bedroom type' : 'same area and bedroom type'}).
-        The median price per square foot was <strong>{fmtNum(t.medianPriceSqft)} AED/sqft</strong>.
-        Your property is <strong>{fmtNum(t.sizeSqft, 0)} sqft</strong>, so the fair market value is <strong>{fmtAED(t.fairValuePointEstimate)}</strong>.
-        You're buying at <strong>{fmtAED(t.askingPrice)}</strong>, which is <strong>{fmtNum(t.priceDifferencePct)}% below</strong> fair value — this is a {t.marketLabel}.
+        <strong>In plain English:</strong> We found <strong>{comparableCount}</strong> actual DLD-registered sales for the same project ({method === 'project_bedroom' ? 'exact same building and bedroom type' : 'same area and bedroom type'}).
+        The median price per square foot was <strong>{fmtNum(medianPriceSqft)} AED/sqft</strong>.
+        Your property is <strong>{fmtNum(sizeSqft, 0)} sqft</strong>, so the fair market value is <strong>{fmtAED(fairValue)}</strong>.
+        You're buying at <strong>{fmtAED(askingPrice)}</strong>, which is <strong>{fmtNum(priceDiffPct)}%</strong> relative to fair value.
       </LaymanExplanation>
 
       <DataSource>
-        Data source: Dubai Land Department (DLD) verified transaction records. {t.comparableCount} comparable sales found for this project/bedroom type. Confidence: {t.confidence}.
+        Data source: Dubai Land Department (DLD) verified transaction records. {comparableCount} comparable sales found for this project/bedroom type. Method: {method}.
       </DataSource>
     </div>
   );
@@ -152,34 +177,36 @@ function ValuationTrace({ trace }: { trace: any }) {
 
 function RentalTrace({ trace }: { trace: any }) {
   const t = trace;
+  const inp = t.inputs || t;
+  const out = t.output || t;
+  const purchasePrice = inp.purchase_price ?? t.purchasePrice;
+  const annualRent = out.annualRent ?? t.annualRent ?? 0;
+  const grossYield = out.grossYield ?? t.grossYieldPct ?? 0;
+  const netYield = out.netYield ?? t.netYieldPct ?? 0;
+  const netIncome = out.netIncome ?? t.netAnnualIncome ?? 0;
+  const reason = inp.reason || t.rentSource || '';
   return (
     <div>
       <TraceSection title="Input Values">
-        <TraceRow label="Purchase Price" value={fmtAED(t.purchasePrice)} source="Qdrant listing" />
-        <TraceRow label="Comparable Rentals" value={`${t.comparableRentalsCount ?? 0} contracts`} source="DLD rental registrations" />
-        <TraceRow label="Rent Source" value={t.rentSource || '—'} source="DLD Ejari rental contracts" />
-        <TraceRow label="Rent Confidence" value={t.rentConfidence || '—'} source={`${t.comparableRentalsCount} comparables used`} />
+        <TraceRow label="Purchase Price" value={fmtAED(purchasePrice)} source="Qdrant listing" />
+        <TraceRow label="Rent Source" value={reason || '—'} source="DLD Ejari rental contracts" />
       </TraceSection>
 
       <TraceSection title="Calculation Steps">
-        <TraceRow label="Step 1: Find comparable rentals" value={`${t.comparableRentalsCount} DLD rentals`} source="Same area, same bedroom type" />
-        <TraceRow label="Step 2: Take median annual rent" value={fmtAED(t.annualRent)} source="Middle value of all comparable rents" />
-        <TraceRow label="Step 3: Service charge (5% of rent)" value={fmtAED(t.serviceCharge)} source={`${fmtNum(t.serviceChargePct * 100, 0)}% × ${fmtAED(t.annualRent)}`} />
-        <TraceRow label="Step 4: Vacancy cost (5% of rent)" value={fmtAED(t.vacancyCost)} source={`${fmtNum(t.vacancyRate * 100, 0)}% × ${fmtAED(t.annualRent)}`} />
-        <TraceRow label="Step 5: Management fee (5% of rent)" value={fmtAED(t.managementFee)} source={`${fmtNum(t.managementFeePct * 100, 0)}% × ${fmtAED(t.annualRent)}`} />
-        <TraceRow label="Step 6: Net income = rent − all costs" value={fmtAED(t.netAnnualIncome)} source={`${fmtAED(t.annualRent)} − ${fmtAED(t.totalOperatingCost)}`} />
-        <TraceRow label="Step 7: Gross yield = rent ÷ price" value={`${fmtNum(t.grossYieldPct)}%`} source={`${fmtAED(t.annualRent)} ÷ ${fmtAED(t.purchasePrice)} × 100`} />
-        <TraceRow label="Step 8: Net yield = net income ÷ price" value={`${fmtNum(t.netYieldPct)}%`} source={`${fmtAED(t.netAnnualIncome)} ÷ ${fmtAED(t.purchasePrice)} × 100`} />
+        <TraceRow label="Step 1: Find comparable rentals" value={reason || '—'} source="Same area, same bedroom type" />
+        <TraceRow label="Step 2: Annual rent" value={fmtAED(annualRent)} source="Median of comparable rents" />
+        <TraceRow label="Step 3: Gross yield = rent ÷ price" value={`${fmtNum(grossYield)}%`} source={`${fmtAED(annualRent)} ÷ ${fmtAED(purchasePrice)} × 100`} />
+        <TraceRow label="Step 4: Net income (after costs)" value={fmtAED(netIncome)} source="rent − service charge − vacancy − management" />
+        <TraceRow label="Step 5: Net yield = net income ÷ price" value={`${fmtNum(netYield)}%`} source={`${fmtAED(netIncome)} ÷ ${fmtAED(purchasePrice)} × 100`} />
       </TraceSection>
 
       <LaymanExplanation>
-        <strong>In plain English:</strong> We found <strong>{t.comparableRentalsCount}</strong> actual DLD-registered rental contracts for 1-bedroom apartments in the same area.
-        The median rent is <strong>{fmtAED(t.annualRent)}/year</strong>. From this, we subtract 3 costs: service charge (5%), vacancy (5%), and management fee (5%) — each equals {fmtAED(t.serviceCharge)}.
-        That leaves you with <strong>{fmtAED(t.netAnnualIncome)}</strong> net income per year, which is a <strong>{fmtNum(t.netYieldPct)}% net yield</strong> on your purchase price.
+        <strong>In plain English:</strong> {reason ? `No rental evidence found — ${reason}.` : `Based on DLD rental data, the estimated annual rent is <strong>${fmtAED(annualRent)}</strong>.`}
+        {annualRent > 0 ? ` After deducting service charge, vacancy, and management fees, net income is <strong>${fmtAED(netIncome)}</strong>/year — a <strong>${fmtNum(netYield)}% net yield</strong>.` : ' Rental estimates are not available for this property.'}
       </LaymanExplanation>
 
       <DataSource>
-        Data source: DLD Ejari rental registrations. {t.comparableRentalsCount} comparable rental contracts. No project-specific rentals found (building is off-plan) — area-level rentals used instead.
+        Data source: DLD Ejari rental registrations. Comparable rental contracts filtered by area and bedroom type.
       </DataSource>
     </div>
   );
@@ -187,30 +214,40 @@ function RentalTrace({ trace }: { trace: any }) {
 
 function GrowthTrace({ trace }: { trace: any }) {
   const t = trace;
+  const inp = t.inputs || t;
+  const out = t.output || t;
+  const purchasePrice = inp.purchase_price ?? t.purchasePrice;
+  const growthRate = inp.growth_rate ?? t.annualGrowthRate;
+  const years = inp.years ?? t.holdingYears;
+  const futureValue = out.futureValue ?? t.futureValue;
+  const capitalGain = out.capitalGain ?? t.capitalGain;
+  const capitalGainPct = out.capitalGainPct ?? t.capitalGainPct;
+  const growthSource = inp.growth_source ?? t.growthSource;
+  const growthConfidence = inp.growth_confidence ?? t.growthConfidence;
   return (
     <div>
       <TraceSection title="Input Values">
-        <TraceRow label="Purchase Price" value={fmtAED(t.futureValue ? undefined : undefined)} source="" />
-        <TraceRow label="Annual Growth Rate" value={`${fmtNum(t.annualGrowthRate)}%`} source={t.growthDescription || t.growthSource} />
-        <TraceRow label="Growth Source" value={t.growthSource || '—'} source={t.growthConfidence ? `Confidence: ${t.growthConfidence}` : ''} />
-        <TraceRow label="Holding Period" value={`${fmtNum(t.holdingYears, 1)} years`} source="Time to handover / exit" />
+        <TraceRow label="Purchase Price" value={fmtAED(purchasePrice)} source="Qdrant listing" />
+        <TraceRow label="Annual Growth Rate" value={`${fmtNum(growthRate)}%`} source={t.growthDescription || growthSource} />
+        <TraceRow label="Growth Source" value={growthSource || '—'} source={growthConfidence ? `Confidence: ${growthConfidence}` : ''} />
+        <TraceRow label="Holding Period" value={`${fmtNum(years, 1)} years`} source="Time to handover / exit" />
       </TraceSection>
 
       <TraceSection title="Calculation Steps">
-        <TraceRow label="Step 1: Get project growth rate" value={`${fmtNum(t.annualGrowthRate)}%/yr`} source={t.growthDescription} />
-        <TraceRow label="Step 2: Compound over holding period" value={fmtAED(t.futureValue)} source={`price × (1 + ${fmtNum(t.annualGrowthRate)}%)^${fmtNum(t.holdingYears, 1)}`} />
-        <TraceRow label="Step 3: Capital gain" value={fmtAED(t.capitalGain)} source={`${fmtAED(t.futureValue)} − purchase price`} />
-        <TraceRow label="Step 4: Capital gain %" value={`${fmtNum(t.capitalGainPct)}%`} source={`gain ÷ price × 100`} />
+        <TraceRow label="Step 1: Get project growth rate" value={`${fmtNum(growthRate)}%/yr`} source={t.growthDescription || growthSource} />
+        <TraceRow label="Step 2: Compound over holding period" value={fmtAED(futureValue)} source={`price × (1 + ${fmtNum(growthRate)}%)^${fmtNum(years, 1)}`} />
+        <TraceRow label="Step 3: Capital gain" value={fmtAED(capitalGain)} source={`${fmtAED(futureValue)} − purchase price`} />
+        <TraceRow label="Step 4: Capital gain %" value={`${fmtNum(capitalGainPct)}%`} source={`gain ÷ price × 100`} />
       </TraceSection>
 
       <LaymanExplanation>
-        <strong>In plain English:</strong> The DLD data shows that this project's prices have grown by a total of ~{(t.annualGrowthRate * 3).toFixed(1)}% over the last ~3 years.
-        That's <strong>{fmtNum(t.annualGrowthRate)}% per year</strong>. If this trend continues for the next {fmtNum(t.holdingYears, 1)} years until handover,
-        your property could be worth <strong>{fmtAED(t.futureValue)}</strong> — a gain of <strong>{fmtAED(t.capitalGain)}</strong> ({fmtNum(t.capitalGainPct)}%).
+        <strong>In plain English:</strong> The DLD data shows this project's prices growing at <strong>{fmtNum(growthRate)}% per year</strong>.
+        If this trend continues for {fmtNum(years, 1)} years, your property could be worth <strong>{fmtAED(futureValue)}</strong> —
+        a gain of <strong>{fmtAED(capitalGain)}</strong> ({fmtNum(capitalGainPct)}%).
       </LaymanExplanation>
 
       <DataSource>
-        Data source: DLD project statistics (price_change_pct). Growth rate is annualized from total historical change. Source: {t.growthSource}, confidence: {t.growthConfidence}.
+        Data source: DLD project statistics (price_change_pct). Growth rate is annualized from total historical change. Source: {growthSource}, confidence: {growthConfidence}.
       </DataSource>
     </div>
   );
@@ -242,14 +279,14 @@ function TotalReturnTrace({ trace }: { trace: any }) {
       </TraceSection>
 
       <TraceSection title="Costs Deducted">
-        {inputs.annual_service_charge != null ? (
+        {inputs.annual_service_charge != null && inputs.annual_service_charge > 0 ? (
           <>
             <TraceRow label="Annual Service Charge" value={fmtAED(inputs.annual_service_charge)} source="Building maintenance fees (from DLD service charge data)" />
             <TraceRow label="Service Charge Years" value={`${inputs.service_charge_years ?? 1} year(s)`} source="From handover to sale" />
             <TraceRow label="Total Service Charge" value={fmtAED(inputs.total_service_charge)} source={`${fmtAED(inputs.annual_service_charge)} × ${inputs.service_charge_years ?? 1} years`} />
           </>
         ) : (
-          <TraceRow label="Annual Service Charge" value="N/A" source="No DLD service charge data found for this project" />
+          <TraceRow label="Annual Service Charge" value="N/A" source="No DLD service charge data found for this project — not deducted from ROE" />
         )}
         <TraceRow label="Selling Costs (6%)" value={fmtAED((inputs.projected_sale_value ?? 0) * 0.06)} source="4% transfer fee + 2% agent commission" />
       </TraceSection>
@@ -315,8 +352,11 @@ function LeverageTrace({ trace }: { trace: any }) {
 
 function RiskTrace({ trace }: { trace: any }) {
   const t = trace;
-  const components = t.components || {};
-  const weights = t.weights || {};
+  const inp = t.inputs || t;
+  const out = t.output || t;
+  const components = t.components || out.components || {};
+  const weights = t.weights || t.weights || {};
+  const overallRisk = out.overallRisk ?? t.overallRisk;
   const componentNames: Record<string, string> = {
     developerRisk: 'Developer Risk',
     supplyRisk: 'Supply Risk',
@@ -340,12 +380,12 @@ function RiskTrace({ trace }: { trace: any }) {
       </TraceSection>
 
       <TraceSection title="Calculation">
-        <TraceRow label="Overall Risk Score" value={`${t.overallRisk}/100`} source="Weighted sum of all components" />
+        <TraceRow label="Overall Risk Score" value={`${overallRisk}/100`} source="Weighted sum of all components" />
         <TraceRow label="Risk Level" value={t.riskLevel || '—'} source="Derived from overall score" />
       </TraceSection>
 
       <LaymanExplanation>
-        <strong>In plain English:</strong> The risk score of <strong>{t.overallRisk}/100</strong> is calculated by scoring 7 different risk factors and weighting them.
+        <strong>In plain English:</strong> The risk score of <strong>{overallRisk}/100</strong> is calculated by scoring 7 different risk factors and weighting them.
         The biggest risks for this property are highlighted above. Each factor is scored from DLD data — for example, supply risk is based on how many competing projects are being built in the same area.
       </LaymanExplanation>
 
@@ -358,9 +398,12 @@ function RiskTrace({ trace }: { trace: any }) {
 
 function ScoreTrace({ trace }: { trace: any }) {
   const t = trace;
+  const inp = t.inputs || t;
+  const out = t.output || t;
   const breakdown = t.breakdown || {};
-  const weights = t.weights || {};
+  const weights = t.weights || (out.weights || {});
   const componentTrace = t.componentTrace || {};
+  const investmentScore = out.score ?? t.investmentScore;
   const componentNames: Record<string, string> = {
     developer: 'Developer Score',
     pricing: 'Price vs Market',
@@ -408,22 +451,22 @@ function ScoreTrace({ trace }: { trace: any }) {
       </TraceSection>
 
       <TraceSection title="Final Score Calculation">
-        <TraceRow label="Raw Weighted Sum" value={`${fmtNum(t.rawScore, 1)}`} source="Sum of (component score × weight) for all available components" />
-        <TraceRow label="Available Weight" value={`${fmtNum(t.availableWeight, 3)}`} source="Sum of weights for components that have data" />
-        <TraceRow label="Final Investment Score" value={`${t.investmentScore}/100`} source="weightedSum ÷ availableWeight × 100" />
+        {t.rawScore != null && <TraceRow label="Raw Weighted Sum" value={`${fmtNum(t.rawScore, 1)}`} source="Sum of (component score × weight) for all available components" />}
+        {t.availableWeight != null && <TraceRow label="Available Weight" value={`${fmtNum(t.availableWeight, 3)}`} source="Sum of weights for components that have data" />}
+        <TraceRow label="Final Investment Score" value={`${investmentScore}/100`} source={t.formula || "weightedSum ÷ availableWeight × 100"} />
+        {inp.goal && <TraceRow label="Investor Goal" value={inp.goal} source="From questionnaire" />}
+        {inp.strategy && <TraceRow label="Strategy" value={inp.strategy} source={`Strategy file: ${inp.strategy_file || '—'}`} />}
       </TraceSection>
 
       <LaymanExplanation>
-        <strong>In plain English:</strong> The investment score of <strong>{t.investmentScore}/100</strong> is a weighted average of {Object.keys(breakdown).length} factors.
-        Each factor is scored 0-100 based on real DLD data. For example:
+        <strong>In plain English:</strong> The investment score of <strong>{investmentScore}/100</strong> is a weighted average of {Object.keys(breakdown).length || 'several'} factors.
+        Each factor is scored 0-100 based on real DLD data.{Object.keys(breakdown).length > 0 && <> For example:
         <br/><br/>
-        <strong>Developer = {breakdown.developer}</strong>: The developer (Tiger Group) has a strong track record, so this scores high.
+        {breakdown.developer != null && <><strong>Developer = {breakdown.developer}</strong>: Based on the developer's track record.<br/></>}
+        {breakdown.supply != null && <><strong>Supply = {breakdown.supply}</strong>: Based on competing projects in the area.<br/></>}
+        {breakdown.liquidity != null && <><strong>Liquidity = {breakdown.liquidity}</strong>: Based on resale activity in the area.<br/></>}</>}
         <br/>
-        <strong>Supply = {breakdown.supply}</strong>: There are many competing projects being built in the same area (Jumeirah Village Circle), so supply risk is very high — this drags the score down.
-        <br/>
-        <strong>Liquidity = {breakdown.liquidity}</strong>: The area has moderate resale activity — not the easiest to sell quickly.
-        <br/><br/>
-        The final score weights growth and developer heavily (since your goal is capital growth), while still penalizing for supply and liquidity risks.
+        The final score weights factors based on your investor goal ({inp.goal || 'capital growth'}).
       </LaymanExplanation>
 
       <DataSource>
@@ -435,27 +478,237 @@ function ScoreTrace({ trace }: { trace: any }) {
 
 function EvidenceTrace({ trace }: { trace: any }) {
   const t = trace;
+  const inp = t.inputs || t;
+  const out = t.output || t;
   return (
     <div>
       <TraceSection title="Data Coverage">
-        <TraceRow label="Project Sales (same building)" value={`${t.projectSalesCount} transactions`} source="DLD sales for this exact project" />
-        <TraceRow label="Area Sales (same bedroom)" value={`${t.areaSalesCount} transactions`} source="DLD sales in same area, same bedroom" />
-        <TraceRow label="Project Rentals" value={`${t.projectRentalsCount} contracts`} source="DLD Ejari rentals for this project" />
-        <TraceRow label="Area Rentals (same bedroom)" value={`${t.areaRentalsCount} contracts`} source="DLD Ejari rentals in same area" />
-        <TraceRow label="Valuation Method Used" value={t.valuationMethod || '—'} source="Best available evidence level" />
+        <TraceRow label="Project Sales (same building)" value={`${out.project_sales ?? t.projectSalesCount ?? 0} transactions`} source="DLD sales for this exact project" />
+        <TraceRow label="Area Sales (same bedroom)" value={`${out.area_sales ?? t.areaSalesCount ?? 0} transactions`} source="DLD sales in same area, same bedroom" />
+        <TraceRow label="Comparable Sales Used" value={`${out.comparable_sales ?? t.comparableSalesCount ?? 0} transactions`} source="Filtered to residential, same project + bedroom" />
+        <TraceRow label="Comparable Rentals" value={`${out.comparable_rentals ?? t.comparableRentalsCount ?? 0} contracts`} source="DLD Ejari rentals, same area + bedroom" />
         <TraceRow label="Evidence Level" value={t.evidenceLevel || '—'} source="Based on comparable sales count" />
         <TraceRow label="Confidence Level" value={t.confidenceLevel || '—'} source="Mapped from evidence level" />
       </TraceSection>
 
       <LaymanExplanation>
-        <strong>In plain English:</strong> We found <strong>{t.projectSalesCount} sales</strong> for this exact project and <strong>{t.areaSalesCount} sales</strong> in the same area with the same bedroom type.
-        For rentals, <strong>{t.projectRentalsCount} project-level</strong> and <strong>{t.areaRentalsCount} area-level</strong> contracts were found.
-        The valuation uses the <strong>{t.valuationMethod}</strong> method, which means {t.valuationMethod === 'project_bedroom' ? 'we have enough data from this exact building' : 'we use area-level data as a proxy'}.
-        Overall confidence: <strong>{t.confidenceLevel}</strong>.
+        <strong>In plain English:</strong> We searched DLD records for this project ({inp.project || '—'}, {inp.area || '—'}, {inp.bedroom || '—'}).
+        Found <strong>{out.comparable_sales ?? 0} comparable sales</strong> and <strong>{out.comparable_rentals ?? 0} comparable rentals</strong>.
+        {out.comparable_sales > 0 ? 'This gives us good data for valuation.' : 'Limited data — valuation may be less precise.'}
       </LaymanExplanation>
 
       <DataSource>
-        Data source: Dubai Land Department (DLD) verified transaction and Ejari rental records. All counts are actual registered transactions, not estimates.
+        Data source: Dubai Land Department (DLD) verified transaction and Ejari rental records. All counts are actual registered transactions, filtered to residential-only.
+      </DataSource>
+    </div>
+  );
+}
+
+function StrategyTrace({ trace }: { trace: any }) {
+  const t = trace;
+  const inp = t.inputs || {};
+  const out = t.output || {};
+  const weights = out.weights || {};
+  return (
+    <div>
+      <TraceSection title="Investor Inputs">
+        <TraceRow label="Goal" value={inp.goal_input || '—'} source="From questionnaire" />
+        <TraceRow label="Property Status" value={inp.property_status || '—'} source="Off-plan or ready" />
+        <TraceRow label="Timeline" value={`${inp.timeline_years ?? '—'} years`} source="Investor holding period" />
+        <TraceRow label="Risk Profile" value={inp.risk_profile || '—'} source="From questionnaire" />
+        <TraceRow label="Strategy File" value={inp.strategy_file || '—'} source="JSON config loaded" />
+      </TraceSection>
+
+      <TraceSection title="Scoring Weights Applied">
+        {Object.entries(weights).map(([k, v]: [string, any]) => (
+          <TraceRow key={k} label={k.charAt(0).toUpperCase() + k.slice(1)} value={`${(v * 100).toFixed(0)}%`} source={`Weight for ${k} component`} />
+        ))}
+      </TraceSection>
+
+      <LaymanExplanation>
+        <strong>In plain English:</strong> Based on your goal ({inp.goal_input}), property type ({inp.property_status}), and timeline ({inp.timeline_years}y),
+        the system loaded the <strong>{inp.strategy_file}</strong> strategy. This determines how each factor is weighted when scoring the property.
+        {inp.goal_input === 'capital_growth' && inp.property_status === 'off_plan' && ' For capital growth on off-plan, a flip-at-handover model is used (sell at completion, no rental period).'}
+      </LaymanExplanation>
+
+      <DataSource>
+        Data source: Strategy configs in /strategies/*.json. Weights adjusted by timeline and property status. Flip-at-handover hardcoded for capital_growth + off_plan.
+      </DataSource>
+    </div>
+  );
+}
+
+function FitTrace({ trace }: { trace: any }) {
+  const t = trace;
+  const inp = t.inputs || {};
+  const out = t.output || {};
+  return (
+    <div>
+      <TraceSection title="Investor vs Property Match">
+        <TraceRow label="Asking Price" value={fmtAED(inp.asking_price)} source="Qdrant listing" />
+        <TraceRow label="Budget Range" value={`${fmtAED(inp.budget_min)} – ${fmtAED(inp.budget_max)}`} source="From questionnaire" />
+        <TraceRow label="Within Budget" value={inp.within_budget ? 'Yes' : 'No'} source={inp.budget_overflow_pct > 0 ? `Overflow: ${inp.budget_overflow_pct}%` : 'Price within budget'} />
+        <TraceRow label="Investor Goal" value={inp.goal || '—'} source="From questionnaire" />
+        <TraceRow label="Risk Score" value={`${inp.risk_overall ?? '—'}/100`} source="From risk engine" />
+        <TraceRow label="Developer Score" value={`${inp.developer_score ?? '—'}/100`} source="From developer_scores.json" />
+      </TraceSection>
+
+      <TraceSection title="Result">
+        <TraceRow label="Fit Score" value={`${out.fitScore ?? '—'}/100`} source={t.formula || 'Weighted dimensions with budget penalty'} />
+      </TraceSection>
+
+      <LaymanExplanation>
+        <strong>In plain English:</strong> This property is priced at <strong>{fmtAED(inp.asking_price)}</strong> and your budget is <strong>{fmtAED(inp.budget_min)}–{fmtAED(inp.budget_max)}</strong>.
+        {inp.within_budget ? ' The price is within your budget.' : ` The price exceeds your budget by ${inp.budget_overflow_pct}%.`}
+        The fit score of <strong>{out.fitScore}/100</strong> measures how well this property matches your investor profile.
+      </LaymanExplanation>
+
+      <DataSource>
+        Data source: Investor questionnaire + property data + risk score + developer score. Budget mismatch hard-caps fit at 40.
+      </DataSource>
+    </div>
+  );
+}
+
+function PropertyTrace({ trace }: { trace: any }) {
+  const t = trace;
+  return (
+    <div>
+      <TraceSection title="Property Data Source">
+        <TraceRow label="Project" value={t.project || t.name || '—'} source="Qdrant property listing" />
+        <TraceRow label="Area" value={t.area || '—'} source="Qdrant property listing" />
+        <TraceRow label="Developer" value={t.developer || '—'} source="Qdrant → developer_scores.json" />
+        <TraceRow label="Bedroom" value={t.bedType || '—'} source="Qdrant property listing" />
+        <TraceRow label="Size" value={`${t.sizeSqft ?? '—'} sqft`} source="Qdrant property listing" />
+        <TraceRow label="Asking Price" value={fmtAED(t.askingPrice)} source="Qdrant property listing" />
+        <TraceRow label="Price/sqft" value={`${fmtNum(t.priceSqft)} AED/sqft`} source={`asking price ÷ size`} />
+        <TraceRow label="Status" value={t.status || '—'} source="Off-plan or ready" />
+        <TraceRow label="Construction Years" value={t.constructionYears ? `${t.constructionYears} years` : 'Default 2.5'} source={t.constructionYears ? 'Qdrant listing' : 'Fallback (no data in Qdrant)'} />
+      </TraceSection>
+
+      <LaymanExplanation>
+        <strong>In plain English:</strong> This property is a <strong>{t.bedType}</strong> in <strong>{t.project}</strong> by <strong>{t.developer}</strong>, located in <strong>{t.area}</strong>.
+        It's priced at <strong>{fmtAED(t.askingPrice)}</strong> ({fmtNum(t.priceSqft)} AED/sqft for {t.sizeSqft} sqft).
+        All property data comes from Qdrant (the property listing database).
+      </LaymanExplanation>
+
+      <DataSource>
+        Data source: Qdrant property database (listing details, price, size, developer, handover date). Developer score from developer_scores.json.
+      </DataSource>
+    </div>
+  );
+}
+
+function PaymentPlanTrace({ trace }: { trace: any }) {
+  const t = trace;
+  const plans = t.plans || (t.downPaymentPct ? [t] : []);
+  return (
+    <div>
+      <TraceSection title="Payment Plan Structure">
+        <TraceRow label="Down Payment" value={`${t.downPaymentPct ?? '—'}%`} source={t.askingPrice ? `${fmtAED(t.askingPrice * (t.downPaymentPct || 0) / 100)}` : 'Qdrant listing'} />
+        <TraceRow label="During Construction" value={`${t.duringConstructionPct ?? '—'}%`} source="Paid in installments over construction period" />
+        <TraceRow label="On Handover" value={`${t.onHandoverPct ?? '—'}%`} source="Final payment at key handover" />
+        <TraceRow label="Total" value={`${(t.downPaymentPct || 0) + (t.duringConstructionPct || 0) + (t.onHandoverPct || 0)}%`} source="Should equal 100%" />
+        {t.isComplete != null && <TraceRow label="Plan Complete" value={t.isComplete ? 'Yes' : 'No'} source="All percentages sum to 100%" />}
+      </TraceSection>
+
+      {t.installments && t.installments.length > 0 && (
+        <TraceSection title="Installment Schedule">
+          {t.installments.map((inst: any, i: number) => (
+            <TraceRow key={i} label={inst.label || inst.milestone || `Installment ${i + 1}`} value={`${inst.percentage || inst.percent}%`} source="From Qdrant payment plan" />
+          ))}
+        </TraceSection>
+      )}
+
+      <LaymanExplanation>
+        <strong>In plain English:</strong> You pay <strong>{t.downPaymentPct}%</strong> upfront as a down payment,
+        <strong> {t.duringConstructionPct}%</strong> during construction (in installments),
+        and <strong>{t.onHandoverPct}%</strong> at handover when you get the keys.
+        This structure affects your cash flow timing and leverage.
+      </LaymanExplanation>
+
+      <DataSource>
+        Data source: Qdrant property listing (payment plan field). Extracted by matching project name to Qdrant project cache.
+      </DataSource>
+    </div>
+  );
+}
+
+function ConstructionTrace({ trace }: { trace: any }) {
+  const t = trace;
+  return (
+    <div>
+      <TraceSection title="Construction Timeline">
+        <TraceRow label="Construction Period" value={`${t.constructionYears ?? '2.5'} years`} source={t.constructionYears ? 'Qdrant listing' : 'Default fallback (2.5 years)'} />
+        <TraceRow label="Handover Date" value={t.handoverDate || '—'} source={t.handoverSource || 'Qdrant listing'} />
+        <TraceRow label="Handover Confidence" value={t.handoverConfidence || '—'} source="Based on data quality" />
+      </TraceSection>
+
+      <LaymanExplanation>
+        <strong>In plain English:</strong> Construction is expected to take <strong>{t.constructionYears ?? 2.5} years</strong>.
+        {t.handoverDate ? ` Estimated handover: ${t.handoverDate}.` : ' No specific handover date available — using estimate.'}
+        {t.constructionYears == null && ' Note: Qdrant does not have construction timeline data for this project, so the default of 2.5 years is used.'}
+      </LaymanExplanation>
+
+      <DataSource>
+        Data source: Qdrant property listing (construction_years, expected_completion). Default fallback: 2.5 years when no data available.
+      </DataSource>
+    </div>
+  );
+}
+
+function MarketTrace({ trace }: { trace: any }) {
+  const t = trace;
+  return (
+    <div>
+      <TraceSection title="Area Market Data">
+        <TraceRow label="Area" value={t.area || '—'} source="Property location" />
+        <TraceRow label="Area Sales Count" value={`${t.areaSalesCount ?? '—'} transactions`} source="DLD transactions for this area" />
+        <TraceRow label="Area Rentals Count" value={`${t.areaRentalsCount ?? '—'} contracts`} source="DLD Ejari rentals for this area" />
+        <TraceRow label="Median Price/sqft" value={`${fmtNum(t.medianPriceSqft)} AED/sqft`} source="From DLD comparable sales" />
+        <TraceRow label="Growth Rate" value={`${fmtNum(t.growthRate)}%/yr`} source={t.growthSource || 'DLD project stats'} />
+        <TraceRow label="Supply Index" value={`${t.supplyIndex ?? '—'}/100`} source="Based on competing projects in area" />
+        <TraceRow label="Liquidity Index" value={`${t.liquidityIndex ?? '—'}/100`} source="Based on transaction turnover rate" />
+      </TraceSection>
+
+      <LaymanExplanation>
+        <strong>In plain English:</strong> The <strong>{t.area}</strong> area has <strong>{t.areaSalesCount} recorded sales</strong> and <strong>{t.areaRentalsCount} rental contracts</strong> in the DLD database.
+        Prices have been {'growing' /* placeholder */} at <strong>{fmtNum(t.growthRate)}%/year</strong>.
+        Supply risk is <strong>{t.supplyIndex}/100</strong> and liquidity is <strong>{t.liquidityIndex}/100</strong>.
+      </LaymanExplanation>
+
+      <DataSource>
+        Data source: DLD transaction records (sales, rentals), DLD project stats (growth rate), area-level calculations (supply, liquidity indices).
+      </DataSource>
+    </div>
+  );
+}
+
+function ExitStrategyTrace({ trace }: { trace: any }) {
+  const t = trace;
+  return (
+    <div>
+      <TraceSection title="Exit Strategy">
+        <TraceRow label="Strategy" value={t.exitStrategy || t.strategy || '—'} source="Resolved from investor goal + property status" />
+        <TraceRow label="Holding Period" value={t.holdingPeriod || `${t.timelineYears ?? '—'} years`} source="From investor timeline" />
+        <TraceRow label="Exit Type" value={t.exitType || '—'} source="Sell at handover, rent then sell, or hold" />
+      </TraceSection>
+
+      <TraceSection title="Projected Outcome">
+        <TraceRow label="Future Value" value={fmtAED(t.futureValue)} source="Purchase price × (1 + growth)^years" />
+        <TraceRow label="Capital Gain" value={fmtAED(t.capitalGain)} source="Future value − purchase price" />
+        <TraceRow label="Capital Gain %" value={`${fmtNum(t.capitalGainPct)}%`} source="Gain ÷ price × 100" />
+        {t.completionYears && <TraceRow label="Years to Exit" value={`${t.completionYears} years`} source="Construction + holding period" />}
+      </TraceSection>
+
+      <LaymanExplanation>
+        <strong>In plain English:</strong> The recommended strategy is to <strong>{t.exitStrategy || 'sell at handover'}</strong>.
+        {t.exitStrategy === 'flip_handover' || t.exitType === 'flip' ? ' This means buying off-plan, paying installments during construction, and selling at handover for a quick profit.' : ' This means holding the property and either renting it out or waiting for appreciation before selling.'}
+        Projected value at exit: <strong>{fmtAED(t.futureValue)}</strong> (a gain of <strong>{fmtAED(t.capitalGain)}</strong>).
+      </LaymanExplanation>
+
+      <DataSource>
+        Data source: Strategy resolver (goal + property status → exit strategy). Growth projection from DLD data. Flip-at-handover hardcoded for capital_growth + off_plan.
       </DataSource>
     </div>
   );

@@ -8,7 +8,7 @@
  *
  * Off-plan property:
  *   - Replace entire section with purchase price, payment schedule,
- *     construction progress, expected exit value, capital gain, ROE
+ *     construction progress, expected exit value, capital gain, total return
  *   - Never display rental ROI, annual rent, vacancy, rental calculator
  */
 import { TrendingUp, Calendar, Target, DollarSign, ChevronDown } from 'lucide-react';
@@ -73,21 +73,30 @@ function ReadyReturnsSection({ property, topRec, ctx, community }: ReturnsSectio
   const hasRentData = ctx.hasRentalEvidence;
   const askingPrice = safeVal(property.askingPrice) || 0;
   const estRent = safeVal(rentalData.annualRent) ?? safeVal(property.estimatedRent) ?? 0;
-  const serviceCharge = safeVal(rentalData.serviceCharge) ?? safeVal(property.serviceChargeAnnual) ?? 0;
-  const mgmtFee = safeVal(rentalData.managementFee) ?? safeVal(property.managementFee) ?? 0;
-  const vacancyCost = safeVal(rentalData.vacancyCost) ?? 0;
-  const netIncome = safeVal(rentalData.netAnnualIncome) ?? safeVal(property.netAnnualIncome) ?? 0;
+  // CRITICAL: Never coalesce null to 0 for financial metrics.
+  // null = genuinely unknown (N/A), 0 = confirmed zero.
+  const serviceChargeRaw = safeVal(rentalData.serviceCharge) ?? safeVal(property.serviceChargeAnnual);
+  const mgmtFeeRaw = safeVal(rentalData.managementFee) ?? safeVal(property.managementFee);
+  const vacancyCostRaw = safeVal(rentalData.vacancyCost);
+  const netIncomeRaw = safeVal(rentalData.netAnnualIncome) ?? safeVal(property.netAnnualIncome);
+
+  // For calculations that need numbers, use 0 fallback only if ALL components are available
+  const hasCompleteCostData = serviceChargeRaw !== null && mgmtFeeRaw !== null && vacancyCostRaw !== null;
+  const serviceCharge = serviceChargeRaw ?? 0;
+  const mgmtFee = mgmtFeeRaw ?? 0;
+  const vacancyCost = vacancyCostRaw ?? 0;
+  const netIncome = netIncomeRaw; // Keep null if unknown
   const isCapitalGrowth = isGrowthGoal(ctx);
 
   // Scenarios — use engine stress test data when available
   const rentStress = stressTests.rent_minus_10pct || {};
   const rentDownROI = safeVal(rentStress.new_net_yield) != null
     ? safeVal(rentStress.new_net_yield)!
-    : (askingPrice > 0 && netIncome > 0
-      ? Math.round(((netIncome * 0.9) / askingPrice) * 1000) / 10
+    : (askingPrice > 0 && netIncomeRaw != null && netIncomeRaw > 0
+      ? Math.round(((netIncomeRaw * 0.9) / askingPrice) * 1000) / 10
       : 0);
   const negotiatedPrice = askingPrice * 0.95;
-  const negotiatedROI = negotiatedPrice > 0 && netIncome > 0 ? Math.round((netIncome / negotiatedPrice) * 1000) / 10 : null;
+  const negotiatedROI = negotiatedPrice > 0 && netIncomeRaw != null && netIncomeRaw > 0 ? Math.round((netIncomeRaw / negotiatedPrice) * 1000) / 10 : null;
   const stressRec = rentDownROI >= 6.8 ? 'Still a Buy' : rentDownROI >= 4 ? 'Hold — yield drops below average' : 'Caution — income at risk';
 
   // Build KPI cards — always show key rental metrics when available
@@ -120,21 +129,45 @@ function ReadyReturnsSection({ property, topRec, ctx, community }: ReturnsSectio
         bg: 'bg-blue-50',
         textColor: 'text-blue-600',
       });
+    } else if (grossROI != null && serviceChargeRaw === null) {
+      // Gross yield available but net N/A because service charge unknown
+      kpiCards.push({
+        label: 'Net Yield',
+        value: 'N/A',
+        sublabel: 'Service charge data unavailable',
+        bg: 'bg-gray-50',
+        textColor: 'text-gray-400',
+      });
     }
-    if (netIncome !== 0) {
+    if (netIncomeRaw !== null && netIncomeRaw !== 0) {
       kpiCards.push({
         label: 'Net Income / Year',
-        value: formatAED(netIncome),
+        value: formatAED(netIncomeRaw),
         sublabel: 'After costs & vacancy',
         bg: 'bg-green-50',
         textColor: 'text-green-600',
       });
     }
-    if (growth12 !== null && growth12 !== 0) {
+    // Total-return figures come from the engine's dated cash-flow model — never
+    // recomputed here. IRR (annualizedReturnPct) prices every payment/rent/sale
+    // on its actual year; Total ROI (totalReturnPct) is profit over equity.
+    // A 12-month historical trend (growth12) is NOT an annualized projection and
+    // must never be added to yield to fake a "total return".
+    const totalRoi = safeVal(topRec?.returns?.totalReturn?.totalReturnPct);
+    const annualizedIrr = safeVal(topRec?.returns?.totalReturn?.annualizedReturnPct);
+    if (annualizedIrr != null) {
       kpiCards.push({
-        label: 'Total Return Est.',
-        value: `${((netROI ?? 0) + Math.max(0, growth12 ?? 0)).toFixed(1)}%`,
-        sublabel: 'Yield + Growth combined',
+        label: 'Annualized Return (IRR)',
+        value: `${annualizedIrr.toFixed(1)}%`,
+        sublabel: 'On dated cash flows',
+        bg: 'bg-amber-50',
+        textColor: 'text-amber-600',
+      });
+    } else if (totalRoi != null) {
+      kpiCards.push({
+        label: 'Total Return (ROI)',
+        value: `${totalRoi.toFixed(1)}%`,
+        sublabel: 'Profit / equity over hold',
         bg: 'bg-amber-50',
         textColor: 'text-amber-600',
       });
@@ -142,17 +175,17 @@ function ReadyReturnsSection({ property, topRec, ctx, community }: ReturnsSectio
   } else {
     kpiCards.push({
       label: 'Net Income / Year',
-      value: formatAED(netIncome),
-      sublabel: 'After all costs',
-      bg: 'bg-green-50',
-      textColor: 'text-green-600',
+      value: netIncomeRaw != null ? formatAED(netIncomeRaw) : 'N/A',
+      sublabel: netIncomeRaw != null ? 'After all costs' : 'Service charge data unavailable',
+      bg: netIncomeRaw != null ? 'bg-green-50' : 'bg-gray-50',
+      textColor: netIncomeRaw != null ? 'text-green-600' : 'text-gray-400',
     });
     kpiCards.push({
       label: 'Net Yield',
-      value: netROI != null ? `${netROI.toFixed(1)}%` : '—',
-      sublabel: 'Annual return on price',
-      bg: 'bg-blue-50',
-      textColor: 'text-blue-600',
+      value: netROI != null ? `${netROI.toFixed(1)}%` : (grossROI != null ? 'N/A' : '—'),
+      sublabel: netROI != null ? 'Annual return on price' : (grossROI != null ? 'Service charge data unavailable' : 'No rental data'),
+      bg: netROI != null ? 'bg-blue-50' : (grossROI != null ? 'bg-gray-50' : 'bg-gray-50'),
+      textColor: netROI != null ? 'text-blue-600' : 'text-gray-400',
     });
   }
 
@@ -212,15 +245,26 @@ function ReadyReturnsSection({ property, topRec, ctx, community }: ReturnsSectio
               </div>
               <div>
                 <p className="text-xs text-apil-gray-500">Service Charge</p>
-                <p className="font-semibold text-red-500">-{formatAED(serviceCharge)}</p>
+                <p className={`font-semibold ${serviceChargeRaw !== null ? 'text-red-500' : 'text-apil-gray-400'}`}>
+                  {serviceChargeRaw !== null ? `-${formatAED(serviceCharge)}` : 'N/A'}
+                </p>
               </div>
               <div>
                 <p className="text-xs text-apil-gray-500">Mgmt + Vacancy</p>
-                <p className="font-semibold text-red-500">{mgmtFee > 0 || vacancyCost > 0 ? `-${formatAED(Math.round(mgmtFee + vacancyCost))}` : 'Not modeled'}</p>
+                <p className={`font-semibold ${mgmtFeeRaw !== null && vacancyCostRaw !== null ? 'text-red-500' : 'text-apil-gray-400'}`}>
+                  {mgmtFeeRaw !== null && vacancyCostRaw !== null
+                    ? `-${formatAED(Math.round(mgmtFee + vacancyCost))}`
+                    : 'Not modeled'}
+                </p>
               </div>
               <div>
                 <p className="text-xs text-apil-gray-500">Net Cash Flow</p>
-                <p className={`font-semibold ${netIncome > 0 ? 'text-green-600' : 'text-red-500'}`}>{formatAED(Math.round(netIncome))}</p>
+                <p className={`font-semibold ${netIncomeRaw !== null ? (netIncomeRaw > 0 ? 'text-green-600' : 'text-red-500') : 'text-apil-gray-400'}`}>
+                  {netIncomeRaw !== null ? formatAED(Math.round(netIncomeRaw)) : 'N/A'}
+                </p>
+                {netIncomeRaw === null && serviceChargeRaw === null && (
+                  <p className="text-[10px] text-amber-600 mt-0.5">Service charge data unavailable</p>
+                )}
               </div>
             </div>
           </div>
@@ -236,52 +280,6 @@ function ReadyReturnsSection({ property, topRec, ctx, community }: ReturnsSectio
           </div>
         )}
       </div>
-
-      {/* Scenario Analysis — only if we have rental data */}
-      {hasRentData && (
-        <div className="premium-card p-6">
-          <h3 className="font-semibold text-apil-gray-900 mb-1">What If? — Stress Test</h3>
-          <p className="text-xs text-apil-gray-500 mb-4">How does the investment hold up under pressure?</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 bg-red-50/30 rounded-lg border border-red-100">
-              <p className="text-sm font-semibold text-apil-gray-700 mb-2">If market rents drop 10%</p>
-              <div className="flex items-center gap-3 text-sm mb-2">
-                <div>
-                  <p className="text-xs text-apil-gray-500">Net Yield</p>
-                  <p className="font-semibold text-apil-gray-900">{netROI != null ? `${netROI.toFixed(2)}%` : '—'}</p>
-                </div>
-                <span className="text-apil-gray-400">→</span>
-                <div>
-                  <p className="text-xs text-apil-gray-500">Stressed Yield</p>
-                  <p className="font-semibold text-red-500">{rentDownROI.toFixed(2)}%</p>
-                </div>
-              </div>
-              <div className="text-xs text-apil-gray-500 mb-2">
-                {estRent > 0 && (
-                  <>Rent: {formatAED(estRent)} → {formatAED(estRent * 0.9)} · </>
-                )}
-                Net income: {formatAED(netIncome)} → {formatAED(safeVal(rentStress.new_net_income) ?? netIncome * 0.9)}
-              </div>
-              <p className={`text-xs font-medium ${rentDownROI >= 6.8 ? 'text-green-600' : rentDownROI >= 4 ? 'text-amber-600' : 'text-red-500'}`}>{stressRec}</p>
-            </div>
-            <div className="p-4 bg-green-50/30 rounded-lg border border-green-100">
-              <p className="text-sm font-semibold text-apil-gray-700 mb-2">If you negotiate 5% off</p>
-              <div className="flex items-center gap-3 text-sm mb-2">
-                <div>
-                  <p className="text-xs text-apil-gray-500">Price</p>
-                  <p className="font-semibold text-apil-gray-900">{fmtAEDsafe(property.askingPrice)}</p>
-                </div>
-                <span className="text-apil-gray-400">→</span>
-                <div>
-                  <p className="text-xs text-apil-gray-500">New Price</p>
-                  <p className="font-semibold text-green-600">{formatAED(negotiatedPrice)}</p>
-                </div>
-              </div>
-              <p className="text-xs text-green-600 font-medium">{negotiatedROI !== null ? `ROI improves to ${negotiatedROI}%` : 'ROI improvement depends on rental data'}</p>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Benchmark Comparison */}
       <div className="premium-card p-6">
@@ -324,8 +322,8 @@ function OffPlanReturnsSection({ property, topRec, ctx }: ReturnsSectionProps) {
   const postHandoverROI = topRec?.postHandoverROI || {};
   const rentalGoal = isRentalGoal(ctx);
   const growthGoal = isGrowthGoal(ctx);
-  const hasExitValue = isAvailable(ctx, 'projected_exit_value');
-  const hasGrowthRate = isAvailable(ctx, 'growth_rate');
+  const hasExitValue = futureApp.futureValue != null && futureApp.futureValue !== undefined;
+  const hasGrowthRate = futureApp.growthRate != null && futureApp.growthRate !== undefined;
   const hasRental = isAvailable(ctx, 'rental_income') || isAlternativeOnly(ctx, 'rental_income');
   const showRentalStress = !shouldHideSection(ctx, 'rental_stress');
   const showSalePriceStress = !shouldHideSection(ctx, 'sale_price_stress');
@@ -410,15 +408,30 @@ function OffPlanReturnsSection({ property, topRec, ctx }: ReturnsSectionProps) {
     });
   }
 
-  // ROE if available
-  const roePct = topRec?.returns?.totalReturn?.roePct;
+  // Total-return metrics from the engine's dated cash-flow model.
+  // roePct here equals totalReturnPct (simple profit / equity) — it is a Total
+  // ROI, not an ROE in the financial-accounting sense, so it is labeled as such.
+  // The IRR (annualizedReturnPct) prices each payment on its actual year and is
+  // shown separately. Neither is ever recomputed in the frontend.
+  const trTotal = topRec?.returns?.totalReturn;
+  const roePct = safeVal(trTotal?.roePct);
+  const irrPct = safeVal(trTotal?.annualizedReturnPct);
   if (roePct != null) {
     kpiCards.push({
-      label: 'ROE',
+      label: 'Total Return on Equity',
       value: `${roePct.toFixed(1)}%`,
-      sublabel: 'Return on Equity',
+      sublabel: 'Profit / total equity invested',
       bg: 'bg-emerald-50',
       textColor: 'text-emerald-600',
+    });
+  }
+  if (irrPct != null) {
+    kpiCards.push({
+      label: 'Annualized Return (IRR)',
+      value: `${irrPct.toFixed(1)}%`,
+      sublabel: 'On dated cash flows',
+      bg: 'bg-amber-50',
+      textColor: 'text-amber-600',
     });
   }
 
@@ -480,20 +493,20 @@ function OffPlanReturnsSection({ property, topRec, ctx }: ReturnsSectionProps) {
           </div>
           <div className="p-3 bg-apil-gray-50 rounded-lg">
             <p className="text-xs text-apil-gray-500">Investment Horizon</p>
-            <p className="font-semibold">{futureApp.completionYears ? `${futureApp.completionYears} years` : '—'}</p>
+            <p className="font-semibold">{futureApp.holdingYears ? `${futureApp.holdingYears} years` : '—'}</p>
           </div>
         </div>
 
         {/* Calculation trace — click to expand */}
         <CalcTracePanel trace={topRec?.calcTrace?.growth} section="growth" title="Capital Growth Projection" />
-        <CalcTracePanel trace={topRec?.calcTrace?.totalReturn} section="totalReturn" title="ROE & Total Return" />
+        <CalcTracePanel trace={topRec?.calcTrace?.totalReturn} section="totalReturn" title="Total Return & IRR" />
 
         {/* Unavailable metrics explanation */}
         {!hasExitValue && (
           <div className="mt-4 p-4 bg-amber-50/50 rounded-lg border border-amber-100">
             <p className="text-sm text-apil-gray-700">
               <strong className="text-amber-700">Capital growth rate cannot be estimated</strong> because there is insufficient comparable sales / project growth data.
-              Projected growth metrics are therefore marked as N/A. ROE is calculated independently from the purchase price, payment plan, and exit value.
+              Projected growth metrics are therefore marked as N/A. Total ROI is calculated independently from the purchase price, payment plan, and exit value.
             </p>
           </div>
         )}
@@ -609,123 +622,15 @@ function OffPlanReturnsSection({ property, topRec, ctx }: ReturnsSectionProps) {
         </div>
       )}
 
-      {/* Off-Plan Stress Tests — real off-plan risk scenarios */}
-      <div className="premium-card p-6">
-        <h3 className="font-semibold text-apil-gray-900 mb-1">What If? — Off-Plan Risk Scenarios</h3>
-        <p className="text-xs text-apil-gray-500 mb-4">How does the investment hold up under real-world off-plan risks?</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Construction Delay */}
-          {showConstructionStress && (
-          <div className="p-4 bg-red-50/30 rounded-lg border border-red-100">
-            <p className="text-sm font-semibold text-apil-gray-700 mb-2">Construction delayed 12 months</p>
-            <div className="flex items-center gap-3 text-sm mb-2">
-              <div>
-                <p className="text-xs text-apil-gray-500">Expected Exit</p>
-                <p className="font-semibold text-apil-gray-900">{futureApp.completionYears ? `${futureApp.completionYears}y` : '—'}</p>
-              </div>
-              <span className="text-apil-gray-400">→</span>
-              <div>
-                <p className="text-xs text-apil-gray-500">Delayed Exit</p>
-                <p className="font-semibold text-red-500">{futureApp.completionYears ? `${futureApp.completionYears + 1}y` : '—'}</p>
-              </div>
-            </div>
-            <p className="text-xs text-amber-600 font-medium">Additional carrying costs + delayed rental income. Opportunity cost of tied-up capital.</p>
-          </div>
-          )}
-
-          {/* Payment Plan Increase */}
-          {showPaymentStress && (
-          <div className="p-4 bg-amber-50/30 rounded-lg border border-amber-100">
-            <p className="text-sm font-semibold text-apil-gray-700 mb-2">Developer increases down payment</p>
-            <div className="flex items-center gap-3 text-sm mb-2">
-              <div>
-                <p className="text-xs text-apil-gray-500">Current Down</p>
-                <p className="font-semibold text-apil-gray-900">{ppAnalysis.downPaymentPct ? `${ppAnalysis.downPaymentPct}%` : '—'}</p>
-              </div>
-              <span className="text-apil-gray-400">→</span>
-              <div>
-                <p className="text-xs text-apil-gray-500">Stressed</p>
-                <p className="font-semibold text-amber-600">{ppAnalysis.downPaymentPct ? `${ppAnalysis.downPaymentPct + 10}%` : '—'}</p>
-              </div>
-            </div>
-            <p className="text-xs text-amber-600 font-medium">+10% down payment increases upfront capital commitment and reduces leverage.</p>
-          </div>
-          )}
-
-          {/* Rental Below Forecast — only if rental data exists */}
-          {showRentalStress && (
-            <div className={`p-4 bg-orange-50/30 rounded-lg border border-orange-100 ${growthGoal ? 'opacity-70' : ''}`}>
-              <p className="text-sm font-semibold text-apil-gray-700 mb-2">Rental 10% below forecast after handover{growthGoal ? ' (alternative scenario)' : ''}</p>
-              {topRec?.postHandoverROI?.estimatedRent != null ? (
-                <>
-                  <div className="flex items-center gap-3 text-sm mb-2">
-                    <div>
-                      <p className="text-xs text-apil-gray-500">Projected Rent</p>
-                      <p className="font-semibold text-apil-gray-900">{fmtAEDsafe(topRec?.postHandoverROI?.estimatedRent)}</p>
-                    </div>
-                    <span className="text-apil-gray-400">→</span>
-                    <div>
-                      <p className="text-xs text-apil-gray-500">Stressed Rent</p>
-                      <p className="font-semibold text-orange-500">{fmtAEDsafe(topRec.postHandoverROI.estimatedRent * 0.9)}</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-amber-600 font-medium">Lower yield extends break-even period. Verify rent estimates with local agents.</p>
-                </>
-              ) : (
-                <p className="text-xs text-apil-gray-500">Rental forecast unavailable due to insufficient lease data.</p>
-              )}
-            </div>
-          )}
-
-          {/* Price Appreciation Lower — only if exit value exists */}
-          {showSalePriceStress && (
-          <div className="p-4 bg-purple-50/30 rounded-lg border border-purple-100">
-            <p className="text-sm font-semibold text-apil-gray-700 mb-2">Sale price 10% lower than projected</p>
-            <div className="flex items-center gap-3 text-sm mb-2">
-              <div>
-                <p className="text-xs text-apil-gray-500">Base ROE (total return)</p>
-                <p className="font-semibold text-apil-gray-900">{topRec?.returns?.totalReturn?.roePct != null ? `${topRec.returns.totalReturn.roePct.toFixed(2)}%` : (futureApp.potentialGainPct != null ? `${futureApp.potentialGainPct.toFixed(2)}% (capital gain)` : '—')}</p>
-              </div>
-              <span className="text-apil-gray-400">→</span>
-              <div>
-                <p className="text-xs text-apil-gray-500">Stressed ROE</p>
-                <p className="font-semibold text-purple-500">{topRec?.returns?.totalReturn?.stressTests?.price_minus_10pct?.roe != null ? `${topRec.returns.totalReturn.stressTests.price_minus_10pct.roe.toFixed(2)}%` : (futureApp.potentialGainPct != null ? `${(futureApp.potentialGainPct * 0.90).toFixed(2)}% (capital gain)` : '—')}</p>
-              </div>
-            </div>
-            {topRec?.returns?.totalReturn?.roePct == null && (
-              <p className="text-[10px] text-apil-gray-400 mb-1">ROE unavailable — showing capital gain % as proxy. ROE includes rental income; capital gain does not.</p>
-            )}
-            {topRec?.returns?.totalReturn?.available && (
-              <p className="text-[10px] text-apil-gray-400 mb-1">
-                {growthGoal
-                  ? 'ROE measures the total return generated on the investor\'s equity. It is calculated as net profit divided by total equity invested. For a sell-at-completion strategy, rental income is zero and ROE reflects the net capital gain after applicable costs.'
-                  : 'ROE measures the total return generated on the investor\'s equity. It is calculated as net profit (sale proceeds + rental income − total equity invested − applicable costs) divided by total equity invested. It is not the same as gross rental yield.'
-                }
-              </p>
-            )}
-            <p className="text-xs text-amber-600 font-medium">10% price reduction at sale. Reduced capital gain impacts overall ROI.</p>
-          </div>
-          )}
-
-          {/* Sale price stress unavailable */}
-          {!showSalePriceStress && (
-            <div className="p-4 bg-gray-50/30 rounded-lg border border-gray-100">
-              <p className="text-sm font-semibold text-apil-gray-500 mb-1">Sale-price stress test unavailable</p>
-              <p className="text-xs text-apil-gray-400">Projected exit value is not available — cannot calculate price appreciation stress.</p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* ROE Cash-Flow Schedule — expandable */}
+      {/* Cash-Flow Schedule — expandable */}
       {topRec?.returns?.totalReturn?.available && topRec.returns.totalReturn.cashFlows && (
-        <ROECashFlowCard totalReturn={topRec.returns.totalReturn} futureApp={futureApp} property={property} />
+        <CashFlowCard totalReturn={topRec.returns.totalReturn} futureApp={futureApp} property={property} />
       )}
     </div>
   );
 }
 
-function ROECashFlowCard({ totalReturn, futureApp, property }: { totalReturn: any; futureApp: any; property?: any }) {
+function CashFlowCard({ totalReturn, futureApp, property }: { totalReturn: any; futureApp: any; property?: any }) {
   const [expanded, setExpanded] = useState(false);
   const cashFlows: number[] = totalReturn.cashFlows || [];
   const paymentSchedule: {year: number; amount: number; label: string}[] = totalReturn.paymentSchedule || [];
@@ -831,15 +736,16 @@ function ROECashFlowCard({ totalReturn, futureApp, property }: { totalReturn: an
         className="flex items-center gap-2 w-full text-left"
       >
         <DollarSign className="w-5 h-5 text-blue-600" />
-        <h3 className="font-semibold text-apil-gray-900 flex-1">ROE Cash-Flow Schedule</h3>
-        <span className="text-xs text-apil-gray-500">{totalReturn.roePct?.toFixed(2)}% ROE</span>
+        <h3 className="font-semibold text-apil-gray-900 flex-1">Cash-Flow Schedule</h3>
+        <span className="text-xs text-apil-gray-500">{totalReturn.roePct?.toFixed(2)}% Total ROI</span>
         <ChevronDown className={`w-4 h-4 text-apil-gray-400 transition-transform ${expanded ? 'rotate-180' : ''}`} />
       </button>
 
       {expanded && (
         <div className="mt-4">
           <p className="text-xs text-apil-gray-500 mb-3">
-            ROE: <strong>{totalReturn.roePct?.toFixed(2)}%</strong>
+            Total ROI: <strong>{totalReturn.roePct?.toFixed(2)}%</strong>
+            {totalReturn.annualizedReturnPct != null ? <>{' · '}IRR: <strong>{totalReturn.annualizedReturnPct.toFixed(2)}%</strong></> : null}
             {' · '}Investment period: <strong>{holdingYears} years</strong>
             {timeToHandover != null ? <>{' · '}Exit: <strong>At handover</strong></> : null}
             {' · '}Rental income: <strong>{totalRental > 0 ? formatAED(totalRental) : 'AED 0'}</strong>
@@ -892,14 +798,21 @@ function ROECashFlowCard({ totalReturn, futureApp, property }: { totalReturn: an
             </div>
           </div>
 
-          {/* ROE metrics */}
+          {/* Total-return metrics: simple Total ROI and timed IRR, both engine-derived */}
           {totalReturn.roePct != null && (
             <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
               <div className="p-3 bg-emerald-50 rounded-lg">
-                <p className="text-xs text-apil-gray-500">Return on Equity (ROE)</p>
+                <p className="text-xs text-apil-gray-500">Total Return on Equity (Total ROI)</p>
                 <p className="font-semibold text-emerald-600">{totalReturn.roePct?.toFixed(2)}%</p>
                 <p className="text-[10px] text-apil-gray-400 mt-0.5">Net profit / total equity invested</p>
               </div>
+              {totalReturn.annualizedReturnPct != null && (
+                <div className="p-3 bg-amber-50 rounded-lg">
+                  <p className="text-xs text-apil-gray-500">Annualized Return (IRR)</p>
+                  <p className="font-semibold text-amber-600">{totalReturn.annualizedReturnPct.toFixed(2)}%</p>
+                  <p className="text-[10px] text-apil-gray-400 mt-0.5">IRR on dated cash flows</p>
+                </div>
+              )}
               <div className="p-3 bg-apil-gray-50 rounded-lg">
                 <p className="text-xs text-apil-gray-500">Total Equity Invested</p>
                 <p className="font-semibold text-apil-gray-900">{formatAED(totalReturn.totalEquityInvested)}</p>
@@ -909,8 +822,10 @@ function ROECashFlowCard({ totalReturn, futureApp, property }: { totalReturn: an
           )}
 
           <p className="mt-3 text-[10px] text-apil-gray-400">
-            Model: {totalReturn.model || 'unlevered ROE'}. Formula: {inputs.formula || 'Year 0: -price; Years 1..N: +rent (after construction); Year N: +rent +sale'}.
+            Model: {totalReturn.model || 'unlevered Total ROI'}. Formula: {inputs.formula || 'Year 0: -price; Years 1..N: +rent (after construction); Year N: +rent +sale'}.
           </p>
+
+          <CalcTracePanel trace={totalReturn} section="totalReturn" title="Total Return & IRR" />
         </div>
       )}
     </div>

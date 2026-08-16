@@ -1,0 +1,575 @@
+{
+  "audit_version": "2.0.0",
+  "audit_date": "2026-08-16T18:25:46.351487",
+  "summary": {
+    "total_tests": 46,
+    "passed": 44,
+    "failed": 0,
+    "warnings": 2,
+    "critical_failures": 0,
+    "browser_ux_failures": 0,
+    "api_contract_failures": 0,
+    "safety_failures": 0,
+    "privacy_security_failures": 0,
+    "evidence_display_failures": 0,
+    "ranking_failures": 0,
+    "responsive_ux_failures": 0,
+    "performance_warnings": 0
+  },
+  "performance": {
+    "measurements": [
+      {
+        "endpoint": "GET /opportunities",
+        "time_seconds": 0.011,
+        "status": 200,
+        "items": 20
+      },
+      {
+        "endpoint": "GET /properties/6749",
+        "time_seconds": 0.003,
+        "status": 200,
+        "items": 1
+      },
+      {
+        "endpoint": "POST /compare",
+        "time_seconds": 0.003,
+        "status": 200,
+        "items": 3
+      },
+      {
+        "endpoint": "POST /investors",
+        "time_seconds": 0.005,
+        "status": 200,
+        "items": 1
+      }
+    ]
+  },
+  "personas_tested": [
+    "conservative",
+    "moderate_balanced",
+    "aggressive",
+    "short_term",
+    "luxury",
+    "low_budget",
+    "income_oriented"
+  ],
+  "investor_ids_created": {
+    "conservative": "ceacea20-10e6-4039-b794-560c82f43aa7",
+    "moderate_balanced": "d69c180f-96b2-4eb3-b669-0ce1d961cb71",
+    "aggressive": "0d4d6f80-b3e2-4529-87fc-5a8f7ae6ec05",
+    "short_term": "773f3139-1bfd-43f0-8760-9a78b79139b3",
+    "luxury": "128e332a-b43b-44e7-ae26-4299c949ab61",
+    "low_budget": "741677ee-8972-4b50-b18a-3b9723e19bf7",
+    "income_oriented": "04527045-9eb2-4142-bda3-ab3bf6e9936f"
+  },
+  "results": [
+    {
+      "test_id": "A1",
+      "category": "API Health",
+      "severity": "PASS",
+      "page_endpoint": "GET /",
+      "description": "Root endpoint returns correct version and stats",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.154358"
+    },
+    {
+      "test_id": "B_conservative",
+      "category": "Profile Creation",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Created conservative investor",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.160131"
+    },
+    {
+      "test_id": "B_moderate_balanced",
+      "category": "Profile Creation",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Created moderate_balanced investor",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.164572"
+    },
+    {
+      "test_id": "B_aggressive",
+      "category": "Profile Creation",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Created aggressive investor",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.168943"
+    },
+    {
+      "test_id": "B_short_term",
+      "category": "Profile Creation",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Created short_term investor",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.173333"
+    },
+    {
+      "test_id": "B_luxury",
+      "category": "Profile Creation",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Created luxury investor",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.177807"
+    },
+    {
+      "test_id": "B_low_budget",
+      "category": "Profile Creation",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Created low_budget investor",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.181938"
+    },
+    {
+      "test_id": "B_income_oriented",
+      "category": "Profile Creation",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Created income_oriented investor",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.185915"
+    },
+    {
+      "test_id": "C2",
+      "category": "Decision Safety",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "Objective decision identical across 7 personas: STRONG_OPPORTUNITY",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.203536"
+    },
+    {
+      "test_id": "C3",
+      "category": "Decision Safety",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "Confidence identical across personas",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.203541"
+    },
+    {
+      "test_id": "C4",
+      "category": "Decision Safety",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "Developer grade identical across personas",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.203543"
+    },
+    {
+      "test_id": "C5",
+      "category": "Decision Safety",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "Benchmarks identical across personas",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.203603"
+    },
+    {
+      "test_id": "C6",
+      "category": "Decision Safety",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "Fit scores vary appropriately: {'conservative': 70, 'moderate_balanced': 57, 'aggressive': 53, 'short_term': 57, 'luxury': 51, 'low_budget': 70, 'income_oriented': 57}",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.203608"
+    },
+    {
+      "test_id": "D3",
+      "category": "Evidence Display",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "All 2 benchmarks checked for advantage safety",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.205834"
+    },
+    {
+      "test_id": "E1",
+      "category": "Language Audit",
+      "severity": "PASS",
+      "page_endpoint": "All frontend files",
+      "description": "No forbidden wording detected",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.211907"
+    },
+    {
+      "test_id": "E_sep_api.ts",
+      "category": "Language Audit",
+      "severity": "PASS",
+      "page_endpoint": "api.ts",
+      "description": "Page shows both objective_signal and combined_explanation",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.213317"
+    },
+    {
+      "test_id": "E_sep_PropertyDetail.tsx",
+      "category": "Language Audit",
+      "severity": "PASS",
+      "page_endpoint": "PropertyDetail.tsx",
+      "description": "Page shows both objective_signal and combined_explanation",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.213404"
+    },
+    {
+      "test_id": "F1",
+      "category": "Unknown Data",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "Unsupported preferences correctly UNKNOWN: ['rental_yield', 'financing_compatibility']",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.217307"
+    },
+    {
+      "test_id": "G1",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/NONEXISTENT",
+      "description": "404 for nonexistent property",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.219948"
+    },
+    {
+      "test_id": "G2",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749?investor_id=bad",
+      "description": "Invalid investor_id returns property with null fit",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.222233"
+    },
+    {
+      "test_id": "G3",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "GET /opportunities",
+      "description": "Empty result handled correctly",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.234791"
+    },
+    {
+      "test_id": "G4",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "POST /compare",
+      "description": "1 property rejected with 400",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.237445"
+    },
+    {
+      "test_id": "G5",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "POST /compare",
+      "description": "4 properties rejected with 400",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.239535"
+    },
+    {
+      "test_id": "G6",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "POST /compare",
+      "description": "Duplicate IDs deduplicated to 2 unique",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.241927"
+    },
+    {
+      "test_id": "G6b",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "POST /compare",
+      "description": "Comparing same property with itself returns 400",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.243813"
+    },
+    {
+      "test_id": "G7",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Invalid questionnaire value rejected",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.245888"
+    },
+    {
+      "test_id": "G8",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Missing required fields rejected",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.248161"
+    },
+    {
+      "test_id": "G9",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "GET /opportunities",
+      "description": "Pagination beyond range returns empty results",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.255447"
+    },
+    {
+      "test_id": "G10",
+      "category": "API Contract",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "No internal fields leaked",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.258304"
+    },
+    {
+      "test_id": "H1",
+      "category": "Security",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/INVALID<>PATH",
+      "description": "Error response clean",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.261453"
+    },
+    {
+      "test_id": "H2",
+      "category": "Security",
+      "severity": "PASS",
+      "page_endpoint": "GET /investors/ca0f6bb8-fabd-4348-b832-3716ea717095",
+      "description": "Random investor_id returns 404",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.263768"
+    },
+    {
+      "test_id": "H3",
+      "category": "Security",
+      "severity": "PASS",
+      "page_endpoint": "GET /opportunities",
+      "description": "No cross-investor data leakage",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.300891"
+    },
+    {
+      "test_id": "I1",
+      "category": "Performance",
+      "severity": "PASS",
+      "page_endpoint": "GET /opportunities",
+      "description": "Response time: 0.01s",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.312406"
+    },
+    {
+      "test_id": "I2",
+      "category": "Performance",
+      "severity": "PASS",
+      "page_endpoint": "GET /properties/6749",
+      "description": "Response time: 0.00s",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.315354"
+    },
+    {
+      "test_id": "I3",
+      "category": "Performance",
+      "severity": "PASS",
+      "page_endpoint": "POST /compare",
+      "description": "Response time: 0.00s",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.318520"
+    },
+    {
+      "test_id": "I4",
+      "category": "Performance",
+      "severity": "PASS",
+      "page_endpoint": "POST /investors",
+      "description": "Response time: 0.00s",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.323526"
+    },
+    {
+      "test_id": "J1",
+      "category": "Marketplace",
+      "severity": "PASS",
+      "page_endpoint": "GET /opportunities",
+      "description": "INSUFFICIENT_EVIDENCE excluded from default view",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.345610"
+    },
+    {
+      "test_id": "J2",
+      "category": "Marketplace",
+      "severity": "PASS",
+      "page_endpoint": "GET /opportunities",
+      "description": "Results sorted by decision tier descending",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.345633"
+    },
+    {
+      "test_id": "K1",
+      "category": "Session",
+      "severity": "PASS",
+      "page_endpoint": "GET /investors/d69c180f-96b2-4eb3-b669-0ce1d961cb71",
+      "description": "Consistent profile across repeated fetches",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.350978"
+    },
+    {
+      "test_id": "L_Landing.tsx",
+      "category": "Frontend",
+      "severity": "PASS",
+      "page_endpoint": "Landing.tsx",
+      "description": "Page exists and references locked data structures",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.351100"
+    },
+    {
+      "test_id": "L_Questionnaire.tsx",
+      "category": "Frontend",
+      "severity": "WARNING",
+      "page_endpoint": "Questionnaire.tsx",
+      "description": "Page may not reference objective/fit data",
+      "observed": "missing refs",
+      "expected": "should reference api types",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.351180"
+    },
+    {
+      "test_id": "L_Marketplace.tsx",
+      "category": "Frontend",
+      "severity": "PASS",
+      "page_endpoint": "Marketplace.tsx",
+      "description": "Page exists and references locked data structures",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.351249"
+    },
+    {
+      "test_id": "L_PropertyDetail.tsx",
+      "category": "Frontend",
+      "severity": "PASS",
+      "page_endpoint": "PropertyDetail.tsx",
+      "description": "Page exists and references locked data structures",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.351298"
+    },
+    {
+      "test_id": "L_Compare.tsx",
+      "category": "Frontend",
+      "severity": "PASS",
+      "page_endpoint": "Compare.tsx",
+      "description": "Page exists and references locked data structures",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.351364"
+    },
+    {
+      "test_id": "L_Profile.tsx",
+      "category": "Frontend",
+      "severity": "WARNING",
+      "page_endpoint": "Profile.tsx",
+      "description": "Page may not reference objective/fit data",
+      "observed": "missing refs",
+      "expected": "should reference api types",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.351423"
+    },
+    {
+      "test_id": "L_viewport",
+      "category": "Frontend",
+      "severity": "PASS",
+      "page_endpoint": "index.html",
+      "description": "Viewport meta tag present for responsive design",
+      "observed": "PASSED",
+      "expected": "PASSED",
+      "recommended_fix": "",
+      "timestamp": "2026-08-16T18:25:46.351483"
+    }
+  ],
+  "status": "PASS",
+  "launch_recommendation": "READY_WITH_REVIEW"
+}

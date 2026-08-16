@@ -1,0 +1,5217 @@
+[
+  {
+    "projectName": "Hotel Edge by Rotana",
+    "slug": "hotel-edge-by-rotana",
+    "area": "Damac Hills 2",
+    "offplanScore": 68,
+    "recommendation": "HOLD",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 80,
+    "futureSupply": {
+      "futureSupplyScore": 82,
+      "totalSupply": 179,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2285,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 711.57,
+      "predictedGrowth": 426.94,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 32,
+      "riskLevel": "Low",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 426.94% based on area trends",
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.917781"
+  },
+  {
+    "projectName": "ELO 2 and 3 Damac",
+    "slug": "elo-2-and-3-damac",
+    "area": "Damac Hills 2",
+    "offplanScore": 68,
+    "recommendation": "HOLD",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 80,
+    "futureSupply": {
+      "futureSupplyScore": 82,
+      "totalSupply": 179,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2285,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 711.57,
+      "predictedGrowth": 426.94,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 32,
+      "riskLevel": "Low",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 426.94% based on area trends",
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.946352"
+  },
+  {
+    "projectName": "Anantara Mina",
+    "slug": "anantara-mina",
+    "area": "Mina Al Arab",
+    "offplanScore": 67,
+    "recommendation": "HOLD",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 76,
+    "futureSupply": {
+      "futureSupplyScore": 79,
+      "totalSupply": 211,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2349,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1085.37,
+      "predictedGrowth": 651.22,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 33,
+      "riskLevel": "Low",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 651.22% based on area trends",
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.915652"
+  },
+  {
+    "projectName": "Emaar Terra Woods at Expo Living",
+    "slug": "emaar-terra-woods-at-expo-living",
+    "area": "Expo City",
+    "offplanScore": 66,
+    "recommendation": "HOLD",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 91,
+      "totalSupply": 87,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 916,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1118.31,
+      "predictedGrowth": 670.99,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 30,
+      "riskLevel": "Low",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 670.99% based on area trends",
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.897861"
+  },
+  {
+    "projectName": "Emaar Terra Gardens at Expo City",
+    "slug": "emaar-terra-gardens-at-expo-city",
+    "area": "Expo City",
+    "offplanScore": 66,
+    "recommendation": "HOLD",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 91,
+      "totalSupply": 87,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 916,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1118.31,
+      "predictedGrowth": 670.99,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 30,
+      "riskLevel": "Low",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 670.99% based on area trends",
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.904856"
+  },
+  {
+    "projectName": "Emaar Fior 1 at Rashid Yachts & Marina",
+    "slug": "emaar-fior-1-at-rashid-yachts-&-marina",
+    "area": "Rashid Yachts & Marina",
+    "offplanScore": 61,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 79,
+    "futureSupply": {
+      "futureSupplyScore": 85,
+      "totalSupply": 153,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2215,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 41,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.897784"
+  },
+  {
+    "projectName": "Emaar Aurea at Mina Rashid",
+    "slug": "emaar-aurea-at-mina-rashid",
+    "area": "Rashid Yachts & Marina",
+    "offplanScore": 61,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 79,
+    "futureSupply": {
+      "futureSupplyScore": 85,
+      "totalSupply": 153,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2215,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 41,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.905784"
+  },
+  {
+    "projectName": "Emaar Sera 2 at Mina Rashid",
+    "slug": "emaar-sera-2-at-mina-rashid",
+    "area": "Rashid Yachts & Marina",
+    "offplanScore": 61,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 79,
+    "futureSupply": {
+      "futureSupplyScore": 85,
+      "totalSupply": 153,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2215,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 41,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.905865"
+  },
+  {
+    "projectName": "Nineteen Riviera Lagoon",
+    "slug": "nineteen-riviera-lagoon",
+    "area": "Nad Al Sheba",
+    "offplanScore": 60,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 74,
+    "futureSupply": {
+      "futureSupplyScore": 84,
+      "totalSupply": 163,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1906,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 42,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.917880"
+  },
+  {
+    "projectName": "Arada Masaar 3 Sedra at Sharjah",
+    "slug": "arada-masaar-3-sedra-at-sharjah",
+    "area": "Masaar 3",
+    "offplanScore": 58,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 62,
+    "futureSupply": {
+      "futureSupplyScore": 85,
+      "totalSupply": 147,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1882,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 41,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.893847"
+  },
+  {
+    "projectName": "John Richmond District",
+    "slug": "john-richmond-district",
+    "area": "Discovery Gardens",
+    "offplanScore": 58,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 85,
+      "totalSupply": 154,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2620,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 41,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.893939"
+  },
+  {
+    "projectName": "Emaar Golf Vale at Emaar South",
+    "slug": "emaar-golf-vale-at-emaar-south",
+    "area": "Emaar South",
+    "offplanScore": 58,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 72,
+    "futureSupply": {
+      "futureSupplyScore": 77,
+      "totalSupply": 231,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1959,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 43,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.894871"
+  },
+  {
+    "projectName": "Emaar Grove Ridge at Emaar South",
+    "slug": "emaar-grove-ridge-at-emaar-south",
+    "area": "Emaar South",
+    "offplanScore": 58,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 72,
+    "futureSupply": {
+      "futureSupplyScore": 77,
+      "totalSupply": 231,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1959,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 43,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.900959"
+  },
+  {
+    "projectName": "Emaar Vista Ridge at Emaar South",
+    "slug": "emaar-vista-ridge-at-emaar-south",
+    "area": "Emaar South",
+    "offplanScore": 58,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 72,
+    "futureSupply": {
+      "futureSupplyScore": 77,
+      "totalSupply": 231,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1959,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 43,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.901055"
+  },
+  {
+    "projectName": "Bloom Arjaan by Rotana",
+    "slug": "bloom-arjaan-by-rotana",
+    "area": "Saadiyat Island",
+    "offplanScore": 58,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 65,
+    "futureSupply": {
+      "futureSupplyScore": 82,
+      "totalSupply": 181,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 155,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 42,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.910806"
+  },
+  {
+    "projectName": "Greenville 1 and 2 Phases",
+    "slug": "greenville-1-and-2-phases",
+    "area": "Emaar South",
+    "offplanScore": 58,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 72,
+    "futureSupply": {
+      "futureSupplyScore": 77,
+      "totalSupply": 231,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1959,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 43,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.920232"
+  },
+  {
+    "projectName": "Rodopoleos Elliniko",
+    "slug": "rodopoleos-elliniko",
+    "area": "Elliniko",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 52,
+    "futureSupply": {
+      "futureSupplyScore": 95,
+      "totalSupply": 53,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1860,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 39,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.891299"
+  },
+  {
+    "projectName": "Arada Jenna 1 at Al Jada",
+    "slug": "arada-jenna-1-at-al-jada",
+    "area": "Aljada",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 65,
+    "futureSupply": {
+      "futureSupplyScore": 76,
+      "totalSupply": 243,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1692,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 44,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.891966"
+  },
+  {
+    "projectName": "Jacob and Co Beachfront Living by Ohana",
+    "slug": "jacob-and-co-beachfront-living-by-ohana",
+    "area": "Al Jurf",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 48,
+    "futureSupply": {
+      "futureSupplyScore": 97,
+      "totalSupply": 30,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 105,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.893972"
+  },
+  {
+    "projectName": "Binghatti Project Maybach at Meydan City",
+    "slug": "binghatti-project-maybach-at-meydan-city",
+    "area": "Meydan City",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 78,
+    "futureSupply": {
+      "futureSupplyScore": 10,
+      "totalSupply": 899,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2206,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1788.33,
+      "predictedGrowth": 1073.0,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 50,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 1073.0% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.894368"
+  },
+  {
+    "projectName": "Binghatti Vision Iconic at Mercedes-Benz Places",
+    "slug": "binghatti-vision-iconic-at-mercedes-benz-places",
+    "area": "Mohammed Bin Rashid City",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 53,
+    "futureSupply": {
+      "futureSupplyScore": 90,
+      "totalSupply": 98,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2419,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 40,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.895793"
+  },
+  {
+    "projectName": "Piazza Roma at DAMAC Lagoons",
+    "slug": "piazza-roma-at-damac-lagoons",
+    "area": "Damac Lagoons",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 63,
+    "futureSupply": {
+      "futureSupplyScore": 81,
+      "totalSupply": 186,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1640,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 42,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.899169"
+  },
+  {
+    "projectName": "costa brava",
+    "slug": "costa-brava",
+    "area": "Damac Lagoons",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 63,
+    "futureSupply": {
+      "futureSupplyScore": 81,
+      "totalSupply": 186,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1640,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 42,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.900852"
+  },
+  {
+    "projectName": "Cove Edition 6",
+    "slug": "cove-edition-6",
+    "area": "Dubai Land Residence Complex",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 85,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1614,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1376,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 804.61,
+      "predictedGrowth": 482.77,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 482.77% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.910589"
+  },
+  {
+    "projectName": "Muheira Maysan",
+    "slug": "muheira-maysan",
+    "area": "Al Reem island",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 79,
+    "futureSupply": {
+      "futureSupplyScore": 9,
+      "totalSupply": 906,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1283,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 954.69,
+      "predictedGrowth": 572.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 50,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 572.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.912472"
+  },
+  {
+    "projectName": "Cove Edition 5",
+    "slug": "cove-edition-5",
+    "area": "Dubai Land Residence Complex",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 85,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1614,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1376,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 804.61,
+      "predictedGrowth": 482.77,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 482.77% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.913685"
+  },
+  {
+    "projectName": "AG Aum",
+    "slug": "ag-aum",
+    "area": "Dubai Land Residence Complex",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 85,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1614,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1376,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 804.61,
+      "predictedGrowth": 482.77,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 482.77% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.914412"
+  },
+  {
+    "projectName": "Lexington",
+    "slug": "lexington",
+    "area": "Town Square Dubai",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 67,
+    "futureSupply": {
+      "futureSupplyScore": 76,
+      "totalSupply": 239,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1833,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 44,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.914563"
+  },
+  {
+    "projectName": "The Heights Country Club and Wellness",
+    "slug": "the-heights-country-club-and-wellness",
+    "area": "The Heights Country Club & Wellness by Emaar",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 58,
+    "futureSupply": {
+      "futureSupplyScore": 86,
+      "totalSupply": 138,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1437,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 41,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.918823"
+  },
+  {
+    "projectName": "D Villa by Dar Global",
+    "slug": "d-villa-by-dar-global",
+    "area": "Jumeirah Golf Estates",
+    "offplanScore": 57,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 57,
+    "futureSupply": {
+      "futureSupplyScore": 86,
+      "totalSupply": 140,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1983,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 41,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.918891"
+  },
+  {
+    "projectName": "Aldar Yas Park Place at Yas Island",
+    "slug": "aldar-yas-park-place-at-yas-island",
+    "area": "Yas Island",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 65,
+    "futureSupply": {
+      "futureSupplyScore": 70,
+      "totalSupply": 305,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2468,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 45,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.892673"
+  },
+  {
+    "projectName": "The Luxury Collection at Al Marjan Island",
+    "slug": "the-luxury-collection-at-al-marjan-island",
+    "area": "Al Marjan Island",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 78,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1552,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1704,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 601.91,
+      "predictedGrowth": 361.15,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 361.15% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.898554"
+  },
+  {
+    "projectName": "Emaar Sirena by Palace at Emaar Beachfront",
+    "slug": "emaar-sirena-by-palace-at-emaar-beachfront",
+    "area": "EMAAR Beachfront",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 50,
+    "futureSupply": {
+      "futureSupplyScore": 93,
+      "totalSupply": 74,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2744,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 39,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.900744"
+  },
+  {
+    "projectName": "Emaar Avarra by Palace at Business Bay",
+    "slug": "emaar-avarra-by-palace-at-business-bay",
+    "area": "Business Bay",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 80,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2425,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1868,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1073.65,
+      "predictedGrowth": 644.19,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 644.19% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.902106"
+  },
+  {
+    "projectName": "Elire Managed by LUX",
+    "slug": "elire-managed-by-lux",
+    "area": "Business Bay",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 80,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2425,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1868,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1073.65,
+      "predictedGrowth": 644.19,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 644.19% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.903064"
+  },
+  {
+    "projectName": "Playa Del Sol",
+    "slug": "playa-del-sol",
+    "area": "Al Marjan Island",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 78,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1552,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1704,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 601.91,
+      "predictedGrowth": 361.15,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 361.15% based on area trends"
+    ],
+    "unitTypes": [
+      {
+        "bedType": "Studio",
+        "unitScore": 8,
+        "medianPrice": 0,
+        "medianPriceSqft": 0,
+        "medianRent": 51625,
+        "rentalYield": 0,
+        "transactionCount": 0,
+        "demandScore": 0,
+        "avgAreaSqft": 0
+      }
+    ],
+    "computedAt": "2026-08-05T17:37:33.903708"
+  },
+  {
+    "projectName": "Aqua Arc",
+    "slug": "aqua-arc",
+    "area": "Al Marjan Island",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 78,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1552,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1704,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 601.91,
+      "predictedGrowth": 361.15,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 361.15% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.904462"
+  },
+  {
+    "projectName": "DoubleTree by Hilton",
+    "slug": "doubletree-by-hilton",
+    "area": "Jumeirah Garden City",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 65,
+    "futureSupply": {
+      "futureSupplyScore": 67,
+      "totalSupply": 328,
+      "riskLevel": "Medium"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1554,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 46,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.905708"
+  },
+  {
+    "projectName": "Miraggio",
+    "slug": "miraggio",
+    "area": "Al Marjan Island",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 78,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1552,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1704,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 601.91,
+      "predictedGrowth": 361.15,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 361.15% based on area trends"
+    ],
+    "unitTypes": [
+      {
+        "bedType": "Studio",
+        "unitScore": 8,
+        "medianPrice": 0,
+        "medianPriceSqft": 0,
+        "medianRent": 69000,
+        "rentalYield": 0,
+        "transactionCount": 0,
+        "demandScore": 0,
+        "avgAreaSqft": 0
+      }
+    ],
+    "computedAt": "2026-08-05T17:37:33.908189"
+  },
+  {
+    "projectName": "Confident Preston",
+    "slug": "confident-preston",
+    "area": "Liwan Square",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 65,
+    "futureSupply": {
+      "futureSupplyScore": 73,
+      "totalSupply": 270,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1554,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 44,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.908624"
+  },
+  {
+    "projectName": "You and Co IMPZ",
+    "slug": "you-and-co-impz",
+    "area": "Dubai Production City",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 78,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1507,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2045,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1785.8,
+      "predictedGrowth": 1071.48,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 1071.48% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.913066"
+  },
+  {
+    "projectName": "La Mer By Elie Saab",
+    "slug": "la-mer-by-elie-saab",
+    "area": "Al Marjan Island",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 78,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1552,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1704,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 601.91,
+      "predictedGrowth": 361.15,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 361.15% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.916339"
+  },
+  {
+    "projectName": "DaVinci",
+    "slug": "davinci",
+    "area": "Business Bay",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 80,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2425,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1868,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1073.65,
+      "predictedGrowth": 644.19,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 644.19% based on area trends"
+    ],
+    "unitTypes": [
+      {
+        "bedType": "Studio",
+        "unitScore": 8,
+        "medianPrice": 0,
+        "medianPriceSqft": 0,
+        "medianRent": 135000,
+        "rentalYield": 0,
+        "transactionCount": 0,
+        "demandScore": 0,
+        "avgAreaSqft": 0
+      }
+    ],
+    "computedAt": "2026-08-05T17:37:33.917664"
+  },
+  {
+    "projectName": "Safa One de Grisogono",
+    "slug": "safa-one-de-grisogono",
+    "area": "Safa Park",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 46,
+    "futureSupply": {
+      "futureSupplyScore": 96,
+      "totalSupply": 40,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1575,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.918717"
+  },
+  {
+    "projectName": "Bayview by Address Resorts",
+    "slug": "bayview-by-address-resorts",
+    "area": "EMAAR Beachfront",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 50,
+    "futureSupply": {
+      "futureSupplyScore": 93,
+      "totalSupply": 74,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2744,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 39,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.919020"
+  },
+  {
+    "projectName": "Luxor",
+    "slug": "luxor",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.922837"
+  },
+  {
+    "projectName": "Oak Yard",
+    "slug": "oak-yard",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.925158"
+  },
+  {
+    "projectName": "V1TER",
+    "slug": "v1ter",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.927450"
+  },
+  {
+    "projectName": "Ozone 1",
+    "slug": "ozone-1",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.929911"
+  },
+  {
+    "projectName": "North 43",
+    "slug": "north-43",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [
+      {
+        "bedType": "Studio",
+        "unitScore": 8,
+        "medianPrice": 0,
+        "medianPriceSqft": 0,
+        "medianRent": 98250,
+        "rentalYield": 0,
+        "transactionCount": 0,
+        "demandScore": 0,
+        "avgAreaSqft": 0
+      }
+    ],
+    "computedAt": "2026-08-05T17:37:33.932182"
+  },
+  {
+    "projectName": "elitz 3",
+    "slug": "elitz-3",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.934433"
+  },
+  {
+    "projectName": "elitz 2",
+    "slug": "elitz-2",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.936637"
+  },
+  {
+    "projectName": "elitz",
+    "slug": "elitz",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.938962"
+  },
+  {
+    "projectName": "Izzzi.LifeMINT",
+    "slug": "izzzi.lifemint",
+    "area": "Jumeirah village circle",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 82,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 5889,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1250,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 839.69,
+      "predictedGrowth": 503.81,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 503.81% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.941501"
+  },
+  {
+    "projectName": "Altitude de Grisogono",
+    "slug": "altitude-de-grisogono",
+    "area": "Business Bay",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 80,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2425,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1868,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1073.65,
+      "predictedGrowth": 644.19,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 644.19% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.942606"
+  },
+  {
+    "projectName": "Eywa",
+    "slug": "eywa",
+    "area": "Business Bay",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 80,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2425,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1868,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1073.65,
+      "predictedGrowth": 644.19,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 644.19% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.943558"
+  },
+  {
+    "projectName": "Opus By Zaha Hadid",
+    "slug": "opus-by-zaha-hadid",
+    "area": "Business Bay",
+    "offplanScore": 56,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 80,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2425,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1868,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1073.65,
+      "predictedGrowth": 644.19,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 644.19% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.944492"
+  },
+  {
+    "projectName": "Damac District Tower B at DAMAC Hills",
+    "slug": "damac-district-tower-b-at-damac-hills",
+    "area": "Damac Hills",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 62,
+    "futureSupply": {
+      "futureSupplyScore": 66,
+      "totalSupply": 343,
+      "riskLevel": "Medium"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1826,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 46,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.892529"
+  },
+  {
+    "projectName": "Kora IL Vento at Dubai Maritime City",
+    "slug": "kora-il-vento-at-dubai-maritime-city",
+    "area": "Dubai Maritime City",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 76,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1629,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 3113,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 2332.45,
+      "predictedGrowth": 1399.47,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 1399.47% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.899853"
+  },
+  {
+    "projectName": "May",
+    "slug": "may",
+    "area": "Arabian Ranches 3",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 43,
+    "futureSupply": {
+      "futureSupplyScore": 95,
+      "totalSupply": 52,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1426,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 39,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.904912"
+  },
+  {
+    "projectName": "Breez",
+    "slug": "breez",
+    "area": "Dubai Maritime City",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 76,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1629,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 3113,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 2332.45,
+      "predictedGrowth": 1399.47,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 1399.47% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.907544"
+  },
+  {
+    "projectName": "Tomorrow World Properties",
+    "slug": "tomorrow-world-properties",
+    "area": "Dubai Islands",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 76,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 3397,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2258,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1494.55,
+      "predictedGrowth": 896.73,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 896.73% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.909952"
+  },
+  {
+    "projectName": "Masaar 2 Coral",
+    "slug": "masaar-2-coral",
+    "area": "Masaar",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 57,
+    "futureSupply": {
+      "futureSupplyScore": 73,
+      "totalSupply": 267,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2346,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 44,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.910712"
+  },
+  {
+    "projectName": "Wynwood",
+    "slug": "wynwood",
+    "area": "Dubai Islands",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 76,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 3397,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2258,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1494.55,
+      "predictedGrowth": 896.73,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 896.73% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.912107"
+  },
+  {
+    "projectName": "Silk Leaf 4",
+    "slug": "silk-leaf-4",
+    "area": "Al Barari",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 39,
+    "futureSupply": {
+      "futureSupplyScore": 98,
+      "totalSupply": 16,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 3287,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.917904"
+  },
+  {
+    "projectName": "Rouge by Baccarat",
+    "slug": "rouge-by-baccarat",
+    "area": "Downtown Dubai",
+    "offplanScore": 55,
+    "recommendation": "CAUTION",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 77,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1903,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2669,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 1445.25,
+      "predictedGrowth": 867.15,
+      "growthPotentialScore": 100
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion"
+      ]
+    },
+    "reasons": [
+      "Predicted capital growth of 867.15% based on area trends"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.945787"
+  },
+  {
+    "projectName": "Quattro Del Mar",
+    "slug": "quattro-del-mar",
+    "area": "Hayat Island",
+    "offplanScore": 54,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 34,
+    "futureSupply": {
+      "futureSupplyScore": 98,
+      "totalSupply": 21,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2221,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.910830"
+  },
+  {
+    "projectName": "Binghatti Vision One Eleven at Mercedes-Benz Places",
+    "slug": "binghatti-vision-one-eleven-at-mercedes-benz-places",
+    "area": "Mercedes Benz Places by Binghatti",
+    "offplanScore": 53,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 30,
+    "futureSupply": {
+      "futureSupplyScore": 96,
+      "totalSupply": 40,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 5731,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.895711"
+  },
+  {
+    "projectName": "Binghatti Vision Avtr at Mercedes-Benz Places",
+    "slug": "binghatti-vision-avtr-at-mercedes-benz-places",
+    "area": "Mercedes Benz Places by Binghatti",
+    "offplanScore": 53,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 30,
+    "futureSupply": {
+      "futureSupplyScore": 96,
+      "totalSupply": 40,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 5731,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.895737"
+  },
+  {
+    "projectName": "Ghaf Woods Distrikt",
+    "slug": "ghaf-woods-distrikt",
+    "area": "Ghaf Woods",
+    "offplanScore": 53,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 26,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 4,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1851,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.908212"
+  },
+  {
+    "projectName": "The Next Chapter - Pinewood Village",
+    "slug": "the-next-chapter---pinewood-village",
+    "area": "The Next Chapter at JGE \u2013 Wasl Group",
+    "offplanScore": 53,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 28,
+    "futureSupply": {
+      "futureSupplyScore": 97,
+      "totalSupply": 34,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1333,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.908505"
+  },
+  {
+    "projectName": "Meraki Piraeus",
+    "slug": "meraki-piraeus",
+    "area": "Piraeus",
+    "offplanScore": 52,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 23,
+    "futureSupply": {
+      "futureSupplyScore": 98,
+      "totalSupply": 18,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1031,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.891345"
+  },
+  {
+    "projectName": "The Wilds Residences at Wadi Al Safa 3 by Aldar",
+    "slug": "the-wilds-residences-at-wadi-al-safa-3-by-aldar",
+    "area": "The Wilds",
+    "offplanScore": 52,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 21,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 5,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1106,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.892545"
+  },
+  {
+    "projectName": "Address Villas Hillcrest",
+    "slug": "address-villas-hillcrest",
+    "area": "Dubai Hills Estate",
+    "offplanScore": 52,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 66,
+    "futureSupply": {
+      "futureSupplyScore": 43,
+      "totalSupply": 568,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2374,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.905558"
+  },
+  {
+    "projectName": "Aspirz",
+    "slug": "aspirz",
+    "area": "Dubai Sports City",
+    "offplanScore": 52,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 70,
+    "futureSupply": {
+      "futureSupplyScore": 40,
+      "totalSupply": 599,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1485,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 52,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.908470"
+  },
+  {
+    "projectName": "FLEVAS ILION",
+    "slug": "flevas-ilion",
+    "area": "ILION",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.891320"
+  },
+  {
+    "projectName": "Royal \u0392outique Collection",
+    "slug": "royal-\u03b2outique-collection",
+    "area": "Neo Iraklio",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.891358"
+  },
+  {
+    "projectName": "The Willows at Sobha Sanctuary",
+    "slug": "the-willows-at-sobha-sanctuary",
+    "area": "Dubailand",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 65,
+    "futureSupply": {
+      "futureSupplyScore": 35,
+      "totalSupply": 646,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 3656,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 54,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.896103"
+  },
+  {
+    "projectName": "DAMAC Antigua at Damac Islands 2",
+    "slug": "damac-antigua-at-damac-islands-2",
+    "area": "Damac Islands 2",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.897688"
+  },
+  {
+    "projectName": "Naseem AlJurf",
+    "slug": "naseem-aljurf",
+    "area": "AlJurf Gardens",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.897888"
+  },
+  {
+    "projectName": "Khalid Bin Sultan City",
+    "slug": "khalid-bin-sultan-city",
+    "area": "Khalid Bin Sultan City",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.901119"
+  },
+  {
+    "projectName": "The Ritz Carlton Al Wadi Desert Resort",
+    "slug": "the-ritz-carlton-al-wadi-desert-resort",
+    "area": "Al Wadi desert",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.903079"
+  },
+  {
+    "projectName": "Nawayef East by Modon Properties",
+    "slug": "nawayef-east-by-modon-properties",
+    "area": "Hudayriyat Island",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.904508"
+  },
+  {
+    "projectName": "Anantara Sharjah Resort",
+    "slug": "anantara-sharjah-resort",
+    "area": "Arabian Gulf",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.904872"
+  },
+  {
+    "projectName": "Brabus Island Chapter Two - The Villas",
+    "slug": "brabus-island-chapter-two---the-villas",
+    "area": "Al Seef",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.906898"
+  },
+  {
+    "projectName": "Bada Al Jubail",
+    "slug": "bada-al-jubail",
+    "area": "Al Jubail Island",
+    "offplanScore": 51,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 18,
+    "futureSupply": {
+      "futureSupplyScore": 100,
+      "totalSupply": 0,
+      "riskLevel": "Low"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 0,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 38,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Low future supply in area \u2014 favorable for price appreciation"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.918933"
+  },
+  {
+    "projectName": "Frond I",
+    "slug": "frond-i",
+    "area": "Palm Jumeirah",
+    "offplanScore": 50,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 68,
+    "futureSupply": {
+      "futureSupplyScore": 27,
+      "totalSupply": 734,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1562,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 56,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.904809"
+  },
+  {
+    "projectName": "Six Senses",
+    "slug": "six-senses",
+    "area": "Palm Jumeirah",
+    "offplanScore": 50,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 68,
+    "futureSupply": {
+      "futureSupplyScore": 27,
+      "totalSupply": 734,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1562,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 56,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.944861"
+  },
+  {
+    "projectName": "15 Cascade Featured by Versace Ceramics",
+    "slug": "15-cascade-featured-by-versace-ceramics",
+    "area": "Dubai Motor City",
+    "offplanScore": 49,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 63,
+    "futureSupply": {
+      "futureSupplyScore": 29,
+      "totalSupply": 714,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1910,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 55,
+      "riskLevel": "Medium",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.916657"
+  },
+  {
+    "projectName": "Dubai Creek Gardens by OCTA Properties",
+    "slug": "dubai-creek-gardens-by-octa-properties",
+    "area": "Dubai Creek Harbour",
+    "offplanScore": 48,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 66,
+    "futureSupply": {
+      "futureSupplyScore": 12,
+      "totalSupply": 882,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2425,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 60,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.894748"
+  },
+  {
+    "projectName": "Bayshore at Creek Beach",
+    "slug": "bayshore-at-creek-beach",
+    "area": "Dubai Creek Harbour",
+    "offplanScore": 48,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 66,
+    "futureSupply": {
+      "futureSupplyScore": 12,
+      "totalSupply": 882,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2425,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 60,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.946231"
+  },
+  {
+    "projectName": "X11",
+    "slug": "x11",
+    "area": "Dubai South",
+    "offplanScore": 46,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 69,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2507,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1450,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.893774"
+  },
+  {
+    "projectName": "Astra South",
+    "slug": "astra-south",
+    "area": "Dubai South",
+    "offplanScore": 46,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 69,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2507,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1450,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.906861"
+  },
+  {
+    "projectName": "Fashionz",
+    "slug": "fashionz",
+    "area": "Jumeirah Village Triangle",
+    "offplanScore": 46,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 67,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1115,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1644,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.915083"
+  },
+  {
+    "projectName": "Voxa Pantheon",
+    "slug": "voxa-pantheon",
+    "area": "Jumeirah Village Triangle",
+    "offplanScore": 46,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 67,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1115,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1644,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.915541"
+  },
+  {
+    "projectName": "Dubai South by Dugasta",
+    "slug": "dubai-south-by-dugasta",
+    "area": "Dubai South",
+    "offplanScore": 46,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 69,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 2507,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1450,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.920106"
+  },
+  {
+    "projectName": "Emaar Alva at The Valley",
+    "slug": "emaar-alva-at-the-valley",
+    "area": "The Valley",
+    "offplanScore": 45,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1007,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2680,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.891843"
+  },
+  {
+    "projectName": "Emaar Alva 2 at The Valley",
+    "slug": "emaar-alva-2-at-the-valley",
+    "area": "The Valley",
+    "offplanScore": 45,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1007,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2680,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.892373"
+  },
+  {
+    "projectName": "Emaar Eden Phase 2 at The Valley",
+    "slug": "emaar-eden-phase-2-at-the-valley",
+    "area": "The Valley",
+    "offplanScore": 45,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1007,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2680,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.895286"
+  },
+  {
+    "projectName": "Emaar Virella 3 at The Valley, Dubai",
+    "slug": "emaar-virella-3-at-the-valley,-dubai",
+    "area": "The Valley",
+    "offplanScore": 45,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1007,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2680,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.895678"
+  },
+  {
+    "projectName": "Sobha The Grove at Sobha Sanctuary",
+    "slug": "sobha-the-grove-at-sobha-sanctuary",
+    "area": "The Valley",
+    "offplanScore": 45,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1007,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2680,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.900264"
+  },
+  {
+    "projectName": "Sobha The Brooks at Sobha Sanctuary",
+    "slug": "sobha-the-brooks-at-sobha-sanctuary",
+    "area": "The Valley",
+    "offplanScore": 45,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1007,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2680,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.900679"
+  },
+  {
+    "projectName": "Nima",
+    "slug": "nima",
+    "area": "The Valley",
+    "offplanScore": 45,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 64,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1007,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 2680,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.905311"
+  },
+  {
+    "projectName": "Emaar Palmiera Collective at The Oasis",
+    "slug": "emaar-palmiera-collective-at-the-oasis",
+    "area": "Emaar Oasis Dubailand",
+    "offplanScore": 44,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 59,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1154,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 1839,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.899051"
+  },
+  {
+    "projectName": "Safa Two de Grisogono",
+    "slug": "safa-two-de-grisogono",
+    "area": "Sheikh Zayed Road",
+    "offplanScore": 44,
+    "recommendation": "AVOID",
+    "scoreLabel": "Review Carefully",
+    "developerName": "Independent / Other",
+    "developerScore": 50,
+    "locationScore": 60,
+    "futureSupply": {
+      "futureSupplyScore": 0,
+      "totalSupply": 1771,
+      "riskLevel": "High"
+    },
+    "launchPricing": {
+      "projectPriceSqft": 0,
+      "nearbyPriceSqft": 4029,
+      "discountToMarket": 0,
+      "launchPricingScore": 50
+    },
+    "growthForecast": {
+      "historicalGrowth12m": 0.0,
+      "communityGrowth12m": 0.0,
+      "predictedGrowth": 0.0,
+      "growthPotentialScore": 50
+    },
+    "paymentPlan": {
+      "paymentPlanScore": 50,
+      "planType": "Unknown"
+    },
+    "constructionProgress": {
+      "constructionProgressScore": 50,
+      "delayRisk": "Medium"
+    },
+    "risk": {
+      "overallRisk": 62,
+      "riskLevel": "High",
+      "riskFactors": [
+        "Developer Independent / Other has below-average track record (score: 50)",
+        "High future supply in area may pressure prices on completion",
+        "Low predicted capital growth based on area trends"
+      ]
+    },
+    "reasons": [
+      "Off-plan project meets baseline investment criteria"
+    ],
+    "unitTypes": [],
+    "computedAt": "2026-08-05T17:37:33.918679"
+  }
+]

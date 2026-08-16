@@ -1,0 +1,473 @@
+<title>APIL — 12-Point Financial-Model Critique: Implementation & Verification</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #F4F1EA;
+    --surface: #FFFFFF;
+    --surface-2: #FAF8F3;
+    --ink: #1C2521;
+    --ink-soft: #2E3833;
+    --muted: #5D6259;
+    --faint: #8A8F86;
+    --accent: #A4832E;
+    --accent-ink: #7A6118;
+    --rule: #E2DCCD;
+    --pass: #2E7D4F;
+    --pass-bg: #E7F1EA;
+    --warn: #A86F14;
+    --warn-bg: #F6EBD8;
+    --fail: #B4432E;
+    --fail-bg: #F6E7E2;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151A17;
+      --surface: #1D2420;
+      --surface-2: #202723;
+      --ink: #EBE7DC;
+      --ink-soft: #D8D3C6;
+      --muted: #A6AB9F;
+      --faint: #777D73;
+      --accent: #C9A94E;
+      --accent-ink: #D6B967;
+      --rule: #2C332E;
+      --pass: #67C38B;
+      --pass-bg: #1E3A29;
+      --warn: #DEB054;
+      --warn-bg: #3A2F17;
+      --fail: #E27B5C;
+      --fail-bg: #3B241D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #151A17;
+    --surface: #1D2420;
+    --surface-2: #202723;
+    --ink: #EBE7DC;
+    --ink-soft: #D8D3C6;
+    --muted: #A6AB9F;
+    --faint: #777D73;
+    --accent: #C9A94E;
+    --accent-ink: #D6B967;
+    --rule: #2C332E;
+    --pass: #67C38B;
+    --pass-bg: #1E3A29;
+    --warn: #DEB054;
+    --warn-bg: #3A2F17;
+    --fail: #E27B5C;
+    --fail-bg: #3B241D;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 56px 28px 88px; }
+  a { color: var(--accent-ink); }
+
+  /* ── masthead ── */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(30px, 4.6vw, 44px);
+    line-height: 1.08;
+    margin: 0 0 16px;
+    text-wrap: balance;
+    max-width: 19em;
+  }
+  .lede {
+    font-size: 16.5px;
+    color: var(--muted);
+    max-width: 58ch;
+    margin: 0 0 8px;
+  }
+  .meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--faint);
+    margin: 14px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 22px;
+  }
+  .meta b { color: var(--ink-soft); font-weight: 600; }
+
+  /* ── verification strip ── */
+  .strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin: 34px 0 8px;
+  }
+  @media (max-width: 720px) { .strip { grid-template-columns: repeat(2, 1fr); } }
+  .stat {
+    background: var(--surface);
+    padding: 18px 18px 16px;
+  }
+  .stat .n {
+    font-family: var(--mono);
+    font-size: 26px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .stat .n em { font-style: normal; color: var(--accent); }
+  .stat .l {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+
+  /* ── sections ── */
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    margin: 48px 0 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  h2 .eyebrow {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    flex: none;
+  }
+  .sec-note {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 64ch;
+    margin: 6px 0 18px;
+  }
+
+  /* ── callout ── */
+  .callout {
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    background: var(--surface-2);
+    padding: 18px 20px;
+    margin: 26px 0;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+  .callout b { color: var(--ink); }
+  .callout .mono { font-family: var(--mono); font-size: 13px; }
+
+  /* ── critique table ── */
+  .table-scroll { overflow-x: auto; margin-top: 14px; }
+  table.critique {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    min-width: 720px;
+  }
+  table.critique th {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--faint);
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--ink);
+    font-weight: 600;
+  }
+  table.critique td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  table.critique tr:last-child td { border-bottom: none; }
+  table.critique .idx {
+    font-family: var(--mono);
+    color: var(--faint);
+    font-size: 12px;
+    width: 34px;
+    padding-left: 0;
+  }
+  table.critique .issue { font-weight: 600; color: var(--ink-soft); }
+  table.critique .fix { color: var(--muted); }
+  table.critique .fix code, .fix code {
+    font-family: var(--mono);
+    font-size: 12px;
+    background: var(--surface-2);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1px 4px;
+    color: var(--ink-soft);
+  }
+  table.critique .enf { color: var(--faint); font-size: 12.5px; }
+  table.critique .enf code { font-size: 11.5px; }
+
+  .pill {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .pill.resolved { color: var(--pass); background: var(--pass-bg); }
+  .pill.partial  { color: var(--warn); background: var(--warn-bg); }
+  .pill.failed   { color: var(--fail); background: var(--fail-bg); }
+
+  /* ── caught-bugs list ── */
+  .caught { list-style: none; margin: 14px 0 0; padding: 0; }
+  .caught li {
+    display: flex;
+    gap: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--ink-soft);
+    align-items: baseline;
+  }
+  .caught li:last-child { border-bottom: none; }
+  .caught .tag {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    flex: none;
+    width: 108px;
+    color: var(--faint);
+    padding-top: 2px;
+  }
+  .caught b { color: var(--ink); }
+
+  /* ── change columns ── */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 8px; }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } }
+  .col { border: 1px solid var(--rule); background: var(--surface); }
+  .col h3 {
+    font-size: 12px;
+    font-family: var(--mono);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+    padding: 13px 18px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .col ul { list-style: none; margin: 0; padding: 6px 18px 10px; }
+  .col li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+  .col li:last-child { border-bottom: none; }
+  .col li code { font-family: var(--mono); font-size: 12px; color: var(--ink-soft); }
+
+  .foot {
+    margin-top: 56px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    font-size: 12.5px;
+    color: var(--faint);
+    font-family: var(--mono);
+    line-height: 1.7;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .strip .stat { transition: background 0.15s ease; }
+  }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">APIL Investment Engine · Financial-Model Critique</p>
+  <h1>The twelve issues, resolved — and the invariants that now stop a bad report from shipping</h1>
+  <p class="lede">
+    Every one of the twelve external-review findings was traced to a root cause, fixed in the
+    engine, and locked in with an automated reconciliation audit that runs inside report
+    generation. A hard failure no longer reaches the frontend — it blocks the report with an error.
+  </p>
+  <div class="meta">
+    <span>Engine <b>canonical report + audit layer</b></span>
+    <span>Scope <b>backend returns/risk/scoring/evidence + frontend labels</b></span>
+    <span>Verified <b>2026-08-11</b></span>
+  </div>
+
+  <div class="strip">
+    <div class="stat"><div class="n"><em>6360</em>/6360</div><div class="l">real properties generate a report that passes the reconciliation audit</div></div>
+    <div class="stat"><div class="n">40<em>/40</em></div><div class="l">regression tests green (C1–C5, M1–M7, API validation)</div></div>
+    <div class="stat"><div class="n">11<em>/11</em></div><div class="l">golden-property invariant tests green (deterministic scenarios)</div></div>
+    <div class="stat"><div class="n"><em>0</em></div><div class="l">fabricated fallback constants remaining — missing data renders N/A</div></div>
+  </div>
+
+  <div class="callout">
+    <b>The invariant layer is the fix, not the numbers.</b> The critique's own conclusion was that the
+    problem is architectural — several parts independently computing the same financial concepts. The
+    engine now has <span class="mono">one canonical cash-flow builder</span>
+    (<code>build_payment_schedule</code>), and every headline figure is re-derived from the schedule's
+    own totals inside <code>verify_returns</code> + <code>verify_scores</code>. A failed reconciliation
+    raises inside <code>build_canonical_report</code> and the API returns <span class="mono">HTTP 500</span> —
+    the report never renders. This immediately caught four real bugs the audit run below documents.
+  </div>
+
+  <h2><span class="eyebrow">I.</span> The twelve findings</h2>
+  <p class="sec-note">Status reflects what the report and frontend show today. Ten resolved; two honestly partial (marked amber).</p>
+
+  <div class="table-scroll">
+  <table class="critique">
+    <thead>
+      <tr><th></th><th>Finding</th><th>Status</th><th>Fix</th><th>Enforced by</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="idx">01</td>
+        <td class="issue">ROE on dated cash flows; Total ROI / IRR / equity multiple kept separate — never call simple profit÷equity “ROE”</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix">IRR is computed on the dated payment schedule (<code>_irr(cash_flows)</code>). Simple profit÷equity is relabeled <b>Total Return on Equity (Total ROI)</b>; the timed figure is shown as <b>Annualized Return (IRR)</b>. Frontend labels updated to match.</td>
+        <td class="enf">audit <code>cash_flows==total_profit</code>; golden <code>staged_payments</code>, <code>reconciliation_matrix</code></td>
+      </tr>
+      <tr>
+        <td class="idx">02</td>
+        <td class="issue">Rental income consistent with exit strategy — flip ⇒ zero rental; hold ⇒ rent only between handover and exit</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix">Flip model feeds <code>net_annual_income=0</code> into the schedule. Otherwise rent starts at <code>constr+1</code> and runs to exit — the schedule applies exactly the years it is entitled to.</td>
+        <td class="enf">golden <code>flip_has_no_rental_income</code>; audit <code>holding≥construction</code></td>
+      </tr>
+      <tr>
+        <td class="idx">03</td>
+        <td class="issue">Separate purchase / handover / exit / rental-start dates — never conflate time-to-handover with the horizon</td>
+        <td><span class="pill partial">Partial</span></td>
+        <td class="fix">The cash-flow model is year-based and derives every milestone from the schedule (<code>rental_start_year</code>, <code>holding_years</code>, handover at construction year). Full calendar-date XIRR on actual dated cash flows is the remaining gap.</td>
+        <td class="enf">audit <code>holding≥construction</code>; golden <code>timeline_clamps</code></td>
+      </tr>
+      <tr>
+        <td class="idx">04</td>
+        <td class="issue">Label projected gain (vs purchase) separately from purchase-discount-to-FMV — no bare “+15.73% gain”</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix">Frontend renders <b>Expected Capital Gain</b> (asking → exit value) and a distinct <b>vs fair market value</b> card from <code>priceOpportunity.priceDifferencePct</code>.</td>
+        <td class="enf">—</td>
+      </tr>
+      <tr>
+        <td class="idx">05</td>
+        <td class="issue">Growth must render UNAVAILABLE with no project/area data — never a fabricated market default</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix"><code>resolve_growth_rate</code> returns <code>source="none", value=None</code>; the report sets <code>growth.status = UNAVAILABLE</code>. The old <code>DEFAULT_ANNUAL_GROWTH_RATE</code> constant is gone.</td>
+        <td class="enf">regression <code>TestGrowthFallback</code>; golden <code>zero_growth_is_na</code></td>
+      </tr>
+      <tr>
+        <td class="idx">06</td>
+        <td class="issue">Never derive investor horizon from the handover date (the 0.1-year Park Horizon bug)</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix"><code>_resolve_holding_years</code> clamps holding to construction when the timeline is shorter (exit at handover, no rental); missing construction ⇒ N/A. UNKNOWN-status properties with real handover data now follow the off-plan path consistently.</td>
+        <td class="enf">golden <code>timeline_shorter_than_construction_clamps</code>; full 6360 sweep</td>
+      </tr>
+      <tr>
+        <td class="idx">07</td>
+        <td class="issue">Cash-flow events table is the single source of truth — report never recalculates downstream</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix"><code>build_payment_schedule</code> is the one canonical builder. Total-return and leverage both take rental/service-charge totals from the schedule it returns, never from recomputed rounded years.</td>
+        <td class="enf">audit <code>cash_flows==total_profit</code>; caught the 4/80 + 6/6360 divergences below</td>
+      </tr>
+      <tr>
+        <td class="idx">08</td>
+        <td class="issue">Calculation trace for every number — input + formula + output</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix">Every engine result carries an <code>inputs</code> dict with formula and operands; the frontend <code>CalcTracePanel</code> renders them inline.</td>
+        <td class="enf">—</td>
+      </tr>
+      <tr>
+        <td class="idx">09</td>
+        <td class="issue">Automated invariants block report generation on failure</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix"><code>verify_returns</code> + <code>verify_scores</code> run inside <code>build_canonical_report</code>; a hard FAIL raises <code>ReturnAuditError</code> → API <span class="mono">HTTP 500</span>. The report is never shipped inconsistent.</td>
+        <td class="enf">full 6360-property sweep, 0 audit failures</td>
+      </tr>
+      <tr>
+        <td class="idx">10</td>
+        <td class="issue">Scoring audit test</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix"><code>verify_scores</code> reconciles <code>weighted_sum == Σ(component×weight)</code> and <code>investment_score == clamp(raw_score)</code> against the component trace.</td>
+        <td class="enf">golden <code>scoring_reconciliation_*</code></td>
+      </tr>
+      <tr>
+        <td class="idx">11</td>
+        <td class="issue">Valuation evidence tiers — confidence must reflect evidence quality</td>
+        <td><span class="pill resolved">Resolved</span></td>
+        <td class="fix">Evidence hierarchy (project → community → area-wide) unchanged; recency now counts comparable records within 24 months and caps <code>FULL/HIGH → MODERATE</code> when ≥10 sales but &lt;3 are recent.</td>
+        <td class="enf">regression + <code>recentSalesCount/recentRentalsCount/recencyLabel</code> in report</td>
+      </tr>
+      <tr>
+        <td class="idx">12</td>
+        <td class="issue">OBSERVED / ESTIMATED / DERIVED / UNAVAILABLE status on every number</td>
+        <td><span class="pill partial">Partial</span></td>
+        <td class="fix">Rental, growth, leverage, and total-return blocks each carry a <code>status</code> field, and missing inputs now propagate <code>None</code> to render N/A instead of 0. Per-scalar status coverage is the remaining gap.</td>
+        <td class="enf">golden <code>zero_growth_is_na</code>, <code>missing_construction_is_na</code></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2><span class="eyebrow">II.</span> Real bugs the invariant layer caught</h2>
+  <p class="sec-note">The audit exists precisely because the critique predicted these. Each was found on real data and fixed at its root.</p>
+  <ul class="caught">
+    <li><span class="tag">schedule</span><span><b>Payment plans not funding 100% of price</b> (e.g. Savanna 10/80/11 = 101%) left sum(cash_flows) ≠ profit. A transparent balance entry now settles the schedule to the full purchase price.</span></li>
+    <li><span class="tag">rounding</span><span><b>Divergent construction-year rounding</b> — the total-return path applied 3 rental years while the schedule applied 4, breaking reconciliation by construction. Aggregates are now taken only from schedule totals.</span></li>
+    <li><span class="tag">status</span><span><b>UNKNOWN-status properties</b> (6/6360) got construction timing in the leverage model but not in the total-return model — two different schedules, <code>equity_gain ≠ total_profit</code>. Both now share one construction rule.</span></li>
+    <li><span class="tag">scoring</span><span><b>Score clamped from the unrounded mean</b> while <code>raw_score</code> is stored rounded to 2dp — a 1-point divergence at .5 boundaries. The audit tolerates that artifact and still blocks real tampering.</span></li>
+  </ul>
+
+  <h2><span class="eyebrow">III.</span> What changed</h2>
+  <div class="cols">
+    <div class="col">
+      <h3>Backend engine</h3>
+      <ul>
+        <li><code>returns/returns_engine.py</code> — canonical <code>build_payment_schedule</code>; N/A over fallback for growth, construction, rental; stress tests None-safe; UNKNOWN-status construction rule unified.</li>
+        <li><code>report/audit_checks.py</code> (new) — <code>verify_returns</code> + <code>verify_scores</code>, hard-fail raises.</li>
+        <li><code>report/canonical_report.py</code> — audit wired into every report; growth/rental statuses; evidence recency fields.</li>
+        <li><code>evidence/evidence_engine.py</code> — 24-month recency counting + confidence cap.</li>
+        <li><code>api/server.py</code> — audit failure → HTTP 500; exit-strategy resolution.</li>
+        <li><code>risk/risk_engine.py</code> — None-safe yield in opportunity scoring.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Frontend labels</h3>
+      <ul>
+        <li><code>ReturnsSection.tsx</code> — “Total Return Est.” (netROI + 12-month trend) removed; engine IRR / Total ROI shown instead.</li>
+        <li><code>ReturnsSection.tsx</code> — “ROE” cards relabeled Total ROI, with a separate Annualized Return (IRR) card.</li>
+        <li><code>ReturnsSection.tsx</code> — cash-flow card uses engine <code>total_return_pct</code> stress values, not a nonexistent field.</li>
+        <li><code>pdf_report.py</code> — <code>None</code> annual rent renders “N/A”, never 0.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="foot">
+    APIL Investment Engine · returns &amp; scoring reconciliation audit · verified 2026-08-11<br>
+    Regression 40/40 · Golden invariants 11/11 · Real-property sweep 6360/6360 · 0 audit failures<br>
+    Remaining honest gaps (finding 03, 12): calendar-date XIRR and per-scalar status coverage.
+  </p>
+
+</div>
