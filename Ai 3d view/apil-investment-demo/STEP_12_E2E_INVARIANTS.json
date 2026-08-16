@@ -1,0 +1,46 @@
+{
+  "invariants": [
+    {
+      "name": "decision_immutable",
+      "description": "Objective decision identical across all investor personas for same property"
+    },
+    {
+      "name": "developer_grade_immutable",
+      "description": "Developer grade identical across all investor personas"
+    },
+    {
+      "name": "benchmark_immutable",
+      "description": "Benchmark data identical across all investor personas"
+    },
+    {
+      "name": "fit_does_not_override",
+      "description": "Investor fit cannot upgrade or downgrade objective decision"
+    },
+    {
+      "name": "score_bounds",
+      "description": "Fit score never exceeds 100 or falls below 0"
+    },
+    {
+      "name": "insufficient_excluded",
+      "description": "INSUFFICIENT_EVIDENCE excluded from default marketplace"
+    },
+    {
+      "name": "null_advantage_when_unusable",
+      "description": "usable_for_investment=false implies price_advantage_pct is null"
+    },
+    {
+      "name": "no_duplicate_ids",
+      "description": "No duplicate property IDs in locked dataset"
+    },
+    {
+      "name": "api_safety",
+      "description": "No stack traces or internal paths in API error responses"
+    },
+    {
+      "name": "extreme_values_flagged",
+      "description": "Extreme price advantages carry warnings"
+    }
+  ],
+  "verified": true,
+  "timestamp": "2026-08-16T19:15:43.561066"
+}
