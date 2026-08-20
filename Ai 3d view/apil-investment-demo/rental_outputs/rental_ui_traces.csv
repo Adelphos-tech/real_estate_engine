@@ -1,0 +1,12 @@
+property_id,expected_status,actual_status,expected_tier,actual_tier,expected_rent,actual_rent,expected_yield,actual_yield,expected_label,actual_label,r4_disclosure_required,r4_disclosure_present,not_evaluated,dq_warning_required,dq_warning_present,all_pass
+6056,Ready,Ready,R2,R2,278400.0,278400.0,4.42,4.42,Estimated Project Rent,Estimated Project Rent,False,False,False,False,False,True
+6277,Ready,Ready,R2,R2,100800.0,100800.0,7.75,7.75,Estimated Project Rent,Estimated Project Rent,False,False,False,False,False,True
+8057,Ready,Ready,R2,R2,172800.0,172800.0,3.84,3.84,Estimated Project Rent,Estimated Project Rent,False,False,False,False,False,True
+3201,Ready,Ready,R2,R2,72000.0,72000.0,5.22,5.22,Estimated Project Rent,Estimated Project Rent,False,False,False,False,False,True
+7061,Ready,Ready,R4,R4,172800.0,172800.0,3.84,3.84,Estimated Area Rent,Estimated Area Rent,True,True,False,False,False,True
+8201,Ready,Ready,R4,R4,163200.0,163200.0,3.8,3.8,Estimated Area Rent,Estimated Area Rent,True,True,False,False,False,True
+2725,Ready,Ready,R4,R4,84480.0,84480.0,93.87,93.87,Estimated Area Rent,Estimated Area Rent,True,True,False,True,True,True
+3693,Offplan,Offplan,NONE,NONE,,,,,,,False,False,True,False,False,True
+4434,Offplan,Offplan,NONE,NONE,,,,,,,False,False,True,False,False,True
+701,Offplan,Offplan,NONE,NONE,,,,,,,False,False,True,False,False,True
+3983,Offplan,Offplan,NONE,NONE,,,,,,,False,False,True,False,False,True

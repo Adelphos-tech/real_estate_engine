@@ -1,7 +1,7 @@
 """
 Rental Context Service — Shadow endpoint logic for gross rental yield.
 
-LOCKED METHODOLOGY: RENTAL_MARKET_RENT_V1_CANDIDATE / GROSS_RENTAL_YIELD_V1_CANDIDATE
+LOCKED METHODOLOGY: RENTAL_MARKET_RENT_V1 / GROSS_RENTAL_YIELD_V1
   - Estimator: RECENCY_WEIGHTED_MEDIAN_ANNUAL_RENT
   - Half-life: 12 months
   - Outlier filter: IQR 1.5
@@ -35,8 +35,8 @@ from investor_api.rental.rental_area_mapping import (
 # ──────────────────────────────────────────────────────────────────────────────
 # LOCKED CONFIGURATION
 # ──────────────────────────────────────────────────────────────────────────────
-CALC_VERSION_RENT = "RENTAL_MARKET_RENT_V1_CANDIDATE"
-CALC_VERSION_YIELD = "GROSS_RENTAL_YIELD_V1_CANDIDATE"
+CALC_VERSION_RENT = "RENTAL_MARKET_RENT_V1"
+CALC_VERSION_YIELD = "GROSS_RENTAL_YIELD_V1"
 DEFAULT_PROP_TYPE = "Unit"
 SIZE_BAND = 0.25
 MIN_HISTORICAL = 5

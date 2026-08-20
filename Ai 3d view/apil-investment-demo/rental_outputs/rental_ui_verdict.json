@@ -1,0 +1,34 @@
+{
+  "verdict": "GROSS_RENTAL_YIELD_V1_UI_VERIFIED",
+  "checks": {
+    "trace_tests_pass": true,
+    "ui_api_parity_pass": true,
+    "sales_regression_pass": true,
+    "no_duplicated_logic": true,
+    "calc_versions_correct": true,
+    "debug_endpoint_available": true
+  },
+  "trace_failures": 0,
+  "ui_api_parity": {
+    "rent_mismatches": 0,
+    "range_mismatches": 0,
+    "yield_mismatches": 0,
+    "tier_semantic_mismatches": 0,
+    "properties_tested": 50
+  },
+  "sales_regression": {
+    "RENTAL_UI_CHANGED_MARKET_CONTEXT": 0,
+    "RENTAL_UI_CHANGED_PRODUCTION_SIGNAL": 0,
+    "RENTAL_UI_CHANGED_APIL_ADVANTAGE": 0,
+    "RENTAL_UI_CHANGED_CONVENTIONAL_POSITION": 0,
+    "RENTAL_UI_CHANGED_FIT_SCORE": 0
+  },
+  "no_duplicated_logic": {
+    "frontend_rent_formula": 0,
+    "frontend_yield_formula": 0
+  },
+  "calc_versions": {
+    "rent": "RENTAL_MARKET_RENT_V1_CANDIDATE",
+    "yield": "GROSS_RENTAL_YIELD_V1_CANDIDATE"
+  }
+}

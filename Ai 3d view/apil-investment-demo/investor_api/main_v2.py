@@ -2216,6 +2216,39 @@ def build_response(r: Dict, fit: Optional[Dict] = None, investor_id: Optional[st
     else:
         clean["investor_profile"] = None
 
+    # ── Rental Context (DISPLAY-ONLY — gross rental yield) ──
+    # Uses the SAME compute_rental_context as /debug/rental-context/{id}.
+    # Does NOT modify any production signal (objective_signal, market_context,
+    # APIL advantage, conventional position, investor fit, ranking).
+    try:
+        rental_attrs = apil_attrs_result.get("attributes", {})
+        rental_pid = str(prop.get("id", ""))
+        rental_master = master_by_id.get(rental_pid)
+        rental_area = str(rental_master.get("area", "")).strip() if rental_master else (rental_attrs.get("area") or prop.get("area", ""))
+        rental_project = str(rental_master.get("sub_project", "")).strip() if rental_master else ""
+        if not rental_project:
+            rental_project = str(rental_master.get("property_name", "")).strip() if rental_master else (prop.get("name") or "")
+        rental_bedrooms = rental_attrs.get("bedrooms")
+        rental_size_sqft = rental_attrs.get("size_sqft")
+        rental_price_aed = rental_attrs.get("price")
+        rental_resolved_status = rental_attrs.get("status", "Unknown")
+        clean["rental_context"] = compute_rental_context(
+            property_id=rental_pid,
+            resolved_status=rental_resolved_status,
+            master_area=rental_area,
+            master_project=rental_project,
+            master_bedrooms=rental_bedrooms,
+            master_size_sqft=rental_size_sqft,
+            master_price_aed=rental_price_aed,
+        )
+    except Exception as e:
+        clean["rental_context"] = {
+            "shadow": True,
+            "error": f"rental_context computation failed: {str(e)}",
+            "calc_version_rent": RENTAL_CALC_VERSION_RENT,
+            "calc_version_yield": RENTAL_CALC_VERSION_YIELD,
+        }
+
     return _sanitize_for_json(clean)
 
 
@@ -2798,8 +2831,8 @@ def debug_rental_context(property_id: str):
     APIL advantage, conventional position, investor fit).
 
     Calc versions:
-      RENTAL_MARKET_RENT_V1_CANDIDATE
-      GROSS_RENTAL_YIELD_V1_CANDIDATE
+      RENTAL_MARKET_RENT_V1
+      GROSS_RENTAL_YIELD_V1
     """
     r = by_id.get(property_id)
     if not r:
