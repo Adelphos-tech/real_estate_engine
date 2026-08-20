@@ -1,0 +1,134 @@
+{
+  "section1": {
+    "total_prediction_rows": 295672,
+    "unique_target_record_ids": 43513,
+    "unique_target_contracts": 43513,
+    "unique_target_projects": 76,
+    "unique_target_areas": 16,
+    "pred_per_target_median": 3,
+    "pred_per_target_p75": 6.0,
+    "pred_per_target_p90": 14.0,
+    "pred_per_target_max": 242,
+    "replication_ratio": 6.8,
+    "distribution": {
+      "1": 6920,
+      "100+": 206,
+      "11-50": 5821,
+      "2-5": 24425,
+      "51-100": 354,
+      "6-10": 5787
+    }
+  },
+  "section2": {
+    "raw_row_metrics": {
+      "n": 295672,
+      "median_ape": 14.52,
+      "p75_ape": 26.15,
+      "p90_ape": 39.52,
+      "median_bias": -0.16,
+      "mean_bias": 1.56
+    },
+    "unique_target_metrics": {
+      "n": 43513,
+      "median_ape": 14.29,
+      "p75_ape": 25.44,
+      "p90_ape": 38.87,
+      "median_bias": -1.33,
+      "mean_bias": 0.57
+    },
+    "distortion": {
+      "median_ape_delta": -0.23,
+      "p90_ape_delta": -0.65,
+      "bias_delta": -1.17
+    }
+  },
+  "section3_4": {
+    "cal_test_all_obs": {
+      "n": 170589,
+      "median_ape": 14.24,
+      "p75_ape": 25.33,
+      "p90_ape": 38.29,
+      "median_bias": -0.16,
+      "mean_bias": 1.36
+    },
+    "cal_test_proj_wtd_median_ape": 17.65,
+    "cal_test_proj_wtd_mean_ape": 17.53,
+    "cal_test_proj_wtd_p90": 23.64,
+    "cal_test_area_wtd_median_ape": 13.42,
+    "cal_test_area_wtd_mean_ape": 17.89,
+    "cal_test_area_wtd_p90": 18.45,
+    "cal_test_ex_bb": {
+      "n": 111927,
+      "median_ape": 13.6,
+      "p75_ape": 24.51,
+      "p90_ape": 37.33,
+      "median_bias": -1.26,
+      "mean_bias": 0.22
+    },
+    "learned_factor": 0.96
+  },
+  "section5": {
+    "folds": [
+      {
+        "name": "Fold1",
+        "train_dates": "2026-04-01 to 2026-05-04",
+        "test_dates": "2026-05-04 to 2026-06-06",
+        "train_n": 56004,
+        "test_n": 70335,
+        "cal_factor": 0.9615,
+        "median_ape": 14.18,
+        "p75_ape": 26.11,
+        "p90_ape": 39.35,
+        "bias": 0.18
+      },
+      {
+        "name": "Fold2",
+        "train_dates": "2026-04-01 to 2026-06-06",
+        "test_dates": "2026-06-06 to 2026-07-08",
+        "train_n": 125083,
+        "test_n": 82506,
+        "cal_factor": 0.96,
+        "median_ape": 14.0,
+        "p75_ape": 25.71,
+        "p90_ape": 39.2,
+        "bias": 0.65
+      },
+      {
+        "name": "Fold3",
+        "train_dates": "2026-04-01 to 2026-07-08",
+        "test_dates": "2026-07-08 to 2026-08-09",
+        "train_n": 204486,
+        "test_n": 91186,
+        "cal_factor": 0.9583,
+        "median_ape": 14.2,
+        "p75_ape": 25.0,
+        "p90_ape": 37.36,
+        "bias": -1.08
+      }
+    ],
+    "cal_factor_min": 0.9583,
+    "cal_factor_max": 0.9615,
+    "cal_factor_median": 0.96,
+    "cal_factor_range": 0.0031999999999999806
+  },
+  "section7": {
+    "calibration_target_leakage": 0
+  },
+  "section8": {
+    "estimator_a_iqr": 1.5,
+    "estimator_c_iqr": 2.0,
+    "verdict": "A_MORE_AGGRESSIVE (1.5 < 2.0 \u2192 tighter fences \u2192 more outliers removed)",
+    "report_needs_fix": true
+  },
+  "section11": {
+    "HOLDOUT_TARGET_LEAKAGE": 0,
+    "FUTURE_DATA_LEAKAGE": 0,
+    "CALIBRATION_TARGET_LEAKAGE": 0,
+    "RENTAL_PRODUCTION_ELIGIBLE_TRUE": 0,
+    "RENTAL_PRODUCTION_SIGNAL_NON_NONE": 0,
+    "NET_ROI_CALCULATED": 0,
+    "RENTAL_CHANGED_MARKET_CONTEXT": 0,
+    "RENTAL_CHANGED_PRODUCTION_SIGNAL": 0,
+    "RENTAL_CHANGED_FIT_SCORE": 0
+  }
+}

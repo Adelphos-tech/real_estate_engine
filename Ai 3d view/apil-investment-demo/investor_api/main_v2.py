@@ -22,7 +22,7 @@ import os
 import sys
 import uuid
 from datetime import datetime
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Tuple
 from fastapi import FastAPI, HTTPException, Query, Header
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
@@ -46,6 +46,17 @@ from investor_api.fallback.market_context_service import (
     get_area_context,
     select_market_context,
     AREA_CONTEXT_CONFIG_V1,
+)
+
+# Rental Context Service — SHADOW ONLY (gross rental yield candidate)
+from investor_api.rental.rental_context_service import (
+    compute_rental_context,
+    get_rental_csv_sha256,
+    get_rental_csv_rows,
+    EXPECTED_RENTAL_SHA256,
+    RENTAL_CSV_PATH,
+    CALC_VERSION_RENT as RENTAL_CALC_VERSION_RENT,
+    CALC_VERSION_YIELD as RENTAL_CALC_VERSION_YIELD,
 )
 
 
@@ -116,6 +127,10 @@ for dev_name, props in by_developer.items():
     }
 
 print(f"API loaded: {len(records)} properties, {len(ranked_opportunities)} ranked opportunities, {len(developer_stats)} developers")
+
+# Module-level caches for fast-pass investor personalization (no Qdrant enrichment)
+_fast_pass_eligibility_cache: Dict[Tuple[str, str], Dict] = {}
+_fast_pass_fit_cache: Dict[Tuple[str, str], Dict] = {}
 
 # ============================================================
 # LOAD MASTER PROPERTIES DATASET (authoritative unit-level facts)
@@ -2347,31 +2362,37 @@ def list_opportunities(
         results.append(r)
 
     # STEP 25: Apply investor eligibility filtering when investor_id present
+    # PERFORMANCE FIX: two-phase approach — fast eligibility/fit without Qdrant
+    # enrichment for all results, sort + paginate, then only enrich the current page.
     if investor_id and investor_id in investor_profiles:
         profile_data = investor_profiles[investor_id]
         profile = InvestorProfileModel(profile_data["answers"])
         checker = InvestorEligibilityChecker(profile)
         scorer = InvestorFitScorer(profile)
 
-        eligible_results = []
-        other_results = []
+        eligible_items = []
+        other_items = []
+        cache_key_prefix = investor_id
         for r in results:
-            enrichment = enrich_property(r["property"]["id"], r["property"], r.get("developer"))
-            eligibility = checker.check(r, enrichment)
-            if eligibility["eligible"]:
-                fit = scorer.score_property(r, enrichment)
-                resp = build_response(r, fit, investor_id, enrichment)
-                resp["eligibility"] = eligibility
-                eligible_results.append({"record": r, "fit": fit, "response": resp})
+            pid = r["property"]["id"]
+            cache_key = (cache_key_prefix, pid)
+            # Phase 1: fast pass using MASTER data only (no Qdrant enrichment)
+            # Use module-level cache when available.
+            eligibility_fast = _fast_pass_eligibility_cache.get(cache_key)
+            if eligibility_fast is None:
+                eligibility_fast = checker.check(r, None)
+                _fast_pass_eligibility_cache[cache_key] = eligibility_fast
+            if eligibility_fast["eligible"]:
+                fit_fast = _fast_pass_fit_cache.get(cache_key)
+                if fit_fast is None:
+                    fit_fast = scorer.score_property(r, None)
+                    _fast_pass_fit_cache[cache_key] = fit_fast
+                eligible_items.append({"record": r, "fit": fit_fast, "eligibility": eligibility_fast})
             elif include_other_opportunities:
-                fit = scorer.score_property(r, enrichment)
-                resp = build_response(r, fit, investor_id, enrichment)
-                resp["eligibility"] = eligibility
-                other_results.append({"record": r, "fit": fit, "response": resp})
+                other_items.append({"record": r, "eligibility": eligibility_fast})
 
         # Sort eligible by investor fit first, then investment signal quality
-        # This ensures personalization controls ranking, not just objective signal
-        eligible_results.sort(key=lambda item: (
+        eligible_items.sort(key=lambda item: (
             -item["fit"]["score"],                                      # 1. Investor fit (primary)
             DECISION_ORDER.get(item["record"]["investment_decision"]["decision"], 99),  # 2. Signal quality
             -(item["record"]["price_analysis"].get("best_usable_advantage_pct") or -999),
@@ -2380,29 +2401,48 @@ def list_opportunities(
             item["record"]["property"].get("current_price_aed") or 999999999,
         ))
 
-        total = len(eligible_results)
+        total = len(eligible_items)
         start = (page - 1) * per_page
         end = start + per_page
-        page_results = [e["response"] for e in eligible_results[start:end]]
+        page_slice = eligible_items[start:end]
+
+        # Phase 2: only enrich + build_response for the current page
+        page_results = []
+        for item in page_slice:
+            r = item["record"]
+            enrichment = enrich_property(r["property"]["id"], r["property"], r.get("developer"))
+            eligibility = checker.check(r, enrichment)
+            fit = scorer.score_property(r, enrichment)
+            resp = build_response(r, fit, investor_id, enrichment)
+            resp["eligibility"] = eligibility
+            page_results.append(resp)
 
         other_page = []
         if include_other_opportunities:
             # Sort other opportunities by APIL signal strength only (not investor fit)
-            other_results.sort(key=lambda item: (
+            other_items.sort(key=lambda item: (
                 DECISION_ORDER.get(item["record"]["investment_decision"]["decision"], 99),
                 -(item["record"]["price_analysis"].get("best_usable_advantage_pct") or -999),
                 -(item["record"]["_ranking"]["evidence_strength_score"]),
                 grade_rank(item["record"]["developer"]["grade"]),
             ))
-            other_page = [e["response"] for e in other_results[:per_page]]
+            other_slice = other_items[:per_page]
+            for item in other_slice:
+                r = item["record"]
+                enrichment = enrich_property(r["property"]["id"], r["property"], r.get("developer"))
+                eligibility = checker.check(r, enrichment)
+                fit = scorer.score_property(r, enrichment)
+                resp = build_response(r, fit, investor_id, enrichment)
+                resp["eligibility"] = eligibility
+                other_page.append(resp)
 
         resp = {
             "total": total, "page": page, "per_page": per_page,
             "investor_id": investor_id,
             "results": page_results,
             "other_opportunities": other_page if include_other_opportunities else None,
-            "eligible_count": len(eligible_results),
-            "other_count": len(other_results),
+            "eligible_count": len(eligible_items),
+            "other_count": len(other_items),
         }
         if investor_id and investor_id in investor_profiles:
             resp["investor_profile"] = investor_profiles[investor_id]["answers"]
@@ -2741,6 +2781,65 @@ def debug_benchmark_sources(property_id: str):
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Benchmark sources error: {str(e)}")
+
+
+# ============================================================
+# SHADOW RENTAL CONTEXT ENDPOINT — GROSS RENTAL YIELD CANDIDATE
+# ============================================================
+@app.get("/debug/rental-context/{property_id}")
+def debug_rental_context(property_id: str):
+    """
+    SHADOW endpoint: returns estimated annual market rent + gross rental yield.
+
+    Uses the SAME production status-resolution path as /properties/{id}:
+      _build_apil_attributes() → MASTER unit_status > _resolve_property_status()
+
+    Does NOT modify any production signal (market_context, production_signal,
+    APIL advantage, conventional position, investor fit).
+
+    Calc versions:
+      RENTAL_MARKET_RENT_V1_CANDIDATE
+      GROSS_RENTAL_YIELD_V1_CANDIDATE
+    """
+    r = by_id.get(property_id)
+    if not r:
+        raise HTTPException(status_code=404, detail="Property not found")
+
+    # ── Use the SAME production status-resolution path ──
+    enrichment = enrich_property(property_id, r["property"], r.get("developer"))
+    apil_attrs_result = _build_apil_attributes(r, enrichment)
+    attrs = apil_attrs_result.get("attributes", {})
+    resolved_status = attrs.get("status", "Unknown")
+
+    # ── Extract MASTER facts (same hierarchy as production) ──
+    master = master_by_id.get(property_id)
+    master_area = str(master.get("area", "")).strip() if master else (attrs.get("area") or r["property"].get("area", ""))
+    master_project = str(master.get("sub_project", "")).strip() if master else ""
+    if not master_project:
+        master_project = str(master.get("property_name", "")).strip() if master else (r["property"].get("name") or "")
+    master_bedrooms = attrs.get("bedrooms")
+    master_size_sqft = attrs.get("size_sqft")
+    master_price_aed = attrs.get("price")
+
+    # ── Compute rental context (shadow only) ──
+    rental = compute_rental_context(
+        property_id=property_id,
+        resolved_status=resolved_status,
+        master_area=master_area,
+        master_project=master_project,
+        master_bedrooms=master_bedrooms,
+        master_size_sqft=master_size_sqft,
+        master_price_aed=master_price_aed,
+    )
+
+    # ── Add property metadata for context ──
+    rental["property_name"] = r["property"].get("name", "")
+    rental["master_available"] = apil_attrs_result.get("master_available", False)
+    rental["rental_csv_sha256"] = get_rental_csv_sha256()
+    rental["rental_csv_rows"] = get_rental_csv_rows()
+    rental["rental_csv_path"] = RENTAL_CSV_PATH
+
+    return rental
 
 
 # ============================================================

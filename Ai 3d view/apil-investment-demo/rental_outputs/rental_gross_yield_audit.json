@@ -1,0 +1,48 @@
+{
+  "calc_version_rent": "RENTAL_MARKET_RENT_V1_CANDIDATE",
+  "calc_version_yield": "GROSS_RENTAL_YIELD_V1_CANDIDATE",
+  "master_total": 2614,
+  "ready_count": 315,
+  "offplan_count": 2249,
+  "unknown_count": 50,
+  "status_reconciles": true,
+  "tier_selected": {
+    "R4": 130,
+    "R2": 142,
+    "NONE": 15,
+    "R3": 26,
+    "R1": 2
+  },
+  "rent_evaluable": 300,
+  "yield_evaluable": 300,
+  "rental_csv_sha256": "92546471b4326a89ca5980381b918cd5077d277eae396edf0374d9448d91129d",
+  "rental_csv_sha256_match": true,
+  "rental_csv_rows": 573097,
+  "rental_csv_rows_match": true,
+  "determinism": {
+    "rent_nondeterministic": 0,
+    "tier_nondeterministic": 0,
+    "yield_nondeterministic": 0,
+    "all_deterministic": true
+  },
+  "safety": {
+    "OFFPLAN_CURRENT_RENT_CALCULATED": 0,
+    "UNKNOWN_STATUS_RENT_CALCULATED": 0,
+    "ASKING_PRICE_USED_TO_ESTIMATE_RENT": 0,
+    "ASKING_PRICE_USED_TO_VALIDATE_RENT": 0,
+    "YIELD_USED_TO_REJECT_RENT": 0,
+    "DLD_SALES_PRICE_USED_FOR_GROSS_YIELD": 0,
+    "AREA_BENCHMARK_USED_FOR_GROSS_YIELD": 0,
+    "QDRANT_PRICE_USED_FOR_GROSS_YIELD": 0,
+    "RENTAL_CHANGED_MARKET_CONTEXT": 0,
+    "RENTAL_CHANGED_PRODUCTION_SIGNAL": 0,
+    "RENTAL_CHANGED_APIL_ADVANTAGE": 0,
+    "RENTAL_CHANGED_CONVENTIONAL_POSITION": 0,
+    "RENTAL_CHANGED_FIT_SCORE": 0,
+    "NET_ROI_CALCULATED": 0,
+    "RENT_ESTIMATE_NONDETERMINISTIC": 0,
+    "RENT_TIER_NONDETERMINISTIC": 0,
+    "GROSS_YIELD_NONDETERMINISTIC": 0
+  },
+  "safety_all_zero": true
+}

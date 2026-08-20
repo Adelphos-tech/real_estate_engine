@@ -1,0 +1,12 @@
+property_id,expected_status,actual_status,status_match,expected_tier,actual_tier,tier_match,expected_rent,actual_rent,rent_match,expected_yield,actual_yield,yield_match,all_match
+6056,Ready,Ready,True,R2,R2,True,278400.0,278400.0,True,4.42,4.42,True,True
+6277,Ready,Ready,True,R2,R2,True,100800.0,100800.0,True,7.75,7.75,True,True
+8057,Ready,Ready,True,R2,R2,True,172800.0,172800.0,True,3.84,3.84,True,True
+3201,Ready,Ready,True,R2,R2,True,72000.0,72000.0,True,5.22,5.22,True,True
+7061,Ready,Ready,True,R4,R4,True,172800.0,172800.0,True,3.84,3.84,True,True
+8201,Ready,Ready,True,R4,R4,True,163200.0,163200.0,True,3.8,3.8,True,True
+2725,Ready,Ready,True,R4,R4,True,84480.0,84480.0,True,93.87,93.87,True,True
+3693,Offplan,Offplan,True,NONE,NONE,True,,,True,,,True,True
+4434,Offplan,Offplan,True,NONE,NONE,True,,,True,,,True,True
+701,Offplan,Offplan,True,NONE,NONE,True,,,True,,,True,True
+3983,Offplan,Offplan,True,NONE,NONE,True,,,True,,,True,True

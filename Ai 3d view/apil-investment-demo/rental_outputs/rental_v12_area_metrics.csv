@@ -1,0 +1,16 @@
+n,median_ape,p75_ape,p90_ape,median_bias,mean_bias,area,candidate,n_properties
+16226,14.32,23.9,34.08,0.17,1.23,Al Barshaa South Third,SIZE_20,21
+3652,11.36,20.0,32.55,-4.0,-2.96,Al Hebiah Fourth,SIZE_20,8
+1244,10.4,20.0,28.0,-1.26,-1.5,Al Jadaf,SIZE_20,2
+40502,10.44,19.48,30.67,1.33,2.95,Al Khairan First,SIZE_20,25
+3758,16.57,28.0,37.72,-0.61,0.8,Al Thanyah Fifth,SIZE_20,8
+14151,20.5,34.72,52.52,1.05,6.34,Burj Khalifa,SIZE_20,11
+58473,15.56,27.76,40.31,2.86,4.33,Business Bay,SIZE_20,52
+138,14.26,23.43,34.85,-9.99,-0.74,Dubai Investment Park First,SIZE_20,1
+11021,14.65,25.22,37.81,-4.59,-4.99,Jabal Ali First,SIZE_20,9
+2073,12.0,23.2,34.3,-4.0,-1.77,Madinat Al Mataar,SIZE_20,5
+12926,19.31,33.22,49.54,0.8,1.47,Marsa Dubai,SIZE_20,16
+318,12.27,20.0,32.0,0.0,-0.79,Nad Al Shiba First,SIZE_20,3
+2332,17.71,31.56,47.64,2.86,5.3,Palm Jumeirah,SIZE_20,13
+671,14.06,23.2,35.04,-7.43,-5.07,Wadi Al Safa 3,SIZE_20,3
+1583,11.62,20.17,28.0,-4.4,-3.24,Wadi Al Safa 5,SIZE_20,3

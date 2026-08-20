@@ -1,0 +1,180 @@
+{
+  "config": {
+    "size_band_pct": 0.25,
+    "lookback_months": 24
+  },
+  "cutoff_date": "2026-03-31",
+  "contract_strategy": "NEW_PLUS_RENEWED",
+  "total_tier_hit_properties": 301,
+  "properties_with_holdout": 13,
+  "total_individual_predictions": 306,
+  "aggregate_metrics": {
+    "n_predictions": 306,
+    "median_absolute_error_aed": 15000.0,
+    "median_ape_pct": 13.636363636363635,
+    "p75_ape_pct": 23.96330275229358,
+    "p90_ape_pct": 39.009661835748794,
+    "median_bias_pct": 12.5,
+    "mean_bias_pct": 16.910066301592877,
+    "project_weighted_mape_pct": 20.59502424646899,
+    "mape_pct": 20.595024246469002
+  },
+  "per_property_holdout": [
+    {
+      "property_id": 2459,
+      "selected_tier": "R2",
+      "holdout_passed": false,
+      "holdout_mape": 28.000000000000004,
+      "holdout_p75_ape": 40.66496163682864,
+      "holdout_p90_ape": 60.0,
+      "holdout_median_bias": 28.000000000000004,
+      "holdout_n_predictions": 50,
+      "holdout_n_test": 50,
+      "holdout_n_train": 34
+    },
+    {
+      "property_id": 507,
+      "selected_tier": "R2",
+      "holdout_passed": false,
+      "holdout_mape": 32.93269230769231,
+      "holdout_p75_ape": 40.0,
+      "holdout_p90_ape": 50.65217391304348,
+      "holdout_median_bias": 32.93269230769231,
+      "holdout_n_predictions": 18,
+      "holdout_n_test": 18,
+      "holdout_n_train": 15
+    },
+    {
+      "property_id": 6556,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 7.560630730996658,
+      "holdout_p75_ape": 12.5,
+      "holdout_p90_ape": 13.960216998191681,
+      "holdout_median_bias": 2.3255813953488373,
+      "holdout_n_predictions": 20,
+      "holdout_n_test": 20,
+      "holdout_n_train": 19
+    },
+    {
+      "property_id": 983,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 17.142857142857142,
+      "holdout_p75_ape": 36.57342657342657,
+      "holdout_p90_ape": 42.338461538461544,
+      "holdout_median_bias": 17.142857142857142,
+      "holdout_n_predictions": 14,
+      "holdout_n_test": 14,
+      "holdout_n_train": 22
+    },
+    {
+      "property_id": 8220,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 16.508152173913043,
+      "holdout_p75_ape": 26.32890365448505,
+      "holdout_p90_ape": 42.5,
+      "holdout_median_bias": 13.696808510638299,
+      "holdout_n_predictions": 16,
+      "holdout_n_test": 16,
+      "holdout_n_train": 22
+    },
+    {
+      "property_id": 6235,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 16.883116883116884,
+      "holdout_p75_ape": 22.727272727272727,
+      "holdout_p90_ape": 35.0,
+      "holdout_median_bias": 16.883116883116884,
+      "holdout_n_predictions": 26,
+      "holdout_n_test": 26,
+      "holdout_n_train": 10
+    },
+    {
+      "property_id": 2645,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 10.204081632653061,
+      "holdout_p75_ape": 12.903225806451612,
+      "holdout_p90_ape": 37.999999999999986,
+      "holdout_median_bias": 8.0,
+      "holdout_n_predictions": 29,
+      "holdout_n_test": 29,
+      "holdout_n_train": 17
+    },
+    {
+      "property_id": 4872,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 18.695652173913043,
+      "holdout_p75_ape": 22.74629468177855,
+      "holdout_p90_ape": 28.10606060606061,
+      "holdout_median_bias": 17.0,
+      "holdout_n_predictions": 16,
+      "holdout_n_test": 16,
+      "holdout_n_train": 16
+    },
+    {
+      "property_id": 3522,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 10.714285714285714,
+      "holdout_p75_ape": 11.692174492844828,
+      "holdout_p90_ape": 15.545454545454547,
+      "holdout_median_bias": 9.411764705882353,
+      "holdout_n_predictions": 13,
+      "holdout_n_test": 13,
+      "holdout_n_train": 14
+    },
+    {
+      "property_id": 1656,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 10.230115712701311,
+      "holdout_p75_ape": 18.181818181818183,
+      "holdout_p90_ape": 18.181818181818183,
+      "holdout_median_bias": 8.333333333333332,
+      "holdout_n_predictions": 34,
+      "holdout_n_test": 34,
+      "holdout_n_train": 24
+    },
+    {
+      "property_id": 7266,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 8.695652173913043,
+      "holdout_p75_ape": 13.636363636363635,
+      "holdout_p90_ape": 21.49859943977591,
+      "holdout_median_bias": 8.695652173913043,
+      "holdout_n_predictions": 34,
+      "holdout_n_test": 34,
+      "holdout_n_train": 31
+    },
+    {
+      "property_id": 7170,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 19.602649006622517,
+      "holdout_p75_ape": 20.405405405405403,
+      "holdout_p90_ape": 25.35714285714286,
+      "holdout_median_bias": 19.602649006622517,
+      "holdout_n_predictions": 20,
+      "holdout_n_test": 20,
+      "holdout_n_train": 15
+    },
+    {
+      "property_id": 6246,
+      "selected_tier": "R2",
+      "holdout_passed": true,
+      "holdout_mape": 16.508152173913043,
+      "holdout_p75_ape": 26.32890365448505,
+      "holdout_p90_ape": 42.5,
+      "holdout_median_bias": 13.696808510638299,
+      "holdout_n_predictions": 16,
+      "holdout_n_test": 16,
+      "holdout_n_train": 22
+    }
+  ]
+}

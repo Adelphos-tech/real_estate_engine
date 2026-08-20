@@ -1,0 +1,373 @@
+n,median_ape,p75_ape,p90_ape,median_signed_bias,mean_signed_bias,median_abs_error_aed,mape,project,estimator,n_properties,areas
+4515,17.36,27.78,38.3,0.0,3.48,12500.0,20.07,48 parkside,A,3,Al Barshaa South Third
+4515,17.25,28.58,42.53,3.93,6.24,12899.0,21.08,48 parkside,B,3,Al Barshaa South Third
+4515,17.19,28.68,42.66,4.15,6.44,12930.0,21.13,48 parkside,C,3,Al Barshaa South Third
+4515,17.22,27.78,38.3,0.0,3.46,12500.0,20.07,48 parkside,D,3,Al Barshaa South Third
+2854,11.76,20.12,29.41,-0.67,0.78,6000.0,14.8,4direction residence 1,A,3,Wadi Al Safa 5
+2854,12.41,21.45,35.37,4.05,6.79,6594.0,16.44,4direction residence 1,B,3,Wadi Al Safa 5
+2854,12.4,21.53,35.29,4.15,6.84,6665.0,16.46,4direction residence 1,C,3,Wadi Al Safa 5
+2854,11.76,20.12,29.41,-0.67,0.82,6000.0,14.8,4direction residence 1,D,3,Wadi Al Safa 5
+6298,16.62,28.57,44.39,8.33,9.79,15000.0,21.07,ag tower,A,3,Business Bay
+6298,15.81,28.49,43.36,6.92,9.25,14236.0,20.76,ag tower,B,3,Business Bay
+6298,15.86,28.69,43.69,7.44,9.64,14508.0,20.91,ag tower,C,3,Business Bay
+6298,16.13,28.57,43.84,7.71,9.41,15000.0,20.89,ag tower,D,3,Business Bay
+6811,16.67,28.95,43.46,7.14,8.23,15000.0,21.28,ahad residences,A,4,Business Bay
+6811,17.7,31.66,46.78,9.67,11.92,16465.0,22.64,ahad residences,B,4,Business Bay
+6811,17.71,32.0,47.03,10.2,12.28,16675.0,22.82,ahad residences,C,4,Business Bay
+6811,16.67,28.8,42.86,6.25,7.85,15000.0,21.1,ahad residences,D,4,Business Bay
+5108,17.65,30.94,46.15,5.56,8.59,17125.0,22.14,avanti tower,A,3,Business Bay
+5108,18.22,32.06,47.22,6.81,9.67,18537.0,23.02,avanti tower,B,3,Business Bay
+5108,18.26,32.22,47.79,7.24,10.06,18744.0,23.18,avanti tower,C,3,Business Bay
+5108,17.34,30.33,45.84,5.26,8.13,17000.0,21.95,avanti tower,D,3,Business Bay
+8036,16.67,29.82,45.45,6.67,9.66,15000.0,21.75,aykon city tower,A,4,Business Bay
+8036,16.59,28.9,44.23,4.82,7.75,14618.0,21.11,aykon city tower,B,4,Business Bay
+8036,16.64,29.01,44.66,5.29,8.12,14715.0,21.24,aykon city tower,C,4,Business Bay
+8036,16.67,29.41,45.27,6.62,9.22,15000.0,21.55,aykon city tower,D,4,Business Bay
+11151,14.33,26.94,38.52,-0.62,0.11,8000.0,18.12,azizi amber,A,4,Jabal Ali First
+11151,18.01,30.93,44.6,8.89,10.22,10959.0,22.27,azizi amber,B,4,Jabal Ali First
+11151,18.02,31.09,44.84,9.08,10.39,10959.0,22.34,azizi amber,C,4,Jabal Ali First
+11151,14.39,26.81,38.51,-0.72,0.1,8000.0,18.12,azizi amber,D,4,Jabal Ali First
+3823,15.07,27.1,38.12,-0.35,0.76,9559.0,18.44,azizi feirouz,A,1,Jabal Ali First
+3823,16.92,29.48,38.25,4.78,6.14,10905.0,19.76,azizi feirouz,B,1,Jabal Ali First
+3823,16.81,29.49,38.47,5.2,6.42,10985.0,19.86,azizi feirouz,C,1,Jabal Ali First
+3823,15.04,27.07,38.12,-0.38,0.68,9567.0,18.4,azizi feirouz,D,1,Jabal Ali First
+3525,15.11,28.95,39.47,-2.08,-3.28,8000.0,19.06,azizi lina,A,3,Jabal Ali First
+3525,22.62,33.67,48.63,12.98,12.46,13703.0,25.45,azizi lina,B,3,Jabal Ali First
+3525,22.62,34.01,48.63,13.06,12.59,13713.0,25.54,azizi lina,C,3,Jabal Ali First
+3525,15.11,28.97,39.47,-2.08,-3.25,8000.0,19.06,azizi lina,D,3,Jabal Ali First
+1030,16.13,30.47,47.55,3.33,6.62,27750.0,23.47,azizi mina,A,2,Palm Jumeirah
+1030,16.13,29.78,45.72,0.97,4.05,26522.0,22.78,azizi mina,B,2,Palm Jumeirah
+1030,16.35,29.8,46.05,1.46,4.73,27099.0,22.95,azizi mina,C,2,Palm Jumeirah
+1030,16.1,30.43,47.32,3.33,6.38,27825.0,23.38,azizi mina,D,2,Palm Jumeirah
+374,13.64,25.0,37.5,-5.0,-2.69,10000.0,17.97,barari views,A,1,Wadi Al Safa 3
+374,13.55,25.43,39.21,-2.14,0.92,10632.0,18.27,barari views,B,1,Wadi Al Safa 3
+374,13.54,25.39,39.25,-1.87,1.09,10711.0,18.29,barari views,C,1,Wadi Al Safa 3
+374,13.64,25.0,37.5,-4.8,-2.5,10000.0,17.98,barari views,D,1,Wadi Al Safa 3
+10522,15.0,25.69,37.5,4.17,6.89,19000.0,19.03,bayshore at creek beach,A,3,Al Khairan First
+10522,15.0,28.17,42.94,5.66,10.81,19478.0,20.53,bayshore at creek beach,B,3,Al Khairan First
+10522,15.03,28.17,43.15,5.68,11.01,19617.0,20.62,bayshore at creek beach,C,3,Al Khairan First
+10522,15.0,25.69,37.5,4.0,6.61,18514.0,18.97,bayshore at creek beach,D,3,Al Khairan First
+4604,13.75,23.58,34.29,3.17,4.36,8500.0,17.35,beverly boulevard,A,3,Al Barshaa South Third
+4604,14.01,24.04,34.8,1.72,4.22,8386.0,17.31,beverly boulevard,B,3,Al Barshaa South Third
+4604,13.93,24.0,34.96,2.05,4.58,8379.0,17.36,beverly boulevard,C,3,Al Barshaa South Third
+4604,13.64,23.53,34.29,2.52,4.26,8300.0,17.29,beverly boulevard,D,3,Al Barshaa South Third
+60,10.24,19.61,26.57,4.88,5.67,8193.0,14.83,binghatti amber,A,3,Al Barsha South Fourth
+60,20.03,33.16,47.77,17.88,17.22,14658.0,22.39,binghatti amber,B,3,Al Barsha South Fourth
+60,19.99,32.21,46.84,17.88,17.26,14626.0,22.38,binghatti amber,C,3,Al Barsha South Fourth
+60,10.05,20.0,26.62,4.88,5.38,8000.0,14.7,binghatti amber,D,3,Al Barsha South Fourth
+6323,16.67,29.63,46.64,7.14,10.05,15000.0,21.84,binghatti canal,A,3,Business Bay
+6323,17.32,29.93,47.02,7.6,10.39,15014.0,22.17,binghatti canal,B,3,Business Bay
+6323,17.41,30.1,47.32,7.86,10.75,15174.0,22.31,binghatti canal,C,3,Business Bay
+6323,16.67,29.31,45.83,6.78,9.6,15000.0,21.64,binghatti canal,D,3,Business Bay
+28,14.29,22.7,29.83,14.13,24.1,11000.0,26.73,binghatti crescent,A,2,Al Barsha South Fourth
+28,13.26,22.0,29.08,6.75,19.51,9462.0,23.72,binghatti crescent,B,2,Al Barsha South Fourth
+28,12.89,22.0,29.08,7.32,19.65,9462.0,23.76,binghatti crescent,C,2,Al Barsha South Fourth
+28,14.29,21.37,28.67,12.86,23.55,12500.0,26.49,binghatti crescent,D,2,Al Barsha South Fourth
+47,15.56,23.33,55.17,11.54,14.34,14000.0,25.56,binghatti crest,A,3,Al Barsha South Fourth
+47,13.24,36.61,65.45,5.65,19.39,11021.0,26.43,binghatti crest,B,3,Al Barsha South Fourth
+47,13.24,36.61,64.98,5.65,19.36,11001.0,26.35,binghatti crest,C,3,Al Barsha South Fourth
+47,14.75,23.33,54.67,11.54,13.87,14000.0,25.35,binghatti crest,D,3,Al Barsha South Fourth
+40,7.69,13.98,20.84,7.69,8.83,5000.0,9.89,binghatti emerald,A,2,Al Barsha South Fourth
+40,5.65,10.61,18.11,5.65,6.07,3677.0,8.01,binghatti emerald,B,2,Al Barsha South Fourth
+40,5.65,10.61,18.21,5.65,6.12,3761.0,8.05,binghatti emerald,C,2,Al Barsha South Fourth
+40,7.4,14.39,20.84,7.4,8.48,5000.0,9.62,binghatti emerald,D,2,Al Barsha South Fourth
+14,9.96,16.96,22.72,7.61,6.32,8000.0,14.66,binghatti galaxy,A,1,Al Barsha South Fourth
+14,11.43,15.52,23.05,4.3,5.02,9055.0,13.84,binghatti galaxy,B,1,Al Barsha South Fourth
+14,11.43,15.52,23.05,4.3,5.02,9055.0,13.84,binghatti galaxy,C,1,Al Barsha South Fourth
+14,9.34,19.64,22.2,7.61,7.72,7500.0,14.95,binghatti galaxy,D,1,Al Barsha South Fourth
+53,7.69,12.9,16.67,7.4,6.24,5000.0,9.02,binghatti gardenia,A,2,Al Barsha South Fourth
+53,12.58,18.02,23.2,12.58,12.11,8175.0,12.74,binghatti gardenia,B,2,Al Barsha South Fourth
+53,12.58,18.02,23.2,12.58,12.09,8175.0,12.73,binghatti gardenia,C,2,Al Barsha South Fourth
+53,7.69,12.9,16.67,7.14,5.72,5000.0,8.65,binghatti gardenia,D,2,Al Barsha South Fourth
+48,14.76,23.01,33.27,13.74,12.44,9250.0,18.18,binghatti house,A,3,Al Barsha South Fourth
+48,15.59,23.92,36.61,15.59,13.52,10135.0,18.95,binghatti house,B,3,Al Barsha South Fourth
+48,15.59,24.05,36.61,15.59,13.66,10135.0,19.02,binghatti house,C,3,Al Barsha South Fourth
+48,13.74,21.9,31.45,11.71,11.8,9000.0,17.55,binghatti house,D,3,Al Barsha South Fourth
+31,10.0,15.38,21.74,7.14,6.54,6583.0,11.68,binghatti lavender,A,3,Al Barsha South Fourth
+31,8.03,13.56,18.12,4.48,5.24,6716.0,9.92,binghatti lavender,B,3,Al Barsha South Fourth
+31,8.03,13.29,17.89,5.46,5.49,6716.0,9.98,binghatti lavender,C,3,Al Barsha South Fourth
+31,10.0,15.38,21.74,7.14,6.61,8000.0,12.07,binghatti lavender,D,3,Al Barsha South Fourth
+36,5.49,12.39,20.44,4.58,4.41,3938.0,9.58,binghatti luna,A,2,Al Barsha South Fourth
+36,11.74,17.75,28.1,-4.8,0.97,8207.0,14.34,binghatti luna,B,2,Al Barsha South Fourth
+36,11.78,17.75,28.21,-4.95,1.0,8237.0,14.57,binghatti luna,C,2,Al Barsha South Fourth
+36,5.49,11.95,20.44,4.0,3.94,3750.0,9.22,binghatti luna,D,2,Al Barsha South Fourth
+43,12.9,20.0,20.69,12.9,10.79,9000.0,12.72,binghatti nova,A,2,Al Barsha South Fourth
+43,13.39,17.07,26.86,13.26,11.85,8218.0,14.55,binghatti nova,B,2,Al Barsha South Fourth
+43,13.39,17.07,26.86,13.26,11.85,8218.0,14.55,binghatti nova,C,2,Al Barsha South Fourth
+43,12.9,18.87,20.69,12.9,9.78,8000.0,12.68,binghatti nova,D,2,Al Barsha South Fourth
+114,7.67,15.38,21.96,5.33,6.24,6583.0,10.28,binghatti onyx,A,2,Al Barsha South Fourth
+114,7.09,14.81,22.58,4.64,5.47,5670.0,9.93,binghatti onyx,B,2,Al Barsha South Fourth
+114,7.55,14.86,22.51,4.64,5.72,5608.0,10.03,binghatti onyx,C,2,Al Barsha South Fourth
+114,7.65,15.38,21.96,5.33,6.05,6000.0,10.27,binghatti onyx,D,2,Al Barsha South Fourth
+77,7.14,11.94,17.94,5.98,5.39,6000.0,8.96,binghatti orchid,A,2,Al Barsha South Fourth
+77,9.49,14.38,21.02,8.43,8.71,7656.0,10.83,binghatti orchid,B,2,Al Barsha South Fourth
+77,9.49,14.38,21.02,8.43,8.7,7656.0,10.82,binghatti orchid,C,2,Al Barsha South Fourth
+77,7.27,11.94,17.68,5.41,5.01,6000.0,8.84,binghatti orchid,D,2,Al Barsha South Fourth
+27,7.65,16.74,26.12,6.25,8.15,6500.0,11.99,binghatti rose,A,2,Al Barsha South Fourth
+27,7.59,15.44,24.77,6.54,6.96,5231.0,10.89,binghatti rose,B,2,Al Barsha South Fourth
+27,7.59,15.47,25.08,6.62,7.03,5694.0,10.95,binghatti rose,C,2,Al Barsha South Fourth
+27,6.94,17.0,24.43,4.62,7.14,5000.0,11.38,binghatti rose,D,2,Al Barsha South Fourth
+76,19.66,25.8,38.44,17.65,13.33,20000.0,22.33,binghatti royale,A,1,Al Barsha South Fourth
+76,16.14,24.87,30.4,4.69,1.95,12748.0,16.35,binghatti royale,B,1,Al Barsha South Fourth
+76,16.14,24.87,30.4,4.69,1.95,12748.0,16.35,binghatti royale,C,1,Al Barsha South Fourth
+76,19.66,26.85,37.94,16.67,12.61,20000.0,21.87,binghatti royale,D,1,Al Barsha South Fourth
+43,7.69,12.79,23.43,5.44,6.04,5000.0,9.91,binghatti tulip,A,3,Al Barsha South Fourth
+43,15.77,22.72,26.56,13.58,9.0,10329.0,16.14,binghatti tulip,B,3,Al Barsha South Fourth
+43,15.55,22.72,26.56,12.6,8.97,10329.0,16.1,binghatti tulip,C,3,Al Barsha South Fourth
+43,7.69,12.79,21.81,5.0,5.7,5000.0,9.85,binghatti tulip,D,3,Al Barsha South Fourth
+2462,11.39,22.02,31.8,2.22,1.77,8000.0,14.69,binghatti twilight,A,2,Al Jadaf
+2462,12.4,22.59,32.31,3.7,4.12,8709.0,15.4,binghatti twilight,B,2,Al Jadaf
+2462,12.46,23.09,32.55,4.35,4.68,8938.0,15.62,binghatti twilight,C,2,Al Jadaf
+2462,11.27,21.83,31.73,1.45,1.66,8000.0,14.65,binghatti twilight,D,2,Al Jadaf
+8225,20.98,34.21,49.02,4.0,5.95,35000.0,25.32,canal front residences,A,3,Burj Khalifa
+8225,22.59,38.54,58.44,12.74,15.0,38203.0,29.11,canal front residences,B,3,Burj Khalifa
+8225,22.67,38.86,58.54,13.09,15.36,38859.0,29.28,canal front residences,C,3,Burj Khalifa
+8225,20.44,34.21,48.86,4.0,5.56,34750.0,25.17,canal front residences,D,3,Burj Khalifa
+2868,11.92,20.0,30.01,1.4,1.23,6604.0,14.82,canal residence west,A,4,Al Hebiah Fourth
+2868,15.96,26.61,36.37,12.12,11.57,8720.0,19.12,canal residence west,B,4,Al Hebiah Fourth
+2868,15.85,26.74,36.47,12.22,11.66,8757.0,19.16,canal residence west,C,4,Al Hebiah Fourth
+2868,11.76,20.0,30.0,1.37,1.21,6654.0,14.8,canal residence west,D,4,Al Hebiah Fourth
+796,8.89,18.0,27.67,5.0,6.6,4000.0,14.16,casa aura residence,A,1,Madinat Al Mataar
+796,8.81,17.46,29.52,-0.3,1.32,3352.0,12.68,casa aura residence,B,1,Madinat Al Mataar
+796,8.78,17.58,29.44,-0.22,1.45,3346.0,12.7,casa aura residence,C,1,Madinat Al Mataar
+796,9.09,17.65,27.27,5.0,6.27,4000.0,14.09,casa aura residence,D,1,Madinat Al Mataar
+326,20.64,39.21,64.23,0.23,4.37,45000.0,28.89,cayan tower,A,1,Marsa Dubai
+326,24.04,44.08,66.38,8.97,12.71,53098.0,32.35,cayan tower,B,1,Marsa Dubai
+326,24.13,44.39,66.24,9.39,13.18,53545.0,32.59,cayan tower,C,1,Marsa Dubai
+326,20.05,38.59,64.29,0.0,3.93,45150.0,28.78,cayan tower,D,1,Marsa Dubai
+9316,11.11,18.75,26.51,5.56,6.45,10000.0,15.19,creek beach orchid,A,3,Al Khairan First
+9316,9.75,16.69,26.82,3.35,5.25,9654.0,14.97,creek beach orchid,B,3,Al Khairan First
+9316,10.16,16.85,26.51,3.75,5.48,9792.0,15.03,creek beach orchid,C,3,Al Khairan First
+9316,11.11,18.75,25.93,5.26,6.1,10000.0,15.0,creek beach orchid,D,3,Al Khairan First
+8399,11.76,18.92,30.0,5.56,6.47,13000.0,15.93,creek edge,A,3,Al Khairan First
+8399,11.08,18.52,32.35,4.61,5.95,12362.0,15.84,creek edge,B,3,Al Khairan First
+8399,11.07,18.61,32.35,4.83,6.2,12332.0,15.91,creek edge,C,3,Al Khairan First
+8399,11.11,19.3,29.63,5.26,6.14,12117.0,15.81,creek edge,D,3,Al Khairan First
+7201,12.0,18.75,27.78,5.56,6.26,13000.0,15.43,creek gate tower 2,A,3,Al Khairan First
+7201,12.58,20.53,32.87,8.68,10.7,13639.0,17.37,creek gate tower 2,B,3,Al Khairan First
+7201,12.75,20.53,33.28,8.74,10.85,13805.0,17.44,creek gate tower 2,C,3,Al Khairan First
+7201,11.76,18.75,28.03,5.26,5.94,12000.0,15.27,creek gate tower 2,D,3,Al Khairan First
+9083,13.04,20.78,29.63,5.26,4.42,15000.0,16.5,creek rise tower 1,A,4,Al Khairan First
+9083,16.75,26.45,37.72,12.64,12.51,19768.0,20.33,creek rise tower 1,B,4,Al Khairan First
+9083,16.75,26.65,37.72,12.78,12.77,19914.0,20.48,creek rise tower 1,C,4,Al Khairan First
+9083,13.04,20.47,29.63,4.96,4.22,15000.0,16.41,creek rise tower 1,D,4,Al Khairan First
+5867,16.13,28.1,44.39,6.3,8.34,15000.0,20.77,damac majestine,A,3,Business Bay
+5867,16.67,30.0,45.95,8.74,11.02,16611.0,21.84,damac majestine,B,3,Business Bay
+5867,16.67,30.36,46.24,9.11,11.42,16611.0,22.02,damac majestine,C,3,Business Bay
+5867,16.07,27.9,44.19,5.83,7.97,15000.0,20.63,damac majestine,D,3,Business Bay
+1625,11.69,24.44,35.05,2.26,4.53,6500.0,16.96,divine elements,A,2,Madinat Al Mataar
+1625,14.13,23.45,36.45,-0.23,3.7,7329.0,18.54,divine elements,B,2,Madinat Al Mataar
+1625,14.01,23.5,36.4,-0.14,3.66,7215.0,18.46,divine elements,C,2,Madinat Al Mataar
+1625,11.69,24.44,34.3,2.26,4.34,6500.0,16.91,divine elements,D,2,Madinat Al Mataar
+3461,16.67,27.97,39.6,1.06,4.3,12400.0,20.79,divine living,A,3,Al Barshaa South Third
+3461,17.6,28.54,42.41,3.4,7.03,12798.0,21.87,divine living,B,3,Al Barshaa South Third
+3461,17.47,28.4,42.88,3.68,7.26,12792.0,21.93,divine living,C,3,Al Barshaa South Third
+3461,16.67,28.02,39.54,0.57,4.27,12150.0,20.77,divine living,D,3,Al Barshaa South Third
+3361,12.5,22.4,43.59,6.56,8.18,15000.0,17.25,dubai creek residence tower 2 north,A,1,Al Khairan First
+3361,11.12,20.77,39.24,2.69,4.84,14434.0,16.14,dubai creek residence tower 2 north,B,1,Al Khairan First
+3361,10.94,20.9,39.24,2.81,4.94,14672.0,16.16,dubai creek residence tower 2 north,C,1,Al Khairan First
+3361,12.37,21.92,43.48,6.56,7.82,15000.0,17.16,dubai creek residence tower 2 north,D,1,Al Khairan First
+184,18.27,33.2,42.86,3.34,9.84,25603.0,24.54,ellington beach house,A,1,Palm Jumeirah
+184,16.64,28.71,41.21,-4.97,1.14,21901.0,22.87,ellington beach house,B,1,Palm Jumeirah
+184,16.32,28.94,40.8,-4.29,1.95,22053.0,22.86,ellington beach house,C,1,Palm Jumeirah
+184,18.48,31.84,42.86,2.58,9.41,25000.0,24.39,ellington beach house,D,1,Palm Jumeirah
+564,12.0,21.57,30.2,2.7,3.39,10000.0,15.11,emerge residences,A,3,Nad Al Shiba First
+564,14.54,25.68,39.09,5.14,8.3,12565.0,18.82,emerge residences,B,3,Nad Al Shiba First
+564,14.54,25.9,39.22,5.62,8.43,12500.0,18.87,emerge residences,C,3,Nad Al Shiba First
+564,12.0,21.59,30.32,2.7,3.26,10000.0,15.07,emerge residences,D,3,Nad Al Shiba First
+609,15.11,21.78,32.5,-1.82,0.96,8564.0,17.65,evelyn on the park,A,1,Wadi Al Safa 3
+609,14.42,22.0,34.09,-7.02,-3.69,7792.0,17.68,evelyn on the park,B,1,Wadi Al Safa 3
+609,14.37,22.0,34.09,-6.71,-3.65,7784.0,17.67,evelyn on the park,C,1,Wadi Al Safa 3
+609,15.11,21.99,32.42,-2.06,0.89,8488.0,17.65,evelyn on the park,D,1,Wadi Al Safa 3
+1206,14.89,27.84,40.74,0.0,5.14,13000.0,20.18,golf edge,A,2,Madinat Al Mataar
+1206,14.3,31.57,46.71,7.35,12.34,12459.0,22.43,golf edge,B,2,Madinat Al Mataar
+1206,14.26,31.67,46.34,7.2,12.38,12599.0,22.49,golf edge,C,2,Madinat Al Mataar
+1206,14.89,27.69,40.74,0.0,5.01,13000.0,20.14,golf edge,D,2,Madinat Al Mataar
+2018,20.67,39.43,58.58,-1.3,-0.79,30000.0,27.65,grand bleu tower 1,A,1,Marsa Dubai
+2018,25.18,45.9,65.99,9.04,10.1,37986.0,31.58,grand bleu tower 1,B,1,Marsa Dubai
+2018,25.82,46.21,66.76,10.21,11.16,38978.0,32.1,grand bleu tower 1,C,1,Marsa Dubai
+2018,20.58,39.09,58.55,-1.32,-0.89,30000.0,27.62,grand bleu tower 1,D,1,Marsa Dubai
+8197,12.0,18.75,27.27,5.26,5.4,14000.0,15.4,harbour gate,A,3,Al Khairan First
+8197,12.5,21.83,32.47,7.49,9.21,14642.0,17.37,harbour gate,B,3,Al Khairan First
+8197,12.46,21.94,32.75,7.53,9.38,14744.0,17.41,harbour gate,C,3,Al Khairan First
+8197,11.82,18.75,27.27,4.65,5.1,13750.0,15.25,harbour gate,D,3,Al Khairan First
+1984,13.33,25.93,39.29,2.58,5.66,22800.0,19.89,harbour views 1,A,1,Al Khairan First
+1984,15.1,29.27,44.76,10.23,13.78,28062.0,23.45,harbour views 1,B,1,Al Khairan First
+1984,15.09,29.29,44.9,10.37,13.96,28190.0,23.57,harbour views 1,C,1,Al Khairan First
+1984,13.33,25.93,39.29,2.58,5.57,22636.0,19.85,harbour views 1,D,1,Al Khairan First
+263,12.94,21.95,32.48,-6.25,-0.58,5125.0,19.04,hotel edge by rotana,A,1,Dubai Investment Park First
+263,12.84,21.77,32.3,-6.9,-1.04,5176.0,18.98,hotel edge by rotana,B,1,Dubai Investment Park First
+263,12.64,21.67,32.16,-6.9,-0.83,5092.0,18.94,hotel edge by rotana,C,1,Dubai Investment Park First
+263,13.64,21.95,31.61,-5.26,-0.06,5000.0,19.09,hotel edge by rotana,D,1,Dubai Investment Park First
+7563,18.75,33.33,50.0,6.0,8.6,34457.0,25.26,imperial avenue,A,5,Burj Khalifa
+7563,22.09,37.63,60.52,14.69,18.62,38899.0,29.6,imperial avenue,B,5,Burj Khalifa
+7563,22.15,37.63,60.77,14.8,18.81,39296.0,29.7,imperial avenue,C,5,Burj Khalifa
+7563,18.75,33.33,49.63,5.55,8.41,34261.0,25.15,imperial avenue,D,5,Burj Khalifa
+5,13.12,22.22,23.89,13.12,14.67,12461.0,14.67,la residenza,A,1,Al Barsha South Fourth
+5,14.42,22.02,22.49,14.42,14.76,13696.0,14.76,la residenza,B,1,Al Barsha South Fourth
+5,14.42,22.02,22.49,14.42,14.76,13696.0,14.76,la residenza,C,1,Al Barsha South Fourth
+5,12.28,22.22,25.56,12.28,14.64,11420.0,14.64,la residenza,D,1,Al Barsha South Fourth
+31,20.0,27.34,50.0,20.0,19.85,8600.0,21.35,laya mansion,A,2,Al Barsha South Fourth
+31,12.52,19.15,58.12,7.43,14.84,5341.0,20.58,laya mansion,B,2,Al Barsha South Fourth
+31,12.52,19.15,55.44,7.43,14.73,5341.0,20.46,laya mansion,C,2,Al Barsha South Fourth
+31,19.05,26.08,50.0,19.05,18.12,8000.0,20.33,laya mansion,D,2,Al Barsha South Fourth
+7006,20.0,36.02,53.08,1.35,1.76,23586.0,25.84,liv residence,A,4,Marsa Dubai
+7006,24.22,41.8,60.33,11.25,11.43,27629.0,29.65,liv residence,B,4,Marsa Dubai
+7006,24.43,42.38,61.6,12.17,12.39,28249.0,30.14,liv residence,C,4,Marsa Dubai
+7006,20.0,35.76,53.03,0.59,1.51,23368.0,25.74,liv residence,D,4,Marsa Dubai
+65,17.8,26.98,31.12,12.26,9.67,8500.0,18.24,luma21,A,2,Al Barsha South Fourth
+65,15.08,34.75,53.03,14.58,16.53,8335.0,22.09,luma21,B,2,Al Barsha South Fourth
+65,15.08,34.75,53.03,14.58,16.5,8335.0,22.06,luma21,C,2,Al Barsha South Fourth
+65,17.78,26.74,31.11,11.54,8.92,8000.0,17.76,luma21,D,2,Al Barsha South Fourth
+69,14.29,26.67,33.33,7.27,6.72,10000.0,16.68,luma22,A,3,Al Barsha South Fourth
+69,27.89,45.69,57.92,27.89,28.0,18929.0,30.49,luma22,B,3,Al Barsha South Fourth
+69,28.54,46.83,57.92,28.54,28.1,18929.0,30.55,luma22,C,3,Al Barsha South Fourth
+69,14.29,25.0,33.33,5.45,6.48,9000.0,16.55,luma22,D,3,Al Barsha South Fourth
+1818,16.67,30.0,51.16,11.07,14.3,10000.0,22.26,mama residences,A,1,Business Bay
+1818,14.9,27.51,46.3,6.13,9.26,9214.0,19.98,mama residences,B,1,Business Bay
+1818,15.12,27.81,46.44,6.48,9.62,9222.0,20.12,mama residences,C,1,Business Bay
+1818,16.67,30.0,50.0,10.0,13.64,10000.0,21.93,mama residences,D,1,Business Bay
+822,23.2,42.86,64.33,0.0,-0.08,43360.0,31.43,marina arcade tower,A,2,Marsa Dubai
+822,28.96,49.35,68.87,13.01,11.92,57960.0,36.4,marina arcade tower,B,2,Marsa Dubai
+822,29.71,50.57,70.47,14.06,13.01,59540.0,36.99,marina arcade tower,C,2,Marsa Dubai
+822,23.1,42.86,64.28,0.0,-0.34,43250.0,31.38,marina arcade tower,D,2,Marsa Dubai
+6787,21.05,36.36,54.28,4.55,4.79,22414.0,26.56,marina star,A,5,Marsa Dubai
+6787,23.37,39.0,55.94,7.85,8.47,24160.0,28.18,marina star,B,5,Marsa Dubai
+6787,23.54,39.5,56.41,8.56,9.24,24304.0,28.52,marina star,C,5,Marsa Dubai
+6787,21.05,36.36,54.0,4.35,4.42,22210.0,26.45,marina star,D,5,Marsa Dubai
+7078,16.96,30.0,44.0,5.71,7.38,17000.0,21.98,marquise square,A,4,Business Bay
+7078,21.63,36.31,53.54,15.26,16.84,20595.0,26.22,marquise square,B,4,Business Bay
+7078,21.82,36.73,53.75,15.61,17.17,20706.0,26.42,marquise square,C,4,Business Bay
+7078,16.78,30.0,43.75,5.26,7.02,16272.0,21.83,marquise square,D,4,Business Bay
+4446,18.82,30.76,44.84,5.88,8.46,18000.0,22.75,marriott residences,A,2,Business Bay
+4446,18.86,31.09,45.22,6.51,9.48,17946.0,23.12,marriott residences,B,2,Business Bay
+4446,18.81,31.56,45.49,6.94,9.85,18051.0,23.27,marriott residences,C,2,Business Bay
+4446,18.75,30.3,44.62,5.76,8.15,18000.0,22.63,marriott residences,D,2,Business Bay
+5,4.69,5.0,25.0,4.69,8.93,3761.0,10.34,mayas geneva,A,1,Al Barsha South Fourth
+5,17.49,17.65,41.46,17.49,23.44,13991.0,23.44,mayas geneva,B,1,Al Barsha South Fourth
+5,17.49,17.65,41.46,17.49,23.44,13991.0,23.44,mayas geneva,C,1,Al Barsha South Fourth
+5,4.69,5.0,24.0,4.69,8.14,3761.0,10.41,mayas geneva,D,1,Al Barsha South Fourth
+2484,16.67,28.99,39.29,1.25,3.7,15000.0,20.84,mbl royal,A,3,Al Thanyah Fifth
+2484,17.71,28.98,42.72,6.63,8.45,17165.0,22.64,mbl royal,B,3,Al Thanyah Fifth
+2484,17.81,28.88,43.03,6.79,8.83,17429.0,22.79,mbl royal,C,3,Al Thanyah Fifth
+2484,16.67,28.99,39.29,1.25,3.6,15000.0,20.82,mbl royal,D,3,Al Thanyah Fifth
+2919,17.65,28.57,41.18,2.56,5.48,16500.0,21.66,me do re,A,4,Al Thanyah Fifth
+2919,18.13,31.52,46.84,7.39,11.21,18768.0,23.97,me do re,B,4,Al Thanyah Fifth
+2919,18.2,31.78,47.14,7.53,11.56,18869.0,24.13,me do re,C,4,Al Thanyah Fifth
+2919,17.65,28.57,41.18,2.49,5.37,16350.0,21.62,me do re,D,4,Al Thanyah Fifth
+1041,18.18,27.67,36.17,-2.6,0.26,15330.0,19.36,mosela waterside residences,A,1,Al Barshaa South Third
+1041,18.38,33.29,46.31,9.27,12.22,19104.0,23.1,mosela waterside residences,B,1,Al Barshaa South Third
+1041,18.42,33.47,46.57,9.37,12.33,19127.0,23.16,mosela waterside residences,C,1,Al Barshaa South Third
+1041,18.18,27.6,36.17,-2.6,0.35,15330.0,19.39,mosela waterside residences,D,1,Al Barshaa South Third
+813,20.37,33.33,46.22,2.38,5.09,44162.0,26.26,muraba residences,A,1,Palm Jumeirah
+813,22.02,36.45,51.32,8.29,10.64,47760.0,28.4,muraba residences,B,1,Palm Jumeirah
+813,22.29,36.5,51.37,8.64,10.88,47760.0,28.49,muraba residences,C,1,Palm Jumeirah
+813,20.37,33.33,46.25,2.38,4.94,43710.0,26.21,muraba residences,D,1,Palm Jumeirah
+4876,18.12,29.65,43.11,5.56,7.89,18000.0,22.09,nobles tower,A,2,Business Bay
+4876,18.07,32.15,45.17,8.55,10.44,18361.0,23.08,nobles tower,B,2,Business Bay
+4876,18.03,32.42,45.27,9.29,10.86,18452.0,23.26,nobles tower,C,2,Business Bay
+4876,18.18,29.41,42.86,5.26,7.61,18000.0,21.97,nobles tower,D,2,Business Bay
+27,9.68,19.27,24.06,3.17,9.34,9448.0,12.66,oakley square residences,A,3,Al Barsha South Fourth
+27,11.31,26.49,30.32,11.31,15.24,9614.0,16.05,oakley square residences,B,3,Al Barsha South Fourth
+27,11.38,26.85,32.74,11.38,15.41,9614.0,16.49,oakley square residences,C,3,Al Barsha South Fourth
+27,9.68,20.0,23.26,5.88,10.2,9448.0,12.92,oakley square residences,D,3,Al Barsha South Fourth
+4714,12.0,20.88,30.53,5.73,6.0,6650.0,15.35,oxford gardens,A,3,Al Barshaa South Third
+4714,12.35,21.46,30.65,4.94,5.5,6534.0,15.27,oxford gardens,B,3,Al Barshaa South Third
+4714,12.34,21.57,30.83,5.17,5.79,6534.0,15.33,oxford gardens,C,3,Al Barshaa South Third
+4714,12.0,20.75,30.53,4.76,5.65,6400.0,15.19,oxford gardens,D,3,Al Barshaa South Third
+9,10.0,19.09,45.71,7.14,14.81,10000.0,17.03,oxford terraces 2,A,2,Al Barsha South Fourth
+9,8.95,20.06,35.93,8.43,14.04,8952.0,16.34,oxford terraces 2,B,2,Al Barsha South Fourth
+9,8.92,20.06,35.93,8.43,14.33,8921.0,16.31,oxford terraces 2,C,2,Al Barsha South Fourth
+9,10.0,18.18,43.7,7.14,13.59,10000.0,15.81,oxford terraces 2,D,2,Al Barsha South Fourth
+3766,15.42,27.11,38.12,-0.07,0.61,9628.0,18.54,park town,A,1,Jabal Ali First
+3766,17.55,30.25,39.23,5.74,7.03,11489.0,20.26,park town,B,1,Jabal Ali First
+3766,17.51,30.43,39.4,5.87,7.23,11536.0,20.34,park town,C,1,Jabal Ali First
+3766,15.38,27.16,38.15,-0.21,0.56,9665.0,18.52,park town,D,1,Jabal Ali First
+2791,15.0,24.46,33.67,0.0,1.36,10175.0,17.47,q gardens boutique residences,A,2,Al Barshaa South Third
+2791,15.89,27.28,41.69,4.21,8.17,11385.0,20.04,q gardens boutique residences,B,2,Al Barshaa South Third
+2791,15.77,27.49,41.71,4.58,8.55,11485.0,20.13,q gardens boutique residences,C,2,Al Barshaa South Third
+2791,14.87,24.37,33.62,0.0,1.31,10265.0,17.46,q gardens boutique residences,D,2,Al Barshaa South Third
+853,22.34,38.75,54.83,2.23,6.93,46050.0,30.31,raffles the palm dubai,A,4,Palm Jumeirah
+853,24.64,44.96,64.31,8.55,14.38,57557.0,34.45,raffles the palm dubai,B,4,Palm Jumeirah
+853,24.65,44.97,64.3,8.73,14.73,57443.0,34.57,raffles the palm dubai,C,4,Palm Jumeirah
+853,22.34,38.46,54.66,2.22,6.7,45626.0,30.21,raffles the palm dubai,D,4,Palm Jumeirah
+774,18.18,33.33,50.0,4.0,7.13,30000.0,24.99,royal bay,A,2,Palm Jumeirah
+774,18.5,34.8,50.97,5.05,8.36,30000.0,25.64,royal bay,B,2,Palm Jumeirah
+774,18.65,34.7,52.03,5.5,8.86,30265.0,25.8,royal bay,C,2,Palm Jumeirah
+774,17.89,33.33,50.0,3.2,6.77,30000.0,24.86,royal bay,D,2,Palm Jumeirah
+1479,17.33,26.67,35.71,3.53,4.32,15000.0,19.55,saba 2,A,1,Al Thanyah Fifth
+1479,18.42,29.36,40.21,9.53,10.51,16037.0,21.92,saba 2,B,1,Al Thanyah Fifth
+1479,18.86,29.61,40.7,9.94,10.9,16122.0,22.09,saba 2,C,1,Al Thanyah Fifth
+1479,17.33,26.67,35.38,3.53,4.05,14250.0,19.48,saba 2,D,1,Al Thanyah Fifth
+3073,15.38,25.0,34.0,5.4,4.61,8000.0,17.65,samana hills,A,3,Al Barshaa South Third
+3073,15.57,28.31,44.78,8.54,11.03,9801.0,20.4,samana hills,B,3,Al Barshaa South Third
+3073,15.63,28.38,44.88,8.65,11.1,9800.0,20.43,samana hills,C,3,Al Barshaa South Third
+3073,15.24,25.0,33.69,4.56,4.37,8000.0,17.55,samana hills,D,3,Al Barshaa South Third
+9,14.29,20.0,24.0,6.67,3.19,6000.0,15.77,serenity lakes 5,A,1,Al Barsha South Fourth
+9,33.83,51.0,51.44,33.83,29.68,18224.0,35.26,serenity lakes 5,B,1,Al Barsha South Fourth
+9,33.83,51.0,51.44,33.83,29.83,18399.0,35.42,serenity lakes 5,C,1,Al Barsha South Fourth
+9,14.29,20.0,24.5,6.67,2.91,6000.0,16.05,serenity lakes 5,D,1,Al Barsha South Fourth
+8589,22.86,38.89,62.1,2.94,11.27,42256.0,29.23,sls dubai hotels and residences,A,3,Burj Khalifa
+8589,22.94,38.51,63.53,3.48,11.54,40884.0,29.54,sls dubai hotels and residences,B,3,Burj Khalifa
+8589,22.94,38.59,63.82,3.82,11.86,40919.0,29.63,sls dubai hotels and residences,C,3,Burj Khalifa
+8589,22.86,38.64,61.92,2.94,10.92,42188.0,29.12,sls dubai hotels and residences,D,3,Burj Khalifa
+4293,17.42,30.0,44.44,10.0,10.76,14000.0,22.01,sol bay,A,2,Business Bay
+4293,19.57,34.32,50.62,14.9,16.2,15754.0,24.84,sol bay,B,2,Business Bay
+4293,19.93,34.46,50.96,15.39,16.6,15875.0,25.06,sol bay,C,2,Business Bay
+4293,17.19,30.0,44.15,9.02,10.17,13707.0,21.7,sol bay,D,2,Business Bay
+6044,20.59,36.08,55.09,2.88,3.39,24705.0,26.14,sunrise bay,A,3,Marsa Dubai
+6044,20.98,38.4,57.31,4.1,5.75,24878.0,27.14,sunrise bay,B,3,Marsa Dubai
+6044,21.18,39.0,57.68,4.95,6.6,25163.0,27.46,sunrise bay,C,3,Marsa Dubai
+6044,20.59,36.0,55.0,2.35,3.07,24346.0,26.04,sunrise bay,D,3,Marsa Dubai
+8297,17.65,30.56,44.48,5.88,8.25,16000.0,21.93,the atria,A,4,Business Bay
+8297,18.91,32.75,49.89,9.66,12.18,18527.0,24.03,the atria,B,4,Business Bay
+8297,18.99,33.04,50.33,9.92,12.53,18651.0,24.18,the atria,C,4,Business Bay
+8297,17.39,30.09,44.2,5.88,7.92,16000.0,21.79,the atria,D,4,Business Bay
+346,13.28,22.87,35.83,-3.66,-3.62,10350.0,17.02,the cape,A,1,Wadi Al Safa 3
+346,15.77,25.33,38.27,5.08,3.77,12989.0,18.39,the cape,B,1,Wadi Al Safa 3
+346,15.73,25.32,38.27,5.08,3.77,12989.0,18.39,the cape,C,1,Wadi Al Safa 3
+346,13.33,23.08,35.83,-3.08,-3.46,10449.0,17.0,the cape,D,1,Wadi Al Safa 3
+3523,11.11,20.0,31.25,0.0,1.06,6000.0,14.54,the community motor city,A,4,Al Hebiah Fourth
+3523,12.07,22.56,34.63,2.43,4.72,6402.0,16.11,the community motor city,B,4,Al Hebiah Fourth
+3523,12.07,22.48,34.81,2.49,4.83,6349.0,16.13,the community motor city,C,4,Al Hebiah Fourth
+3523,11.11,20.0,31.11,0.0,0.98,6000.0,14.52,the community motor city,D,4,Al Hebiah Fourth
+9723,12.5,22.65,33.3,5.26,5.06,15000.0,17.5,the cove,A,4,Al Khairan First
+9723,18.39,29.78,40.82,14.36,15.96,21235.0,22.71,the cove,B,4,Al Khairan First
+9723,18.52,30.16,40.82,14.51,16.14,21694.0,22.82,the cove,C,4,Al Khairan First
+9723,12.5,22.45,32.76,4.67,4.72,15000.0,17.39,the cove,D,4,Al Khairan First
+4256,18.0,31.95,47.02,5.02,8.35,17756.0,22.88,the pad by omniyat,A,2,Business Bay
+4256,18.46,31.87,47.55,5.81,9.15,18167.0,23.3,the pad by omniyat,B,2,Business Bay
+4256,18.56,32.09,47.94,6.23,9.58,18264.0,23.47,the pad by omniyat,C,2,Business Bay
+4256,18.0,31.96,46.67,4.95,8.17,18000.0,22.83,the pad by omniyat,D,2,Business Bay
+675,15.38,26.71,40.0,4.08,10.48,20000.0,22.74,the palm tower,A,3,Palm Jumeirah
+675,14.7,23.96,36.92,-7.43,-0.3,20453.0,21.78,the palm tower,B,3,Palm Jumeirah
+675,14.06,23.77,36.1,-5.65,0.84,20000.0,21.73,the palm tower,C,3,Palm Jumeirah
+675,15.38,26.43,40.0,3.66,10.35,20000.0,22.67,the palm tower,D,3,Palm Jumeirah
+6757,17.65,31.82,50.0,7.14,9.72,15000.0,22.94,the paragon by igo,A,4,Business Bay
+6757,18.39,33.52,51.32,7.82,11.87,16247.0,24.11,the paragon by igo,B,4,Business Bay
+6757,18.49,33.69,51.66,8.2,12.27,16363.0,24.28,the paragon by igo,C,4,Business Bay
+6757,17.5,31.58,50.0,6.67,9.21,15000.0,22.71,the paragon by igo,D,4,Business Bay
+6895,16.67,29.31,44.23,6.29,8.95,15000.0,21.52,trillionaire residences,A,3,Business Bay
+6895,17.58,30.9,46.01,7.79,10.62,16230.0,22.68,trillionaire residences,B,3,Business Bay
+6895,17.59,31.06,46.18,7.99,10.98,16282.0,22.82,trillionaire residences,C,3,Business Bay
+6895,16.67,29.11,44.0,5.88,8.63,15000.0,21.38,trillionaire residences,D,3,Business Bay
+12,15.28,18.4,20.23,6.22,3.34,6500.0,12.28,uniestate prime tower,A,1,Al Barsha South Fourth
+12,13.92,17.91,20.28,1.96,0.44,5846.0,11.63,uniestate prime tower,B,1,Al Barsha South Fourth
+12,10.26,14.28,19.19,1.96,1.87,5201.0,10.2,uniestate prime tower,C,1,Al Barsha South Fourth
+12,18.96,19.38,21.67,6.75,3.55,8000.0,14.46,uniestate prime tower,D,1,Al Barsha South Fourth
+1549,16.36,30.0,54.33,11.11,15.13,10000.0,22.17,upside living,A,1,Business Bay
+1549,13.55,24.13,39.97,-1.02,3.02,8404.0,17.71,upside living,B,1,Business Bay
+1549,13.41,24.03,40.16,-0.86,3.27,8404.0,17.74,upside living,C,1,Business Bay
+1549,16.0,30.0,51.16,9.38,14.13,10000.0,21.67,upside living,D,1,Business Bay
+6934,17.65,30.28,42.47,4.58,5.96,17000.0,21.63,urban oasis by missoni,A,5,Business Bay
+6934,19.63,33.79,51.01,11.98,13.08,20465.0,24.73,urban oasis by missoni,B,5,Business Bay
+6934,19.88,33.93,51.41,12.28,13.39,20598.0,24.9,urban oasis by missoni,C,5,Business Bay
+6934,17.6,30.16,41.99,3.95,5.61,17000.0,21.48,urban oasis by missoni,D,5,Business Bay
+4296,16.67,29.63,44.44,9.51,10.88,13194.0,21.81,vera residences,A,2,Business Bay
+4296,17.56,30.92,46.79,10.97,12.76,13870.0,22.69,vera residences,B,2,Business Bay
+4296,17.67,31.37,47.17,11.35,13.17,14054.0,22.89,vera residences,C,2,Business Bay
+4296,16.67,29.06,44.16,8.33,10.31,13000.0,21.53,vera residences,D,2,Business Bay
+4434,14.67,25.0,36.0,4.17,5.05,9000.0,18.56,vincitore volare,A,3,Al Barshaa South Third
+4434,17.83,29.21,42.72,10.04,10.86,10894.0,21.52,vincitore volare,B,3,Al Barshaa South Third
+4434,17.97,29.5,42.94,10.15,11.02,10891.0,21.6,vincitore volare,C,3,Al Barshaa South Third
+4434,14.69,25.0,35.97,3.79,4.84,9000.0,18.49,vincitore volare,D,3,Al Barshaa South Third

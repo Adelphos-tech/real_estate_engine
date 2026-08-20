@@ -1,0 +1,57 @@
+{
+  "verdict": "GROSS_RENTAL_YIELD_V1_HTTP_SHADOW_VERIFIED",
+  "checks": {
+    "rental_source_sha256_match": true,
+    "status_parity_mismatch_zero": true,
+    "normal_api_safety_all_zero": true,
+    "trace_mismatch_zero": true,
+    "full_coverage_reconciles": true
+  },
+  "rental_source": {
+    "sha256": "92546471b4326a89ca5980381b918cd5077d277eae396edf0374d9448d91129d",
+    "sha256_match": true,
+    "rows": 573097,
+    "path": "/Users/apple/Desktop/Ai 3d view/dxb_rents_all.csv"
+  },
+  "status_parity": {
+    "mismatches": 0,
+    "api_status_counts": {
+      "Offplan": 2249,
+      "Ready": 315,
+      "Unknown": 50
+    },
+    "rental_status_counts": {
+      "Offplan": 2249,
+      "Ready": 315,
+      "Unknown": 50
+    }
+  },
+  "normal_api_safety": {
+    "RENTAL_CHANGED_MARKET_CONTEXT": 0,
+    "RENTAL_CHANGED_PRODUCTION_SIGNAL": 0,
+    "RENTAL_CHANGED_APIL_ADVANTAGE": 0,
+    "RENTAL_CHANGED_CONVENTIONAL_POSITION": 0,
+    "RENTAL_CHANGED_FIT_SCORE": 0
+  },
+  "trace_mismatches": 0,
+  "full_coverage": {
+    "ready_evaluated": 300,
+    "ready_none": 15,
+    "offplan_not_evaluated": 2249,
+    "unknown_not_evaluated": 50,
+    "tier_counts": {
+      "NONE": 2314,
+      "R4": 130,
+      "R2": 142,
+      "R3": 26,
+      "R1": 2
+    },
+    "total": 2614
+  },
+  "performance": {
+    "cold_ms": 3.5,
+    "warm_median_ms": 4.1,
+    "warm_p95_ms": 7.5,
+    "warm_samples": 30
+  }
+}

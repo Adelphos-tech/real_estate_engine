@@ -1,0 +1,11 @@
+property_id,name,status,tier,annual_rent,p25,p75,comparables,projects_in_pool,gross_yield,dld_area,size_sqft,price_aed,warnings
+6056,Imperial Avenue,ready,R2,278400.0,264000.0,297600.0,27.0,1.0,4.42,Burj Khalifa,2049.0,6300000.0,High-end area P90 tail risk
+6277,Binghatti Emerald,ready,R2,100800.0,96000.0,105600.0,13.0,1.0,7.75,Al Barsha South Fourth,1378.0,1300000.0,
+8057,Binghatti Royale,ready,R2,172800.0,163200.0,172800.0,5.0,1.0,3.84,Al Barsha South Fourth,2102.0,4500000.0,
+3201,Binghatti Nova,ready,R2,72000.0,67200.0,76800.0,13.0,1.0,5.22,Al Barsha South Fourth,989.0,1380000.0,
+3693,Elvira,offplan,OFFPLAN_RENTAL_NOT_EVALUATED,,,,0.0,0.0,,,1062.0,1900000.0,Offplan properties not evaluated for current rent
+4434,Lime Gardens,offplan,OFFPLAN_RENTAL_NOT_EVALUATED,,,,0.0,0.0,,,1320.0,2100000.0,Offplan properties not evaluated for current rent
+701,Elvira,offplan,OFFPLAN_RENTAL_NOT_EVALUATED,,,,0.0,0.0,,,1501.0,3000000.0,Offplan properties not evaluated for current rent
+3983,Sapphire 32,offplan,OFFPLAN_RENTAL_NOT_EVALUATED,,,,0.0,0.0,,,1515.0,2111140.0,Offplan properties not evaluated for current rent
+7061,Azizi Mina,ready,R4,172800.0,148800.0,200376.0,1081.0,18.0,3.84,Palm Jumeirah,1522.0,4500000.0,High-end area P90 tail risk
+8201,Marquise Square,ready,R4,163200.0,143109.0,192004.0,834.0,44.0,3.8,Business Bay,2326.0,4300000.0,
