@@ -1,0 +1,193 @@
+{
+  "verdict": "FULL_PROPERTY_ROI_V1_3_SCENARIO_INPUT_LAYER_VERIFIED",
+  "phase": "FULL_PROPERTY_ROI_V1_3_SCENARIO_INPUTS",
+  "methodology_version": "ROI_SCENARIO_V1_3",
+  "valuation_date": "2026-08-22",
+
+  "holding_period_model": {
+    "input": "holding_period_months",
+    "source": "USER_INPUT",
+    "default": "NONE",
+    "validation": "months > 0, <= 1200",
+    "derived_years": "holding_period_months / 12",
+    "derived_source": "DERIVED"
+  },
+
+  "exit_value_modes": {
+    "USER_EXIT_PRICE": {
+      "input": "exit_sale_price_aed",
+      "validation": ">= 0",
+      "source": "USER_INPUT",
+      "no_benchmark_comparison": true
+    },
+    "USER_APPRECIATION_RATE": {
+      "input": "annual_appreciation_rate_pct",
+      "source": "USER_INPUT",
+      "never_assumed": true,
+      "formula": "purchase_price * (1 + rate/100) ^ holding_period_years",
+      "exit_price_source": "DERIVED",
+      "rate_source": "USER_INPUT",
+      "negative_allowed": true,
+      "bounds": {"min": -100, "max": 1000, "reason": "technical limits to reject non-finite/absurd inputs"}
+    },
+    "both_modes_simultaneously": "REJECTED (422)",
+    "automatic_forecast": "NOT_SUPPORTED"
+  },
+
+  "selling_cost_model": {
+    "broker": {
+      "modes": ["SELLING_BROKER_PERCENT", "SELLING_BROKER_FIXED_AED", "NO_SELLING_BROKER_COST"],
+      "required_for_complete": true,
+      "no_default": true,
+      "zero_must_be_explicit": true
+    },
+    "noc": {
+      "modes": ["NOC_FIXED_AED", "NO_NOC_FEE"],
+      "required_for_complete": true,
+      "no_default": true,
+      "zero_must_be_explicit": true
+    },
+    "other": {
+      "modes": ["OTHER_SELLING_COSTS_AED", "NO_OTHER_SELLING_COSTS"],
+      "required_for_complete": true,
+      "no_default": true,
+      "zero_must_be_explicit": true
+    },
+    "mortgage_payoff": "NOT_APPLICABLE (UNLEVERED V1)"
+  },
+
+  "completion_rules": {
+    "selling_cost_levels": ["NO_SELLING_COSTS", "PARTIAL_SELLING_COSTS", "COMPLETE_SELLING_COSTS"],
+    "complete_selling_costs_formula": "selling_broker + noc + other",
+    "net_sale_proceeds_formula": "exit_sale_price - complete_selling_costs",
+    "negative_net_sale_proceeds_allowed": true
+  },
+
+  "roi_input_readiness": {
+    "states": ["INCOMPLETE", "READY_FOR_FULL_ROI_CALCULATION", "NOT_EVALUATED_OFFPLAN"],
+    "ready_requires": [
+      "COMPLETE_ACQUISITION_COSTS",
+      "NET_RENTAL",
+      "holding_period",
+      "exit_sale_price",
+      "COMPLETE_SELLING_COSTS"
+    ],
+    "full_roi_not_calculated_when_ready": true,
+    "offplan": "NOT_EVALUATED_OFFPLAN",
+    "uses_actual_context": true
+  },
+
+  "test_results": {
+    "all_tests_pass": true,
+    "test_count": 18,
+    "tests": {
+      "A": {"description": "No scenario inputs → INCOMPLETE", "pass": true},
+      "B": {"description": "Holding period only → INCOMPLETE", "pass": true},
+      "C": {"description": "Holding + user exit price → INCOMPLETE (selling missing)", "pass": true},
+      "D": {"description": "Holding + appreciation rate → exit price derived", "pass": true},
+      "E": {"description": "Negative appreciation → price decreases, not clamped", "pass": true},
+      "F": {"description": "Both exit price and appreciation → 422", "pass": true},
+      "G": {"description": "Selling broker only → PARTIAL_SELLING_COSTS", "pass": true},
+      "H": {"description": "NO_SELLING_BROKER_COST → broker = 0, explicit", "pass": true},
+      "I": {"description": "All selling costs complete → COMPLETE + net_sale_proceeds", "pass": true},
+      "J": {"description": "Missing NOC → remain incomplete", "pass": true},
+      "K": {"description": "NO_NOC_FEE explicit → 0 accepted", "pass": true},
+      "L": {"description": "Missing other selling cost → remain incomplete", "pass": true},
+      "M": {"description": "NO_OTHER_SELLING_COSTS explicit → 0 accepted", "pass": true},
+      "N": {"description": "Negative selling cost → 422", "pass": true},
+      "O": {"description": "Offplan property → NOT_EVALUATED_OFFPLAN", "pass": true},
+      "P": {"description": "Scenario complete, acquisition incomplete → INCOMPLETE", "pass": true},
+      "Q": {"description": "Acquisition + scenario complete, NET_RENTAL missing → INCOMPLETE", "pass": true},
+      "R": {"description": "All complete → READY_FOR_FULL_ROI_CALCULATION (no ROI value)", "pass": true}
+    }
+  },
+
+  "acquisition_regression_counters": {
+    "V13_CHANGED_DLD_RULE": 0,
+    "V13_CHANGED_TITLE_DEED_FEE": 0,
+    "V13_CHANGED_KNOWLEDGE_FEE": 0,
+    "V13_CHANGED_INNOVATION_FEE": 0,
+    "V13_CHANGED_ACQUISITION_COMPLETENESS": 0,
+    "V13_CHANGED_TOTAL_CASH_INVESTED_FORMULA": 0,
+    "all_acquisition_counters_zero": true
+  },
+
+  "rental_sc_regression_counters": {
+    "V13_CHANGED_ANNUAL_RENT": 0,
+    "V13_CHANGED_GROSS_YIELD": 0,
+    "V13_CHANGED_SC_ELIGIBILITY": 0,
+    "V13_CHANGED_SC_RATE": 0,
+    "V13_CHANGED_INCOME_AFTER_SC": 0,
+    "V13_CHANGED_YIELD_AFTER_SC": 0,
+    "V13_CHANGED_NET_RENTAL_FORMULA": 0,
+    "all_rental_counters_zero": true
+  },
+
+  "sales_signal_fit_regression_counters": {
+    "V13_CHANGED_MARKET_CONTEXT": 0,
+    "V13_CHANGED_PRODUCTION_SIGNAL": 0,
+    "V13_CHANGED_APIL_ADVANTAGE": 0,
+    "V13_CHANGED_CONVENTIONAL_POSITION": 0,
+    "V13_CHANGED_FIT_SCORE": 0,
+    "all_sales_counters_zero": true
+  },
+
+  "safety_counters": {
+    "DEFAULT_HOLDING_PERIOD_USED": 0,
+    "DEFAULT_APPRECIATION_USED": 0,
+    "MARKET_BENCHMARK_USED_AS_FUTURE_EXIT_PRICE": 0,
+    "NEGATIVE_APPRECIATION_CLAMPED": 0,
+    "APPRECIATION_SILENTLY_CLAMPED": 0,
+    "DEFAULT_SELLING_BROKER_COMMISSION_USED": 0,
+    "AUTO_NO_SELLING_BROKER_ASSUMPTION": 0,
+    "DEFAULT_NOC_FEE_USED": 0,
+    "MISSING_SELLING_COST_COERCED_TO_ZERO": 0,
+    "NEGATIVE_NET_SALE_PROCEEDS_CLAMPED": 0,
+    "RENTAL_GROWTH_ASSUMPTION_INTRODUCED": 0,
+    "GROSS_RENTAL_USED_AS_NET_RENTAL_INPUT": 0,
+    "SERVICE_CHARGE_INCOME_USED_AS_NET_RENTAL_INPUT": 0,
+    "ROI_INPUT_READINESS_FALSE_POSITIVE": 0,
+    "ROI_INPUT_READINESS_FALSE_NEGATIVE": 0,
+    "OFFPLAN_FULL_ROI_SCENARIO_CALCULATED": 0,
+    "V13_AUTH_CHANGES": 0,
+    "all_safety_counters_zero": true
+  },
+
+  "backend_package": {
+    "path": "investor_api/roi/",
+    "new_files": [
+      "roi_scenario_models.py",
+      "roi_scenario_validation.py",
+      "roi_scenario_calculator.py",
+      "roi_scenario_user_input_store.py"
+    ],
+    "ephemeral_store": true,
+    "no_auth": true,
+    "backend_only_calculations": true,
+    "isolated_from_acquisition": true
+  },
+
+  "output_files": [
+    "roi_outputs/FULL_PROPERTY_ROI_V1_3_SCENARIO_INPUTS_REPORT.md",
+    "roi_outputs/full_property_roi_v1_3_scenario_test_cases.json",
+    "roi_outputs/full_property_roi_v1_3_scenario_verdict.json"
+  ],
+
+  "not_done": [
+    "Full Property ROI calculation",
+    "Capital return",
+    "Total return",
+    "Annualized return",
+    "IRR",
+    "Default appreciation",
+    "DLD benchmark as future price",
+    "Rental growth/escalation",
+    "Mortgage ROI",
+    "Acquisition V1.2 formula modification",
+    "Rental stack modification",
+    "Service Charge V2 modification",
+    "Investor Fit modification",
+    "Authentication",
+    "Frontend UI"
+  ]
+}

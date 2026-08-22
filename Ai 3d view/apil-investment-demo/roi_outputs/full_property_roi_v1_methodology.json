@@ -1,0 +1,197 @@
+{
+  "methodology_name": "FULL_PROPERTY_ROI_V1_UNLEVERED",
+  "version": "V1_AUDIT",
+  "status": "DESIGNED_NOT_IMPLEMENTED",
+  "leverage": "UNLEVERED",
+  "roi_type": "TOTAL_ROI_ONLY",
+  "annualized_return": "NOT_IMPLEMENTED_V1",
+  "irr": "NOT_IMPLEMENTED_V1",
+
+  "formula": {
+    "total_cash_invested_aed": "purchase_price_aed + acquisition_costs_aed",
+    "cumulative_net_rental_income_aed": "sum(net_rental_income_year_1..N) where N = holding_period_years",
+    "net_sale_proceeds_aed": "exit_sale_price_aed - selling_costs_aed",
+    "total_return_aed": "cumulative_net_rental_income_aed + net_sale_proceeds_aed - total_cash_invested_aed",
+    "full_property_roi_pct": "total_return_aed / total_cash_invested_aed * 100"
+  },
+
+  "formula_notes": {
+    "double_counting_check": "Acquisition costs are in the denominator (total_cash_invested) and also subtracted in capital_return. They are NOT subtracted from net rental income. No double counting.",
+    "operating_costs_note": "Recurring operating costs (vacancy, management, maintenance, service charges) are already deducted inside net_rental_income. They are NOT subtracted again from total_return.",
+    "sign_convention": "Positive return = profit. Negative return = loss. No clamping."
+  },
+
+  "capital_return_decomposition": {
+    "capital_return_aed": "net_sale_proceeds_aed - purchase_price_aed - acquisition_costs_aed",
+    "rental_return_aed": "cumulative_net_rental_income_aed",
+    "total_return_aed": "capital_return_aed + rental_return_aed",
+    "note": "This decomposition is mathematically identical to the canonical formula. Use one formulation to avoid confusion."
+  },
+
+  "input_categories": {
+    "A_PROPERTY_PURCHASE_PRICE": {
+      "source": "MASTER",
+      "status": "AVAILABLE",
+      "field": "current_price_aed",
+      "availability": "2614/2614 properties (100%)",
+      "classification": "VERIFIED_PROPERTY_FACT"
+    },
+    "B_ACQUISITION_COSTS": {
+      "dld_transfer_fee": {
+        "source": "OFFICIAL_DLD_RERA",
+        "status": "NOT_STORED_IN_SYSTEM",
+        "rate": "4% of purchase price",
+        "legal_basis": "Executive Council Resolution No. 30 of 2013",
+        "payer": "Legally 2% buyer + 2% seller; market practice: buyer pays full 4%",
+        "classification": "OFFICIAL_VERIFIED",
+        "v1_treatment": "DERIVED from purchase_price_aed * 0.04 (statutory rate, not an assumption)"
+      },
+      "title_deed_fee": {
+        "source": "OFFICIAL_DLD_RERA",
+        "status": "NOT_STORED_IN_SYSTEM",
+        "amount": "AED 540 (apartments AED 580, land AED 430)",
+        "classification": "OFFICIAL_VERIFIED",
+        "v1_treatment": "DERIVED fixed amount"
+      },
+      "trustee_office_fee": {
+        "source": "OFFICIAL_DLD_RERA",
+        "status": "NOT_STORED_IN_SYSTEM",
+        "amount": "AED 2,000 (<AED 500k) or AED 4,000 (>=AED 500k) + VAT",
+        "classification": "OFFICIAL_VERIFIED",
+        "v1_treatment": "DERIVED based on price threshold"
+      },
+      "knowledge_fee": {
+        "source": "OFFICIAL_DLD_RERA",
+        "amount": "AED 10",
+        "classification": "OFFICIAL_VERIFIED"
+      },
+      "innovation_fee": {
+        "source": "OFFICIAL_DLD_RERA",
+        "amount": "AED 10",
+        "classification": "OFFICIAL_VERIFIED"
+      },
+      "broker_purchase_commission": {
+        "source": "USER_INPUT",
+        "status": "NOT_IN_SYSTEM",
+        "market_standard": "2% of purchase price + 5% VAT",
+        "legal_limit": "No statutory maximum/minimum — regulated contractually",
+        "classification": "USER_INPUT",
+        "v1_treatment": "USER_INPUT — must not default"
+      },
+      "mortgage_registration": {
+        "classification": "NOT_APPLICABLE",
+        "note": "Not applicable in unlevered V1"
+      }
+    },
+    "C_HOLDING_PERIOD": {
+      "source": "USER_INPUT",
+      "status": "NOT_IN_SYSTEM",
+      "field": "holding_period_years",
+      "classification": "USER_INPUT",
+      "v1_treatment": "USER_INPUT — must not default"
+    },
+    "D_NET_RENTAL_INCOME": {
+      "source": "DERIVED",
+      "status": "CONDITIONALLY_AVAILABLE",
+      "condition": "calculation_level == NET_RENTAL (requires annual_rent + verified_SC + vacancy + management + maintenance)",
+      "current_availability": "0/2614 (user inputs are ephemeral, not persisted)",
+      "prerequisite_availability": "12/2614 have annual_rent + verified_SC",
+      "classification": "DERIVED from frozen layers + user inputs",
+      "v1_treatment": "Available only when calculation_level == NET_RENTAL"
+    },
+    "E_EXIT_VALUE": {
+      "source": "USER_INPUT",
+      "status": "NOT_IN_SYSTEM",
+      "modes": ["USER_ENTERED_EXIT_PRICE", "USER_ENTERED_ANNUAL_APPRECIATION_RATE", "NO_EXIT_VALUE_AVAILABLE"],
+      "recommended_v1_mode": "USER_ENTERED_EXIT_PRICE or USER_ENTERED_ANNUAL_APPRECIATION_RATE",
+      "classification": "USER_INPUT",
+      "v1_treatment": "USER_INPUT — must not default, must not use DLD benchmark as future exit price"
+    },
+    "F_SELLING_COSTS": {
+      "broker_selling_commission": {
+        "source": "USER_INPUT",
+        "market_standard": "2% of sale price + 5% VAT",
+        "classification": "USER_INPUT",
+        "v1_treatment": "USER_INPUT — must not default"
+      },
+      "developer_noc_fee": {
+        "source": "USER_INPUT",
+        "range": "AED 500–5,000 + VAT (varies by developer)",
+        "classification": "USER_INPUT",
+        "v1_treatment": "USER_INPUT — must not default"
+      },
+      "dld_transfer_fee_on_sale": {
+        "classification": "NOT_APPLICABLE_FOR_SELLER",
+        "note": "4% DLD fee typically paid by buyer in market practice"
+      }
+    },
+    "G_CAPITAL_RETURN": {
+      "formula": "net_sale_proceeds_aed - purchase_price_aed - acquisition_costs_aed",
+      "classification": "DERIVED"
+    },
+    "H_TOTAL_RETURN": {
+      "formula": "cumulative_net_rental_income_aed + net_sale_proceeds_aed - total_cash_invested_aed",
+      "classification": "DERIVED"
+    }
+  },
+
+  "multi_year_rental_income": {
+    "current_engine": "Estimates one annual rental level only",
+    "v1_recommendation": "CONSTANT_ANNUAL_NET_RENTAL_INCOME",
+    "rationale": "Safest approach — no rental escalation without explicit evidence/input",
+    "future_options": [
+      "A_CONSTANT_ANNUAL — no growth (recommended V1)",
+      "B_USER_ENTERED_RENTAL_GROWTH — user provides annual growth rate",
+      "C_VERIFIED_MARKET_RENTAL_GROWTH — requires validated market model"
+    ],
+    "v1_formula": "cumulative_net_rental_income_aed = net_rental_income_aed * holding_period_years"
+  },
+
+  "offplan_treatment": {
+    "classification": "OFFPLAN_RENTAL_NOT_EVALUATED",
+    "v1_recommendation": "READY_ONLY",
+    "rationale": "Current rental engine does not project future rent for Offplan properties. Do not calculate rental-based Full ROI for Offplan in V1."
+  },
+
+  "annualized_return": {
+    "v1_recommendation": "TOTAL_ROI_ONLY",
+    "rationale": "Annualized return / CAGR / IRR require cash-flow timing which is not defined in V1",
+    "future_cagr_formula": "((total_return_aed + total_cash_invested_aed) / total_cash_invested_aed) ^ (1/holding_period_years) - 1",
+    "irr_requirement": "IRR requires per-period cash flow timing (purchase date, annual rent dates, sale date) — not available in V1"
+  },
+
+  "evidence_hierarchy": {
+    "allowed_sources": ["MASTER", "OFFICIAL_DLD_RERA", "VERIFIED_EXTERNAL", "USER_INPUT", "DERIVED", "MISSING"],
+    "rule": "Never mix user assumptions with verified official facts. Every ROI field must track value, source, status, and evidence date."
+  },
+
+  "user_input_fields_required": [
+    "holding_period_years",
+    "vacancy_input (already exists in operating cost layer)",
+    "management_input (already exists in operating cost layer)",
+    "maintenance_input (already exists in operating cost layer)",
+    "broker_purchase_commission_aed or broker_purchase_commission_pct",
+    "exit_value_mode (USER_ENTERED_EXIT_PRICE | USER_ENTERED_ANNUAL_APPRECIATION_RATE | NO_EXIT_VALUE)",
+    "exit_sale_price_aed (if USER_ENTERED_EXIT_PRICE)",
+    "annual_appreciation_rate_pct (if USER_ENTERED_ANNUAL_APPRECIATION_RATE)",
+    "broker_selling_commission_aed or broker_selling_commission_pct",
+    "developer_noc_fee_aed"
+  ],
+
+  "verified_cost_fields": [
+    "dld_transfer_fee_aed = purchase_price_aed * 0.04 (OFFICIAL_VERIFIED, statutory)",
+    "title_deed_fee_aed = AED 540 (OFFICIAL_VERIFIED, fixed)",
+    "trustee_office_fee_aed = AED 2000 or AED 4000 (OFFICIAL_VERIFIED, threshold-based)",
+    "knowledge_fee_aed = AED 10 (OFFICIAL_VERIFIED, fixed)",
+    "innovation_fee_aed = AED 10 (OFFICIAL_VERIFIED, fixed)"
+  ],
+
+  "safety_rules": {
+    "DEFAULT_BROKER_COMMISSION_USED": 0,
+    "DEFAULT_APPRECIATION_USED": 0,
+    "MARKET_BENCHMARK_USED_AS_FUTURE_EXIT_PRICE": 0,
+    "IRR_WITHOUT_CASHFLOW_TIMING": 0,
+    "ROI_AUDIT_AUTH_CHANGES": 0,
+    "ROI_AUDIT_CHANGED_FIT_SCORE": 0
+  }
+}

@@ -1,0 +1,132 @@
+[FallbackDLD] Loaded 112749 transactions across 265 areas
+[DLDStore] Loaded 99391 transactions across 3065 projects
+================================================================================
+PER-PROPERTY DIAGNOSIS (Direct Function)
+================================================================================
+
+--- Property 6277 | Binghatti Emerald ---
+eligible: True
+level: AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE
+estimated_benchmark_aed: 2400534.07
+final_transaction_count: 40
+raw_transaction_count: 68
+unique_project_count: 18
+mapped_dld_area: JUMEIRAH VILLAGE CIRCLE
+excluded_reasons: []
+quality_flags: ['SQM_CONVERTED_TO_SQFT:68', 'SIZE_BAND_APPLIED_0.25', 'PPSF_OUTLIERS_REMOVED:3(IQR_973-2710)']
+main_v2.py looks for 'benchmark_median': None
+main_v2.py looks for 'transaction_count': None
+
+--- Property 3201 | Binghatti Nova ---
+eligible: True
+level: AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE
+estimated_benchmark_aed: 1240272.35
+final_transaction_count: 112
+raw_transaction_count: 286
+unique_project_count: 45
+mapped_dld_area: JUMEIRAH VILLAGE CIRCLE
+excluded_reasons: []
+quality_flags: ['SQM_CONVERTED_TO_SQFT:286', 'SIZE_BAND_APPLIED_0.25', 'PPSF_OUTLIERS_REMOVED:6(IQR_528-1957)']
+main_v2.py looks for 'benchmark_median': None
+main_v2.py looks for 'transaction_count': None
+
+--- Property 3983 | Sapphire 32 ---
+eligible: True
+level: AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE
+estimated_benchmark_aed: 2127515.48
+final_transaction_count: 58
+raw_transaction_count: 99
+unique_project_count: 26
+mapped_dld_area: JUMEIRAH VILLAGE CIRCLE
+excluded_reasons: []
+quality_flags: ['SQM_CONVERTED_TO_SQFT:46', 'SIZE_BAND_APPLIED_0.25', 'PPSF_OUTLIERS_REMOVED:8(IQR_718-2204)']
+main_v2.py looks for 'benchmark_median': None
+main_v2.py looks for 'transaction_count': None
+
+--- Property 7061 | azizi mina ---
+eligible: True
+level: AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE
+estimated_benchmark_aed: 3778313.53
+final_transaction_count: 77
+raw_transaction_count: 122
+unique_project_count: 11
+mapped_dld_area: PALM JUMEIRAH
+excluded_reasons: []
+quality_flags: ['SQM_CONVERTED_TO_SQFT:122', 'SIZE_BAND_APPLIED_0.25', 'PPSF_OUTLIERS_REMOVED:1(IQR_30-5597)']
+main_v2.py looks for 'benchmark_median': None
+main_v2.py looks for 'transaction_count': None
+
+--- Property 8057 | Binghatti Royale ---
+eligible: True
+level: AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE
+estimated_benchmark_aed: 3550368.62
+final_transaction_count: 27
+raw_transaction_count: 68
+unique_project_count: 19
+mapped_dld_area: JUMEIRAH VILLAGE CIRCLE
+excluded_reasons: []
+quality_flags: ['SQM_CONVERTED_TO_SQFT:68', 'SIZE_BAND_APPLIED_0.25']
+main_v2.py looks for 'benchmark_median': None
+main_v2.py looks for 'transaction_count': None
+
+--- Property 8201 | Marquise Square ---
+eligible: True
+level: AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE
+estimated_benchmark_aed: 3758377.55
+final_transaction_count: 50
+raw_transaction_count: 71
+unique_project_count: 11
+mapped_dld_area: BUSINESS BAY
+excluded_reasons: []
+quality_flags: ['SQM_CONVERTED_TO_SQFT:71', 'SIZE_BAND_APPLIED_0.25', 'PPSF_OUTLIERS_REMOVED:3(IQR_854-2521)']
+main_v2.py looks for 'benchmark_median': None
+main_v2.py looks for 'transaction_count': None
+
+================================================================================
+AGGREGATE ACROSS ALL 2,614 MASTER PROPERTIES
+================================================================================
+area_function_called_count: 2614
+area_function_returned_object_count: 2614
+area_function_eligible_count: 2154
+area_function_valid_median_count: 2154
+area_function_valid_tx_count: 2154
+area_function_identity_valid_count: 2134
+area_function_blocked_count: 460
+area_function_available_count: 2154
+
+Level distribution:
+  AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE: 1967
+  NO_VERIFIED_AREA_MAPPING: 275
+  AREA_SAME_BEDROOM_EVIDENCE: 167
+  NO_VERIFIED_FALLBACK_EVIDENCE: 115
+  AMBIGUOUS_BEDROOM_NO_FALLBACK: 54
+  EXACT_PROJECT_STATUS_BROADENED_EVIDENCE: 20
+  MISSING_BEDROOM_NO_FALLBACK: 11
+  NON_DUBAI_DLD_NOT_APPLICABLE: 5
+
+Block reason distribution:
+  NO_VERIFIED_AREA_MAPPING: 275
+  AMBIGUOUS_BEDROOM_NO_FALLBACK: 54
+  INSUFFICIENT_FINAL_TRANSACTIONS_1_vs_8: 24
+  INSUFFICIENT_FINAL_TRANSACTIONS_4_vs_8: 21
+  INSUFFICIENT_FINAL_TRANSACTIONS_2_vs_8: 18
+  NO_SAME_BEDROOM_TRANSACTIONS_IN_AREA: 18
+  INSUFFICIENT_FINAL_TRANSACTIONS_7_vs_8: 12
+  MISSING_BEDROOM: 11
+  INSUFFICIENT_FINAL_TRANSACTIONS_5_vs_8: 10
+  INSUFFICIENT_FINAL_TRANSACTIONS_3_vs_8: 9
+  NON_DUBAI_DLD_NOT_APPLICABLE: 5
+  INSUFFICIENT_FINAL_TRANSACTIONS_6_vs_8: 3
+
+================================================================================
+WIRING BUG CONFIRMATION
+================================================================================
+main_v2.py looks for 'benchmark_median' at top level
+calculate_fallback_benchmark stores it at result['benchmark']['estimated_benchmark_aed']
+main_v2.py looks for 'transaction_count' at top level
+calculate_fallback_benchmark stores it at result['benchmark']['final_transaction_count']
+main_v2.py looks for 'evidence_level' at top level
+calculate_fallback_benchmark stores it at result['level']
+main_v2.py does NOT check result['eligible']
+Therefore: area_fallback_raw.get('benchmark_median') is ALWAYS None
+Therefore: area_fallback is NEVER selected even when function produces valid results

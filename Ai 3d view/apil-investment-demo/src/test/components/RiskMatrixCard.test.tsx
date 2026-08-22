@@ -12,7 +12,8 @@ describe('RiskMatrixCard', () => {
 
   it('shows all 7 risk dimensions with plain English labels', () => {
     render(<RiskMatrixCard property={mockPropertyFull} />);
-    expect(screen.getByText('New Supply Nearby')).toBeInTheDocument();
+    // Use getAllByText because some labels also appear in summary sections
+    expect(screen.getAllByText('New Supply Nearby').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText('Developer Track Record')).toBeInTheDocument();
     expect(screen.getByText('Area Popularity')).toBeInTheDocument();
     expect(screen.getByText('Rental Demand')).toBeInTheDocument();

@@ -1,0 +1,47 @@
+{
+  "verdict": "SERVICE_CHARGE_ADJUSTED_INCOME_V1_UI_VERIFIED",
+  "eligible_ui_properties": 6,
+  "eligible_value_mismatches": 0,
+  "held_rejected_leakage": 0,
+  "non_eligible_leakage": 0,
+  "frontend_recalculation": {
+    "sc": 0,
+    "income": 0,
+    "yield": 0
+  },
+  "rental_regression": {
+    "rent": 0,
+    "yield": 0,
+    "tier": 0
+  },
+  "sales_regression": {
+    "mc": 0,
+    "ps": 0,
+    "apil": 0,
+    "conv": 0,
+    "fit": 0
+  },
+  "stale_message_count": 0,
+  "performance_avg_seconds": 0.026,
+  "all_counters": {
+    "ELIGIBLE_PROPERTY_UI_VALUE_MISMATCH": 0,
+    "HELD_PROPERTY_EXPOSED_ADJUSTED_METRICS": 0,
+    "REJECTED_PROPERTY_EXPOSED_ADJUSTED_METRICS": 0,
+    "NON_ELIGIBLE_PROPERTY_EXPOSED_ADJUSTED_METRICS": 0,
+    "UI_CHANGED_ANNUAL_RENT": 0,
+    "UI_CHANGED_RENT_RANGE": 0,
+    "UI_CHANGED_RENT_TIER": 0,
+    "UI_CHANGED_GROSS_YIELD": 0,
+    "UI_CHANGED_GROSS_YIELD_RANGE": 0,
+    "UI_INTEGRATION_CHANGED_MARKET_CONTEXT": 0,
+    "UI_INTEGRATION_CHANGED_PRODUCTION_SIGNAL": 0,
+    "UI_INTEGRATION_CHANGED_APIL_ADVANTAGE": 0,
+    "UI_INTEGRATION_CHANGED_CONVENTIONAL_POSITION": 0,
+    "UI_INTEGRATION_CHANGED_FIT_SCORE": 0,
+    "STALE_RENTAL_UNKNOWN_MESSAGE_VISIBLE_ON_READY_EVALUATED_PROPERTY": 0,
+    "FRONTEND_SERVICE_CHARGE_RECALCULATION": 0,
+    "FRONTEND_ADJUSTED_INCOME_RECALCULATION": 0,
+    "FRONTEND_ADJUSTED_YIELD_RECALCULATION": 0,
+    "NORMAL_PROPERTY_API_PERFORMANCE_REGRESSION": 0
+  }
+}

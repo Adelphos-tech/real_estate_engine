@@ -286,3 +286,58 @@ from an investor request.
 Only **Canonical**, **Level 2**, and **V4 Area** remain in the active application code.
 
 **Calculation output changed during cleanup: ZERO.**
+
+---
+
+## FINAL FREEZE RECORD
+
+**Status:** `MARKET_CONTEXT_RUNTIME_V1_FROZEN`
+
+| Tier | Count |
+|---|---|
+| Canonical | **785** |
+| Level 2 | **40** |
+| Area V4 | **1,171** |
+| No Context | **618** |
+| **Total** | **2,614** |
+
+**Production signal:** `CANONICAL_DLD` or `NONE` only
+
+**Area calculation:** `AREA_CONTEXT_V4_DLD_OFFICIAL_V1`
+
+**Canonical calculation:** `CANONICAL_DLD_SALES_ONLY_V1`
+
+### FINAL_FROZEN_DATA_SNAPSHOT
+
+| File | Full SHA256 |
+|---|---|
+| `MASTER_FINAL.xlsx` | `aea1e8d64de38e8aaa38e35f9bccd4eac289991ddde83a6e201bd2ab6002be4f` |
+| `dxb_transactions_all.csv` | `3d441392f8ca5d8c91f272d16b3d2a156a93db86464a6d28ee3523a8c6ede5a1` |
+
+### Git Commit
+
+**Commit:** `5a36d1a47471c613fd492fd60481c2213051d0a8`
+**Message:** `Freeze market context runtime v1`
+
+### Git Tag
+
+**Tag:** `MARKET_CONTEXT_RUNTIME_V1_FROZEN`
+**Commit:** `5a36d1a47471c613fd492fd60481c2213051d0a8`
+
+### Historical Canonical Tag
+
+**Tag:** `DLD_CANONICAL_UI_V1_FROZEN`
+**Commit:** `d48a692fb369cb4b9d11dd460d169d972e25278f`
+
+### Rental
+
+**UNTOUCHED**
+
+---
+
+**Any future methodology modification requires:**
+- new calculation version
+- new full 2,614 audit
+- regression comparison
+- explicit approval
+- new freeze tag

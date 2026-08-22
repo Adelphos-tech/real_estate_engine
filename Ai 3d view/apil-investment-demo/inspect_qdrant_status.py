@@ -2,7 +2,8 @@
 import json, urllib.request
 from collections import Counter
 
-url = 'http://localhost:6333/collections/Dubai_real_estate_calculation_data_/points/scroll'
+COLLECTION = 'properties_collection'
+url = f'http://localhost:6333/collections/{COLLECTION}/points/scroll'
 body = json.dumps({'limit': 200, 'with_payload': True, 'with_vector': False}).encode()
 req = urllib.request.Request(url, data=body, headers={'Content-Type': 'application/json'})
 resp = json.loads(urllib.request.urlopen(req, timeout=30).read())

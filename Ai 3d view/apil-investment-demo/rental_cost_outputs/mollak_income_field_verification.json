@@ -1,0 +1,98 @@
+[
+  {
+    "project": "MARQUISE SQUARE TOWER",
+    "group": "Marquise Square Tower",
+    "year": "2026",
+    "gf": 15.85,
+    "rf": 1.09,
+    "gt": 16.85,
+    "income": 0.09,
+    "old_diff": 0.09,
+    "formula_diff": 0.0,
+    "formula_match": true
+  },
+  {
+    "project": "THE DUBAI CREEK RESIDENCES",
+    "group": "The Dubai Creek Residences",
+    "year": "2026",
+    "gf": 16.15,
+    "rf": 0.57,
+    "gt": 16.5,
+    "income": 0.22,
+    "old_diff": 0.22,
+    "formula_diff": 0.0,
+    "formula_match": true
+  },
+  {
+    "project": "HARBOUR VIEWS",
+    "group": "Harbour Views",
+    "year": "2026",
+    "gf": 15.61,
+    "rf": 1.28,
+    "gt": 16.82,
+    "income": 0.07,
+    "old_diff": 0.07,
+    "formula_diff": 0.0,
+    "formula_match": true
+  },
+  {
+    "project": "AHAD RESIDENCES",
+    "group": "Ahad Residences",
+    "year": "2026",
+    "gf": 18.15,
+    "rf": 2.11,
+    "gt": 20.26,
+    "income": 0,
+    "old_diff": -0.0,
+    "formula_diff": -0.0,
+    "formula_match": true
+  },
+  {
+    "project": "PANTHEON ELYSEE",
+    "group": "Pantheon Elysee",
+    "year": "2025",
+    "gf": 13.07,
+    "rf": 1.53,
+    "gt": 14.6,
+    "income": 0,
+    "old_diff": 0.0,
+    "formula_diff": 0.0,
+    "formula_match": true
+  },
+  {
+    "project": "AZIZI. FEIROUZ",
+    "group": "Azizi Feirouz",
+    "year": "2026",
+    "gf": 11.37,
+    "rf": 0.74,
+    "gt": 12.11,
+    "income": 0,
+    "old_diff": 0.0,
+    "formula_diff": 0.0,
+    "formula_match": true
+  },
+  {
+    "project": "CREEK HORIZON",
+    "group": "Creek Horizon",
+    "year": "2026",
+    "gf": 16.69,
+    "rf": 1.08,
+    "gt": 17.62,
+    "income": 0.15,
+    "old_diff": 0.15,
+    "formula_diff": 0.0,
+    "formula_match": true
+  },
+  {
+    "project": "CREEKSIDE 18",
+    "group": "Creekside 18",
+    "year": "2026",
+    "gf": 19.25,
+    "rf": 1.13,
+    "gt": 20.27,
+    "income": 0.11,
+    "old_diff": 0.11,
+    "formula_diff": 0.0,
+    "formula_match": true
+  }
+]

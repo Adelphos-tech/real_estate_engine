@@ -143,10 +143,33 @@ export default function Compare() {
                     <div className="font-medium">{item.price_analysis.evidence_strength || 'N/A'}</div>
                   </div>
 
-                  <div className="text-sm">
-                    <div className="text-apil-gray-500 mb-1">Size</div>
-                    <div className="font-medium">{p.size_sqm ? `${p.size_sqm} sqm` : 'N/A'} · {p.bedrooms || 'N/A'} BR</div>
-                  </div>
+                  {/* Property details from enrichment */}
+                  {item.enrichment?.enrichment_status === 'CONFIRMED' ? (
+                    <div className="text-sm space-y-2">
+                      <div className="text-apil-gray-500 mb-1">Property Details (confirmed)</div>
+                      <div className="font-medium">{item.enrichment.property_attributes.category || 'N/A'}</div>
+                      <div className="font-medium">
+                        {item.enrichment.property_attributes.bedrooms !== undefined
+                          ? `${item.enrichment.property_attributes.bedrooms} bed`
+                          : 'Bedrooms unavailable'}
+                        {' · '}
+                        {item.enrichment.property_attributes.bathrooms !== undefined
+                          ? `${item.enrichment.property_attributes.bathrooms} bath`
+                          : 'Bathrooms unavailable'}
+                      </div>
+                      <div className="font-medium">
+                        {item.enrichment.property_attributes.size_sqm
+                          ? `${item.enrichment.property_attributes.size_sqm} sqm`
+                          : 'Size unavailable'}
+                      </div>
+                      <div className="font-medium">{item.enrichment.property_attributes.status || 'Status unavailable'}</div>
+                    </div>
+                  ) : (
+                    <div className="text-sm">
+                      <div className="text-apil-gray-500 mb-1">Property Details</div>
+                      <div className="font-medium text-apil-gray-400">Not confirmed from listing data</div>
+                    </div>
+                  )}
 
                   <Link
                     to={`/property/${p.id}`}

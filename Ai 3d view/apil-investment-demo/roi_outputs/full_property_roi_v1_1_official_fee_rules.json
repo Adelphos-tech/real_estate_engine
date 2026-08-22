@@ -1,0 +1,132 @@
+{
+  "methodology_version": "ACQUISITION_COST_V1_1",
+  "valuation_date": "2026-08-22",
+
+  "dld_transfer": {
+    "fee_name": "DLD Transfer / Registration Fee",
+    "source": "OFFICIAL_DLD_RERA",
+    "source_date": "2013-09-18",
+    "effective_date": "2013-09-18",
+    "legal_basis": "Executive Council Resolution No. 30 of 2013, Article 2, Schedule Item 1",
+    "calculation_method": "PERCENTAGE_OF_SALE_VALUE",
+    "total_rate_pct": 4.0,
+    "buyer_statutory_share_pct": 2.0,
+    "seller_statutory_share_pct": 2.0,
+    "payer_allocation_status": "CONTRACT_DEPENDENT",
+    "payer_rule": "ECR 30/2013 Article 3(1): 'unless agreed otherwise, the Fee for the sale of Real Property will be shared equally by the seller and purchaser.' Market practice commonly has buyer pay full 4%.",
+    "threshold_rules": null,
+    "status": "OFFICIAL_VERIFIED"
+  },
+
+  "title_deed": {
+    "fee_name": "Title Deed Issuance Fee",
+    "source": "OFFICIAL_DLD_RERA",
+    "source_date": "2013-09-18",
+    "effective_date": "2013-09-18",
+    "legal_basis": "Executive Council Resolution No. 30 of 2013, Schedule Item 22",
+    "calculation_method": "FIXED_AMOUNT",
+    "fixed_amount_aed": 250.0,
+    "percentage_rate": null,
+    "threshold_rules": null,
+    "payer": "Buyer (purchaser of title deed)",
+    "status": "OFFICIAL_VERIFIED",
+    "note": "AED 250 per title deed issuance. Does NOT include knowledge/innovation fees — those are separate."
+  },
+
+  "knowledge_fee": {
+    "fee_name": "Knowledge Dirham Fee",
+    "source": "OFFICIAL_DLD_RERA",
+    "source_date": "2018",
+    "effective_date": "2018",
+    "legal_basis": "Law No. 1 of 2018 (Knowledge Dirham Fee)",
+    "calculation_method": "FIXED_AMOUNT",
+    "fixed_amount_aed": 10.0,
+    "percentage_rate": null,
+    "threshold_rules": "Not charged for transactions less than AED 50",
+    "payer": "Applicant (buyer for property transactions)",
+    "status": "OFFICIAL_VERIFIED",
+    "note": "Charged per government service transaction. Separate from title deed fee."
+  },
+
+  "innovation_fee": {
+    "fee_name": "Innovation Dirham Fee",
+    "source": "OFFICIAL_DLD_RERA",
+    "source_date": "2018",
+    "effective_date": "2018",
+    "legal_basis": "Law No. 2 of 2018 (Innovation Dirham Fee)",
+    "calculation_method": "FIXED_AMOUNT",
+    "fixed_amount_aed": 10.0,
+    "percentage_rate": null,
+    "threshold_rules": "Not charged for transactions less than AED 50",
+    "payer": "Applicant (buyer for property transactions)",
+    "status": "OFFICIAL_VERIFIED",
+    "note": "Charged per government service transaction. Separate from title deed fee."
+  },
+
+  "trustee_office_fee": {
+    "fee_name": "Trustee Office Fee",
+    "source": "MISSING",
+    "source_date": null,
+    "effective_date": null,
+    "legal_basis": null,
+    "calculation_method": null,
+    "fixed_amount_aed": null,
+    "percentage_rate": null,
+    "threshold_rules": null,
+    "payer": "Typically buyer, but varies by trustee office",
+    "status": "MISSING",
+    "note": "Trustee offices are private entities authorised by DLD. Their fees are NOT fixed by official government statute. Market sources cite AED 2,000-4,000 but this is NOT OFFICIAL_VERIFIED. Must be USER_INPUT."
+  },
+
+  "property_map_fee": {
+    "fee_name": "Property Map / Plan Fee",
+    "source": "OFFICIAL_DLD_RERA",
+    "source_date": "2013-09-18",
+    "effective_date": "2013-09-18",
+    "legal_basis": "Executive Council Resolution No. 30 of 2013, Schedule Item 62",
+    "calculation_method": "FIXED_AMOUNT",
+    "fixed_amount_aed": 250.0,
+    "percentage_rate": null,
+    "threshold_rules": "AED 250 for villa/apartment plan; AED 100 for land map; AED 225 for unified land map (Dubai Municipality)",
+    "payer": "Applicant",
+    "status": "OFFICIAL_VERIFIED",
+    "note": "Optional — only if a new map/plan is required. Not always charged."
+  },
+
+  "broker_purchase_commission": {
+    "fee_name": "Broker Purchase Commission",
+    "source": "USER_INPUT",
+    "legal_basis": "No statutory rate — regulated contractually (RERA Form B)",
+    "market_standard": "2% of sale price + 5% VAT (commonly cited, not statutory)",
+    "calculation_method": "USER_INPUT_PERCENT or USER_INPUT_AED",
+    "status": "USER_INPUT",
+    "note": "No default is ever applied. Must be explicitly entered by user."
+  },
+
+  "developer_admin_fee": {
+    "fee_name": "Developer / Admin Fee",
+    "source": "USER_INPUT",
+    "legal_basis": "Varies by developer — no statutory rate",
+    "calculation_method": "USER_INPUT_AED",
+    "status": "USER_INPUT",
+    "note": "Not universally applicable. Optional — does not block COMPLETE_ACQUISITION_COSTS."
+  },
+
+  "mortgage_registration_fee": {
+    "fee_name": "Mortgage Registration Fee",
+    "source": "NOT_APPLICABLE",
+    "legal_basis": "ECR 30/2013 Schedule Item 10 (0.25% of mortgage value)",
+    "status": "NOT_APPLICABLE",
+    "note": "NOT_APPLICABLE in unlevered V1."
+  },
+
+  "double_counting_prevention": {
+    "title_deed_includes_knowledge": false,
+    "title_deed_includes_innovation": false,
+    "knowledge_fee_separate": true,
+    "innovation_fee_separate": true,
+    "TITLE_DEED_FEE_DOUBLE_COUNT": 0,
+    "KNOWLEDGE_FEE_DOUBLE_COUNT": 0,
+    "INNOVATION_FEE_DOUBLE_COUNT": 0
+  }
+}

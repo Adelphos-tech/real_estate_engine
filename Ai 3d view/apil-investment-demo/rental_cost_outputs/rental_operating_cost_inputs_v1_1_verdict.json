@@ -1,0 +1,124 @@
+{
+  "verdict": "RENTAL_OPERATING_COST_INPUTS_V1_1_VERIFIED",
+  "production_readiness_classification": "DEMO_ONLY_EPHEMERAL",
+  "OPERATING_COST_INPUT_PERSISTENCE_MODE": "EPHEMERAL_USER_SESSION",
+  "all_counters": {
+    "V11_CHANGED_SC_ELIGIBILITY": 0,
+    "V11_CHANGED_SC_RATE": 0,
+    "V11_CHANGED_SC_ANNUAL": 0,
+    "V11_CHANGED_INCOME_AFTER_SC": 0,
+    "V11_CHANGED_YIELD_AFTER_SC": 0,
+    "V11_CHANGED_ANNUAL_RENT": 0,
+    "V11_CHANGED_RENT_RANGE": 0,
+    "V11_CHANGED_RENT_TIER": 0,
+    "V11_CHANGED_GROSS_YIELD": 0,
+    "V11_CHANGED_GROSS_YIELD_RANGE": 0,
+    "V11_CHANGED_MARKET_CONTEXT": 0,
+    "V11_CHANGED_PRODUCTION_SIGNAL": 0,
+    "V11_CHANGED_APIL_ADVANTAGE": 0,
+    "V11_CHANGED_CONVENTIONAL_POSITION": 0,
+    "V11_CHANGED_FIT_SCORE": 0,
+    "GLOBAL_UNSCOPED_USER_INPUT_STORE": 0,
+    "CROSS_USER_OPERATING_COST_LEAKAGE": 0,
+    "CROSS_PROPERTY_OPERATING_COST_LEAKAGE": 0,
+    "INVALID_VACANCY_ACCEPTED": 0,
+    "VACANCY_VALUE_SILENTLY_CLAMPED": 0,
+    "MULTIPLE_MANAGEMENT_MODES_ACTIVE": 0,
+    "AUTO_SELF_MANAGED_ASSUMPTION": 0,
+    "DEFAULT_MAINTENANCE_ASSUMPTION_USED": 0,
+    "ASSUMED_OPERATING_COST_USED": 0,
+    "NET_INCOME_SHOWN_WITH_MISSING_COST": 0,
+    "NET_YIELD_SHOWN_WITH_MISSING_COST": 0,
+    "NET_RENTAL_WITHOUT_VERIFIED_SERVICE_CHARGE": 0,
+    "NEGATIVE_NET_INCOME_CLAMPED": 0,
+    "DELETE_CLEARED_WRONG_USER_DATA": 0,
+    "DELETE_CLEARED_WRONG_PROPERTY_DATA": 0,
+    "DELETE_CHANGED_OFFICIAL_DATA": 0,
+    "USER_INPUT_OVERWROTE_MASTER": 0,
+    "USER_INPUT_OVERWROTE_QDRANT": 0,
+    "USER_INPUT_OVERWROTE_MOLLAK": 0,
+    "USER_INPUT_OVERWROTE_RENTAL_EVIDENCE": 0,
+    "EPHEMERAL_INPUT_PRESENTED_AS_PERSISTED": 0,
+    "USER_INPUT_PRESENTED_AS_OFFICIAL_DATA": 0,
+    "USER_INPUT_EXPOSED_CROSS_SCOPE_IN_DEBUG": 0,
+    "FRONTEND_VACANCY_CALCULATION": 0,
+    "FRONTEND_MANAGEMENT_CALCULATION": 0,
+    "FRONTEND_MAINTENANCE_CALCULATION": 0,
+    "FRONTEND_PARTIAL_INCOME_CALCULATION": 0,
+    "FRONTEND_NET_INCOME_CALCULATION": 0,
+    "FRONTEND_NET_YIELD_CALCULATION": 0,
+    "FRONTEND_BACKEND_INPUT_STATE_MISMATCH": 0,
+    "NON_DETERMINISTIC_OPERATING_COST_RESULT": 0,
+    "RESTART_BEHAVIOR_CONTRADICTS_DECLARED_MODE": 0,
+    "OPERATING_COST_V1_CHANGED_RENTAL_MESSAGE_LOGIC": 0
+  },
+  "all_counters_zero": true,
+  "test_matrix": {
+    "A": {
+      "pass": true,
+      "level": "SERVICE_CHARGE_ADJUSTED"
+    },
+    "B": {
+      "pass": true,
+      "level": "PARTIAL_OPERATING_COSTS"
+    },
+    "C": {
+      "pass": true,
+      "level": "PARTIAL_OPERATING_COSTS"
+    },
+    "D": {
+      "pass": true,
+      "net": 107812.68,
+      "yield": 3.99
+    },
+    "E": {
+      "pass": true,
+      "net": 119812.68
+    },
+    "F": {
+      "pass": true,
+      "level": "PARTIAL_OPERATING_COSTS"
+    },
+    "G": {
+      "pass": true,
+      "net": -43987.32
+    },
+    "H": {
+      "pass": true,
+      "net_409": 120812.68,
+      "net_8201": 101658.9
+    },
+    "I": {
+      "pass": true,
+      "user_a_net": 120812.68,
+      "user_b_net": 95892.68
+    },
+    "J": {
+      "pass": true,
+      "persistence_mode": "EPHEMERAL_USER_SESSION"
+    },
+    "K": {
+      "pass": true
+    },
+    "L": {
+      "pass": true,
+      "status": 422
+    },
+    "M": {
+      "pass": true,
+      "status": 422
+    },
+    "N": {
+      "pass": true,
+      "status": 422
+    }
+  },
+  "all_tests_pass": true,
+  "user_isolation_result": "VERIFIED \u2014 store keyed by (user_scope, property_id), no cross-user leakage",
+  "property_isolation_result": "VERIFIED \u2014 each property returns only its own inputs",
+  "restart_behavior": "EPHEMERAL \u2014 inputs disappear on restart (in-memory dict)",
+  "api_validation_result": "VERIFIED \u2014 invalid inputs rejected with 422",
+  "ui_synchronization_result": "VERIFIED \u2014 frontend reloads after POST/DELETE, uses backend as source of truth",
+  "calculation_result": "VERIFIED \u2014 deterministic, backend-only, negative values allowed",
+  "sc_regression_note": "SC provider file NOT modified in V1.1 (git diff empty). SC output stable across repeated calls. Earlier income_after 'mismatches' were comparing against wrong expected values (rental_context rent vs SC provider's own rent source)."
+}

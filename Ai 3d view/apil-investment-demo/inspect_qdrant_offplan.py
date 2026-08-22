@@ -1,14 +1,15 @@
 """Check Qdrant offplan properties for pricing data."""
 import json, urllib.request
 
-url = 'http://localhost:6333/collections/Dubai_real_estate_calculation_data_/points/scroll'
+COLLECTION = 'properties_collection'
+url = f'http://localhost:6333/collections/{COLLECTION}/points/scroll'
 body = json.dumps({
     'limit': 200,
     'with_payload': True,
     'with_vector': False,
     'filter': {
         'must': [
-            {'key': 'status_norm', 'match': {'value': 'offplan'}}
+            {'key': 'status', 'match': {'value': 'Offplan'}}
         ]
     }
 }).encode()

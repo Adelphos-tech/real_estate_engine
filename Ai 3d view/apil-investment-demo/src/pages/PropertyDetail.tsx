@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { api, investorSession } from '../data/api';
 import type { PersonalizedProperty, Benchmark } from '../data/api';
-import { RentalIncomeCard } from '../components/RentalIncomeCard';
+import { RentalReturnCard } from '../components/RentalReturnCard';
 
 /* ─── Decision badge colors ─── */
 const DECISION_BADGE: Record<string, string> = {
@@ -238,7 +238,9 @@ export default function PropertyDetail() {
 
   useEffect(() => {
     if (!propertyId) return;
-    api.getProperty(propertyId, investorId || undefined)
+    const ocScope = sessionStorage.getItem('apil_operating_cost_user_scope') || undefined;
+    const roiScope = sessionStorage.getItem('apil_roi_user_scope') || undefined;
+    api.getProperty(propertyId, investorId || undefined, ocScope, roiScope)
       .then(setProperty)
       .catch((e: any) => setError(e.message))
       .finally(() => setLoading(false));
@@ -881,8 +883,15 @@ export default function PropertyDetail() {
         </div>
       </div>
 
-      {/* ── 4b. RENTAL INCOME (Gross Rental Yield — display only) ── */}
-      <RentalIncomeCard rental={property.rental_context} />
+      {/* ── 4b. RENTAL RETURN LADDER (progressive: Gross → After SC → Adjusted → Net) ── */}
+      <RentalReturnCard
+        purchasePrice={p.current_price_aed}
+        rental={property.rental_context}
+        serviceCharge={property.service_charge_context}
+        operatingCost={property.rental_operating_cost_context}
+        investorProfile={property.investor_profile}
+        horizonContext={property.horizon_context}
+      />
 
       {/* ── 5. TWO SEPARATE ASSESSMENTS ───────────────────── */}
       <div className="bg-apil-gray-50 rounded-2xl border border-apil-gray-200 p-4 mb-6">

@@ -1,0 +1,9 @@
+property_id,property,property_type,mollak_usage,rate_aed_sqft,chargeable_area_sqft,area_basis_verified,annual_sc_aed,income_after_sc_aed,yield_after_sc_pct,production_eligible,ineligibility_reason
+4744,Ahad Residences,Apartment,Residential,20.26,2308.0,YES,46760.08,116439.92,2.48,YES,
+6435,Pantheon Elysee,Apartment,Residential,14.6,763.0,YES,11139.8,56060.2,6.6,YES,
+7266,Ahad Residences,Apartment,Residential,20.26,894.0,YES,18112.44,92287.56,5.13,YES,
+1074,Ahad Residences,Apartment,Residential,20.26,453.0,YES,9177.78,67622.22,5.41,YES,
+6217,Golf Links,Villa,Residential,18.36,4309.0,NO,,,,NO,AREA_MISMATCH: MASTER area='Emaar South' vs Mollak community='Dubai Sports City'
+4165,Ahad Residences,Apartment,Residential,20.26,1625.0,YES,32922.5,154277.5,4.72,YES,
+7842,Azizi Feirouz,Apartment,Residential,12.11,1008.0,YES,12206.88,58353.12,5.72,YES,
+409,Harbour Views 1,Apartment,Residential,16.82,1526.0,NO,,,,NO,COMPONENT_MISMATCH: GF+RF ≠ Grand Total

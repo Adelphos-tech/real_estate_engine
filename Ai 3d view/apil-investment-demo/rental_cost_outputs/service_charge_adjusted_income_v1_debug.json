@@ -1,0 +1,20 @@
+{
+  "calculation_level": "SERVICE_CHARGE_ADJUSTED",
+  "cost_coverage": {
+    "annual_rent": "AVAILABLE",
+    "service_charge": "VERIFIED",
+    "vacancy": "MISSING",
+    "management": "MISSING",
+    "maintenance": "MISSING"
+  },
+  "NOT_INCLUDED": [
+    "vacancy",
+    "landlord_management",
+    "unit_maintenance"
+  ],
+  "label_income": "Income After Service Charges",
+  "label_yield": "Yield After Service Charges",
+  "explicit_disclaimer": "Only one verified operating cost (service charge) has been deducted. This is NOT Net Rental Income.",
+  "properties_calculated": 8,
+  "arithmetic_failures": 0
+}

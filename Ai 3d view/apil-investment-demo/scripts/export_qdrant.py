@@ -10,7 +10,7 @@ import requests
 from collections import defaultdict
 
 QDRANT_URL = "http://localhost:6333"
-COLLECTION = "Dubai_real_estate_calculation_data_"
+COLLECTION = "properties_collection"
 
 def scroll_all_points():
     """Scroll through all Qdrant points to get all property data."""

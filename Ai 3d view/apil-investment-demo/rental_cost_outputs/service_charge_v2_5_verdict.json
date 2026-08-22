@@ -1,0 +1,110 @@
+{
+  "verdict": "SERVICE_CHARGE_ADJUSTED_INCOME_V2_PROMOTION_VERIFIED",
+  "PRE_PROMOTION_ELIGIBLE": 6,
+  "NEWLY_PROMOTED": 6,
+  "POST_PROMOTION_ELIGIBLE": 12,
+  "HELD_RATE_SCOPE": 4,
+  "all_counters": {
+    "V25_CHANGED_EXISTING_RATE": 0,
+    "V25_CHANGED_EXISTING_ANNUAL_SC": 0,
+    "V25_CHANGED_EXISTING_ADJUSTED_INCOME": 0,
+    "V25_CHANGED_EXISTING_ADJUSTED_YIELD": 0,
+    "V25_NEW_PROPERTY_VALUE_MISMATCH": 0,
+    "V25_HELD_RATE_SCOPE_LEAKAGE": 0,
+    "V25_REJECTED_IDENTITY_LEAKAGE": 0,
+    "V25_NON_ELIGIBLE_LEAKAGE": 0,
+    "V25_CHANGED_ANNUAL_RENT": 0,
+    "V25_CHANGED_RENT_RANGE": 0,
+    "V25_CHANGED_RENT_TIER": 0,
+    "V25_CHANGED_GROSS_YIELD": 0,
+    "V25_CHANGED_GROSS_YIELD_RANGE": 0,
+    "V25_CHANGED_MARKET_CONTEXT": 0,
+    "V25_CHANGED_PRODUCTION_SIGNAL": 0,
+    "V25_CHANGED_APIL_ADVANTAGE": 0,
+    "V25_CHANGED_CONVENTIONAL_POSITION": 0,
+    "V25_CHANGED_FIT_SCORE": 0,
+    "PRODUCTION_ELIGIBLE_COUNT_MISMATCH": 0,
+    "V25_CHANGED_PRODUCTION_PROVIDER": 0,
+    "V25_CHANGED_UI": 0,
+    "V25_CHANGED_FRONTEND": 0,
+    "V25_EXTERNAL_MOLLAK_CALL_PER_REQUEST": 0,
+    "V25_CSV_LOAD_PER_REQUEST": 0,
+    "CANAL_REPRESENTATIVE_RATE_USED": 0
+  },
+  "frozen_expected": {
+    "4744": {
+      "rate": 20.26,
+      "sc": 46760.08,
+      "income": 116439.92,
+      "yield": 2.48
+    },
+    "6435": {
+      "rate": 14.6,
+      "sc": 11139.8,
+      "income": 56060.2,
+      "yield": 6.6
+    },
+    "7266": {
+      "rate": 20.26,
+      "sc": 18112.44,
+      "income": 92287.56,
+      "yield": 5.13
+    },
+    "1074": {
+      "rate": 20.26,
+      "sc": 9177.78,
+      "income": 67622.22,
+      "yield": 5.41
+    },
+    "4165": {
+      "rate": 20.26,
+      "sc": 32922.5,
+      "income": 154277.5,
+      "yield": 4.72
+    },
+    "7842": {
+      "rate": 12.11,
+      "sc": 12206.88,
+      "income": 58353.12,
+      "yield": 5.72
+    }
+  },
+  "new_expected": {
+    "409": {
+      "rate": 16.82,
+      "sc": 25667.32,
+      "income": 137532.68,
+      "yield": 5.09
+    },
+    "8201": {
+      "rate": 16.85,
+      "sc": 39193.1,
+      "income": 124006.9,
+      "yield": 2.88
+    },
+    "1208": {
+      "rate": 16.85,
+      "sc": 17928.4,
+      "income": 78071.6,
+      "yield": 3.72
+    },
+    "5582": {
+      "rate": 16.85,
+      "sc": 27937.3,
+      "income": 101662.7,
+      "yield": 3.51
+    },
+    "3160": {
+      "rate": 16.85,
+      "sc": 8711.45,
+      "income": 48888.55,
+      "yield": 3.99
+    },
+    "7881": {
+      "rate": 16.5,
+      "sc": 16830.0,
+      "income": 103170.0,
+      "yield": 7.37
+    }
+  }
+}

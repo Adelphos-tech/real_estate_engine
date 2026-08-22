@@ -1,0 +1,32 @@
+{
+  "verdict": "MOLLAK_COMPONENT_SEMANTICS_V2_2_RESOLVED",
+  "TOTAL_RESIDENTIAL_PROJECTS": 266,
+  "GF_RF_EXACT_MATCH_COUNT": 108,
+  "GF_RF_MISMATCH_COUNT": 134,
+  "formula": "GT = GF + RF - income",
+  "formula_verified_on": 45,
+  "formula_match_rate": "100%",
+  "income_field_captured_in_csv": false,
+  "income_field_exists_in_api": true,
+  "authoritative_field": "grand_total_aed_sqft",
+  "conclusion": "GRAND_TOTAL_IS_AUTHORITATIVE",
+  "all_counters": {
+    "V22_CHANGED_ANNUAL_RENT": 0,
+    "V22_CHANGED_RENT_RANGE": 0,
+    "V22_CHANGED_RENT_TIER": 0,
+    "V22_CHANGED_GROSS_YIELD": 0,
+    "V22_CHANGED_GROSS_YIELD_RANGE": 0,
+    "V22_CHANGED_MARKET_CONTEXT": 0,
+    "V22_CHANGED_PRODUCTION_SIGNAL": 0,
+    "V22_CHANGED_APIL_ADVANTAGE": 0,
+    "V22_CHANGED_CONVENTIONAL_POSITION": 0,
+    "V22_CHANGED_FIT_SCORE": 0,
+    "V22_CHANGED_FROZEN_SC_RATE": 0,
+    "V22_CHANGED_FROZEN_ANNUAL_SC": 0,
+    "V22_CHANGED_FROZEN_ADJUSTED_INCOME": 0,
+    "V22_CHANGED_FROZEN_ADJUSTED_YIELD": 0,
+    "V22_CHANGED_SERVICE_CHARGE_PROVIDER": 0,
+    "V22_CHANGED_UI": 0
+  },
+  "FROZEN_6_VALUES_CHANGED": 0
+}

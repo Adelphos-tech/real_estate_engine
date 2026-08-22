@@ -1,0 +1,12 @@
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[FallbackDLD] Loaded 112749 transactions across 265 areas
+[DLDStore] Loaded 99391 transactions across 3065 projects
+Total properties from API: 2000
+
+ previous_definition_available_count (all properties): 1694
+ current_raw_available_count (canonical unusable + no Level 2): 793
+ canonical_rejected: 726
+ level2_rejected: 229
+ genuine_area_blocked: 252
+ sum check: 2000 = 2000

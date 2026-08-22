@@ -6,13 +6,10 @@ import type { QuestionnaireAnswers } from '../data/api';
 const STEPS = [
   { id: 'objective', title: 'Investment Objective', question: 'What is your primary investment objective?' },
   { id: 'budget', title: 'Budget', question: 'What is your investment budget range (AED)?' },
-  { id: 'horizon', title: 'Time Horizon', question: 'What is your investment horizon?' },
+  { id: 'horizon', title: 'Investment Holding Period', question: 'How long do you plan to hold this property investment?' },
   { id: 'risk', title: 'Risk Tolerance', question: 'What is your risk tolerance?' },
   { id: 'property', title: 'Property Preferences', question: 'What kind of property are you looking for?' },
   { id: 'location', title: 'Location', question: 'Which areas interest you?' },
-  { id: 'developer', title: 'Developer Preference', question: 'Any developer grade preference?' },
-  { id: 'liquidity', title: 'Liquidity & Income', question: 'Liquidity and rental income preferences' },
-  { id: 'financing', title: 'Financing', question: 'How do you plan to finance?' },
 ];
 
 export default function Questionnaire() {
@@ -25,18 +22,15 @@ export default function Questionnaire() {
     budget_min_aed: 1000000,
     budget_max_aed: 3000000,
     horizon: '5_10_YEARS',
+    investment_horizon_years: 5,
     risk_tolerance: 'MODERATE',
     property_status: ['EITHER'],
     property_types: ['APARTMENT'],
     bedrooms: ['2', '3'],
     locations: ['DUBAI_WIDE'],
-    developer_preference: 'A_B_PREFERRED',
-    liquidity_preference: 'MODERATE',
-    rental_priority: 'BALANCED',
-    financing: 'EITHER',
-    downside_tolerance: '10_PERCENT',
-    lifestyle_requirements: [],
   });
+  const [customHorizon, setCustomHorizon] = useState<string>('');
+  const [showCustomHorizon, setShowCustomHorizon] = useState(false);
 
   const update = (key: string, value: any) => setAnswers(prev => ({ ...prev, [key]: value }));
 
@@ -102,17 +96,56 @@ export default function Questionnaire() {
       case 2:
         return (
           <div className="space-y-4">
-            {[
-              { value: 'LT_2_YEARS', label: 'Less than 2 years' },
-              { value: '2_5_YEARS', label: '2–5 years' },
-              { value: '5_10_YEARS', label: '5–10 years' },
-              { value: 'GT_10_YEARS', label: '10+ years' },
-            ].map(opt => (
-              <button key={opt.value} onClick={() => { update('horizon', opt.value); setStep(3); }}
-                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${answers.horizon === opt.value ? 'border-apil-blue bg-apil-blue/5' : 'border-apil-gray-200 hover:border-apil-gray-300'}`}>
-                <div className="font-semibold">{opt.label}</div>
+            <div className="flex flex-wrap gap-2">
+              {[1, 2, 3, 4, 5].map(years => (
+                <button key={years} onClick={() => {
+                  update('investment_horizon_years', years);
+                  update('horizon', years <= 2 ? 'LT_2_YEARS' : years <= 5 ? '2_5_YEARS' : '5_10_YEARS');
+                  setShowCustomHorizon(false);
+                  setStep(3);
+                }}
+                  className={`px-5 py-3 rounded-xl border-2 text-sm font-semibold transition-all ${answers.investment_horizon_years === years && !showCustomHorizon ? 'border-apil-blue bg-apil-blue/5 text-apil-blue' : 'border-apil-gray-200 text-apil-gray-600 hover:border-apil-gray-300'}`}>
+                  {years} year{years > 1 ? 's' : ''}
+                </button>
+              ))}
+              <button onClick={() => setShowCustomHorizon(true)}
+                className={`px-5 py-3 rounded-xl border-2 text-sm font-semibold transition-all ${showCustomHorizon ? 'border-apil-blue bg-apil-blue/5 text-apil-blue' : 'border-apil-gray-200 text-apil-gray-600 hover:border-apil-gray-300'}`}>
+                Custom
               </button>
-            ))}
+            </div>
+            {showCustomHorizon && (
+              <div className="animate-fade-in">
+                <label className="block text-sm font-medium text-apil-gray-700 mb-2">Holding period in years</label>
+                <div className="flex flex-wrap gap-2 items-center">
+                  <input type="number" min="0" step="0.5" placeholder="e.g. 1.5, 2.5, 6, 7.5"
+                    value={customHorizon}
+                    onChange={e => setCustomHorizon(e.target.value)}
+                    onKeyDown={e => {
+                      if (e.key === 'Enter' && customHorizon && parseFloat(customHorizon) > 0) {
+                        const val = parseFloat(customHorizon);
+                        update('investment_horizon_years', val);
+                        update('horizon', val <= 2 ? 'LT_2_YEARS' : val <= 5 ? '2_5_YEARS' : '5_10_YEARS');
+                        setStep(3);
+                      }
+                    }}
+                    className="text-sm border border-apil-gray-200 rounded-lg px-3 py-2 w-48 bg-white" />
+                  <span className="text-sm text-apil-gray-400">years</span>
+                  <button onClick={() => {
+                    if (customHorizon && parseFloat(customHorizon) > 0) {
+                      const val = parseFloat(customHorizon);
+                      update('investment_horizon_years', val);
+                      update('horizon', val <= 2 ? 'LT_2_YEARS' : val <= 5 ? '2_5_YEARS' : '5_10_YEARS');
+                      setStep(3);
+                    }
+                  }}
+                    className="bg-apil-blue text-white rounded-lg px-4 py-2 text-sm font-semibold hover:bg-apil-blue-dark disabled:opacity-50"
+                    disabled={!customHorizon || parseFloat(customHorizon) <= 0}>
+                    Continue
+                  </button>
+                </div>
+                <p className="text-xs text-apil-gray-400 mt-1">Positive decimal values allowed (e.g. 1.5, 2.5, 6, 7.5 years).</p>
+              </div>
+            )}
           </div>
         );
       case 3:
@@ -181,79 +214,6 @@ export default function Questionnaire() {
                   {v}
                 </button>
               ))}
-            </div>
-            <button onClick={() => setStep(6)} className="w-full bg-apil-blue text-white py-3 rounded-xl font-semibold hover:bg-apil-blue-dark">Continue</button>
-          </div>
-        );
-      case 6:
-        return (
-          <div className="space-y-4">
-            {[
-              { value: 'NO_PREFERENCE', label: 'No preference', desc: 'All developer grades acceptable' },
-              { value: 'A_ONLY', label: 'A-grade only', desc: 'Only A/A+ developers' },
-              { value: 'A_B_PREFERRED', label: 'A/B preferred', desc: 'Prefer A/B, will consider C' },
-              { value: 'ANY', label: 'Any grade', desc: 'Will consider all including C/D' },
-            ].map(opt => (
-              <button key={opt.value} onClick={() => { update('developer_preference', opt.value); setStep(7); }}
-                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${answers.developer_preference === opt.value ? 'border-apil-blue bg-apil-blue/5' : 'border-apil-gray-200 hover:border-apil-gray-300'}`}>
-                <div className="font-semibold">{opt.label}</div>
-                <div className="text-sm text-apil-gray-500">{opt.desc}</div>
-              </button>
-            ))}
-          </div>
-        );
-      case 7:
-        return (
-          <div className="space-y-6">
-            <div>
-              <p className="font-medium text-apil-gray-700 mb-2">Liquidity Preference</p>
-              <div className="flex flex-wrap gap-2">
-                {['HIGH', 'MODERATE', 'LOW'].map(v => (
-                  <button key={v} onClick={() => update('liquidity_preference', v)}
-                    className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${answers.liquidity_preference === v ? 'border-apil-blue bg-apil-blue/5 text-apil-blue' : 'border-apil-gray-200 text-apil-gray-600'}`}>
-                    {v === 'HIGH' ? 'High liquidity / easy resale' : v === 'MODERATE' ? 'Moderate' : 'Accept lower liquidity for higher upside'}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div>
-              <p className="font-medium text-apil-gray-700 mb-2">Rental Income Priority</p>
-              <div className="flex flex-wrap gap-2">
-                {['HIGH', 'BALANCED', 'LOW'].map(v => (
-                  <button key={v} onClick={() => update('rental_priority', v)}
-                    className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${answers.rental_priority === v ? 'border-apil-blue bg-apil-blue/5 text-apil-blue' : 'border-apil-gray-200 text-apil-gray-600'}`}>
-                    {v === 'HIGH' ? 'High rental income is important' : v === 'BALANCED' ? 'Balanced' : 'Rental income not important'}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <button onClick={() => setStep(8)} className="w-full bg-apil-blue text-white py-3 rounded-xl font-semibold hover:bg-apil-blue-dark">Continue</button>
-          </div>
-        );
-      case 8:
-        return (
-          <div className="space-y-6">
-            <div>
-              <p className="font-medium text-apil-gray-700 mb-2">Financing Method</p>
-              <div className="flex flex-wrap gap-2">
-                {['CASH', 'MORTGAGE', 'EITHER'].map(v => (
-                  <button key={v} onClick={() => update('financing', v)}
-                    className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${answers.financing === v ? 'border-apil-blue bg-apil-blue/5 text-apil-blue' : 'border-apil-gray-200 text-apil-gray-600'}`}>
-                    {v === 'CASH' ? 'Cash' : v === 'MORTGAGE' ? 'Mortgage' : 'Either'}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div>
-              <p className="font-medium text-apil-gray-700 mb-2">Downside Tolerance</p>
-              <div className="flex flex-wrap gap-2">
-                {['VERY_LOW', '10_PERCENT', '20_PERCENT', '30_PLUS'].map(v => (
-                  <button key={v} onClick={() => update('downside_tolerance', v)}
-                    className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all ${answers.downside_tolerance === v ? 'border-apil-blue bg-apil-blue/5 text-apil-blue' : 'border-apil-gray-200 text-apil-gray-600'}`}>
-                    {v === 'VERY_LOW' ? 'Very low' : v === '10_PERCENT' ? '~10%' : v === '20_PERCENT' ? '~20%' : '30%+'}
-                  </button>
-                ))}
-              </div>
             </div>
             <button onClick={submit} disabled={loading}
               className="w-full bg-emerald-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-emerald-400 disabled:opacity-50">

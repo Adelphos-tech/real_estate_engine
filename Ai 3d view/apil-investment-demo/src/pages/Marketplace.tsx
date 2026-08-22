@@ -20,20 +20,91 @@ const FIT_BADGES: Record<string, string> = {
   POOR_FIT: 'bg-red-50 text-red-700 border-red-200',
 };
 
-function PropertyCard({ property }: { property: PersonalizedProperty }) {
+function EligibilityBadges({ info }: { info?: PersonalizedProperty['eligibility'] }) {
+  if (!info) return null;
+  return (
+    <div className="flex flex-wrap gap-1 mt-2">
+      {info.eligibility_reasons.map((reason, i) => (
+        <span key={i} className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] ${reason.startsWith('✗') ? 'bg-red-50 text-red-600' : 'bg-emerald-50 text-emerald-600'}`}>
+          {reason}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function PropertyCard({ property, isOther }: { property: PersonalizedProperty; isOther?: boolean }) {
   const obj = property.objective_signal;
   const fit = property.investor_fit;
   const p = property.property;
   const adv = property.price_analysis.best_usable_advantage_pct;
+  const enrichment = property.enrichment;
+  const isEnriched = enrichment?.enrichment_status === 'CONFIRMED';
+  const attrs = enrichment?.property_attributes;
 
   return (
-    <div className="bg-white rounded-xl border border-apil-gray-200 p-5 hover:shadow-md transition-shadow">
-      <div className="flex items-start justify-between mb-3">
-        <div>
-          <h3 className="font-semibold text-apil-gray-900">{p.name || 'Unnamed Property'}</h3>
-          <p className="text-sm text-apil-gray-500">{p.area || 'Unknown Area'}</p>
+    <div className={`bg-white rounded-xl border p-5 hover:shadow-md transition-shadow ${isOther ? 'border-dashed border-apil-gray-300' : 'border-apil-gray-200'}`}>
+      {isOther && (
+        <div className="mb-2 px-2 py-1 bg-amber-50 text-amber-700 text-[10px] font-semibold rounded inline-block">
+          Does not match your selected preferences
         </div>
-        <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${DECISION_BADGES[obj.decision] || 'bg-gray-100'}`}>
+      )}
+      <div className="flex items-start justify-between mb-3">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-apil-gray-900 truncate">{p.name || 'Unnamed Property'}</h3>
+          <p className="text-sm text-apil-gray-500">{p.area || 'Unknown Area'}</p>
+          {/* Property attributes — Qdrant confirmed first, then APIL fallback */}
+          <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1.5 text-xs text-apil-gray-600">
+            {/* Type */}
+            {isEnriched && attrs?.category
+              ? <span>{attrs.category}</span>
+              : property.apil_attributes?.attributes?.property_type
+                ? <span>{property.apil_attributes.attributes.property_type}</span>
+                : null}
+            {/* Bedrooms — support aggregated options array */}
+            {(() => {
+              const opts = attrs?.bedrooms_options;
+              if (isEnriched && Array.isArray(opts) && opts.length > 0) {
+                if (opts.length === 1) return <span>{opts[0]} bed</span>;
+                const min = Math.min(...opts);
+                const max = Math.max(...opts);
+                return <span>{min}–{max} BR</span>;
+              }
+              const single = attrs?.bedrooms;
+              if (isEnriched && single !== undefined) return <span>{single} bed</span>;
+              const apilBeds = property.apil_attributes?.attributes?.bedrooms;
+              if (apilBeds !== undefined) return <span>{apilBeds} bed</span>;
+              return null;
+            })()}
+            {/* Size range from Qdrant when available */}
+            {(() => {
+              const sqmMin = attrs?.size_sqm_min;
+              const sqmMax = attrs?.size_sqm_max;
+              if (isEnriched && sqmMin !== undefined && sqmMax !== undefined) {
+                if (sqmMin === sqmMax) return <span>{sqmMin} sqm</span>;
+                return <span>{sqmMin}–{sqmMax} sqm</span>;
+              }
+              return null;
+            })()}
+            {/* Status */}
+            {isEnriched && attrs?.status
+              ? <span>{attrs.status}</span>
+              : property.apil_attributes?.attributes?.status
+                ? <span>{property.apil_attributes.attributes.status}</span>
+                : null}
+            {/* Show provenance hint when nothing confirmed */}
+            {!isEnriched && !property.apil_attributes?.attributes?.property_type && !property.apil_attributes?.attributes?.bedrooms && !property.apil_attributes?.attributes?.status && (
+              <span className="text-apil-gray-400">Property details unavailable</span>
+            )}
+            {/* Show match count when enriched with Qdrant */}
+            {isEnriched && (enrichment?.matched_qdrant_records?.length ?? 0) > 0 && (
+              <span className="text-apil-gray-400 text-[10px]">{enrichment.matched_qdrant_records?.length} Qdrant units matched</span>
+            )}
+          </div>
+          {/* Eligibility badges */}
+          <EligibilityBadges info={property.eligibility} />
+        </div>
+        <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase flex-shrink-0 ml-2 ${DECISION_BADGES[obj.decision] || 'bg-gray-100'}`}>
           {obj.decision.replace('_', ' ')}
         </span>
       </div>
@@ -66,6 +137,40 @@ function PropertyCard({ property }: { property: PersonalizedProperty }) {
             <span className="text-lg font-bold">{fit.score}/100</span>
           </div>
           <div className="text-xs mt-1">{fit.tier.replace('_', ' ')}</div>
+          {/* Show top matched / unmatched dimensions */}
+          {fit.dimension_explanations && fit.dimension_explanations.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {fit.dimension_explanations
+                .filter(e => e.status === 'matched')
+                .slice(0, 3)
+                .map((exp, i) => (
+                  <span key={i} className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] bg-emerald-50 text-emerald-700">
+                    ✓ {exp.dimension_label}
+                  </span>
+                ))}
+              {fit.dimension_explanations
+                .filter(e => e.status === 'unmatched')
+                .slice(0, 2)
+                .map((exp, i) => (
+                  <span key={i} className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] bg-amber-50 text-amber-700">
+                    ⚠ {exp.dimension_label}
+                  </span>
+                ))}
+              {fit.dimension_explanations
+                .filter(e => e.status === 'not_evaluated')
+                .slice(0, 2)
+                .map((exp, i) => (
+                  <span key={i} className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] bg-gray-50 text-gray-500">
+                    ⊘ {exp.dimension_label}
+                  </span>
+                ))}
+            </div>
+          )}
+          {fit.dimension_explanations && fit.dimension_explanations.length > 5 && (
+            <div className="mt-1.5 text-[10px] text-apil-gray-400 italic">
+              View property details for full fit breakdown
+            </div>
+          )}
         </div>
       )}
 
@@ -81,6 +186,7 @@ function PropertyCard({ property }: { property: PersonalizedProperty }) {
 
 export default function Marketplace() {
   const [properties, setProperties] = useState<PersonalizedProperty[]>([]);
+  const [otherOpportunities, setOtherOpportunities] = useState<PersonalizedProperty[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [filters, setFilters] = useState({
@@ -91,6 +197,9 @@ export default function Marketplace() {
     page: 1,
   });
   const [total, setTotal] = useState(0);
+  const [eligibleCount, setEligibleCount] = useState(0);
+  const [otherCount, setOtherCount] = useState(0);
+  const [showOther, setShowOther] = useState(false);
   const investorId = investorSession.getId();
 
   const load = async () => {
@@ -105,6 +214,9 @@ export default function Marketplace() {
       const res = await api.getOpportunities(params, investorId || undefined);
       setProperties(res.results);
       setTotal(res.total);
+      setEligibleCount(res.eligible_count);
+      setOtherCount(res.other_count);
+      setOtherOpportunities(res.other_opportunities || []);
     } catch (e: any) {
       setError(e.message);
     } finally {
@@ -114,17 +226,27 @@ export default function Marketplace() {
 
   useEffect(() => {
     load();
-  }, [filters.page, filters.decision]);
+  }, [filters.page, filters.decision, investorId]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-apil-gray-900 mb-2">Investment Opportunities</h1>
+        <h1 className="text-3xl font-bold text-apil-gray-900 mb-2">
+          {investorId ? 'Properties matching your investment profile' : 'Investment Opportunities'}
+        </h1>
         <p className="text-apil-gray-500">
           {investorId
-            ? 'Personalized based on your investment profile. Objective decisions locked; fit scores personalize ranking within each tier.'
-            : 'Default marketplace. Complete the questionnaire for personalized ranking.'}
+            ? 'Showing properties that meet your selected budget, location, property type, bedroom and status preferences.'
+            : 'Default marketplace. Complete the questionnaire for personalized results.'}
         </p>
+        {investorId && (
+          <div className="mt-2 text-sm text-apil-gray-600">
+            <span className="font-medium">{eligibleCount}</span> properties match your preferences
+            {otherCount > 0 && (
+              <span> · <span className="font-medium">{otherCount}</span> additional opportunities do not match</span>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="bg-white rounded-xl border border-apil-gray-200 p-4 mb-8 flex flex-wrap gap-4 items-end">
@@ -182,6 +304,14 @@ export default function Marketplace() {
         >
           Apply Filters
         </button>
+        {investorId && (
+          <Link
+            to="/questionnaire"
+            className="bg-white border border-apil-gray-300 text-apil-gray-700 px-5 py-2 rounded-lg text-sm font-semibold hover:bg-apil-gray-50"
+          >
+            Edit Preferences
+          </Link>
+        )}
       </div>
 
       {error && (
@@ -191,12 +321,22 @@ export default function Marketplace() {
       {loading ? (
         <div className="text-center py-20 text-apil-gray-500">Loading opportunities...</div>
       ) : properties.length === 0 ? (
-        <div className="text-center py-20">
+        <div className="text-center py-20 max-w-lg mx-auto">
           <div className="text-4xl mb-4">🔍</div>
-          <h3 className="text-lg font-semibold text-apil-gray-900 mb-2">No properties match your filters</h3>
-          <p className="text-apil-gray-500 max-w-md mx-auto">
-            Try relaxing your filters or completing the questionnaire so we can personalize recommendations.
+          <h3 className="text-lg font-semibold text-apil-gray-900 mb-2">
+            No properties currently match all your selected preferences
+          </h3>
+          <p className="text-apil-gray-500 mb-6">
+            Try editing your preferences to broaden your search and see more results.
           </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              to="/questionnaire"
+              className="bg-apil-blue text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-apil-blue-dark"
+            >
+              Edit Preferences
+            </Link>
+          </div>
         </div>
       ) : (
         <>
@@ -226,6 +366,33 @@ export default function Marketplace() {
             </button>
           </div>
         </>
+      )}
+
+      {/* Other APIL investment opportunities */}
+      {investorId && otherOpportunities.length > 0 && (
+        <div className="mt-16">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-xl font-bold text-apil-gray-900">Other APIL investment opportunities</h2>
+              <p className="text-sm text-apil-gray-500 mt-1">
+                Strong investment signals that do not match your current preferences
+              </p>
+            </div>
+            <button
+              onClick={() => setShowOther(!showOther)}
+              className="text-sm font-semibold text-apil-blue hover:text-apil-blue-dark"
+            >
+              {showOther ? 'Hide' : 'Show'} ({otherCount})
+            </button>
+          </div>
+          {showOther && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {otherOpportunities.map(p => (
+                <PropertyCard key={p.property.id} property={p} isOther />
+              ))}
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

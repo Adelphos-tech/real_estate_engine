@@ -59,6 +59,35 @@ from investor_api.rental.rental_context_service import (
     CALC_VERSION_YIELD as RENTAL_CALC_VERSION_YIELD,
 )
 
+# Service Charge Context — V2 (lightweight dict lookup, no per-request CSV parsing)
+from investor_api.rental_costs.service_charge_provider import get_service_charge_context
+
+# Rental Operating Cost Context — V1 SHADOW (user-input layer for vacancy/management/maintenance)
+from investor_api.rental_operating_costs.operating_cost_calculator import calculate_operating_cost_context
+from investor_api.rental_operating_costs.operating_cost_validation import (
+    validate_vacancy, validate_management, validate_maintenance,
+)
+from investor_api.rental_operating_costs.user_input_store import (
+    save_user_input, get_user_input, clear_user_input,
+)
+
+# ROI Acquisition Cost (V1.2)
+from investor_api.roi.acquisition_cost_calculator import calculate_acquisition_costs
+from investor_api.roi.acquisition_cost_user_input_store import (
+    save_acquisition_input, get_acquisition_input, clear_acquisition_input,
+)
+
+# ROI Scenario (V1.3)
+from investor_api.roi.roi_scenario_calculator import calculate_roi_scenario
+from investor_api.roi.roi_scenario_user_input_store import (
+    save_scenario_input, get_scenario_input, clear_scenario_input,
+)
+
+# Full Property ROI (V1.4)
+from investor_api.roi.full_roi_calculator import calculate_full_roi
+
+from pydantic import BaseModel as PydanticBaseModel
+
 
 app = FastAPI(
     title="APIL Investment Engine API",
@@ -322,8 +351,16 @@ class InvestorProfileModel:
         raw = self.raw
         risk_map = {"CONSERVATIVE": "LOW", "MODERATE": "MEDIUM", "AGGRESSIVE": "HIGH"}
         self.preferred_risk_level = risk_map.get(raw.get("risk_tolerance"), "MEDIUM")
-        horizon_map = {"LT_2_YEARS": (0, 2), "2_5_YEARS": (2, 5), "5_10_YEARS": (5, 10), "GT_10_YEARS": (10, 50)}
-        self.preferred_horizon_years_min, self.preferred_horizon_years_max = horizon_map.get(raw.get("horizon"), (0, 50))
+        # ── Exact horizon from questionnaire (preferred) ──
+        self.investment_horizon_years = raw.get("investment_horizon_years")
+        self.investment_horizon_months = raw.get("investment_horizon_months")
+        # Derive min/max for compatibility with existing fit scoring
+        if self.investment_horizon_years is not None:
+            self.preferred_horizon_years_min = self.investment_horizon_years
+            self.preferred_horizon_years_max = self.investment_horizon_years
+        else:
+            horizon_map = {"LT_2_YEARS": (0, 2), "2_5_YEARS": (2, 5), "5_10_YEARS": (5, 10), "GT_10_YEARS": (10, 50)}
+            self.preferred_horizon_years_min, self.preferred_horizon_years_max = horizon_map.get(raw.get("horizon"), (0, 50))
         self.budget_min = raw.get("budget_min_aed", 0)
         self.budget_max = raw.get("budget_max_aed", 999999999)
         dev_pref = raw.get("developer_preference") or "NO_PREFERENCE"
@@ -349,6 +386,8 @@ class InvestorProfileModel:
     def to_dict(self):
         return {
             "preferred_risk_level": self.preferred_risk_level,
+            "investment_horizon_years": self.investment_horizon_years,
+            "investment_horizon_months": self.investment_horizon_months,
             "preferred_horizon_years_min": self.preferred_horizon_years_min,
             "preferred_horizon_years_max": self.preferred_horizon_years_max,
             "budget_min": self.budget_min,
@@ -647,10 +686,14 @@ class InvestorFitScorer:
         evaluated_dimensions.append("risk_compatibility")
 
         # ── Horizon compatibility ── (EVALUABLE)
+        # Uses exact investment_horizon_years from questionnaire when available.
+        horizon_years = self.profile.investment_horizon_years
         horizon = self.profile.raw.get("horizon", "5_10_YEARS")
         has_offplan = any(b["type"] == "OFFPLAN_RESALE" for b in benchs)
         has_ready = any(b["type"] == "READY_RESALE" for b in benchs)
-        if horizon in ("LT_2_YEARS", "2_5_YEARS"):
+        # Determine if short-term (≤2 years) using exact years or legacy string
+        is_short_term = (horizon_years is not None and horizon_years <= 2) or (horizon_years is None and horizon in ("LT_2_YEARS", "2_5_YEARS"))
+        if is_short_term:
             if has_ready:
                 subscores["horizon_compatibility"] = 100; matched.append("horizon_compatibility")
                 reasons.append("Ready property matches short-term horizon")
@@ -951,7 +994,7 @@ class InvestorEligibilityChecker:
         }
 
 
-def build_dimension_explanations(fit: Dict, property_record: Dict, profile: InvestorProfileModel, enrichment: Optional[Dict] = None, canonical_decision: Optional[Dict] = None) -> List[Dict]:
+def build_dimension_explanations(fit: Dict, property_record: Dict, profile: InvestorProfileModel, enrichment: Optional[Dict] = None, canonical_decision: Optional[Dict] = None, rental_evidence_available: bool = False, rental_resolved_status: str = "Unknown") -> List[Dict]:
     """Build human-readable per-dimension explanations for investor fit."""
     p = property_record["property"]
     dev = property_record["developer"]
@@ -1087,19 +1130,26 @@ def build_dimension_explanations(fit: Dict, property_record: Dict, profile: Inve
         add_exp("risk_compatibility", "Risk Compatibility", "unmatched", risk_score, risk_labels.get(risk, risk), f"{conf} confidence / {dec_val}",
                 f"The property's evidence confidence ({conf}) and decision ({dec_val.replace('_', ' ')}) do not align well with your {risk_labels.get(risk, risk).lower()} risk preference.")
 
-    # Horizon compatibility
+    # Horizon compatibility — uses exact years from questionnaire when available
     horizon_raw = profile.raw.get("horizon", "5_10_YEARS")
+    horizon_years = profile.investment_horizon_years
     horizon_labels = {"LT_2_YEARS": "<2 years", "2_5_YEARS": "2–5 years", "5_10_YEARS": "5–10 years", "GT_10_YEARS": "10+ years"}
+    # Use exact years for display when available
+    if horizon_years is not None:
+        yrs_str = str(int(horizon_years)) if horizon_years == int(horizon_years) else str(horizon_years)
+        horizon_display = f"{yrs_str} year{'s' if horizon_years != 1 else ''}"
+    else:
+        horizon_display = horizon_labels.get(horizon_raw, horizon_raw)
     horizon_score = subscores.get("horizon_compatibility", 0)
     if horizon_score >= 100:
-        add_exp("horizon_compatibility", "Investment Horizon", "matched", horizon_score, horizon_labels.get(horizon_raw, horizon_raw), prop_status,
-                f"The property's status ({prop_status}) is compatible with your {horizon_labels.get(horizon_raw, horizon_raw)} investment horizon.")
+        add_exp("horizon_compatibility", "Investment Horizon", "matched", horizon_score, horizon_display, prop_status,
+                f"The property's status ({prop_status}) is compatible with your {horizon_display} investment horizon.")
     elif horizon_score >= 40:
-        add_exp("horizon_compatibility", "Investment Horizon", "matched", horizon_score, horizon_labels.get(horizon_raw, horizon_raw), prop_status,
-                f"The property's status ({prop_status}) is partially compatible with your {horizon_labels.get(horizon_raw, horizon_raw)} investment horizon.")
+        add_exp("horizon_compatibility", "Investment Horizon", "matched", horizon_score, horizon_display, prop_status,
+                f"The property's status ({prop_status}) is partially compatible with your {horizon_display} investment horizon.")
     else:
-        add_exp("horizon_compatibility", "Investment Horizon", "unmatched", horizon_score, horizon_labels.get(horizon_raw, horizon_raw), prop_status,
-                f"The property's status ({prop_status}) may not suit your {horizon_labels.get(horizon_raw, horizon_raw)} investment horizon.")
+        add_exp("horizon_compatibility", "Investment Horizon", "unmatched", horizon_score, horizon_display, prop_status,
+                f"The property's status ({prop_status}) may not suit your {horizon_display} investment horizon.")
 
     # Property type — Hierarchy: MASTER property_type > Qdrant category > APIL record
     pt_score = subscores.get("property_type_fit")
@@ -1177,7 +1227,34 @@ def build_dimension_explanations(fit: Dict, property_record: Dict, profile: Inve
                 reason)
 
     # Unknown preferences
+    # Rental yield message logic uses the API-resolved status (NOT raw MASTER status)
+    # and the actual rental_context output (NOT duplicated eligibility logic).
+    # The rental_yield dimension remains in unknown_preferences for scoring purposes
+    # (it does not affect the fit score), but the displayed message depends on
+    # whether rental evidence is actually available.
+    #
+    # CASE A: Ready + rental evidence available → no warning (yield IS evaluated)
+    # CASE B: Ready + no rental evidence → "insufficient reliable rental evidence"
+    # CASE C: Offplan → preserve existing OFFPLAN semantics (no rental_yield message)
+    # CASE D: Unknown status → preserve existing safe behavior (stale message for non-rental dims)
+    resolved_status_lower = rental_resolved_status.lower()
     for up in fit.get("unknown_preferences", []):
+        if up == "rental_yield":
+            if resolved_status_lower == "ready":
+                if rental_evidence_available:
+                    # CASE A: Rental yield IS evaluated — skip stale message entirely
+                    continue
+                else:
+                    # CASE B: Ready but no reliable rental evidence
+                    add_exp(up, "Rental Yield", "unknown", 0, "Collected in profile", "Unavailable",
+                            "Rental yield not evaluated — insufficient reliable rental evidence.")
+                    continue
+            elif resolved_status_lower == "offplan":
+                # CASE C: Offplan — rental yield not applicable, skip (handled by RentalIncomeCard)
+                continue
+            else:
+                # CASE D: Unknown status — preserve existing safe behavior
+                pass
         up_label = up.replace('_', ' ').title()
         add_exp(up, up_label, "unknown", 0, "Collected in profile", "Unavailable",
                 f"{up_label} cannot be evaluated — required data is not currently linked to properties.")
@@ -1804,7 +1881,7 @@ def _recompute_investment_decision(price_analysis: Dict, developer: Dict) -> Dic
     }
 
 
-def build_response(r: Dict, fit: Optional[Dict] = None, investor_id: Optional[str] = None, enrichment: Optional[Dict] = None, use_live_benchmark: bool = True) -> Dict:
+def build_response(r: Dict, fit: Optional[Dict] = None, investor_id: Optional[str] = None, enrichment: Optional[Dict] = None, use_live_benchmark: bool = True, operating_cost_user_scope: Optional[str] = None, roi_user_scope: Optional[str] = None) -> Dict:
     """Build investor-facing response with clear objective/fit separation and optional Qdrant enrichment.
 
     If use_live_benchmark is True (default), computes a live DLD benchmark and
@@ -2160,6 +2237,53 @@ def build_response(r: Dict, fit: Optional[Dict] = None, investor_id: Optional[st
     # STEP 18: Add Qdrant enrichment if available
     if enrichment:
         clean["enrichment"] = enrichment
+
+    # ── Rental Context (DISPLAY-ONLY — gross rental yield) ──
+    # Uses the SAME compute_rental_context as /debug/rental-context/{id}.
+    # Does NOT modify any production signal (objective_signal, market_context,
+    # APIL advantage, conventional position, investor fit, ranking).
+    # Computed BEFORE build_dimension_explanations so that rental evidence
+    # availability can be passed to the explanation generator without
+    # calling the rental engine twice.
+    rental_evidence_available = False
+    rental_resolved_status_for_msg = "Unknown"
+    try:
+        rental_attrs = apil_attrs_result.get("attributes", {})
+        rental_pid = str(prop.get("id", ""))
+        rental_master = master_by_id.get(rental_pid)
+        rental_area = str(rental_master.get("area", "")).strip() if rental_master else (rental_attrs.get("area") or prop.get("area", ""))
+        rental_project = str(rental_master.get("sub_project", "")).strip() if rental_master else ""
+        if not rental_project:
+            rental_project = str(rental_master.get("property_name", "")).strip() if rental_master else (prop.get("name") or "")
+        rental_bedrooms = rental_attrs.get("bedrooms")
+        rental_size_sqft = rental_attrs.get("size_sqft")
+        rental_price_aed = rental_attrs.get("price")
+        rental_resolved_status_for_msg = rental_attrs.get("status", "Unknown")
+        clean["rental_context"] = compute_rental_context(
+            property_id=rental_pid,
+            resolved_status=rental_resolved_status_for_msg,
+            master_area=rental_area,
+            master_project=rental_project,
+            master_bedrooms=rental_bedrooms,
+            master_size_sqft=rental_size_sqft,
+            master_price_aed=rental_price_aed,
+        )
+        # Derive rental evidence availability from the computed rental_context
+        # (NOT from raw MASTER status — uses the API-resolved status + actual
+        # rental_context output: annual rent and gross yield must both be non-null)
+        rc = clean["rental_context"]
+        rental_evidence_available = (
+            rc.get("annual_rent_estimate_aed") is not None
+            and rc.get("gross_rental_yield_pct") is not None
+        )
+    except Exception as e:
+        clean["rental_context"] = {
+            "shadow": True,
+            "error": f"rental_context computation failed: {str(e)}",
+            "calc_version_rent": RENTAL_CALC_VERSION_RENT,
+            "calc_version_yield": RENTAL_CALC_VERSION_YIELD,
+        }
+
     if fit:
         # Build structured dimension explanations
         profile_for_explanations = None
@@ -2175,7 +2299,11 @@ def build_response(r: Dict, fit: Optional[Dict] = None, investor_id: Optional[st
                 "recommendation": clean["objective_signal"]["recommendation"],
                 "warnings": clean["objective_signal"]["warnings"],
             }
-            dimension_explanations = build_dimension_explanations(fit, r, profile_for_explanations, enrichment, canonical_decision)
+            dimension_explanations = build_dimension_explanations(
+                fit, r, profile_for_explanations, enrichment, canonical_decision,
+                rental_evidence_available=rental_evidence_available,
+                rental_resolved_status=rental_resolved_status_for_msg,
+            )
 
         clean["investor_fit"] = {
             "score": fit["score"], "tier": fit["tier"], "subscores": fit["subscores"],
@@ -2216,37 +2344,284 @@ def build_response(r: Dict, fit: Optional[Dict] = None, investor_id: Optional[st
     else:
         clean["investor_profile"] = None
 
-    # ── Rental Context (DISPLAY-ONLY — gross rental yield) ──
-    # Uses the SAME compute_rental_context as /debug/rental-context/{id}.
-    # Does NOT modify any production signal (objective_signal, market_context,
-    # APIL advantage, conventional position, investor fit, ranking).
+    # ── Service Charge Context (V2 — lightweight dict lookup) ──
+    # Returns production_eligible=true for 12 verified properties (6 V1 + 6 V2.5).
+    # V2 semantics: GT = GF + RF - income (corrected Mollak formula).
+    # All other properties get production_eligible=false with null adjusted values.
+    # Does NOT parse CSV per request. Does NOT modify rental_context or any other field.
     try:
-        rental_attrs = apil_attrs_result.get("attributes", {})
-        rental_pid = str(prop.get("id", ""))
-        rental_master = master_by_id.get(rental_pid)
-        rental_area = str(rental_master.get("area", "")).strip() if rental_master else (rental_attrs.get("area") or prop.get("area", ""))
-        rental_project = str(rental_master.get("sub_project", "")).strip() if rental_master else ""
-        if not rental_project:
-            rental_project = str(rental_master.get("property_name", "")).strip() if rental_master else (prop.get("name") or "")
-        rental_bedrooms = rental_attrs.get("bedrooms")
-        rental_size_sqft = rental_attrs.get("size_sqft")
-        rental_price_aed = rental_attrs.get("price")
-        rental_resolved_status = rental_attrs.get("status", "Unknown")
-        clean["rental_context"] = compute_rental_context(
-            property_id=rental_pid,
-            resolved_status=rental_resolved_status,
-            master_area=rental_area,
-            master_project=rental_project,
-            master_bedrooms=rental_bedrooms,
-            master_size_sqft=rental_size_sqft,
-            master_price_aed=rental_price_aed,
+        sc_ctx = get_service_charge_context(rental_pid)
+    except Exception:
+        sc_ctx = {
+            "calculation_level": "SERVICE_CHARGE_ADJUSTED",
+            "production_eligible": False,
+            "project_match_status": "NOT_MATCHED",
+            "service_charge_status": "NOT_MATCHED",
+            "service_charge_source": None,
+            "service_charge_year": None,
+            "service_charge_rate_aed_sqft": None,
+            "mollak_project_name": None,
+            "annual_service_charge_aed": None,
+            "income_after_service_charges_aed": None,
+            "yield_after_service_charges_pct": None,
+            "included_costs": [],
+            "excluded_costs": [],
+        }
+
+    # ── Service Charge Transparency V1 ──
+    # Expose how the official annual service charge was calculated.
+    # Only populated for production-eligible records with a verified rate.
+    # All math is backend-only. Frontend renders these fields as-is.
+    # Does NOT modify any existing SC V2 values or eligibility.
+    sc_transparency = None
+    if sc_ctx.get("production_eligible") and sc_ctx.get("annual_service_charge_aed") is not None:
+        sc_rate = sc_ctx.get("service_charge_rate_aed_sqft")
+        sc_annual = sc_ctx.get("annual_service_charge_aed")
+        sc_year = sc_ctx.get("service_charge_year")
+        sc_source = sc_ctx.get("service_charge_source")
+        sc_area_sqft = prop.get("size_sqft")
+        sc_rent = clean.get("rental_context", {}).get("annual_rent_estimate_aed") if clean.get("rental_context") else None
+        sc_price = prop.get("current_price_aed")
+
+        # Determine calculation method
+        sc_method = None
+        if sc_rate is not None and sc_area_sqft is not None:
+            sc_method = "RATE_X_AREA"
+
+        # Derived transparency percentages (informational only, NOT the SC rate)
+        pct_of_rent = None
+        if sc_annual is not None and sc_rent is not None and sc_rent > 0:
+            pct_of_rent = round(sc_annual / sc_rent * 100, 2)
+
+        pct_of_price = None
+        if sc_annual is not None and sc_price is not None and sc_price > 0:
+            pct_of_price = round(sc_annual / sc_price * 100, 2)
+
+        sc_transparency = {
+            "rate_aed_per_sqft": sc_rate,
+            "area_sqft_used": sc_area_sqft,
+            "annual_service_charge_aed": sc_annual,
+            "calculation_method": sc_method,
+            "budget_year": sc_year,
+            "source": sc_source,
+            "rate_source": "MOLLAK_OFFICIAL",
+            "area_source": "MASTER_UNIT_SIZE" if sc_area_sqft is not None else None,
+            "pct_of_estimated_rent": pct_of_rent,
+            "pct_of_purchase_price": pct_of_price,
+        }
+
+    sc_ctx["transparency"] = sc_transparency
+    clean["service_charge_context"] = sc_ctx
+
+    # ── Rental Operating Cost Context (V1 SHADOW — user-input layer) ──
+    # Calculates vacancy/management/maintenance based on user inputs.
+    # Does NOT modify rental_context, service_charge_context, or any frozen logic.
+    # Net Rental Income only produced when ALL required costs are available.
+    try:
+        sc_ctx = clean["service_charge_context"]
+        rc_ctx = clean.get("rental_context", {})
+        annual_rent = rc_ctx.get("annual_rent_estimate_aed") if rc_ctx else None
+        annual_sc = sc_ctx.get("annual_service_charge_aed")
+        sc_eligible = sc_ctx.get("production_eligible", False)
+        current_price = clean.get("property", {}).get("current_price_aed")
+
+        # Get any stored user inputs for this (user_scope, property)
+        user_inputs = get_user_input(rental_pid, user_scope=operating_cost_user_scope)
+        vacancy_input = user_inputs.get("vacancy") if user_inputs else None
+        management_input = user_inputs.get("management") if user_inputs else None
+        maintenance_input = user_inputs.get("maintenance") if user_inputs else None
+
+        clean["rental_operating_cost_context"] = calculate_operating_cost_context(
+            annual_rent_estimate_aed=annual_rent,
+            annual_service_charge_aed=annual_sc,
+            service_charge_production_eligible=sc_eligible,
+            current_price_aed=current_price,
+            vacancy_input=vacancy_input,
+            management_input=management_input,
+            maintenance_input=maintenance_input,
+        )
+    except Exception:
+        clean["rental_operating_cost_context"] = {
+            "calculation_level": "SERVICE_CHARGE_ADJUSTED",
+            "vacancy": {"status": "MISSING", "source": "MISSING", "input_mode": None, "percent": None, "loss_aed": None},
+            "management": {"status": "MISSING", "source": "MISSING", "input_mode": None, "percent": None, "annual_cost_aed": None},
+            "maintenance": {"status": "MISSING", "source": "MISSING", "annual_cost_aed": None},
+            "effective_rental_income_aed": None,
+            "known_operating_income_aed": None,
+            "adjusted_rental_income_aed": None,
+            "adjusted_rental_yield_pct": None,
+            "net_rental_income_aed": None,
+            "net_rental_yield_pct": None,
+            "included_costs": [],
+            "missing_costs": ["Vacancy", "Property management", "Unit maintenance"],
+            "disclosure": "Vacancy, management, and maintenance values shown here are based on your inputs unless identified as verified data.",
+            "partial_disclosure": None,
+        }
+
+    # ── Cumulative Rental Income over Holding Period ──
+    # Uses investment_horizon_months from the investor profile (single source of truth).
+    # Calculates: cumulative_supported_rental_income_aed = annual_supported_income_aed * months / 12
+    # The "annual_supported_income" is the most complete annual income available:
+    #   Net Rental Income > Adjusted Rental Income > Income After SC > Annual Rent
+    # Frontend renders this read-only. No property-local override.
+    horizon_context = None
+    if investor_id and investor_id in investor_profiles:
+        profile_answers = investor_profiles[investor_id]["answers"]
+        horizon_months = profile_answers.get("investment_horizon_months")
+        horizon_years = profile_answers.get("investment_horizon_years")
+        if horizon_months is not None and horizon_months > 0:
+            # Determine the most complete annual income available
+            oc_ctx_cum = clean.get("rental_operating_cost_context", {})
+            sc_ctx_cum = clean.get("service_charge_context", {})
+            rc_ctx_cum = clean.get("rental_context", {})
+            annual_supported_income = (
+                oc_ctx_cum.get("net_rental_income_aed") if oc_ctx_cum and oc_ctx_cum.get("net_rental_income_aed") is not None else
+                oc_ctx_cum.get("adjusted_rental_income_aed") if oc_ctx_cum and oc_ctx_cum.get("adjusted_rental_income_aed") is not None else
+                sc_ctx_cum.get("income_after_service_charges_aed") if sc_ctx_cum and sc_ctx_cum.get("income_after_service_charges_aed") is not None else
+                rc_ctx_cum.get("annual_rent_estimate_aed") if rc_ctx_cum else None
+            )
+            cumulative_income = None
+            annual_income_label = None
+            if annual_supported_income is not None:
+                cumulative_income = round(annual_supported_income * horizon_months / 12, 2)
+                if oc_ctx_cum and oc_ctx_cum.get("net_rental_income_aed") is not None:
+                    annual_income_label = "Net Rental Income"
+                elif oc_ctx_cum and oc_ctx_cum.get("adjusted_rental_income_aed") is not None:
+                    annual_income_label = "Adjusted Rental Income"
+                elif sc_ctx_cum and sc_ctx_cum.get("income_after_service_charges_aed") is not None:
+                    annual_income_label = "Income After Service Charges"
+                else:
+                    annual_income_label = "Estimated Annual Rent"
+            horizon_context = {
+                "investment_horizon_years": horizon_years,
+                "investment_horizon_months": horizon_months,
+                "source": "INVESTOR_PROFILE",
+                "annual_supported_income_aed": annual_supported_income,
+                "annual_income_label": annual_income_label,
+                "cumulative_supported_rental_income_aed": cumulative_income,
+            }
+    clean["horizon_context"] = horizon_context
+
+    # ── ROI Acquisition Cost Context (V1.2 SHADOW — user-input layer) ──
+    # Calculates DLD, trustee, broker, developer/admin fees based on user inputs.
+    # Does NOT modify rental_context, service_charge_context, or any frozen logic.
+    try:
+        roi_pid = str(prop.get("id", ""))
+        roi_price = prop.get("current_price_aed")
+        acq_inputs = get_acquisition_input(roi_pid, user_scope=roi_user_scope)
+
+        acq_kwargs = {"purchase_price_aed": roi_price}
+        if acq_inputs:
+            if acq_inputs.get("dld_input_mode"):
+                acq_kwargs["dld_input_mode"] = acq_inputs["dld_input_mode"]
+                if acq_inputs.get("dld_custom_percent") is not None:
+                    acq_kwargs["dld_custom_percent"] = acq_inputs["dld_custom_percent"]
+                if acq_inputs.get("dld_custom_aed") is not None:
+                    acq_kwargs["dld_custom_aed"] = acq_inputs["dld_custom_aed"]
+            if acq_inputs.get("trustee_fee_aed") is not None:
+                acq_kwargs["trustee_fee_aed"] = acq_inputs["trustee_fee_aed"]
+            if acq_inputs.get("broker_purchase_mode"):
+                acq_kwargs["broker_purchase_mode"] = acq_inputs["broker_purchase_mode"]
+                if acq_inputs.get("broker_purchase_percent") is not None:
+                    acq_kwargs["broker_purchase_percent"] = acq_inputs["broker_purchase_percent"]
+                if acq_inputs.get("broker_purchase_aed") is not None:
+                    acq_kwargs["broker_purchase_aed"] = acq_inputs["broker_purchase_aed"]
+            if acq_inputs.get("developer_admin_mode"):
+                acq_kwargs["developer_admin_mode"] = acq_inputs["developer_admin_mode"]
+                if acq_inputs.get("developer_admin_fee_aed") is not None:
+                    acq_kwargs["developer_admin_fee_aed"] = acq_inputs["developer_admin_fee_aed"]
+
+        clean["acquisition_cost_context"] = calculate_acquisition_costs(**acq_kwargs)
+    except Exception as e:
+        clean["acquisition_cost_context"] = {
+            "calculation_level": "NO_ACQUISITION_COSTS",
+            "purchase_price": {"amount_aed": prop.get("current_price_aed"), "source": "MASTER"},
+            "error": f"acquisition_cost computation failed: {str(e)}",
+        }
+
+    # ── ROI Scenario Context (V1.3 SHADOW — user-input layer) ──
+    # Calculates holding period, exit value, selling costs based on user inputs.
+    # Does NOT modify any frozen logic.
+    try:
+        scn_inputs = get_scenario_input(roi_pid, user_scope=roi_user_scope)
+        oc_ctx = clean.get("rental_operating_cost_context", {})
+        acq_ctx = clean.get("acquisition_cost_context", {})
+
+        scn_kwargs = {
+            "purchase_price_aed": roi_price,
+            "unit_status": status_resolution.get("canonical_status") if 'status_resolution' in locals() else prop.get("status"),
+            "acquisition_calculation_level": acq_ctx.get("calculation_level") if acq_ctx else None,
+            "net_rental_calculation_level": oc_ctx.get("calculation_level") if oc_ctx else None,
+        }
+        if scn_inputs:
+            if scn_inputs.get("holding_period_months") is not None:
+                scn_kwargs["holding_period_months"] = scn_inputs["holding_period_months"]
+            if scn_inputs.get("exit_value_mode"):
+                scn_kwargs["exit_value_mode"] = scn_inputs["exit_value_mode"]
+                if scn_inputs.get("exit_sale_price_aed") is not None:
+                    scn_kwargs["exit_sale_price_aed"] = scn_inputs["exit_sale_price_aed"]
+                if scn_inputs.get("annual_appreciation_rate_pct") is not None:
+                    scn_kwargs["annual_appreciation_rate_pct"] = scn_inputs["annual_appreciation_rate_pct"]
+            if scn_inputs.get("selling_broker_mode"):
+                scn_kwargs["selling_broker_mode"] = scn_inputs["selling_broker_mode"]
+                if scn_inputs.get("selling_broker_percent") is not None:
+                    scn_kwargs["selling_broker_percent"] = scn_inputs["selling_broker_percent"]
+                if scn_inputs.get("selling_broker_aed") is not None:
+                    scn_kwargs["selling_broker_aed"] = scn_inputs["selling_broker_aed"]
+            if scn_inputs.get("noc_mode"):
+                scn_kwargs["noc_mode"] = scn_inputs["noc_mode"]
+                if scn_inputs.get("noc_fee_aed") is not None:
+                    scn_kwargs["noc_fee_aed"] = scn_inputs["noc_fee_aed"]
+            if scn_inputs.get("other_selling_mode"):
+                scn_kwargs["other_selling_mode"] = scn_inputs["other_selling_mode"]
+                if scn_inputs.get("other_selling_costs_aed") is not None:
+                    scn_kwargs["other_selling_costs_aed"] = scn_inputs["other_selling_costs_aed"]
+
+        clean["roi_scenario_context"] = calculate_roi_scenario(**scn_kwargs)
+    except Exception as e:
+        clean["roi_scenario_context"] = {
+            "holding_period": {"status": "MISSING", "months": None, "years": None, "source": "MISSING"},
+            "exit_value": {"status": "MISSING", "mode": None, "exit_sale_price_aed": None, "source": "MISSING"},
+            "selling_costs": {"calculation_level": "NO_SELLING_COSTS", "broker": {}, "noc": {}, "other": {}},
+            "net_sale_proceeds_aed": None,
+            "roi_input_readiness": "INCOMPLETE",
+            "missing_roi_inputs": [],
+            "error": f"roi_scenario computation failed: {str(e)}",
+        }
+
+    # ── Full Property ROI Context (V1.4 SHADOW) ──
+    # Calculates cumulative rental, capital return, total return, ROI%.
+    # Only calculates when ALL inputs are READY.
+    try:
+        scn_ctx = clean.get("roi_scenario_context", {})
+        acq_ctx = clean.get("acquisition_cost_context", {})
+        oc_ctx = clean.get("rental_operating_cost_context", {})
+
+        clean["full_roi_context"] = calculate_full_roi(
+            unit_status=status_resolution.get("canonical_status") if 'status_resolution' in locals() else prop.get("status"),
+            purchase_price_aed=roi_price,
+            complete_acquisition_costs_aed=acq_ctx.get("complete_acquisition_costs_aed") if acq_ctx else None,
+            total_cash_invested_aed=acq_ctx.get("total_cash_invested_aed") if acq_ctx else None,
+            acquisition_calculation_level=acq_ctx.get("calculation_level") if acq_ctx else None,
+            net_rental_income_aed=oc_ctx.get("net_rental_income_aed") if oc_ctx else None,
+            net_rental_calculation_level=oc_ctx.get("calculation_level") if oc_ctx else None,
+            holding_period_months=scn_ctx.get("holding_period", {}).get("months") if scn_ctx else None,
+            holding_period_years=scn_ctx.get("holding_period", {}).get("years") if scn_ctx else None,
+            exit_sale_price_aed=scn_ctx.get("exit_value", {}).get("exit_sale_price_aed") if scn_ctx else None,
+            exit_value_mode=scn_ctx.get("exit_value", {}).get("mode") if scn_ctx else None,
+            annual_appreciation_rate_pct=scn_ctx.get("exit_value", {}).get("annual_appreciation_rate_pct") if scn_ctx else None,
+            complete_selling_costs_aed=scn_ctx.get("selling_costs", {}).get("complete_selling_costs_aed") if scn_ctx else None,
+            net_sale_proceeds_aed=scn_ctx.get("net_sale_proceeds_aed") if scn_ctx else None,
+            selling_calculation_level=scn_ctx.get("selling_costs", {}).get("calculation_level") if scn_ctx else None,
+            roi_input_readiness=scn_ctx.get("roi_input_readiness") if scn_ctx else None,
         )
     except Exception as e:
-        clean["rental_context"] = {
-            "shadow": True,
-            "error": f"rental_context computation failed: {str(e)}",
-            "calc_version_rent": RENTAL_CALC_VERSION_RENT,
-            "calc_version_yield": RENTAL_CALC_VERSION_YIELD,
+        clean["full_roi_context"] = {
+            "calculation_status": "INCOMPLETE",
+            "methodology_version": "FULL_PROPERTY_ROI_V1",
+            "roi_type": "UNLEVERED_TOTAL_ROI",
+            "rental_assumption": "CONSTANT_ANNUAL_NET_RENTAL",
+            "error": f"full_roi computation failed: {str(e)}",
         }
 
     return _sanitize_for_json(clean)
@@ -2289,7 +2664,8 @@ class QuestionnaireRequest(BaseModel):
     investment_objective: str
     budget_min_aed: int = Field(..., ge=100000)
     budget_max_aed: int = Field(..., ge=100000)
-    horizon: str
+    horizon: Optional[str] = None  # Legacy broad-range string (kept for backward compat)
+    investment_horizon_years: Optional[float] = Field(None, gt=0, description="Holding period in years (positive decimal)")
     risk_tolerance: str
     property_status: List[str]
     property_types: List[str]
@@ -2337,11 +2713,23 @@ def root():
 @app.post("/investors")
 def create_investor(req: QuestionnaireRequest):
     investor_id = str(uuid.uuid4())
-    profile = InvestorProfileModel(req.dict())
+    answers = req.dict()
+    # ── Convert investment_horizon_years → investment_horizon_months ──
+    # Backend is the ONLY place this conversion happens.
+    # Frontend sends years; canonical field is investment_horizon_months.
+    if answers.get("investment_horizon_years") is not None:
+        answers["investment_horizon_months"] = round(answers["investment_horizon_years"] * 12)
+    elif answers.get("horizon"):
+        # Legacy backward compat: derive years from broad-range string
+        legacy_map = {"LT_2_YEARS": 2, "2_5_YEARS": 5, "5_10_YEARS": 10, "GT_10_YEARS": 15}
+        fallback_years = legacy_map.get(answers["horizon"], 5)
+        answers["investment_horizon_years"] = fallback_years
+        answers["investment_horizon_months"] = round(fallback_years * 12)
+    profile = InvestorProfileModel(answers)
     investor_profiles[investor_id] = {
         "id": investor_id,
         "created_at": datetime.utcnow().isoformat(),
-        "answers": req.dict(),
+        "answers": answers,
         "normalized_profile": profile.to_dict(),
     }
     save_profiles()
@@ -2506,13 +2894,13 @@ def list_opportunities(
     return _sanitize_for_json(resp)
 
 @app.get("/properties/{property_id}")
-def get_property(property_id: str, investor_id: Optional[str] = Query(None)):
+def get_property(property_id: str, investor_id: Optional[str] = Query(None), operating_cost_user_scope: Optional[str] = Query(None), roi_user_scope: Optional[str] = Query(None)):
     r = by_id.get(property_id)
     if not r:
         raise HTTPException(status_code=404, detail="Property not found")
     enrichment = enrich_property(property_id, r["property"], r.get("developer"))
     fit = compute_fit(r, investor_id, enrichment)
-    return build_response(r, fit, investor_id, enrichment)
+    return build_response(r, fit, investor_id, enrichment, operating_cost_user_scope=operating_cost_user_scope, roi_user_scope=roi_user_scope)
 
 @app.post("/compare")
 def compare_properties(req: Dict):
@@ -2536,6 +2924,219 @@ def compare_properties(req: Dict):
         fit = compute_fit(r, investor_id, enrichment)
         results.append(build_response(r, fit, investor_id, enrichment))
     return {"properties": results, "investor_id": investor_id}
+
+
+# ── Rental Operating Cost Input Endpoints (V1 SHADOW) ──
+
+class OperatingCostInputRequest(PydanticBaseModel):
+    """Request model for submitting user-entered operating cost inputs."""
+    user_scope: Optional[str] = None  # user/session identifier for isolation
+    vacancy_input_mode: Optional[str] = None  # VACANCY_PERCENT | VACANCY_LOSS_AED
+    vacancy_percent: Optional[float] = None
+    vacancy_loss_aed: Optional[float] = None
+    management_input_mode: Optional[str] = None  # USER_INPUT_FIXED_AED | USER_INPUT_PERCENT | SELF_MANAGED
+    management_annual_cost_aed: Optional[float] = None
+    management_percent: Optional[float] = None
+    maintenance_annual_cost_aed: Optional[float] = None
+
+
+@app.post("/properties/{property_id}/operating-costs")
+def submit_operating_costs(property_id: str, req: OperatingCostInputRequest):
+    """
+    Submit user-entered operating cost inputs for a (user_scope, property_id).
+    Inputs are stored in-memory only — never written to MASTER, Qdrant, Mollak,
+    or any official data store. All calculations are performed by the backend.
+    Persistence mode: EPHEMERAL_USER_SESSION (inputs disappear on server restart).
+    """
+    pid = str(property_id)
+    if pid not in by_id:
+        raise HTTPException(status_code=404, detail=f"Property {pid} not found")
+
+    # Get rental context for validation
+    r = by_id[pid]
+    enrichment = enrich_property(pid, r["property"], r.get("developer"))
+    fit = compute_fit(r, None, enrichment)
+    response = build_response(r, fit, None, enrichment)
+    rc = response.get("rental_context", {})
+    annual_rent = rc.get("annual_rent_estimate_aed") if rc else None
+
+    errors = []
+
+    # Validate vacancy
+    v_ok, v_errors, v_vals = validate_vacancy(
+        req.vacancy_input_mode, req.vacancy_percent, req.vacancy_loss_aed, annual_rent
+    )
+    errors.extend(v_errors)
+
+    # Validate management
+    m_ok, m_errors, m_vals = validate_management(
+        req.management_input_mode, req.management_annual_cost_aed, req.management_percent
+    )
+    errors.extend(m_errors)
+
+    # Validate maintenance
+    mt_ok, mt_errors, mt_vals = validate_maintenance(req.maintenance_annual_cost_aed)
+    errors.extend(mt_errors)
+
+    if errors:
+        raise HTTPException(status_code=422, detail={"errors": errors})
+
+    # Build and store user inputs (keyed by user_scope + property_id)
+    vacancy = None
+    if v_vals.get("input_mode"):
+        vacancy = {
+            "input_mode": v_vals["input_mode"],
+            "percent": v_vals.get("percent"),
+            "loss_aed": v_vals.get("loss_aed"),
+        }
+
+    management = None
+    if m_vals.get("input_mode"):
+        management = {
+            "input_mode": m_vals["input_mode"],
+            "annual_cost_aed": m_vals.get("annual_cost_aed"),
+            "percent": m_vals.get("percent"),
+        }
+
+    maintenance = None
+    if mt_vals.get("annual_cost_aed") is not None:
+        maintenance = {
+            "annual_cost_aed": mt_vals["annual_cost_aed"],
+        }
+
+    saved = save_user_input(pid, user_scope=req.user_scope, vacancy=vacancy, management=management, maintenance=maintenance)
+
+    return {
+        "property_id": pid,
+        "user_scope": saved.get("user_scope"),
+        "status": "saved",
+        "stored_inputs": saved,
+        "message": "Operating cost inputs saved. Fetch the property to see updated calculations.",
+    }
+
+
+@app.delete("/properties/{property_id}/operating-costs")
+def clear_operating_costs(property_id: str, user_scope: Optional[str] = Query(None)):
+    """Clear stored user-entered operating cost inputs for a (user_scope, property_id) only."""
+    pid = str(property_id)
+    clear_user_input(pid, user_scope=user_scope)
+    return {"property_id": pid, "status": "cleared"}
+
+
+# ── ROI Acquisition Cost Input Endpoints (V1.2 SHADOW) ──
+
+class AcquisitionCostInputRequest(PydanticBaseModel):
+    """Request model for submitting acquisition cost user inputs."""
+    user_scope: Optional[str] = None
+    dld_input_mode: Optional[str] = None  # USE_STATUTORY_DEFAULT | USE_CUSTOM_BUYER_PERCENT | USE_CUSTOM_BUYER_AED
+    dld_custom_percent: Optional[float] = None
+    dld_custom_aed: Optional[float] = None
+    trustee_fee_aed: Optional[float] = None
+    broker_purchase_mode: Optional[str] = None  # NO_BROKER_COST | BROKER_PERCENT | BROKER_FIXED_AED
+    broker_purchase_percent: Optional[float] = None
+    broker_purchase_aed: Optional[float] = None
+    developer_admin_mode: Optional[str] = None  # NO_DEVELOPER_ADMIN_FEE | DEVELOPER_ADMIN_FEE_AED
+    developer_admin_fee_aed: Optional[float] = None
+
+
+@app.post("/properties/{property_id}/acquisition-costs")
+def submit_acquisition_costs(property_id: str, req: AcquisitionCostInputRequest):
+    """Submit acquisition cost user inputs. EPHEMERAL — in-memory only."""
+    pid = str(property_id)
+    if pid not in by_id:
+        raise HTTPException(status_code=404, detail=f"Property {pid} not found")
+
+    saved = save_acquisition_input(
+        pid,
+        user_scope=req.user_scope,
+        dld_input_mode=req.dld_input_mode,
+        dld_custom_percent=req.dld_custom_percent,
+        dld_custom_aed=req.dld_custom_aed,
+        trustee_fee_aed=req.trustee_fee_aed,
+        broker_purchase_mode=req.broker_purchase_mode,
+        broker_purchase_percent=req.broker_purchase_percent,
+        broker_purchase_aed=req.broker_purchase_aed,
+        developer_admin_mode=req.developer_admin_mode,
+        developer_admin_fee_aed=req.developer_admin_fee_aed,
+    )
+    return {
+        "property_id": pid,
+        "user_scope": saved.get("user_scope"),
+        "status": "saved",
+        "stored_inputs": saved,
+        "message": "Acquisition cost inputs saved. Fetch the property to see updated calculations.",
+    }
+
+
+@app.delete("/properties/{property_id}/acquisition-costs")
+def clear_acquisition_costs(property_id: str, user_scope: Optional[str] = Query(None)):
+    """Clear stored acquisition cost inputs for a (user_scope, property_id) only."""
+    pid = str(property_id)
+    clear_acquisition_input(pid, user_scope=user_scope)
+    return {"property_id": pid, "status": "cleared"}
+
+
+# ── ROI Scenario Input Endpoints (V1.3 SHADOW) ──
+
+class RoiScenarioInputRequest(PydanticBaseModel):
+    """Request model for submitting ROI scenario user inputs."""
+    user_scope: Optional[str] = None
+    holding_period_months: Optional[float] = None
+    exit_value_mode: Optional[str] = None  # USER_EXIT_PRICE | USER_APPRECIATION_RATE
+    exit_sale_price_aed: Optional[float] = None
+    annual_appreciation_rate_pct: Optional[float] = None
+    selling_broker_mode: Optional[str] = None  # NO_SELLING_BROKER_COST | SELLING_BROKER_PERCENT | SELLING_BROKER_FIXED_AED
+    selling_broker_percent: Optional[float] = None
+    selling_broker_aed: Optional[float] = None
+    noc_mode: Optional[str] = None  # NO_NOC_FEE | NOC_FIXED_AED
+    noc_fee_aed: Optional[float] = None
+    other_selling_mode: Optional[str] = None  # NO_OTHER_SELLING_COSTS | OTHER_SELLING_COSTS_AED
+    other_selling_costs_aed: Optional[float] = None
+
+
+@app.post("/properties/{property_id}/roi-scenario")
+def submit_roi_scenario(property_id: str, req: RoiScenarioInputRequest):
+    """Submit ROI scenario user inputs. EPHEMERAL — in-memory only."""
+    pid = str(property_id)
+    if pid not in by_id:
+        raise HTTPException(status_code=404, detail=f"Property {pid} not found")
+
+    # Validate mutual exclusivity of exit value modes
+    if req.exit_value_mode == "USER_EXIT_PRICE" and req.annual_appreciation_rate_pct is not None:
+        raise HTTPException(status_code=422, detail={"errors": ["Cannot provide annual_appreciation_rate_pct when exit_value_mode is USER_EXIT_PRICE"]})
+    if req.exit_value_mode == "USER_APPRECIATION_RATE" and req.exit_sale_price_aed is not None:
+        raise HTTPException(status_code=422, detail={"errors": ["Cannot provide exit_sale_price_aed when exit_value_mode is USER_APPRECIATION_RATE"]})
+
+    saved = save_scenario_input(
+        pid,
+        user_scope=req.user_scope,
+        holding_period_months=req.holding_period_months,
+        exit_value_mode=req.exit_value_mode,
+        exit_sale_price_aed=req.exit_sale_price_aed,
+        annual_appreciation_rate_pct=req.annual_appreciation_rate_pct,
+        selling_broker_mode=req.selling_broker_mode,
+        selling_broker_percent=req.selling_broker_percent,
+        selling_broker_aed=req.selling_broker_aed,
+        noc_mode=req.noc_mode,
+        noc_fee_aed=req.noc_fee_aed,
+        other_selling_mode=req.other_selling_mode,
+        other_selling_costs_aed=req.other_selling_costs_aed,
+    )
+    return {
+        "property_id": pid,
+        "user_scope": saved.get("user_scope"),
+        "status": "saved",
+        "stored_inputs": saved,
+        "message": "ROI scenario inputs saved. Fetch the property to see updated calculations.",
+    }
+
+
+@app.delete("/properties/{property_id}/roi-scenario")
+def clear_roi_scenario(property_id: str, user_scope: Optional[str] = Query(None)):
+    """Clear stored ROI scenario inputs for a (user_scope, property_id) only."""
+    pid = str(property_id)
+    clear_scenario_input(pid, user_scope=user_scope)
+    return {"property_id": pid, "status": "cleared"}
 
 
 @app.get("/debug/eligibility")
@@ -2882,6 +3483,12 @@ def debug_rental_context(property_id: str):
 def investor_ui():
     frontend_dist = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "dist", "index.html")
     return open(frontend_dist).read() if os.path.exists(frontend_dist) else "<h1>Build the frontend first</h1>"
+
+# Serve built frontend assets (JS/CSS) so /ui works without Vite
+from fastapi.staticfiles import StaticFiles as _StaticFiles
+_dist_assets = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "dist", "assets")
+if os.path.isdir(_dist_assets):
+    app.mount("/assets", _StaticFiles(directory=_dist_assets), name="dist-assets")
 
 if __name__ == "__main__":
     import uvicorn

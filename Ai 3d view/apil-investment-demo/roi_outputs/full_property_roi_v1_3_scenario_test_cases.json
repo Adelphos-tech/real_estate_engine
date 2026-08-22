@@ -1,0 +1,83 @@
+{
+  "A": {
+    "pass": true,
+    "readiness": "INCOMPLETE"
+  },
+  "B": {
+    "pass": true,
+    "readiness": "INCOMPLETE"
+  },
+  "C": {
+    "pass": true,
+    "readiness": "INCOMPLETE"
+  },
+  "D": {
+    "pass": true,
+    "exit_price": 3445960.22,
+    "expected": 3445960.22
+  },
+  "E": {
+    "pass": true,
+    "exit_price": 1594323.0,
+    "expected": 1594323.0
+  },
+  "F": {
+    "pass": true,
+    "valid": false,
+    "errors": [
+      "Cannot provide both USER_EXIT_PRICE and USER_APPRECIATION_RATE"
+    ]
+  },
+  "G": {
+    "pass": true,
+    "level": "PARTIAL_SELLING_COSTS"
+  },
+  "H": {
+    "pass": true,
+    "broker": 0.0
+  },
+  "I": {
+    "pass": true,
+    "level": "COMPLETE_SELLING_COSTS",
+    "nsp": 3425000.0
+  },
+  "J": {
+    "pass": true,
+    "level": "PARTIAL_SELLING_COSTS"
+  },
+  "K": {
+    "pass": true,
+    "noc": 0.0
+  },
+  "L": {
+    "pass": true,
+    "level": "PARTIAL_SELLING_COSTS"
+  },
+  "M": {
+    "pass": true,
+    "other": 0.0
+  },
+  "N": {
+    "pass": true,
+    "valid": false,
+    "errors": [
+      "selling broker amount_aed must be >= 0, got -1000"
+    ]
+  },
+  "O": {
+    "pass": true,
+    "readiness": "NOT_EVALUATED_OFFPLAN"
+  },
+  "P": {
+    "pass": true,
+    "readiness": "INCOMPLETE"
+  },
+  "Q": {
+    "pass": true,
+    "readiness": "INCOMPLETE"
+  },
+  "R": {
+    "pass": true,
+    "readiness": "READY_FOR_FULL_ROI_CALCULATION"
+  }
+}

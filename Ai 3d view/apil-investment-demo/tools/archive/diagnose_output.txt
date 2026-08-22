@@ -1,0 +1,707 @@
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[DLDStore] Loaded 99391 transactions across 3065 projects
+[FallbackDLD] Loaded 112749 transactions across 265 areas
+================================================================================
+PER-PROPERTY DIAGNOSIS
+================================================================================
+{
+  "pid": "6277",
+  "name": "Binghatti Emerald",
+  "area": "Jumeirah village circle",
+  "bedrooms": 3.0,
+  "size_sqft": 1378.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "api_market_context_source": "NONE",
+  "api_production_signal_source": "NONE",
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "area_quality_flags": [
+    "SQM_CONVERTED_TO_SQFT:68",
+    "SIZE_BAND_APPLIED_0.25",
+    "PPSF_OUTLIERS_REMOVED:3(IQR_973-2710)"
+  ],
+  "main_looks_for": {
+    "benchmark_median": null,
+    "transaction_count": null,
+    "evidence_level": null,
+    "benchmark_method": null,
+    "benchmark_tier": null,
+    "matched_area": null,
+    "bedroom_filter": null,
+    "status_filter": null
+  },
+  "actual_provides": {
+    "eligible": true,
+    "level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+    "estimated_benchmark_aed": 2400534.07,
+    "final_transaction_count": 40,
+    "raw_transaction_count": 68,
+    "unique_project_count": 18,
+    "mapped_dld_area": "JUMEIRAH VILLAGE CIRCLE",
+    "size_band_applied": true,
+    "status_broadened": false
+  }
+}
+--------------------------------------------------------------------------------
+{
+  "pid": "3201",
+  "name": "Binghatti Nova",
+  "area": "Jumeirah village circle",
+  "bedrooms": 2.0,
+  "size_sqft": 989.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "api_market_context_source": "NONE",
+  "api_production_signal_source": "NONE",
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "area_quality_flags": [
+    "SQM_CONVERTED_TO_SQFT:286",
+    "SIZE_BAND_APPLIED_0.25",
+    "PPSF_OUTLIERS_REMOVED:6(IQR_528-1957)"
+  ],
+  "main_looks_for": {
+    "benchmark_median": null,
+    "transaction_count": null,
+    "evidence_level": null,
+    "benchmark_method": null,
+    "benchmark_tier": null,
+    "matched_area": null,
+    "bedroom_filter": null,
+    "status_filter": null
+  },
+  "actual_provides": {
+    "eligible": true,
+    "level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+    "estimated_benchmark_aed": 1240272.35,
+    "final_transaction_count": 112,
+    "raw_transaction_count": 286,
+    "unique_project_count": 45,
+    "mapped_dld_area": "JUMEIRAH VILLAGE CIRCLE",
+    "size_band_applied": true,
+    "status_broadened": false
+  }
+}
+--------------------------------------------------------------------------------
+{
+  "pid": "3983",
+  "name": "Sapphire 32",
+  "area": "Jumeirah village circle",
+  "bedrooms": 3.0,
+  "size_sqft": 1515.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "api_market_context_source": "NONE",
+  "api_production_signal_source": "NONE",
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "area_quality_flags": [
+    "SQM_CONVERTED_TO_SQFT:46",
+    "SIZE_BAND_APPLIED_0.25",
+    "PPSF_OUTLIERS_REMOVED:8(IQR_718-2204)"
+  ],
+  "main_looks_for": {
+    "benchmark_median": null,
+    "transaction_count": null,
+    "evidence_level": null,
+    "benchmark_method": null,
+    "benchmark_tier": null,
+    "matched_area": null,
+    "bedroom_filter": null,
+    "status_filter": null
+  },
+  "actual_provides": {
+    "eligible": true,
+    "level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+    "estimated_benchmark_aed": 2127515.48,
+    "final_transaction_count": 58,
+    "raw_transaction_count": 99,
+    "unique_project_count": 26,
+    "mapped_dld_area": "JUMEIRAH VILLAGE CIRCLE",
+    "size_band_applied": true,
+    "status_broadened": false
+  }
+}
+--------------------------------------------------------------------------------
+{
+  "pid": "7061",
+  "name": "azizi mina",
+  "area": "Palm Jumeirah",
+  "bedrooms": 2.0,
+  "size_sqft": 1522.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "api_market_context_source": "NONE",
+  "api_production_signal_source": "NONE",
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "area_quality_flags": [
+    "SQM_CONVERTED_TO_SQFT:122",
+    "SIZE_BAND_APPLIED_0.25",
+    "PPSF_OUTLIERS_REMOVED:1(IQR_30-5597)"
+  ],
+  "main_looks_for": {
+    "benchmark_median": null,
+    "transaction_count": null,
+    "evidence_level": null,
+    "benchmark_method": null,
+    "benchmark_tier": null,
+    "matched_area": null,
+    "bedroom_filter": null,
+    "status_filter": null
+  },
+  "actual_provides": {
+    "eligible": true,
+    "level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+    "estimated_benchmark_aed": 3778313.53,
+    "final_transaction_count": 77,
+    "raw_transaction_count": 122,
+    "unique_project_count": 11,
+    "mapped_dld_area": "PALM JUMEIRAH",
+    "size_band_applied": true,
+    "status_broadened": false
+  }
+}
+--------------------------------------------------------------------------------
+{
+  "pid": "8057",
+  "name": "Binghatti Royale",
+  "area": "Jumeirah village circle",
+  "bedrooms": 3.0,
+  "size_sqft": 2102.0,
+  "canonical_usable": false,
+  "level2_available": true,
+  "api_market_context_source": "LEVEL_2_FALLBACK",
+  "api_production_signal_source": "NONE",
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "area_quality_flags": [
+    "SQM_CONVERTED_TO_SQFT:68",
+    "SIZE_BAND_APPLIED_0.25"
+  ],
+  "main_looks_for": {
+    "benchmark_median": null,
+    "transaction_count": null,
+    "evidence_level": null,
+    "benchmark_method": null,
+    "benchmark_tier": null,
+    "matched_area": null,
+    "bedroom_filter": null,
+    "status_filter": null
+  },
+  "actual_provides": {
+    "eligible": true,
+    "level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+    "estimated_benchmark_aed": 3550368.62,
+    "final_transaction_count": 27,
+    "raw_transaction_count": 68,
+    "unique_project_count": 19,
+    "mapped_dld_area": "JUMEIRAH VILLAGE CIRCLE",
+    "size_band_applied": true,
+    "status_broadened": false
+  }
+}
+--------------------------------------------------------------------------------
+{
+  "pid": "8201",
+  "name": "Marquise Square",
+  "area": "Business Bay",
+  "bedrooms": 3.0,
+  "size_sqft": 2326.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "api_market_context_source": "NONE",
+  "api_production_signal_source": "NONE",
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "area_quality_flags": [
+    "SQM_CONVERTED_TO_SQFT:71",
+    "SIZE_BAND_APPLIED_0.25",
+    "PPSF_OUTLIERS_REMOVED:3(IQR_854-2521)"
+  ],
+  "main_looks_for": {
+    "benchmark_median": null,
+    "transaction_count": null,
+    "evidence_level": null,
+    "benchmark_method": null,
+    "benchmark_tier": null,
+    "matched_area": null,
+    "bedroom_filter": null,
+    "status_filter": null
+  },
+  "actual_provides": {
+    "eligible": true,
+    "level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+    "estimated_benchmark_aed": 3758377.55,
+    "final_transaction_count": 50,
+    "raw_transaction_count": 71,
+    "unique_project_count": 11,
+    "mapped_dld_area": "BUSINESS BAY",
+    "size_band_applied": true,
+    "status_broadened": false
+  }
+}
+--------------------------------------------------------------------------------
+
+================================================================================
+SAMPLING 25 NO-CONTEXT PROPERTIES
+================================================================================
+Total properties: 2000
+NO_CONTEXT properties: 1045
+{
+  "pid": "611",
+  "name": "Blue Marina Residence",
+  "area": "Dubai Islands",
+  "bedrooms": 3.0,
+  "size_sqft": 1701.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 4958929.17,
+  "actual_final_tx_count": 168,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "8321",
+  "name": "Verdana Empire",
+  "area": "Dubai Investments Park",
+  "bedrooms": 2.0,
+  "size_sqft": 968.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "EXACT_PROJECT_STATUS_BROADENED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1192842.27,
+  "actual_final_tx_count": 378,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "7889",
+  "name": "Avant Garde Residences by Skyline",
+  "area": "Jumeirah village circle",
+  "bedrooms": 2.0,
+  "size_sqft": 1353.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1759818.87,
+  "actual_final_tx_count": 646,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "6562",
+  "name": "Azizi Ameer",
+  "area": "Al Furjan",
+  "bedrooms": 2.0,
+  "size_sqft": 797.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1056972.31,
+  "actual_final_tx_count": 192,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "3107",
+  "name": "Layla Residences",
+  "area": "Maryam Island",
+  "bedrooms": 2.0,
+  "size_sqft": 1084.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": false,
+  "area_level": "NO_VERIFIED_AREA_MAPPING",
+  "area_excluded_reasons": [
+    "NO_VERIFIED_AREA_MAPPING"
+  ],
+  "actual_estimated_benchmark_aed": null,
+  "actual_final_tx_count": null,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "3895",
+  "name": "One Billion Tower",
+  "area": "Sheikh Zayed Road",
+  "bedrooms": 2.0,
+  "size_sqft": 1611.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": false,
+  "area_level": "NO_VERIFIED_FALLBACK_EVIDENCE",
+  "area_excluded_reasons": [
+    "INSUFFICIENT_FINAL_TRANSACTIONS_1_vs_8"
+  ],
+  "actual_estimated_benchmark_aed": null,
+  "actual_final_tx_count": null,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "4205",
+  "name": "VERDAN1A",
+  "area": "Dubai Land Residence Complex",
+  "bedrooms": 2.0,
+  "size_sqft": 1351.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1650393.69,
+  "actual_final_tx_count": 274,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "8421",
+  "name": "Sunset Bay 2",
+  "area": "Dubai Islands",
+  "bedrooms": 2.0,
+  "size_sqft": 1421.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 4064696.0,
+  "actual_final_tx_count": 830,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "6520",
+  "name": "Celesto 2",
+  "area": "Dubai Land Residence Complex",
+  "bedrooms": 2.0,
+  "size_sqft": 864.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1100062.58,
+  "actual_final_tx_count": 86,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "3863",
+  "name": "Belgrove Residences",
+  "area": "Meydan City",
+  "bedrooms": 2.0,
+  "size_sqft": 1268.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 2932934.0,
+  "actual_final_tx_count": 167,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "488",
+  "name": "Sobha Seahaven",
+  "area": "Dubai Marina",
+  "bedrooms": 5.0,
+  "size_sqft": 7815.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": false,
+  "area_level": "NO_VERIFIED_FALLBACK_EVIDENCE",
+  "area_excluded_reasons": [
+    "INSUFFICIENT_FINAL_TRANSACTIONS_2_vs_8"
+  ],
+  "actual_estimated_benchmark_aed": null,
+  "actual_final_tx_count": null,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "7447",
+  "name": "Athlon by Aldar",
+  "area": "Dubai Land Residence Complex",
+  "bedrooms": 3.0,
+  "size_sqft": 2281.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 2331088.31,
+  "actual_final_tx_count": 12,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "2610",
+  "name": "Sky Hills Residence 2",
+  "area": "Jumeirah village circle",
+  "bedrooms": 2.0,
+  "size_sqft": 1081.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1476875.86,
+  "actual_final_tx_count": 535,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "7069",
+  "name": "Floarea Lakes",
+  "area": "Dubai Production City",
+  "bedrooms": 0.0,
+  "size_sqft": null,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": false,
+  "area_level": "AMBIGUOUS_BEDROOM_NO_FALLBACK",
+  "area_excluded_reasons": [
+    "AMBIGUOUS_BEDROOM_NO_FALLBACK"
+  ],
+  "actual_estimated_benchmark_aed": null,
+  "actual_final_tx_count": null,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "3646",
+  "name": "Binghatti Flare",
+  "area": "Jumeirah Village Triangle",
+  "bedrooms": 1.0,
+  "size_sqft": null,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1126233.46,
+  "actual_final_tx_count": 144,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "5911",
+  "name": "Arthouse Residences by Cledor",
+  "area": "Al Marjan Island",
+  "bedrooms": 2.0,
+  "size_sqft": null,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": false,
+  "area_level": "NO_VERIFIED_AREA_MAPPING",
+  "area_excluded_reasons": [
+    "NO_VERIFIED_AREA_MAPPING"
+  ],
+  "actual_estimated_benchmark_aed": null,
+  "actual_final_tx_count": null,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "3543",
+  "name": "Hawa Residence",
+  "area": "Tilal City",
+  "bedrooms": 1.0,
+  "size_sqft": 631.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": false,
+  "area_level": "NO_VERIFIED_AREA_MAPPING",
+  "area_excluded_reasons": [
+    "NO_VERIFIED_AREA_MAPPING"
+  ],
+  "actual_estimated_benchmark_aed": null,
+  "actual_final_tx_count": null,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "5358",
+  "name": "The Fifth",
+  "area": "Jumeirah village circle",
+  "bedrooms": 1.0,
+  "size_sqft": 649.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 947535.47,
+  "actual_final_tx_count": 1615,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "807",
+  "name": "elitz 3",
+  "area": "Jumeirah village circle",
+  "bedrooms": 2.0,
+  "size_sqft": 1103.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1489050.03,
+  "actual_final_tx_count": 573,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "327",
+  "name": "Alfal Residence",
+  "area": "Jumeirah village circle",
+  "bedrooms": 2.0,
+  "size_sqft": 947.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1308244.21,
+  "actual_final_tx_count": 323,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "7302",
+  "name": "Casa Vista Residence",
+  "area": "Jumeirah village circle",
+  "bedrooms": 3.0,
+  "size_sqft": 936.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1264141.58,
+  "actual_final_tx_count": 98,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "2472",
+  "name": "Montiva by Vida",
+  "area": "Dubai Creek Harbour",
+  "bedrooms": 1.0,
+  "size_sqft": 755.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 1760114.9,
+  "actual_final_tx_count": 34,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "375",
+  "name": "Pantheon Elysee Heights",
+  "area": "Jumeirah village circle",
+  "bedrooms": 0.0,
+  "size_sqft": 377.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 663672.62,
+  "actual_final_tx_count": 1684,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "557",
+  "name": "Peninsula Jumeirah living",
+  "area": "Business Bay",
+  "bedrooms": 4.0,
+  "size_sqft": 4280.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 14139189.57,
+  "actual_final_tx_count": 15,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+{
+  "pid": "5587",
+  "name": "Habtoor Grand Residences",
+  "area": "Dubai Marina",
+  "bedrooms": 3.0,
+  "size_sqft": 4258.0,
+  "canonical_usable": false,
+  "level2_available": false,
+  "area_eligible": true,
+  "area_level": "AREA_SAME_BEDROOM_EVIDENCE",
+  "area_excluded_reasons": [],
+  "actual_estimated_benchmark_aed": 7226619.03,
+  "actual_final_tx_count": 45,
+  "main_would_see_benchmark_median": null,
+  "api_market_context_source": "NONE"
+}
+----------------------------------------
+
+================================================================================
+AGGREGATE COUNTERS
+================================================================================
+area_function_called_count: 2000
+area_function_returned_object_count: 2000
+area_function_valid_median_count: 1694
+area_function_valid_tx_count: 1694
+area_function_identity_valid_count: 1676
+area_function_blocked_count: 306
+area_function_available_count: 1694
+area_context_selected_count: 206

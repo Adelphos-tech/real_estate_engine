@@ -72,17 +72,17 @@ describe('ScoreRing', () => {
 
   it('does not crash with null score', () => {
     render(<ScoreRing score={null} size={80} />);
-    expect(screen.getByText('0')).toBeInTheDocument();
+    expect(screen.getByText('N/A')).toBeInTheDocument();
   });
 
   it('does not crash with undefined score', () => {
     render(<ScoreRing score={undefined} size={80} />);
-    expect(screen.getByText('0')).toBeInTheDocument();
+    expect(screen.getByText('N/A')).toBeInTheDocument();
   });
 
   it('does not crash with NaN score', () => {
     render(<ScoreRing score={NaN} size={80} />);
-    expect(screen.getByText('0')).toBeInTheDocument();
+    expect(screen.getByText('N/A')).toBeInTheDocument();
   });
 });
 
@@ -95,12 +95,12 @@ describe('ScoreBadge', () => {
 
   it('does not crash with null score', () => {
     render(<ScoreBadge score={null} />);
-    expect(screen.getByText(/0/)).toBeInTheDocument();
+    expect(screen.getByText('N/A')).toBeInTheDocument();
   });
 
   it('does not crash with undefined score', () => {
     render(<ScoreBadge score={undefined} />);
-    expect(screen.getByText(/0/)).toBeInTheDocument();
+    expect(screen.getByText('N/A')).toBeInTheDocument();
   });
 });
 

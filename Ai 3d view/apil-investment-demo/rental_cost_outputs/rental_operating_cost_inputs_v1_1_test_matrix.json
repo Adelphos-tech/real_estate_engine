@@ -1,0 +1,60 @@
+{
+  "A": {
+    "pass": true,
+    "level": "SERVICE_CHARGE_ADJUSTED"
+  },
+  "B": {
+    "pass": true,
+    "level": "PARTIAL_OPERATING_COSTS"
+  },
+  "C": {
+    "pass": true,
+    "level": "PARTIAL_OPERATING_COSTS"
+  },
+  "D": {
+    "pass": true,
+    "net": 107812.68,
+    "yield": 3.99
+  },
+  "E": {
+    "pass": true,
+    "net": 119812.68
+  },
+  "F": {
+    "pass": true,
+    "level": "PARTIAL_OPERATING_COSTS"
+  },
+  "G": {
+    "pass": true,
+    "net": -43987.32
+  },
+  "H": {
+    "pass": true,
+    "net_409": 120812.68,
+    "net_8201": 101658.9
+  },
+  "I": {
+    "pass": true,
+    "user_a_net": 120812.68,
+    "user_b_net": 95892.68
+  },
+  "J": {
+    "pass": true,
+    "persistence_mode": "EPHEMERAL_USER_SESSION"
+  },
+  "K": {
+    "pass": true
+  },
+  "L": {
+    "pass": true,
+    "status": 422
+  },
+  "M": {
+    "pass": true,
+    "status": 422
+  },
+  "N": {
+    "pass": true,
+    "status": 422
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "verdict": "FULL_PROPERTY_ROI_V1_2_ACQUISITION_INPUT_LAYER_VERIFIED",
+  "phase": "FULL_PROPERTY_ROI_V1_2_ACQUISITION_INPUTS",
+  "methodology_version": "ACQUISITION_COST_V1_2",
+  "valuation_date": "2026-08-22",
+
+  "official_fee_rules": {
+    "dld_transfer": {
+      "total_rate_pct": 4.0,
+      "buyer_statutory_default_pct": 2.0,
+      "seller_statutory_default_pct": 2.0,
+      "payer_allocation": "CONTRACT_DEPENDENT",
+      "legal_basis": "ECR 30/2013 Article 3(1)"
+    },
+    "title_deed": {"amount_aed": 250, "legal_basis": "ECR 30/2013 Item 22"},
+    "knowledge_fee": {"amount_aed": 10, "legal_basis": "Law No. 1 of 2018"},
+    "innovation_fee": {"amount_aed": 10, "legal_basis": "Law No. 2 of 2018"},
+    "trustee_office_fee": {"status": "MISSING", "note": "Not in DLD statute — USER_INPUT only"},
+    "property_map_fee": {"status": "OFFICIAL_VERIFIED", "included_automatically": false}
+  },
+
+  "dld_confirmation_semantics": {
+    "statuses": ["OFFICIAL_STATUTORY_DEFAULT", "USER_CONFIRMED_DEFAULT", "USER_OVERRIDE", "MISSING"],
+    "input_modes": ["USE_STATUTORY_DEFAULT", "CUSTOM_PERCENT", "CUSTOM_AED"],
+    "statutory_default_pct": 2.0,
+    "max_custom_pct": 4.0,
+    "never_silently_4_pct": true,
+    "never_silently_confirmed": true
+  },
+
+  "user_input_model": {
+    "dld": {
+      "modes": ["USE_STATUTORY_DEFAULT", "CUSTOM_PERCENT", "CUSTOM_AED"],
+      "required_for_complete": true
+    },
+    "trustee": {
+      "mode": "USER_INPUT_AED",
+      "required_for_complete": true,
+      "no_default": true
+    },
+    "broker": {
+      "modes": ["BROKER_PERCENT", "BROKER_FIXED_AED", "NO_BROKER_COST"],
+      "required_for_complete": true,
+      "no_default": true,
+      "zero_must_be_explicit": true
+    },
+    "developer_admin": {
+      "modes": ["USER_INPUT_AED", "NO_DEVELOPER_ADMIN_FEE"],
+      "required_for_complete": true,
+      "zero_must_be_explicit": true
+    }
+  },
+
+  "completion_rules": {
+    "levels": ["PURCHASE_PRICE_ONLY", "OFFICIAL_ACQUISITION_COSTS", "PARTIAL_ACQUISITION_COSTS", "COMPLETE_ACQUISITION_COSTS"],
+    "required_for_complete": [
+      "purchase_price",
+      "dld_transfer (confirmed)",
+      "trustee_office_fee",
+      "broker_purchase",
+      "developer_admin",
+      "title_deed_fee (automatic)",
+      "knowledge_fee (automatic)",
+      "innovation_fee (automatic)"
+    ],
+    "total_cash_invested_only_when_complete": true
+  },
+
+  "test_results": {
+    "all_tests_pass": true,
+    "tests": {
+      "A": {"description": "No user inputs → not COMPLETE", "pass": true},
+      "B": {"description": "Statutory DLD 2% only → PARTIAL", "pass": true},
+      "C": {"description": "DLD + trustee only → PARTIAL", "pass": true},
+      "D": {"description": "DLD + trustee + broker, dev unresolved → PARTIAL", "pass": true},
+      "E": {"description": "All inputs complete → COMPLETE", "pass": true},
+      "F": {"description": "Custom DLD 4% → USER_OVERRIDE", "pass": true},
+      "G": {"description": "NO_BROKER_COST → 0 explicit", "pass": true},
+      "H": {"description": "NO_DEVELOPER_ADMIN_FEE → 0 explicit", "pass": true},
+      "I": {"description": "Missing trustee → incomplete (not coerced to 0)", "pass": true},
+      "J": {"description": "Negative trustee → 422", "pass": true},
+      "K": {"description": "DLD >4% → 422", "pass": true}
+    }
+  },
+
+  "regression_counters": {
+    "ACQ_INPUT_V1_CHANGED_ANNUAL_RENT": 0,
+    "ACQ_INPUT_V1_CHANGED_GROSS_YIELD": 0,
+    "ACQ_INPUT_V1_CHANGED_SC_ELIGIBILITY": 0,
+    "ACQ_INPUT_V1_CHANGED_SC_RATE": 0,
+    "ACQ_INPUT_V1_CHANGED_SC_ANNUAL": 0,
+    "ACQ_INPUT_V1_CHANGED_INCOME_AFTER_SC": 0,
+    "ACQ_INPUT_V1_CHANGED_YIELD_AFTER_SC": 0,
+    "ACQ_INPUT_V1_CHANGED_NET_RENTAL_FORMULA": 0,
+    "ACQ_INPUT_V1_CHANGED_MARKET_CONTEXT": 0,
+    "ACQ_INPUT_V1_CHANGED_PRODUCTION_SIGNAL": 0,
+    "ACQ_INPUT_V1_CHANGED_APIL_ADVANTAGE": 0,
+    "ACQ_INPUT_V1_CHANGED_CONVENTIONAL_POSITION": 0,
+    "ACQ_INPUT_V1_CHANGED_FIT_SCORE": 0,
+    "all_regression_counters_zero": true
+  },
+
+  "safety_counters": {
+    "SELLER_DLD_SHARE_INCLUDED_IN_BUYER_COST": 0,
+    "DLD_4_PERCENT_AUTOMATICALLY_CHARGED_TO_BUYER": 0,
+    "DEFAULT_TRUSTEE_FEE_USED": 0,
+    "DEFAULT_BROKER_PURCHASE_COMMISSION_USED": 0,
+    "AUTO_NO_BROKER_ASSUMPTION": 0,
+    "OPTIONAL_PROPERTY_MAP_FEE_AUTOMATICALLY_INCLUDED": 0,
+    "MISSING_ACQUISITION_COST_COERCED_TO_ZERO": 0,
+    "OLD_AED_540_TITLE_DEED_BUNDLE_USED": 0,
+    "TITLE_DEED_DOUBLE_COUNT": 0,
+    "KNOWLEDGE_DOUBLE_COUNT": 0,
+    "INNOVATION_DOUBLE_COUNT": 0,
+    "TOTAL_CASH_INVESTED_SHOWN_WHILE_INCOMPLETE": 0,
+    "ACQ_INPUT_V1_AUTH_CHANGES": 0,
+    "all_safety_counters_zero": true
+  },
+
+  "backend_package": {
+    "path": "investor_api/roi/",
+    "files": [
+      "__init__.py",
+      "acquisition_cost_models.py",
+      "acquisition_cost_provider.py",
+      "acquisition_cost_calculator.py",
+      "acquisition_cost_validation.py",
+      "acquisition_cost_user_input_store.py"
+    ],
+    "ephemeral_store": true,
+    "no_auth": true,
+    "backend_only_calculations": true
+  },
+
+  "output_files": [
+    "roi_outputs/FULL_PROPERTY_ROI_V1_2_ACQUISITION_INPUTS_REPORT.md",
+    "roi_outputs/full_property_roi_v1_2_acquisition_test_cases.json",
+    "roi_outputs/full_property_roi_v1_2_acquisition_verdict.json"
+  ],
+
+  "not_done": [
+    "Holding period",
+    "Exit value",
+    "Selling costs",
+    "Appreciation",
+    "Full Property ROI calculation",
+    "Mortgage/leverage ROI",
+    "Rental stack modification",
+    "Service Charge V2 modification",
+    "Investor Fit modification",
+    "Authentication",
+    "Frontend UI"
+  ]
+}

@@ -1,0 +1,316 @@
+property_id,project,area,size_sqft,rental_tier,annual_rent_aed,gross_yield_pct,service_charge_matched,sc_rate_aed_sqft,sc_year,sc_project,vacancy_available,management_available,maintenance_available,eligibility_level
+2161,Hotel Edge by Rotana,Damac Hills 2,481.0,R4,36288.0,5.47,False,,,,False,False,False,GROSS_ONLY
+6982,Binghatti Rose,Jumeirah village circle,659.0,R2,63360.0,7.54,False,,,,False,False,False,GROSS_ONLY
+3201,Binghatti Nova,Jumeirah village circle,989.0,R2,72000.0,5.22,False,,,,False,False,False,GROSS_ONLY
+6250,Binghatti Luna,Jumeirah village circle,1178.0,R2,86400.0,6.65,False,,,,False,False,False,GROSS_ONLY
+2666,Binghatti Lavender,Jumeirah village circle,1020.0,R2,96000.0,6.53,False,,,,False,False,False,GROSS_ONLY
+1181,Laya Mansion,Jumeirah village circle,1413.0,R4,88320.0,5.52,False,,,,False,False,False,GROSS_ONLY
+1829,Vita Grande,Jumeirah village circle,774.0,R4,63360.0,6.95,False,,,,False,False,False,GROSS_ONLY
+5128,Marina Star,Dubai Marina,1111.0,R2,105600.0,3.77,False,,,,False,False,False,GROSS_ONLY
+844,Concept 7 Residences,Jumeirah village circle,1016.0,R2,81600.0,7.42,False,,,,False,False,False,GROSS_ONLY
+4699,creek edge,Dubai Creek Harbour,1044.0,R2,139200.0,9.28,False,,,,False,False,False,GROSS_ONLY
+7112,Q Gardens Loft,Jumeirah village circle,848.0,R4,65280.0,12.98,False,,,,False,False,False,GROSS_ONLY
+4914,Franck Muller Yachting,Dubai Maritime City,792.0,NONE,,,False,,,,False,False,False,NONE
+2046,Franck Muller Yachting,Dubai Maritime City,409.0,NONE,,,False,,,,False,False,False,NONE
+3765,Q Gardens Loft,Jumeirah village circle,1304.0,R4,84480.0,4.45,False,,,,False,False,False,GROSS_ONLY
+7881,Dubai Creek Residence Tower 2 North,Dubai Creek Harbour,1020.0,R4,120000.0,8.57,False,,,,False,False,False,GROSS_ONLY
+409,Harbour Views 1,Dubai Creek Harbour,1526.0,R4,163200.0,6.04,False,,,,False,False,False,GROSS_ONLY
+1330,Oxford Gardens,Arjan,413.0,R2,57600.0,10.29,False,,,,False,False,False,GROSS_ONLY
+2899,Q Gardens Loft,Jumeirah village circle,1827.0,R4,105600.0,5.1,False,,,,False,False,False,GROSS_ONLY
+5356,Terraces Marasi Drive,Business Bay,,NONE,,,False,,,,False,False,False,NONE
+2155,Divine Living,Arjan,1236.0,R2,105600.0,8.8,False,,,,False,False,False,GROSS_ONLY
+6836,Serenity Lakes 5,Jumeirah village circle,692.0,R4,62400.0,6.86,False,,,,False,False,False,GROSS_ONLY
+4753,Mayas Geneva,Jumeirah village circle,1055.0,R2,78720.0,8.19,False,,,,False,False,False,GROSS_ONLY
+2459,UPSIDE Living,Business Bay,399.0,R2,86400.0,6.7,False,,,,False,False,False,GROSS_ONLY
+2578,La Residenza,Jumeirah village circle,642.0,R4,57600.0,6.4,False,,,,False,False,False,GROSS_ONLY
+1467,Marriott Residences,Business Bay,1167.0,R4,105600.0,3.5,False,,,,False,False,False,GROSS_ONLY
+6720,Beverly Boulevard,Arjan,403.0,R2,48000.0,8.94,False,,,,False,False,False,GROSS_ONLY
+2473,MBL Royal,Jumeirah Lake Towers,848.0,R2,113280.0,7.55,False,,,,False,False,False,GROSS_ONLY
+8393,Canal Front Residences,Dubai Water Canal,1326.0,R4,172800.0,4.43,False,,,,False,False,False,GROSS_ONLY
+6298,Binghatti Emerald,Jumeirah village circle,623.0,R2,65280.0,8.72,False,,,,False,False,False,GROSS_ONLY
+2766,Binghatti Emerald,Jumeirah village circle,1024.0,R2,100800.0,9.16,False,,,,False,False,False,GROSS_ONLY
+6632,Oakley Square Residences,Jumeirah village circle,1189.0,R2,138240.0,7.47,False,,,,False,False,False,GROSS_ONLY
+507,The Paragon by IGO,Business Bay,596.0,R2,86400.0,7.2,False,,,,False,False,False,GROSS_ONLY
+673,The Community Motor City,Dubai Motor City,441.0,R3,40320.0,7.62,False,,,,False,False,False,GROSS_ONLY
+1597,The Community Motor City,Dubai Motor City,673.0,R4,49920.0,6.26,False,,,,False,False,False,GROSS_ONLY
+6649,Park Lane by Heilbronn,Jumeirah village circle,947.0,R2,91200.0,7.08,False,,,,False,False,False,GROSS_ONLY
+4694,Creek Gate Tower 2,Dubai Creek Harbour,1114.0,R4,124800.0,4.89,False,,,,False,False,False,GROSS_ONLY
+8320,Eleganz,Jumeirah village circle,1274.0,R4,81600.0,3.71,False,,,,False,False,False,GROSS_ONLY
+5092,4Direction Residence 1,Dubai Land Residence Complex,517.0,R3,34560.0,5.63,False,,,,False,False,False,GROSS_ONLY
+7608,Vera Residences,Business Bay,474.0,R4,62400.0,5.83,False,,,,False,False,False,GROSS_ONLY
+3407,Emerge Residences,Meydan City,684.0,R4,72000.0,4.53,False,,,,False,False,False,GROSS_ONLY
+3375,Mayas Geneva,Jumeirah village circle,1712.0,R2,139200.0,7.33,False,,,,False,False,False,GROSS_ONLY
+6350,Q Gardens Boutique Residences,Arjan,1629.0,R2,134400.0,8.96,False,,,,False,False,False,GROSS_ONLY
+2276,Park Lane by Heilbronn,Jumeirah village circle,1163.0,R2,110400.0,5.02,False,,,,False,False,False,GROSS_ONLY
+6209,Concept 7 Residences,Jumeirah village circle,619.0,R2,72000.0,7.2,False,,,,False,False,False,GROSS_ONLY
+5073,Luma22,Jumeirah village circle,577.0,R2,55680.0,7.95,False,,,,False,False,False,GROSS_ONLY
+6695,Binghatti Amber,Jumeirah village circle,455.0,R2,52800.0,7.33,False,,,,False,False,False,GROSS_ONLY
+2460,Creek Gate Tower 2,Dubai Creek Harbour,721.0,R4,86400.0,5.08,False,,,,False,False,False,GROSS_ONLY
+7792,Luma21,Jumeirah village circle,422.0,R2,49920.0,7.56,False,,,,False,False,False,GROSS_ONLY
+7663,48 Parkside,Arjan,1443.0,R4,86592.0,4.5,False,,,,False,False,False,GROSS_ONLY
+2725,saba 2,Jumeirah Lake Towers,950.0,R4,84480.0,93.87,False,,,,False,False,False,GROSS_ONLY
+6540,The Autograph Residences,Jumeirah village circle,1401.0,R4,86590.0,4.56,False,,,,False,False,False,GROSS_ONLY
+93,Marina Star,Dubai Marina,2463.0,R4,187200.0,23.2,False,,,,False,False,False,GROSS_ONLY
+6277,Binghatti Emerald,Jumeirah village circle,1378.0,R2,100800.0,7.75,False,,,,False,False,False,GROSS_ONLY
+6430,Beverly Boulevard,Arjan,1299.0,R4,82555.0,6.35,False,,,,False,False,False,GROSS_ONLY
+1620,SLS Dubai Hotels and Residences,Downtown Dubai,1864.0,R4,227520.0,3.05,False,,,,False,False,False,GROSS_ONLY
+422,Golf Edge,Emaar South,1641.0,R4,91200.0,3.65,False,,,,False,False,False,GROSS_ONLY
+2838,Binghatti Rose,Jumeirah village circle,1285.0,R2,105600.0,6.81,False,,,,False,False,False,GROSS_ONLY
+3843,Beverly Boulevard,Arjan,800.0,R2,81600.0,9.42,False,,,,False,False,False,GROSS_ONLY
+453,Aykon City Tower,Business Bay,1301.0,R4,115200.0,4.43,False,,,,False,False,False,GROSS_ONLY
+8066,The 100,Meydan City,4292.0,R4,240000.0,1.65,False,,,,False,False,False,GROSS_ONLY
+6835,LIV Residence,Dubai Marina,1764.0,R2,177600.0,3.23,False,,,,False,False,False,GROSS_ONLY
+8201,Marquise Square,Business Bay,2326.0,R4,163200.0,3.8,False,,,,False,False,False,GROSS_ONLY
+1913,Creek Beach Orchid,Dubai Creek Harbour,1514.0,R2,163200.0,6.53,False,,,,False,False,False,GROSS_ONLY
+601,Aura Residences,Jumeirah village circle,1107.0,R4,72000.0,3.69,False,,,,False,False,False,GROSS_ONLY
+1111,Oxford Gardens,Arjan,824.0,R2,92160.0,10.93,False,,,,False,False,False,GROSS_ONLY
+5113,SLS Dubai Hotels and Residences,Downtown Dubai,1163.0,R4,165600.0,4.78,False,,,,False,False,False,GROSS_ONLY
+1637,Oxford Gardens,Arjan,413.0,R2,57600.0,4.11,False,,,,False,False,False,GROSS_ONLY
+6594,Creek Beach Orchid,Dubai Creek Harbour,679.0,R2,88320.0,5.2,False,,,,False,False,False,GROSS_ONLY
+7916,Divine Living,Arjan,2037.0,R4,115200.0,6.78,False,,,,False,False,False,GROSS_ONLY
+7020,Canal Front Residences,Dubai Water Canal,1762.0,R4,216000.0,4.15,False,,,,False,False,False,GROSS_ONLY
+897,creek edge,Dubai Creek Harbour,1591.0,R2,211680.0,7.56,False,,,,False,False,False,GROSS_ONLY
+2398,Binghatti Gardenia,Jumeirah village circle,1109.0,R2,105600.0,6.03,False,,,,False,False,False,GROSS_ONLY
+2730,Luma21,Jumeirah village circle,1144.0,R2,112320.0,9.36,False,,,,False,False,False,GROSS_ONLY
+7464,Plaza Residences 1,Jumeirah village circle,1209.0,R4,78720.0,7.72,False,,,,False,False,False,GROSS_ONLY
+4547,Gardenia Residency,Jumeirah village circle,1379.0,R4,86400.0,8.23,False,,,,False,False,False,GROSS_ONLY
+5009,Divine Living,Arjan,739.0,R2,76800.0,9.65,False,,,,False,False,False,GROSS_ONLY
+1146,SLS Dubai Hotels and Residences,Downtown Dubai,1084.0,R4,154028.0,3.89,False,,,,False,False,False,GROSS_ONLY
+7278,Canal Front Residences,Dubai Water Canal,913.0,R4,120000.0,5.45,False,,,,False,False,False,GROSS_ONLY
+365,Beverly Residence 2,Jumeirah village circle,460.0,R3,43200.0,7.09,False,,,,False,False,False,GROSS_ONLY
+3508,The Community Motor City,Dubai Motor City,1446.0,R4,76800.0,4.52,False,,,,False,False,False,GROSS_ONLY
+8369,Aura Residences,Jumeirah village circle,701.0,R4,62400.0,5.67,False,,,,False,False,False,GROSS_ONLY
+7656,Concept 7 Residences,Jumeirah village circle,392.0,R3,43200.0,7.19,False,,,,False,False,False,GROSS_ONLY
+2061,The Community Motor City,Dubai Motor City,1077.0,R4,60480.0,5.04,False,,,,False,False,False,GROSS_ONLY
+140,Yas Beach Residence,Yas Island,1958.0,NONE,,,False,,,,False,False,False,NONE
+4674,MBL Royal,Jumeirah Lake Towers,2308.0,R2,242880.0,6.07,False,,,,False,False,False,GROSS_ONLY
+5773,4Direction Residence 1,Dubai Land Residence Complex,832.0,R4,48960.0,5.31,False,,,,False,False,False,GROSS_ONLY
+5574,Serenity Lakes 2,Jumeirah village circle,850.0,R4,65280.0,7.5,False,,,,False,False,False,GROSS_ONLY
+4744,Ahad Residences,Business Bay,2308.0,R4,163200.0,3.47,True,20.26,2026.0,Ahad Residences,False,False,False,SERVICE_CHARGE_ADJUSTED
+3495,Mayas Geneva,Jumeirah village circle,527.0,R2,59520.0,9.03,False,,,,False,False,False,GROSS_ONLY
+6446,Yas Beach Residence,Yas Island,2698.0,NONE,,,False,,,,False,False,False,NONE
+3666,Sunrise Bay,EMAAR Beachfront,733.0,R2,121920.0,4.98,False,,,,False,False,False,GROSS_ONLY
+7682,Stax,Jumeirah village circle,1086.0,R4,72000.0,4.87,False,,,,False,False,False,GROSS_ONLY
+8222,Flow Residences,Dubai Islands,844.0,NONE,,,False,,,,False,False,False,NONE
+253,The Paragon by IGO,Business Bay,1222.0,R2,144000.0,6.55,False,,,,False,False,False,GROSS_ONLY
+2326,Binghatti Royale,Jumeirah village circle,1618.0,R4,98400.0,4.28,False,,,,False,False,False,GROSS_ONLY
+3834,MBL Royal,Jumeirah Lake Towers,1460.0,R2,182400.0,7.3,False,,,,False,False,False,GROSS_ONLY
+5945,The Paragon by IGO,Business Bay,416.0,R2,72000.0,8.32,False,,,,False,False,False,GROSS_ONLY
+5987,Yas Beach Residence,Yas Island,2724.0,NONE,,,False,,,,False,False,False,NONE
+2832,Westwood Grande Residences,Jumeirah village circle,806.0,R4,64060.0,5.34,False,,,,False,False,False,GROSS_ONLY
+3097,Catch Residence by IGO,Jumeirah village circle,1545.0,R4,96000.0,5.19,False,,,,False,False,False,GROSS_ONLY
+6923,Luma22,Jumeirah village circle,1258.0,R2,98880.0,5.21,False,,,,False,False,False,GROSS_ONLY
+1516,Azizi Amber,Al Furjan,378.0,R2,46080.0,7.55,False,,,,False,False,False,GROSS_ONLY
+1234,Yas Beach Residence,Yas Island,2173.0,NONE,,,False,,,,False,False,False,NONE
+3955,Stax,Jumeirah village circle,393.0,R3,43200.0,6.02,False,,,,False,False,False,GROSS_ONLY
+3962,Q Gardens Boutique Residences,Arjan,850.0,R2,78720.0,7.18,False,,,,False,False,False,GROSS_ONLY
+793,Westwood Grande Residences,Jumeirah village circle,412.0,R3,43200.0,6.17,False,,,,False,False,False,GROSS_ONLY
+8311,The Cape,Al Barari,1380.0,R4,76800.0,2.26,False,,,,False,False,False,GROSS_ONLY
+6163,Wellington Grand Villas,Meydan City,13007.0,NONE,,,False,,,,False,False,False,NONE
+7640,Binghatti Luna,Jumeirah village circle,600.0,R2,65280.0,7.9,False,,,,False,False,False,GROSS_ONLY
+2989,Samana Sky Views,Dubai Production City,,NONE,,,False,,,,False,False,False,NONE
+1279,Marina Star,Dubai Marina,841.0,R2,105600.0,4.64,False,,,,False,False,False,GROSS_ONLY
+6556,SOL Bay,Business Bay,972.0,R2,86400.0,4.75,False,,,,False,False,False,GROSS_ONLY
+983,SOL Bay,Business Bay,491.0,R1,68160.0,6.2,False,,,,False,False,False,GROSS_ONLY
+4545,The Cove,Dubai Creek Harbour,4620.0,NONE,,,False,,,,False,False,False,NONE
+6141,Q Gardens Loft,Jumeirah village circle,385.0,R3,43200.0,8.82,False,,,,False,False,False,GROSS_ONLY
+7286,Binghatti Canal,Business Bay,491.0,R2,73440.0,5.65,False,,,,False,False,False,GROSS_ONLY
+101,Golf Edge,Emaar South,1181.0,R4,76800.0,4.44,False,,,,False,False,False,GROSS_ONLY
+5203,Urban Oasis by Missoni,Business Bay,323.0,R4,53424.0,5.58,False,,,,False,False,False,GROSS_ONLY
+3830,The Paragon by IGO,Business Bay,2382.0,R4,163200.0,4.08,False,,,,False,False,False,GROSS_ONLY
+7282,48 Parkside,Arjan,1186.0,R2,110400.0,6.71,False,,,,False,False,False,GROSS_ONLY
+7842,Azizi Feirouz,Al Furjan,1008.0,R2,70560.0,6.92,False,,,,False,False,False,GROSS_ONLY
+4905,Raffles The Palm Dubai,Palm Jumeirah,4607.0,R4,422400.0,1.19,False,,,,False,False,False,GROSS_ONLY
+5981,Divine Elements,Dubai South,929.0,R4,65280.0,5.12,False,,,,False,False,False,GROSS_ONLY
+6733,Divine Elements,Dubai South,,NONE,,,False,,,,False,False,False,NONE
+8220,The Palm Tower,Palm Jumeirah,1054.0,R2,240000.0,5.33,False,,,,False,False,False,GROSS_ONLY
+3706,Urban Oasis by Missoni,Business Bay,1916.0,R4,140554.0,2.93,False,,,,False,False,False,GROSS_ONLY
+6745,Urban Oasis by Missoni,Business Bay,1916.0,R4,140554.0,2.93,False,,,,False,False,False,GROSS_ONLY
+1068,Eleganz,Jumeirah village circle,951.0,R4,67200.0,4.31,False,,,,False,False,False,GROSS_ONLY
+4209,4Direction Residence 1,Dubai Land Residence Complex,1251.0,R4,58080.0,4.01,False,,,,False,False,False,GROSS_ONLY
+4389,Binghatti Crest,Jumeirah village circle,618.0,R2,65280.0,7.21,False,,,,False,False,False,GROSS_ONLY
+4252,Emerge Residences,Meydan City,1036.0,R4,80640.0,3.13,False,,,,False,False,False,GROSS_ONLY
+6235,The Palm Tower,Palm Jumeirah,524.0,R2,115200.0,5.24,False,,,,False,False,False,GROSS_ONLY
+4524,Binghatti Twilight,Al Jadaf Waterfront,876.0,R4,67235.0,3.74,False,,,,False,False,False,GROSS_ONLY
+5394,Vincitore Volare,Arjan,503.0,R3,43200.0,6.47,False,,,,False,False,False,GROSS_ONLY
+5497,Aura Residences,Jumeirah village circle,320.0,R3,38400.0,5.69,False,,,,False,False,False,GROSS_ONLY
+1459,Binghatti Royale,Jumeirah village circle,756.0,R2,91849.0,6.68,False,,,,False,False,False,GROSS_ONLY
+7285,The Cove,Dubai Creek Harbour,1338.0,R2,150720.0,5.02,False,,,,False,False,False,GROSS_ONLY
+4046,Vincitore Volare,Arjan,727.0,R4,61440.0,6.14,False,,,,False,False,False,GROSS_ONLY
+4997,Beverly Residence 2,Jumeirah village circle,740.0,R4,62400.0,6.43,False,,,,False,False,False,GROSS_ONLY
+6530,Empire Residences,Jumeirah village circle,996.0,R4,69120.0,5.32,False,,,,False,False,False,GROSS_ONLY
+6747,Emerge Residences,Meydan City,3169.0,R4,153600.0,2.29,False,,,,False,False,False,GROSS_ONLY
+3231,Harbour Gate,Dubai Creek Harbour,683.0,R2,86400.0,5.4,False,,,,False,False,False,GROSS_ONLY
+5263,Oakley Square Residences,Jumeirah village circle,802.0,R2,81600.0,5.63,False,,,,False,False,False,GROSS_ONLY
+7022,Park Town,Damac Hills,1021.0,R4,64790.0,3.99,False,,,,False,False,False,GROSS_ONLY
+884,Canal Residence West,Dubai Sports City,2334.0,R4,105600.0,4.52,False,,,,False,False,False,GROSS_ONLY
+1727,Luma21,Jumeirah village circle,595.0,R2,53760.0,5.38,False,,,,False,False,False,GROSS_ONLY
+5402,The Pad by Omniyat,Business Bay,648.0,R4,75840.0,4.89,False,,,,False,False,False,GROSS_ONLY
+1745,Binghatti Crest,Jumeirah village circle,1140.0,R2,98880.0,7.11,False,,,,False,False,False,GROSS_ONLY
+4041,Azizi Lina,Jebel Ali,320.0,R3,44160.0,7.35,False,,,,False,False,False,GROSS_ONLY
+472,Binghatti Lavender,Jumeirah village circle,380.0,R2,52800.0,7.38,False,,,,False,False,False,GROSS_ONLY
+4263,Harbour Gate,Dubai Creek Harbour,1202.0,R2,129600.0,4.89,False,,,,False,False,False,GROSS_ONLY
+6327,Stax,Jumeirah village circle,677.0,R4,61920.0,5.93,False,,,,False,False,False,GROSS_ONLY
+6435,Pantheon Elysee,Jumeirah village circle,763.0,R2,67200.0,7.92,True,14.6,2025.0,PANTHEON ELYSEE,False,False,False,SERVICE_CHARGE_ADJUSTED
+735,Harbour Gate,Dubai Creek Harbour,1640.0,R2,181440.0,4.97,False,,,,False,False,False,GROSS_ONLY
+5081,Binghatti Crest,Jumeirah village circle,1215.0,R2,98880.0,5.79,False,,,,False,False,False,GROSS_ONLY
+4702,Canal Residence West,Dubai Sports City,559.0,R3,40320.0,7.07,False,,,,False,False,False,GROSS_ONLY
+3027,Binghatti Crescent,Jumeirah village circle,988.0,R2,96000.0,6.86,False,,,,False,False,False,GROSS_ONLY
+7457,Binghatti Tulip,Jumeirah village circle,303.0,R2,48000.0,7.06,False,,,,False,False,False,GROSS_ONLY
+5612,Azizi Lina,Jebel Ali,653.0,R4,45120.0,4.76,False,,,,False,False,False,GROSS_ONLY
+432,Creek Beach Orchid,Dubai Creek Harbour,679.0,R2,88320.0,5.2,False,,,,False,False,False,GROSS_ONLY
+4750,Canal Residence West,Dubai Sports City,931.0,R4,55680.0,6.55,False,,,,False,False,False,GROSS_ONLY
+5961,Vera Residences,Business Bay,908.0,R4,86400.0,5.08,False,,,,False,False,False,GROSS_ONLY
+7727,Oakley Square Residences,Jumeirah village circle,507.0,R2,60480.0,7.2,False,,,,False,False,False,GROSS_ONLY
+3440,Royal Bay,Palm Jumeirah,791.0,R4,115200.0,5.76,False,,,,False,False,False,GROSS_ONLY
+1976,Uniestate Prime Tower,Jumeirah village circle,451.0,R1,40320.0,6.5,False,,,,False,False,False,GROSS_ONLY
+1824,48 Parkside,Arjan,748.0,R2,76800.0,6.97,False,,,,False,False,False,GROSS_ONLY
+2645,The Atria,Business Bay,1262.0,R2,124800.0,4.42,False,,,,False,False,False,GROSS_ONLY
+87,Binghatti Amber,Jumeirah village circle,1268.0,R2,110400.0,6.9,False,,,,False,False,False,GROSS_ONLY
+3160,Marquise Square,Business Bay,517.0,R3,57600.0,4.7,False,,,,False,False,False,GROSS_ONLY
+8262,Binghatti Orchid,Jumeirah village circle,1251.0,R2,110400.0,6.49,False,,,,False,False,False,GROSS_ONLY
+4872,Binghatti Canal,Business Bay,717.0,R2,105600.0,6.4,False,,,,False,False,False,GROSS_ONLY
+5193,Serenity Lakes 2,Jumeirah village circle,402.0,R3,43200.0,8.0,False,,,,False,False,False,GROSS_ONLY
+7780,The Residence by Prestige One,Jumeirah village circle,467.0,R2,46080.0,6.36,False,,,,False,False,False,GROSS_ONLY
+107,Binghatti Lavender,Jumeirah village circle,739.0,R2,72000.0,6.55,False,,,,False,False,False,GROSS_ONLY
+914,Laya Mansion,Jumeirah village circle,371.0,R2,43200.0,7.45,False,,,,False,False,False,GROSS_ONLY
+6630,The Autograph Residences,Jumeirah village circle,793.0,R4,63360.0,4.22,False,,,,False,False,False,GROSS_ONLY
+800,Azizi Amber,Al Furjan,599.0,R2,64320.0,4.53,False,,,,False,False,False,GROSS_ONLY
+7669,Pantheon Elysee III,Jumeirah village circle,406.0,R3,43200.0,6.91,False,,,,False,False,False,GROSS_ONLY
+5582,Marquise Square,Business Bay,1658.0,R4,129600.0,4.47,False,,,,False,False,False,GROSS_ONLY
+414,Binghatti Tulip,Jumeirah village circle,612.0,R2,65105.0,6.38,False,,,,False,False,False,GROSS_ONLY
+2184,Grand Bleu Tower 1,EMAAR Beachfront,1768.0,R4,144000.0,2.22,False,,,,False,False,False,GROSS_ONLY
+5579,Creek Rise Tower 1,Dubai Creek Harbour,825.0,R4,91198.0,4.56,False,,,,False,False,False,GROSS_ONLY
+6401,Divine Elements,Dubai South,359.0,R3,38400.0,5.79,False,,,,False,False,False,GROSS_ONLY
+4461,Eleganz,Jumeirah village circle,1627.0,R4,98400.0,3.56,False,,,,False,False,False,GROSS_ONLY
+2313,Binghatti Gardenia,Jumeirah village circle,643.0,R2,67200.0,6.11,False,,,,False,False,False,GROSS_ONLY
+5683,Urban Oasis by Missoni,Business Bay,635.0,R4,72000.0,4.8,False,,,,False,False,False,GROSS_ONLY
+3522,The Atria,Business Bay,795.0,R2,86400.0,4.75,False,,,,False,False,False,GROSS_ONLY
+3451,Binghatti Onyx,Jumeirah village circle,692.0,R2,72000.0,6.55,False,,,,False,False,False,GROSS_ONLY
+4817,Binghatti House,Jumeirah village circle,647.0,R2,67200.0,6.72,False,,,,False,False,False,GROSS_ONLY
+5801,Empire Residences,Jumeirah village circle,375.0,R3,43200.0,6.26,False,,,,False,False,False,GROSS_ONLY
+3265,DAMAC Majestine,Business Bay,478.0,R3,57600.0,6.06,False,,,,False,False,False,GROSS_ONLY
+8028,Evelyn on the Park,Town Square Dubai,765.0,R4,52800.0,3.97,False,,,,False,False,False,GROSS_ONLY
+5303,Serenity Lakes 5,Jumeirah village circle,481.0,R2,46080.0,7.09,False,,,,False,False,False,GROSS_ONLY
+8120,Laya Mansion,Jumeirah village circle,940.0,R2,72576.0,7.85,False,,,,False,False,False,GROSS_ONLY
+5528,Creek Rise Tower 1,Dubai Creek Harbour,1664.0,R4,172800.0,4.67,False,,,,False,False,False,GROSS_ONLY
+7449,Creek Rise Tower 1,Dubai Creek Harbour,1108.0,R4,124800.0,4.46,False,,,,False,False,False,GROSS_ONLY
+6056,Imperial Avenue,Downtown Dubai,2049.0,R2,278400.0,4.42,False,,,,False,False,False,GROSS_ONLY
+1656,AG Tower,Business Bay,443.0,R2,57600.0,5.84,False,,,,False,False,False,GROSS_ONLY
+7378,Urban Oasis by Missoni,Business Bay,904.0,R4,86400.0,2.98,False,,,,False,False,False,GROSS_ONLY
+7918,The Residence by Prestige One,Jumeirah village circle,1322.0,R2,118080.0,5.93,False,,,,False,False,False,GROSS_ONLY
+5431,Pantheon Elysee II,Jumeirah village circle,393.0,R3,43200.0,6.17,False,,,,False,False,False,GROSS_ONLY
+1118,Binghatti House,Jumeirah village circle,1105.0,R2,110880.0,6.16,False,,,,False,False,False,GROSS_ONLY
+2620,Avanti Tower,Business Bay,950.0,R2,81600.0,5.38,False,,,,False,False,False,GROSS_ONLY
+2965,Binghatti Onyx,Jumeirah village circle,1550.0,R2,129600.0,5.18,False,,,,False,False,False,GROSS_ONLY
+3766,Imperial Avenue,Downtown Dubai,859.0,R2,120000.0,4.8,False,,,,False,False,False,GROSS_ONLY
+6032,Luma22,Jumeirah village circle,1036.0,R2,83520.0,6.19,False,,,,False,False,False,GROSS_ONLY
+1227,Sunrise Bay,EMAAR Beachfront,1394.0,R2,177600.0,4.14,False,,,,False,False,False,GROSS_ONLY
+6113,Bayshore at Creek Beach,Dubai Creek Harbour,906.0,R4,100800.0,5.04,False,,,,False,False,False,GROSS_ONLY
+5860,LIV Residence,Dubai Marina,1767.0,R2,182400.0,3.72,False,,,,False,False,False,GROSS_ONLY
+2951,Binghatti Orchid,Jumeirah village circle,777.0,R2,71040.0,6.7,False,,,,False,False,False,GROSS_ONLY
+2265,Binghatti Amber,Jumeirah village circle,989.0,R2,72000.0,5.54,False,,,,False,False,False,GROSS_ONLY
+7137,Binghatti Galaxy,Jumeirah village circle,871.0,R2,76800.0,4.55,False,,,,False,False,False,GROSS_ONLY
+5156,Binghatti Canal,Business Bay,1283.0,R2,158400.0,5.03,False,,,,False,False,False,GROSS_ONLY
+3167,Binghatti Dusk,Jumeirah village circle,899.0,R4,67200.0,5.17,False,,,,False,False,False,GROSS_ONLY
+3599,Pantheon Elysee II,Jumeirah village circle,753.0,R4,62400.0,5.43,False,,,,False,False,False,GROSS_ONLY
+655,Pantheon Elysee III,Jumeirah village circle,666.0,R4,60480.0,5.04,False,,,,False,False,False,GROSS_ONLY
+6176,Catch Residence by IGO,Jumeirah village circle,905.0,R4,67200.0,4.48,False,,,,False,False,False,GROSS_ONLY
+3901,Trillionaire Residences,Business Bay,549.0,R3,61701.0,3.25,False,,,,False,False,False,GROSS_ONLY
+2252,Imperial Avenue,Downtown Dubai,1458.0,R2,182400.0,3.58,False,,,,False,False,False,GROSS_ONLY
+3533,Aykon City Tower,Business Bay,413.0,R3,55680.0,5.35,False,,,,False,False,False,GROSS_ONLY
+7292,Aykon City Tower,Business Bay,646.0,R4,75200.0,4.63,False,,,,False,False,False,GROSS_ONLY
+1113,Binghatti Gardenia,Jumeirah village circle,3008.0,R4,134400.0,5.31,False,,,,False,False,False,GROSS_ONLY
+8019,DAMAC Majestine,Business Bay,1578.0,R4,126720.0,5.12,False,,,,False,False,False,GROSS_ONLY
+7841,Uniestate Prime Tower,Jumeirah village circle,1890.0,R4,105600.0,5.53,False,,,,False,False,False,GROSS_ONLY
+6904,creek edge,Dubai Creek Harbour,689.0,R2,86400.0,9.28,False,,,,False,False,False,GROSS_ONLY
+3668,Nobles Tower,Business Bay,847.0,R4,86400.0,3.2,False,,,,False,False,False,GROSS_ONLY
+7061,azizi mina,Palm Jumeirah,1522.0,R4,172800.0,3.84,False,,,,False,False,False,GROSS_ONLY
+392,Marriott Residences,Business Bay,732.0,R4,81600.0,3.17,False,,,,False,False,False,GROSS_ONLY
+3190,azizi mina,Palm Jumeirah,1173.0,R4,144000.0,3.93,False,,,,False,False,False,GROSS_ONLY
+7930,Muraba Residences,Palm Jumeirah,1965.0,R4,201961.0,2.58,False,,,,False,False,False,GROSS_ONLY
+7266,Ahad Residences,Business Bay,894.0,R2,110400.0,6.13,True,20.26,2026.0,Ahad Residences,False,False,False,SERVICE_CHARGE_ADJUSTED
+1074,Ahad Residences,Business Bay,453.0,R2,76800.0,6.14,True,20.26,2026.0,Ahad Residences,False,False,False,SERVICE_CHARGE_ADJUSTED
+6954,Terraces Marasi Drive,Business Bay,,NONE,,,False,,,,False,False,False,NONE
+6473,Empire Residences,Jumeirah village circle,701.0,R4,62400.0,6.57,False,,,,False,False,False,GROSS_ONLY
+2378,7 Park Central By Meteora,Jumeirah village circle,768.0,R4,63280.0,6.42,False,,,,False,False,False,GROSS_ONLY
+6690,Samana Hills,Arjan,585.0,R2,65280.0,7.68,False,,,,False,False,False,GROSS_ONLY
+3194,Sunrise Bay,EMAAR Beachfront,1925.0,R2,336000.0,4.94,False,,,,False,False,False,GROSS_ONLY
+3276,La Residenza,Jumeirah village circle,1126.0,R2,100243.0,7.02,False,,,,False,False,False,GROSS_ONLY
+1208,Marquise Square,Business Bay,1064.0,R4,96000.0,4.57,False,,,,False,False,False,GROSS_ONLY
+7157,The Atria,Business Bay,2004.0,R2,134400.0,3.22,False,,,,False,False,False,GROSS_ONLY
+6316,Me Do Re,Jumeirah Lake Towers,2233.0,R4,153600.0,2.79,False,,,,False,False,False,GROSS_ONLY
+5216,Oxford Terraces 2,Jumeirah village circle,1150.0,R2,124800.0,6.75,False,,,,False,False,False,GROSS_ONLY
+1746,Binghatti Nova,Jumeirah village circle,635.0,R2,62400.0,6.57,False,,,,False,False,False,GROSS_ONLY
+2185,Azizi Amber,Al Furjan,992.0,R2,86400.0,5.96,False,,,,False,False,False,GROSS_ONLY
+2859,Oxford Terraces 2,Jumeirah village circle,482.0,R2,63360.0,7.2,False,,,,False,False,False,GROSS_ONLY
+3453,Samana Hills,Arjan,360.0,R2,45120.0,7.52,False,,,,False,False,False,GROSS_ONLY
+1848,Binghatti Twilight,Al Jadaf Waterfront,807.0,R4,67200.0,5.01,False,,,,False,False,False,GROSS_ONLY
+7299,The Residence by Prestige One,Jumeirah village circle,790.0,R2,69120.0,6.29,False,,,,False,False,False,GROSS_ONLY
+2435,Royal Yacht Club Residence,Dubai Islands,720.0,NONE,,,False,,,,False,False,False,NONE
+4695,Oxford Terraces 2,Jumeirah village circle,796.0,R2,86400.0,6.91,False,,,,False,False,False,GROSS_ONLY
+2785,Vincitore Volare,Arjan,1430.0,R4,86400.0,5.08,False,,,,False,False,False,GROSS_ONLY
+802,Azizi Amber,Al Furjan,1261.0,R2,86400.0,4.2,False,,,,False,False,False,GROSS_ONLY
+6436,Jumeirah Asora Bay,La Mer,6328.0,NONE,,,False,,,,False,False,False,NONE
+7246,Azizi Lina,Jebel Ali,1758.0,R4,78720.0,3.57,False,,,,False,False,False,GROSS_ONLY
+2166,The Cove,Dubai Creek Harbour,745.0,R2,105600.0,4.59,False,,,,False,False,False,GROSS_ONLY
+4286,Binghatti Galaxy,Jumeirah village circle,670.0,R2,50880.0,5.5,False,,,,False,False,False,GROSS_ONLY
+7412,Serenity Lakes 5,Jumeirah village circle,993.0,R4,69120.0,5.32,False,,,,False,False,False,GROSS_ONLY
+5104,Binghatti Tulip,Jumeirah village circle,1221.0,R2,105600.0,6.32,False,,,,False,False,False,GROSS_ONLY
+5793,AG Tower,Business Bay,1465.0,R2,96000.0,4.29,False,,,,False,False,False,GROSS_ONLY
+1298,Creek Rise Tower 1,Dubai Creek Harbour,2987.0,R4,278400.0,2.84,False,,,,False,False,False,GROSS_ONLY
+5983,Raffles The Palm Dubai,Palm Jumeirah,3337.0,R4,312000.0,1.21,False,,,,False,False,False,GROSS_ONLY
+4432,Binghatti Rose,Jumeirah village circle,939.0,R2,81600.0,6.94,False,,,,False,False,False,GROSS_ONLY
+4762,Ashton Park Residences,Jumeirah village circle,933.0,R2,72000.0,5.54,False,,,,False,False,False,GROSS_ONLY
+2266,Me Do Re,Jumeirah Lake Towers,620.0,R2,73652.0,5.67,False,,,,False,False,False,GROSS_ONLY
+3600,Bayshore at Creek Beach,Dubai Creek Harbour,985.0,R4,117600.0,4.7,False,,,,False,False,False,GROSS_ONLY
+4140,Binghatti Gardenia,Jumeirah village circle,324.0,R2,45120.0,6.73,False,,,,False,False,False,GROSS_ONLY
+1175,Me Do Re,Jumeirah Lake Towers,1095.0,R2,120000.0,5.45,False,,,,False,False,False,GROSS_ONLY
+556,Mosela Waterside Residences,The Greens,1439.0,R4,86400.0,3.3,False,,,,False,False,False,GROSS_ONLY
+5593,Me Do Re,Jumeirah Lake Towers,1387.0,R2,163200.0,4.66,False,,,,False,False,False,GROSS_ONLY
+5513,Canal Residence West,Dubai Sports City,1380.0,R4,76800.0,5.49,False,,,,False,False,False,GROSS_ONLY
+2816,Gardenia Residency,Jumeirah village circle,328.0,R3,43200.0,5.76,False,,,,False,False,False,GROSS_ONLY
+152,Marina Star,Dubai Marina,505.0,R2,76800.0,3.95,False,,,,False,False,False,GROSS_ONLY
+1641,Ashton Park Residences,Jumeirah village circle,402.0,R2,45120.0,5.64,False,,,,False,False,False,GROSS_ONLY
+408,Binghatti Crescent,Jumeirah village circle,728.0,R2,72000.0,6.0,False,,,,False,False,False,GROSS_ONLY
+6627,Royal Bay,Palm Jumeirah,1494.0,R2,154289.0,4.35,False,,,,False,False,False,GROSS_ONLY
+2199,LIV Residence,Dubai Marina,521.0,R2,72000.0,4.36,False,,,,False,False,False,GROSS_ONLY
+5319,LIV Residence,Dubai Marina,919.0,R2,124800.0,4.99,False,,,,False,False,False,GROSS_ONLY
+8327,Aykon City Tower,Business Bay,819.0,R4,86400.0,3.73,False,,,,False,False,False,GROSS_ONLY
+3119,Marina Arcade Tower,Dubai Marina,2466.0,R4,187200.0,4.49,False,,,,False,False,False,GROSS_ONLY
+7426,Barari Views,Al Barari,1271.0,R2,86400.0,5.91,False,,,,False,False,False,GROSS_ONLY
+5,Avanti Tower,Business Bay,1270.0,R2,115200.0,4.98,False,,,,False,False,False,GROSS_ONLY
+7799,Avanti Tower,Business Bay,350.0,R3,54331.0,5.72,False,,,,False,False,False,GROSS_ONLY
+2236,Ashton Park Residences,Jumeirah village circle,1145.0,R4,73347.0,3.49,False,,,,False,False,False,GROSS_ONLY
+4513,The Cove,Dubai Creek Harbour,1898.0,R2,220800.0,4.01,False,,,,False,False,False,GROSS_ONLY
+3150,Creek Gate Tower 2,Dubai Creek Harbour,2162.0,R4,201600.0,3.88,False,,,,False,False,False,GROSS_ONLY
+7461,The Atria,Business Bay,559.0,R3,61701.0,4.5,False,,,,False,False,False,GROSS_ONLY
+6217,Golf Links,Emaar South,4309.0,R4,122880.0,3.0,True,18.36,2026.0,GOLF LINKS ,False,False,False,SERVICE_CHARGE_ADJUSTED
+5075,Ellington Beach House,Palm Jumeirah,1028.0,R4,139200.0,3.24,False,,,,False,False,False,GROSS_ONLY
+2178,Binghatti House,Jumeirah village circle,310.0,R2,43200.0,5.92,False,,,,False,False,False,GROSS_ONLY
+7953,Imperial Avenue,Downtown Dubai,3124.0,R4,327360.0,2.56,False,,,,False,False,False,GROSS_ONLY
+1821,Binghatti Crescent,Jumeirah village circle,1682.0,R4,100800.0,4.2,False,,,,False,False,False,GROSS_ONLY
+6099,The Cove,Dubai Creek Harbour,1839.0,R2,220800.0,3.68,False,,,,False,False,False,GROSS_ONLY
+2170,DAMAC Majestine,Business Bay,1420.0,R4,121928.0,4.35,False,,,,False,False,False,GROSS_ONLY
+3043,Casa Aura Residence,Dubai South,407.0,R3,38400.0,3.84,False,,,,False,False,False,GROSS_ONLY
+7848,Samana Hills,Arjan,1561.0,R4,91200.0,4.35,False,,,,False,False,False,GROSS_ONLY
+8057,Binghatti Royale,Jumeirah village circle,2102.0,R2,172800.0,3.84,False,,,,False,False,False,GROSS_ONLY
+5370,Trillionaire Residences,Business Bay,796.0,R4,86400.0,3.46,False,,,,False,False,False,GROSS_ONLY
+717,Bayshore at Creek Beach,Dubai Creek Harbour,1493.0,R4,158400.0,3.52,False,,,,False,False,False,GROSS_ONLY
+7170,AG Tower,Business Bay,820.0,R2,78720.0,4.5,False,,,,False,False,False,GROSS_ONLY
+5407,Uniestate Prime Tower,Jumeirah village circle,2972.0,R4,134400.0,5.23,False,,,,False,False,False,GROSS_ONLY
+7349,Cayan Tower,Dubai Marina,2912.0,R2,317520.0,5.29,False,,,,False,False,False,GROSS_ONLY
+4975,Trillionaire Residences,Business Bay,1346.0,R4,120000.0,2.67,False,,,,False,False,False,GROSS_ONLY
+7005,Binghatti Dusk,Jumeirah village circle,424.0,R3,43200.0,4.4,False,,,,False,False,False,GROSS_ONLY
+564,Marina Star,Dubai Marina,2497.0,R4,192000.0,1.75,False,,,,False,False,False,GROSS_ONLY
+533,Binghatti Galaxy,Jumeirah village circle,1353.0,R4,86400.0,3.32,False,,,,False,False,False,GROSS_ONLY
+2505,Serenity Lakes 2,Jumeirah village circle,2270.0,R4,120019.0,5.22,False,,,,False,False,False,GROSS_ONLY
+4938,Nobles Tower,Business Bay,1186.0,R4,105600.0,3.06,False,,,,False,False,False,GROSS_ONLY
+4665,Raffles The Palm Dubai,Palm Jumeirah,972.0,R4,139200.0,3.09,False,,,,False,False,False,GROSS_ONLY
+7622,The Pad by Omniyat,Business Bay,1215.0,R4,110400.0,4.09,False,,,,False,False,False,GROSS_ONLY
+4165,Ahad Residences,Business Bay,1625.0,R2,187200.0,5.72,True,20.26,2026.0,Ahad Residences,False,False,False,SERVICE_CHARGE_ADJUSTED
+5712,Imperial Avenue,Downtown Dubai,5198.0,R4,1872000.0,7.49,False,,,,False,False,False,GROSS_ONLY
+5366,Marina Arcade Tower,Dubai Marina,5324.0,R4,451201.0,4.24,False,,,,False,False,False,GROSS_ONLY
+2381,Mama Residences,Business Bay,447.0,R3,59904.0,3.74,False,,,,False,False,False,GROSS_ONLY
+6003,Raffles The Palm Dubai,Palm Jumeirah,2333.0,R4,216720.0,1.92,False,,,,False,False,False,GROSS_ONLY
+6246,The Palm Tower,Palm Jumeirah,1055.0,R2,240000.0,2.4,False,,,,False,False,False,GROSS_ONLY

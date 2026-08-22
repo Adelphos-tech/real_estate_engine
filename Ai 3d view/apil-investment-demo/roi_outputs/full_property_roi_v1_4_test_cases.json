@@ -1,0 +1,94 @@
+{
+  "A": {
+    "pass": true,
+    "status": "INCOMPLETE"
+  },
+  "B": {
+    "pass": true,
+    "status": "INCOMPLETE"
+  },
+  "C": {
+    "pass": true,
+    "status": "INCOMPLETE"
+  },
+  "D": {
+    "pass": true,
+    "status": "INCOMPLETE"
+  },
+  "E": {
+    "pass": true,
+    "status": "CALCULATED",
+    "cum": 650000.0,
+    "cap": 612730.0,
+    "total": 1262730.0,
+    "roi": 44.9
+  },
+  "F": {
+    "pass": true,
+    "cum": 65000.0,
+    "expected": 65000.0
+  },
+  "G": {
+    "pass": true,
+    "cum": 195000.0,
+    "expected": 195000.0
+  },
+  "H": {
+    "pass": true,
+    "cap": -387270.0,
+    "total": 262730.0
+  },
+  "I": {
+    "pass": true,
+    "total": -1382270.0,
+    "roi": -49.15
+  },
+  "J": {
+    "pass": true,
+    "roi": 133.8
+  },
+  "K": {
+    "pass": true,
+    "cap": -187270.0,
+    "expected": -187270.0
+  },
+  "L": {
+    "pass": true,
+    "status": "CALCULATED"
+  },
+  "M": {
+    "pass": true,
+    "tci": 2866270.0
+  },
+  "N": {
+    "pass": true,
+    "exit": 3445960.22
+  },
+  "O": {
+    "pass": true,
+    "exit": 3500000.0
+  },
+  "P": {
+    "pass": true,
+    "status": "INCOMPLETE"
+  },
+  "Q": {
+    "pass": true,
+    "status": "NOT_EVALUATED_OFFPLAN"
+  },
+  "R": {
+    "pass": true,
+    "cum": -250000.0
+  },
+  "S": {
+    "pass": true,
+    "roi1": 44.9,
+    "roi2": 44.9
+  },
+  "T": {
+    "pass": true,
+    "form1": 1262730.0,
+    "form2": 1262730.0,
+    "total": 1262730.0
+  }
+}

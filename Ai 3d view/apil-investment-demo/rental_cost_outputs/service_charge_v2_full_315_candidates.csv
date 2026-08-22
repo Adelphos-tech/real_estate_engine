@@ -1,0 +1,316 @@
+property_id,master_project,master_area,master_developer,resolved_property_type,project_match_status,service_charge_status,mollak_project,mollak_community,mollak_year,mollak_usage,rate_aed_sqft,location_parity,developer_support,qdrant_support,phase_support,area_basis_verified,production_eligible,failure_reason,match_method,gf_rate,rf_rate,gt_rate,component_match,budget_start,budget_end,name_similarity,token_overlap,review_confidence,review_classification
+4165,Ahad Residences,Business Bay,AHAD Group,Apartment,VERIFIED_EXACT,VERIFIED_CALCULABLE,,,,Residential,,True,True,True,False,True,True,,FROZEN_V1,,,,,,,,,,
+4744,Ahad Residences,Business Bay,AHAD Group,Apartment,VERIFIED_EXACT,VERIFIED_CALCULABLE,,,,Residential,,True,True,True,False,True,True,,FROZEN_V1,,,,,,,,,,
+6435,Pantheon Elysee,Jumeirah village circle,Pantheon Development,Apartment,VERIFIED_EXACT,VERIFIED_CALCULABLE,,,,Residential,,True,True,True,False,True,True,,FROZEN_V1,,,,,,,,,,
+7266,Ahad Residences,Business Bay,AHAD Group,Apartment,VERIFIED_EXACT,VERIFIED_CALCULABLE,,,,Residential,,True,True,True,False,True,True,,FROZEN_V1,,,,,,,,,,
+1074,Ahad Residences,Business Bay,AHAD Group,Apartment,VERIFIED_EXACT,VERIFIED_CALCULABLE,,,,Residential,,True,True,True,False,True,True,,FROZEN_V1,,,,,,,,,,
+7842,Azizi Feirouz,Al Furjan,Azizi,Apartment,VERIFIED_NORMALIZED_EXACT,VERIFIED_CALCULABLE,,,,Residential,,True,True,True,False,True,True,,FROZEN_V1,,,,,,,,,,
+409,Harbour Views 1,Dubai Creek Harbour,Emaar,Apartment,VERIFIED_ALIAS,HELD_COMPONENT_MISMATCH,HARBOUR VIEWS,Dubai Creek Harbour,2026.0,Residential,,True,True,True,False,True,False,HELD_COMPONENT_MISMATCH: GF+RF=16.89 ≠ GT=16.82,FROZEN_V1,,,,,,,,,,
+6217,Golf Links,Emaar South,Emaar,Villa,REJECTED_IDENTITY,NOT_MATCHED,GOLF LINKS,Dubai Sports City,,,,False,False,True,False,False,False,REJECTED_IDENTITY: MASTER Emaar South ≠ Mollak Dubai Sports City,FROZEN_V1,,,,,,,,,,
+2161,Hotel Edge by Rotana,Damac Hills 2,Damac,شقة فندقية,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6982,Binghatti Rose,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3201,Binghatti Nova,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6250,Binghatti Luna,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2666,Binghatti Lavender,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1181,Laya Mansion,Jumeirah village circle,Laya Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1829,Vita Grande,Jumeirah village circle,Meteora Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5128,Marina Star,Dubai Marina,Condor Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+844,Concept 7 Residences,Jumeirah village circle,Condor Developers,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.649,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+4699,creek edge,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7112,Q Gardens Loft,Jumeirah village circle,AYS Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4914,Franck Muller Yachting,Dubai Maritime City,landon gate,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2046,Franck Muller Yachting,Dubai Maritime City,landon gate,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3765,Q Gardens Loft,Jumeirah village circle,AYS Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7881,Dubai Creek Residence Tower 2 North,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,THE DUBAI CREEK RESIDENCES,Dubai Creek Harbour,,,,True,True,True,True,False,False,PHASE_FAMILY: MASTER has phase {'2'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.689,2.0,7.0,HIGH_CONFIDENCE_REVIEW
+1330,Oxford Gardens,Arjan,Iman Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2899,Q Gardens Loft,Jumeirah village circle,AYS Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5356,Terraces Marasi Drive,Business Bay,Keymaven,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2155,Divine Living,Arjan,Takmeel Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6836,Serenity Lakes 5,Jumeirah village circle,Gulf Land Property Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4753,Mayas Geneva,Jumeirah village circle,Sama Ezdan,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2459,UPSIDE Living,Business Bay,SRG Holding,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2578,La Residenza,Jumeirah village circle,Dalands Holding,Apartment,AMBIGUOUS,NOT_MATCHED,MAY RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.72,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+1467,Marriott Residences,Business Bay,Fortune 5,Apartment,AMBIGUOUS,NOT_MATCHED,Ahad Residences,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.706,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+6720,Beverly Boulevard,Arjan,HMB Homes Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2473,MBL Royal,Jumeirah Lake Towers,MAG Property Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8393,Canal Front Residences,Dubai Water Canal,Meydan Group,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6298,Binghatti Emerald,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2766,Binghatti Emerald,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6632,Oakley Square Residences,Jumeirah village circle,Ellington,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.683,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+507,The Paragon by IGO,Business Bay,Invest Group Overseas (IGO),Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+673,The Community Motor City,Dubai Motor City,Aqua Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1597,The Community Motor City,Dubai Motor City,Aqua Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6649,Park Lane by Heilbronn,Jumeirah village circle,Heilbronn Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4694,Creek Gate Tower 2,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8320,Eleganz,Jumeirah village circle,Danube,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5092,4Direction Residence 1,Dubai Land Residence Complex,4Direction Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7608,Vera Residences,Business Bay,Damac,Apartment,AMBIGUOUS,NOT_MATCHED,REVA RESIDENCES,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.867,0.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+3407,Emerge Residences,Meydan City,NAAS Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3375,Mayas Geneva,Jumeirah village circle,Sama Ezdan,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6350,Q Gardens Boutique Residences,Arjan,AYS Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2276,Park Lane by Heilbronn,Jumeirah village circle,Heilbronn Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6209,Concept 7 Residences,Jumeirah village circle,Condor Developers,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.649,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+5073,Luma22,Jumeirah village circle,TownX Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6695,Binghatti Amber,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2460,Creek Gate Tower 2,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7792,Luma21,Jumeirah village circle,TownX Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7663,48 Parkside,Arjan,Tabeer Starwood,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2725,saba 2,Jumeirah Lake Towers,Saba Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6540,The Autograph Residences,Jumeirah village circle,Green Group,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.634,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+93,Marina Star,Dubai Marina,Condor Developers,Duplex,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6277,Binghatti Emerald,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6430,Beverly Boulevard,Arjan,HMB Homes Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1620,SLS Dubai Hotels and Residences,Downtown Dubai,Wow Red,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+422,Golf Edge,Emaar South,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2838,Binghatti Rose,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3843,Beverly Boulevard,Arjan,HMB Homes Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+453,Aykon City Tower,Business Bay,Damac,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8066,The 100,Meydan City,The 100 LLC-FZ,بنتهاوس,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6835,LIV Residence,Dubai Marina,Liv,Apartment,AMBIGUOUS,NOT_MATCHED,BAYSIDE RESIDENCE,Dubai Marina,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.733,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+8201,Marquise Square,Business Bay,Seven Tides,Apartment,AMBIGUOUS,NOT_MATCHED,MARQUISE SQUARE TOWER,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.833,2.0,6.0,HIGH_CONFIDENCE_REVIEW
+1913,Creek Beach Orchid,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,CREEK HORIZON,Dubai Creek Harbour,,,,True,True,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.645,1.0,6.0,HIGH_CONFIDENCE_REVIEW
+601,Aura Residences,Jumeirah village circle,Grovy Developers,Apartment,AMBIGUOUS,NOT_MATCHED,MAY RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.786,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+1111,Oxford Gardens,Arjan,Iman Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5113,SLS Dubai Hotels and Residences,Downtown Dubai,Wow Red,دوبلكس,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1637,Oxford Gardens,Arjan,Iman Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6594,Creek Beach Orchid,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,CREEK HORIZON,Dubai Creek Harbour,,,,True,True,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.645,1.0,6.0,HIGH_CONFIDENCE_REVIEW
+7916,Divine Living,Arjan,Takmeel Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7020,Canal Front Residences,Dubai Water Canal,Meydan Group,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+897,creek edge,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2398,Binghatti Gardenia,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2730,Luma21,Jumeirah village circle,TownX Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7464,Plaza Residences 1,Jumeirah village circle,Sky Overseas Real Estate Development LLC,Apartment,AMBIGUOUS,NOT_MATCHED,MAY RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.71,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+4547,Gardenia Residency,Jumeirah village circle,Shaikhani Group,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.686,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+5009,Divine Living,Arjan,Takmeel Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1146,SLS Dubai Hotels and Residences,Downtown Dubai,Wow Red,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7278,Canal Front Residences,Dubai Water Canal,Meydan Group,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+365,Beverly Residence 2,Jumeirah village circle,HMB Homes Real Estate Development,Apartment,AMBIGUOUS,NOT_MATCHED,MAY RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.688,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+3508,The Community Motor City,Dubai Motor City,Aqua Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8369,Aura Residences,Jumeirah village circle,Grovy Developers,Apartment,AMBIGUOUS,NOT_MATCHED,MAY RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.786,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+7656,Concept 7 Residences,Jumeirah village circle,Condor Developers,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.649,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+2061,The Community Motor City,Dubai Motor City,Aqua Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+140,Yas Beach Residence,Yas Island,Siadah Development,Duplex,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4674,MBL Royal,Jumeirah Lake Towers,MAG Property Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5773,4Direction Residence 1,Dubai Land Residence Complex,4Direction Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5574,Serenity Lakes 2,Jumeirah village circle,Gulf Land Property Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3495,Mayas Geneva,Jumeirah village circle,Sama Ezdan,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6446,Yas Beach Residence,Yas Island,Siadah Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3666,Sunrise Bay,EMAAR Beachfront,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7682,Stax,Jumeirah village circle,Pasha1 Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8222,Flow Residences,Dubai Islands,Main Realty,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+253,The Paragon by IGO,Business Bay,Invest Group Overseas (IGO),Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2326,Binghatti Royale,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3834,MBL Royal,Jumeirah Lake Towers,MAG Property Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5945,The Paragon by IGO,Business Bay,Invest Group Overseas (IGO),Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5987,Yas Beach Residence,Yas Island,Siadah Development,دوبلكس,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2832,Westwood Grande Residences,Jumeirah village circle,Imtiaz,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.651,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+3097,Catch Residence by IGO,Jumeirah village circle,Invest Group Overseas (IGO),Apartment,AMBIGUOUS,NOT_MATCHED,HYATI RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.649,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+6923,Luma22,Jumeirah village circle,TownX Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1516,Azizi Amber,Al Furjan,Azizi,Apartment,AMBIGUOUS,NOT_MATCHED,AZIZI. YASAMINE,Al Furjan,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.72,1.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+1234,Yas Beach Residence,Yas Island,Siadah Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3955,Stax,Jumeirah village circle,Pasha1 Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3962,Q Gardens Boutique Residences,Arjan,AYS Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+793,Westwood Grande Residences,Jumeirah village circle,Imtiaz,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.651,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+8311,The Cape,Al Barari,Al Barari,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6163,Wellington Grand Villas,Meydan City,Wellington Developments,Villa,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7640,Binghatti Luna,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2989,Samana Sky Views,Dubai Production City,Samana,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1279,Marina Star,Dubai Marina,Condor Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6556,SOL Bay,Business Bay,Sol Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+983,SOL Bay,Business Bay,Sol Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4545,The Cove,Dubai Creek Harbour,Emaar,بنتهاوس,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6141,Q Gardens Loft,Jumeirah village circle,AYS Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7286,Binghatti Canal,Business Bay,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+101,Golf Edge,Emaar South,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5203,Urban Oasis by Missoni,Business Bay,Dar Global,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3830,The Paragon by IGO,Business Bay,Invest Group Overseas (IGO),Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7282,48 Parkside,Arjan,Tabeer Starwood,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4905,Raffles The Palm Dubai,Palm Jumeirah,Emerald Palace Group,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5981,Divine Elements,Dubai South,Takmeel Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6733,Divine Elements,Dubai South,Takmeel Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8220,The Palm Tower,Palm Jumeirah,Nakheel,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3706,Urban Oasis by Missoni,Business Bay,Dar Global,Penthouse,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6745,Urban Oasis by Missoni,Business Bay,Dar Global,Penthouse,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1068,Eleganz,Jumeirah village circle,Danube,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4209,4Direction Residence 1,Dubai Land Residence Complex,4Direction Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4389,Binghatti Crest,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4252,Emerge Residences,Meydan City,NAAS Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6235,The Palm Tower,Palm Jumeirah,Nakheel,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4524,Binghatti Twilight,Al Jadaf Waterfront,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5394,Vincitore Volare,Arjan,Vincitore,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5497,Aura Residences,Jumeirah village circle,Grovy Developers,Apartment,AMBIGUOUS,NOT_MATCHED,MAY RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.786,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+1459,Binghatti Royale,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7285,The Cove,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4046,Vincitore Volare,Arjan,Vincitore,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4997,Beverly Residence 2,Jumeirah village circle,HMB Homes Real Estate Development,Apartment,AMBIGUOUS,NOT_MATCHED,MAY RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.688,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+6530,Empire Residences,Jumeirah village circle,Peace Homes Development,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.882,0.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+6747,Emerge Residences,Meydan City,NAAS Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3231,Harbour Gate,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,HARBOUR VIEWS,Dubai Creek Harbour,,,,True,True,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.72,1.0,6.0,HIGH_CONFIDENCE_REVIEW
+5263,Oakley Square Residences,Jumeirah village circle,Ellington,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.683,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+7022,Park Town,Damac Hills,Damac,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+884,Canal Residence West,Dubai Sports City,Dubai Sports City LLC,Apartment,AMBIGUOUS,NOT_MATCHED,Canal Residence West 2,Dubai Sports City,,,,True,True,True,False,False,False,AMBIGUOUS: 6 candidates,,,,,,,,0.952,2.0,8.0,HIGH_CONFIDENCE_REVIEW
+1727,Luma21,Jumeirah village circle,TownX Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5402,The Pad by Omniyat,Business Bay,Omniyat,Apartment,AMBIGUOUS,NOT_MATCHED,THE OPUS BY OMNIYAT,Business Bay,,,,True,False,True,False,False,False,ONLY_DEVELOPER_TOKEN_OVERLAP: {'omniyat'},FUZZY_COMMUNITY,,,,,,,0.865,1.0,5.0,HIGH_CONFIDENCE_REVIEW
+1745,Binghatti Crest,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4041,Azizi Lina,Jebel Ali,Azizi,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+472,Binghatti Lavender,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4263,Harbour Gate,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,HARBOUR VIEWS,Dubai Creek Harbour,,,,True,True,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.72,1.0,6.0,HIGH_CONFIDENCE_REVIEW
+6327,Stax,Jumeirah village circle,Pasha1 Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+735,Harbour Gate,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,HARBOUR VIEWS,Dubai Creek Harbour,,,,True,True,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.72,1.0,6.0,HIGH_CONFIDENCE_REVIEW
+5081,Binghatti Crest,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4702,Canal Residence West,Dubai Sports City,Dubai Sports City LLC,Apartment,AMBIGUOUS,NOT_MATCHED,Canal Residence West 2,Dubai Sports City,,,,True,True,True,False,False,False,AMBIGUOUS: 6 candidates,,,,,,,,0.952,2.0,8.0,HIGH_CONFIDENCE_REVIEW
+3027,Binghatti Crescent,Jumeirah village circle,Binghatti,Apartment,AMBIGUOUS,NOT_MATCHED,HYATI RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.606,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+7457,Binghatti Tulip,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5612,Azizi Lina,Jebel Ali,Azizi,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+432,Creek Beach Orchid,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,CREEK HORIZON,Dubai Creek Harbour,,,,True,True,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.645,1.0,6.0,HIGH_CONFIDENCE_REVIEW
+4750,Canal Residence West,Dubai Sports City,Dubai Sports City LLC,Apartment,AMBIGUOUS,NOT_MATCHED,Canal Residence West 2,Dubai Sports City,,,,True,True,True,False,False,False,AMBIGUOUS: 6 candidates,,,,,,,,0.952,2.0,8.0,HIGH_CONFIDENCE_REVIEW
+5961,Vera Residences,Business Bay,Damac,Apartment,AMBIGUOUS,NOT_MATCHED,REVA RESIDENCES,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.867,0.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+7727,Oakley Square Residences,Jumeirah village circle,Ellington,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.683,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+3440,Royal Bay,Palm Jumeirah,Azizi,Apartment,AMBIGUOUS,NOT_MATCHED,ROYAL AMWAJ,Palm Jumeirah,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.7,1.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+1976,Uniestate Prime Tower,Jumeirah village circle,Uniestate Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1824,48 Parkside,Arjan,Tabeer Starwood,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2645,The Atria,Business Bay,Deyaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+87,Binghatti Amber,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3160,Marquise Square,Business Bay,Seven Tides,Apartment,AMBIGUOUS,NOT_MATCHED,MARQUISE SQUARE TOWER,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.833,2.0,6.0,HIGH_CONFIDENCE_REVIEW
+8262,Binghatti Orchid,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4872,Binghatti Canal,Business Bay,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5193,Serenity Lakes 2,Jumeirah village circle,Gulf Land Property Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7780,The Residence by Prestige One,Jumeirah village circle,Prestige One,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+107,Binghatti Lavender,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+914,Laya Mansion,Jumeirah village circle,Laya Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6630,The Autograph Residences,Jumeirah village circle,Green Group,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.634,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+800,Azizi Amber,Al Furjan,Azizi,Apartment,AMBIGUOUS,NOT_MATCHED,AZIZI. YASAMINE,Al Furjan,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.72,1.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+7669,Pantheon Elysee III,Jumeirah village circle,Pantheon Development,Apartment,AMBIGUOUS,NOT_MATCHED,PANTHEON ELYSEE,Jumeirah Village Circle,,,,True,False,True,True,False,False,PHASE_FAMILY: MASTER has phase {'iii'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.882,2.0,6.0,HIGH_CONFIDENCE_REVIEW
+5582,Marquise Square,Business Bay,Seven Tides,Apartment,AMBIGUOUS,NOT_MATCHED,MARQUISE SQUARE TOWER,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.833,2.0,6.0,HIGH_CONFIDENCE_REVIEW
+414,Binghatti Tulip,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2184,Grand Bleu Tower 1,EMAAR Beachfront,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5579,Creek Rise Tower 1,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,CREEKSIDE 18,Dubai Creek Harbour,,,,True,True,True,True,False,False,PHASE_FAMILY: MASTER has phase {'1'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.6,0.0,5.0,HIGH_CONFIDENCE_REVIEW
+6401,Divine Elements,Dubai South,Takmeel Real Estate Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4461,Eleganz,Jumeirah village circle,Danube,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2313,Binghatti Gardenia,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5683,Urban Oasis by Missoni,Business Bay,Dar Global,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3522,The Atria,Business Bay,Deyaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3451,Binghatti Onyx,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4817,Binghatti House,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5801,Empire Residences,Jumeirah village circle,Peace Homes Development,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.882,0.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+3265,DAMAC Majestine,Business Bay,Damac,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8028,Evelyn on the Park,Town Square Dubai,Nshama,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5303,Serenity Lakes 5,Jumeirah village circle,Gulf Land Property Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8120,Laya Mansion,Jumeirah village circle,Laya Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5528,Creek Rise Tower 1,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,CREEKSIDE 18,Dubai Creek Harbour,,,,True,True,True,True,False,False,PHASE_FAMILY: MASTER has phase {'1'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.6,0.0,5.0,HIGH_CONFIDENCE_REVIEW
+7449,Creek Rise Tower 1,Dubai Creek Harbour,Emaar,Apartment,AMBIGUOUS,NOT_MATCHED,CREEKSIDE 18,Dubai Creek Harbour,,,,True,True,True,True,False,False,PHASE_FAMILY: MASTER has phase {'1'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.6,0.0,5.0,HIGH_CONFIDENCE_REVIEW
+6056,Imperial Avenue,Downtown Dubai,Shapoorji Pallonji,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1656,AG Tower,Business Bay,Arabian Gulf Properties,Apartment,AMBIGUOUS,NOT_MATCHED,VERA TOWER ,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.778,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+7378,Urban Oasis by Missoni,Business Bay,Dar Global,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7918,The Residence by Prestige One,Jumeirah village circle,Prestige One,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5431,Pantheon Elysee II,Jumeirah village circle,Pantheon Development,Apartment,AMBIGUOUS,NOT_MATCHED,PANTHEON ELYSEE,Jumeirah Village Circle,,,,True,False,True,True,False,False,PHASE_FAMILY: MASTER has phase {'ii'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.909,2.0,6.0,HIGH_CONFIDENCE_REVIEW
+1118,Binghatti House,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2620,Avanti Tower,Business Bay,Damac,Apartment,AMBIGUOUS,NOT_MATCHED,VERA TOWER ,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.636,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+2965,Binghatti Onyx,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3766,Imperial Avenue,Downtown Dubai,Shapoorji Pallonji,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6032,Luma22,Jumeirah village circle,TownX Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1227,Sunrise Bay,EMAAR Beachfront,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6113,Bayshore at Creek Beach,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5860,LIV Residence,Dubai Marina,Liv,Apartment,AMBIGUOUS,NOT_MATCHED,BAYSIDE RESIDENCE,Dubai Marina,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.733,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+2951,Binghatti Orchid,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2265,Binghatti Amber,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7137,Binghatti Galaxy,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5156,Binghatti Canal,Business Bay,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3167,Binghatti Dusk,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3599,Pantheon Elysee II,Jumeirah village circle,Pantheon Development,Apartment,AMBIGUOUS,NOT_MATCHED,PANTHEON ELYSEE,Jumeirah Village Circle,,,,True,False,True,True,False,False,PHASE_FAMILY: MASTER has phase {'ii'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.909,2.0,6.0,HIGH_CONFIDENCE_REVIEW
+655,Pantheon Elysee III,Jumeirah village circle,Pantheon Development,Apartment,AMBIGUOUS,NOT_MATCHED,PANTHEON ELYSEE,Jumeirah Village Circle,,,,True,False,True,True,False,False,PHASE_FAMILY: MASTER has phase {'iii'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.882,2.0,6.0,HIGH_CONFIDENCE_REVIEW
+6176,Catch Residence by IGO,Jumeirah village circle,Invest Group Overseas (IGO),Apartment,AMBIGUOUS,NOT_MATCHED,HYATI RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.649,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+3901,Trillionaire Residences,Business Bay,Binghatti,Apartment,AMBIGUOUS,NOT_MATCHED,REVA RESIDENCES,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.684,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+2252,Imperial Avenue,Downtown Dubai,Shapoorji Pallonji,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3533,Aykon City Tower,Business Bay,Damac,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7292,Aykon City Tower,Business Bay,Damac,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1113,Binghatti Gardenia,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8019,DAMAC Majestine,Business Bay,Damac,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7841,Uniestate Prime Tower,Jumeirah village circle,Uniestate Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6904,creek edge,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3668,Nobles Tower,Business Bay,Tiger Properties,Apartment,AMBIGUOUS,NOT_MATCHED,VERA TOWER ,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.636,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+7061,azizi mina,Palm Jumeirah,Azizi,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+392,Marriott Residences,Business Bay,Fortune 5,Apartment,AMBIGUOUS,NOT_MATCHED,Ahad Residences,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.706,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+3190,azizi mina,Palm Jumeirah,Azizi,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7930,Muraba Residences,Palm Jumeirah,Muraba Properties,Apartment,AMBIGUOUS,NOT_MATCHED,TIARA RESIDENCE,Palm Jumeirah,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.75,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+6954,Terraces Marasi Drive,Business Bay,Keymaven,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6473,Empire Residences,Jumeirah village circle,Peace Homes Development,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.882,0.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+2378,7 Park Central By Meteora,Jumeirah village circle,Meteora Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6690,Samana Hills,Arjan,Samana,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3194,Sunrise Bay,EMAAR Beachfront,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3276,La Residenza,Jumeirah village circle,Dalands Holding,Apartment,AMBIGUOUS,NOT_MATCHED,MAY RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.72,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+1208,Marquise Square,Business Bay,Seven Tides,Apartment,AMBIGUOUS,NOT_MATCHED,MARQUISE SQUARE TOWER,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.833,2.0,6.0,HIGH_CONFIDENCE_REVIEW
+7157,The Atria,Business Bay,Deyaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6316,Me Do Re,Jumeirah Lake Towers,Me Do Re Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5216,Oxford Terraces 2,Jumeirah village circle,Iman Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1746,Binghatti Nova,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2185,Azizi Amber,Al Furjan,Azizi,Apartment,AMBIGUOUS,NOT_MATCHED,AZIZI. YASAMINE,Al Furjan,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.72,1.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+2859,Oxford Terraces 2,Jumeirah village circle,Iman Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3453,Samana Hills,Arjan,Samana,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1848,Binghatti Twilight,Al Jadaf Waterfront,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7299,The Residence by Prestige One,Jumeirah village circle,Prestige One,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2435,Royal Yacht Club Residence,Dubai Islands,Azimuth Development,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4695,Oxford Terraces 2,Jumeirah village circle,Iman Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2785,Vincitore Volare,Arjan,Vincitore,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+802,Azizi Amber,Al Furjan,Azizi,Apartment,AMBIGUOUS,NOT_MATCHED,AZIZI. YASAMINE,Al Furjan,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.72,1.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+6436,Jumeirah Asora Bay,La Mer,Meraas,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7246,Azizi Lina,Jebel Ali,Azizi,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2166,The Cove,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4286,Binghatti Galaxy,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7412,Serenity Lakes 5,Jumeirah village circle,Gulf Land Property Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5104,Binghatti Tulip,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5793,AG Tower,Business Bay,Arabian Gulf Properties,Apartment,AMBIGUOUS,NOT_MATCHED,VERA TOWER ,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.778,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+1298,Creek Rise Tower 1,Dubai Creek Harbour,Emaar,Townhouse,AMBIGUOUS,NOT_MATCHED,CREEKSIDE 18,Dubai Creek Harbour,,,,True,True,True,True,False,False,PHASE_FAMILY: MASTER has phase {'1'} not in Mollak; cannot assume shared budget,FUZZY_COMMUNITY,,,,,,,0.6,0.0,5.0,HIGH_CONFIDENCE_REVIEW
+5983,Raffles The Palm Dubai,Palm Jumeirah,Emerald Palace Group,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4432,Binghatti Rose,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4762,Ashton Park Residences,Jumeirah village circle,Mirfa,Apartment,AMBIGUOUS,NOT_MATCHED,HYATI RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.649,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+2266,Me Do Re,Jumeirah Lake Towers,Me Do Re Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3600,Bayshore at Creek Beach,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4140,Binghatti Gardenia,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1175,Me Do Re,Jumeirah Lake Towers,Me Do Re Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+556,Mosela Waterside Residences,The Greens,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5593,Me Do Re,Jumeirah Lake Towers,Me Do Re Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5513,Canal Residence West,Dubai Sports City,Dubai Sports City LLC,Apartment,AMBIGUOUS,NOT_MATCHED,Canal Residence West 2,Dubai Sports City,,,,True,True,True,False,False,False,AMBIGUOUS: 6 candidates,,,,,,,,0.952,2.0,8.0,HIGH_CONFIDENCE_REVIEW
+2816,Gardenia Residency,Jumeirah village circle,Shaikhani Group,Apartment,AMBIGUOUS,NOT_MATCHED,DEZIRE RESIDENCES,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.686,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+152,Marina Star,Dubai Marina,Condor Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1641,Ashton Park Residences,Jumeirah village circle,Mirfa,Apartment,AMBIGUOUS,NOT_MATCHED,HYATI RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.649,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+408,Binghatti Crescent,Jumeirah village circle,Binghatti,Apartment,AMBIGUOUS,NOT_MATCHED,HYATI RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.606,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+6627,Royal Bay,Palm Jumeirah,Azizi,Apartment,AMBIGUOUS,NOT_MATCHED,ROYAL AMWAJ,Palm Jumeirah,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.7,1.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+2199,LIV Residence,Dubai Marina,Liv,Apartment,AMBIGUOUS,NOT_MATCHED,BAYSIDE RESIDENCE,Dubai Marina,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.733,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+5319,LIV Residence,Dubai Marina,Liv,Apartment,AMBIGUOUS,NOT_MATCHED,BAYSIDE RESIDENCE,Dubai Marina,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.733,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+8327,Aykon City Tower,Business Bay,Damac,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3119,Marina Arcade Tower,Dubai Marina,Mada'in Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7426,Barari Views,Al Barari,Unknown,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5,Avanti Tower,Business Bay,Damac,Apartment,AMBIGUOUS,NOT_MATCHED,VERA TOWER ,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.636,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+7799,Avanti Tower,Business Bay,Damac,Apartment,AMBIGUOUS,NOT_MATCHED,VERA TOWER ,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.636,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+2236,Ashton Park Residences,Jumeirah village circle,Mirfa,Apartment,AMBIGUOUS,NOT_MATCHED,HYATI RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,AMBIGUOUS: 3 candidates,,,,,,,,0.649,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+4513,The Cove,Dubai Creek Harbour,Emaar,Townhouse,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3150,Creek Gate Tower 2,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7461,The Atria,Business Bay,Deyaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5075,Ellington Beach House,Palm Jumeirah,Ellington,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2178,Binghatti House,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7953,Imperial Avenue,Downtown Dubai,Shapoorji Pallonji,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+1821,Binghatti Crescent,Jumeirah village circle,Binghatti,Apartment,AMBIGUOUS,NOT_MATCHED,HYATI RESIDENCE,Jumeirah Village Circle,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.606,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+6099,The Cove,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2170,DAMAC Majestine,Business Bay,Damac,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+3043,Casa Aura Residence,Dubai South,AGN Skyline Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7848,Samana Hills,Arjan,Samana,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+8057,Binghatti Royale,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5370,Trillionaire Residences,Business Bay,Binghatti,Apartment,AMBIGUOUS,NOT_MATCHED,REVA RESIDENCES,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.684,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+717,Bayshore at Creek Beach,Dubai Creek Harbour,Emaar,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7170,AG Tower,Business Bay,Arabian Gulf Properties,Apartment,AMBIGUOUS,NOT_MATCHED,VERA TOWER ,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.778,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+5407,Uniestate Prime Tower,Jumeirah village circle,Uniestate Properties,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7349,Cayan Tower,Dubai Marina,Cayan Group,دوبلكس,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4975,Trillionaire Residences,Business Bay,Binghatti,Apartment,AMBIGUOUS,NOT_MATCHED,REVA RESIDENCES,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.684,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+7005,Binghatti Dusk,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+564,Marina Star,Dubai Marina,Condor Developers,Duplex,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+533,Binghatti Galaxy,Jumeirah village circle,Binghatti,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2505,Serenity Lakes 2,Jumeirah village circle,Gulf Land Property Developers,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+4938,Nobles Tower,Business Bay,Tiger Properties,Apartment,AMBIGUOUS,NOT_MATCHED,VERA TOWER ,Business Bay,,,,True,False,True,False,False,False,,FUZZY_COMMUNITY,,,,,,,0.636,0.0,3.0,MEDIUM_CONFIDENCE_REVIEW
+4665,Raffles The Palm Dubai,Palm Jumeirah,Emerald Palace Group,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+7622,The Pad by Omniyat,Business Bay,Omniyat,Apartment,AMBIGUOUS,NOT_MATCHED,THE OPUS BY OMNIYAT,Business Bay,,,,True,False,True,False,False,False,ONLY_DEVELOPER_TOKEN_OVERLAP: {'omniyat'},FUZZY_COMMUNITY,,,,,,,0.865,1.0,5.0,HIGH_CONFIDENCE_REVIEW
+5712,Imperial Avenue,Downtown Dubai,Shapoorji Pallonji,بنتهاوس,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+5366,Marina Arcade Tower,Dubai Marina,Mada'in Properties,دوبلكس,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+2381,Mama Residences,Business Bay,Kappa Acca Real Estate Development,Apartment,AMBIGUOUS,NOT_MATCHED,Ahad Residences,Business Bay,,,,True,False,True,False,False,False,AMBIGUOUS: 2 candidates,,,,,,,,0.867,0.0,4.0,MEDIUM_CONFIDENCE_REVIEW
+6003,Raffles The Palm Dubai,Palm Jumeirah,Emerald Palace Group,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,
+6246,The Palm Tower,Palm Jumeirah,Nakheel,Apartment,NOT_MATCHED,NOT_MATCHED,,,,,,False,False,False,False,False,False,,,,,,,,,0.0,0.0,,

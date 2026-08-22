@@ -1,0 +1,3577 @@
+{
+  "profiles": {
+    "3f92c8b1-41f6-443e-b240-12ecc09d9c23": {
+      "id": "3f92c8b1-41f6-443e-b240-12ecc09d9c23",
+      "created_at": "2026-08-17T17:35:49.630938",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "test-broad-profile": {
+      "id": "test-broad-profile",
+      "created_at": "2026-08-17T23:36:03.769846",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 500000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY",
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "ANY"
+        ],
+        "bedrooms": [
+          "ANY"
+        ],
+        "locations": [
+          "Jumeirah Village Circle",
+          "Dubai Hills Estate",
+          "Dubai South"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 500000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "ANY"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "321be4e5-695f-45e9-85c2-87cf1741f17b": {
+      "id": "321be4e5-695f-45e9-85c2-87cf1741f17b",
+      "created_at": "2026-08-17T18:08:34.617008",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "LT_2_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 0,
+        "preferred_horizon_years_max": 2,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "broad-test-v2": {
+      "id": "broad-test-v2",
+      "created_at": "2026-08-18T10:00:00",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 0,
+        "budget_max_aed": 10000000,
+        "horizon": "5_10_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY",
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "ANY"
+        ],
+        "bedrooms": [
+          "ANY"
+        ],
+        "locations": [
+          "Dubai Wide"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 5,
+        "preferred_horizon_years_max": 10,
+        "budget_min": 0,
+        "budget_max": 10000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "ANY"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "319a32f7-ffcf-4c02-8408-18cbde567827": {
+      "id": "319a32f7-ffcf-4c02-8408-18cbde567827",
+      "created_at": "2026-08-17T18:42:19.462064",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1500000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1500000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "3fc1269c-c2ec-4516-a836-2a4a33c5664f": {
+      "id": "3fc1269c-c2ec-4516-a836-2a4a33c5664f",
+      "created_at": "2026-08-17T18:42:50.602692",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 7500000,
+        "horizon": "LT_2_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 0,
+        "preferred_horizon_years_max": 2,
+        "budget_min": 1000000,
+        "budget_max": 7500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "70275070-189e-4f64-aba9-9b394293a553": {
+      "id": "70275070-189e-4f64-aba9-9b394293a553",
+      "created_at": "2026-08-17T19:07:34.773253",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 4000000,
+        "budget_max_aed": 24000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "VILLA"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Business Bay"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 4000000,
+        "budget_max": 24000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "VILLA"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "7ae38e63-4bd7-4b67-98f6-cb0a2af16925": {
+      "id": "7ae38e63-4bd7-4b67-98f6-cb0a2af16925",
+      "created_at": "2026-08-17T19:51:25.320025",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "7c6b3b87-2e77-4070-9190-2a8bcb0da878": {
+      "id": "7c6b3b87-2e77-4070-9190-2a8bcb0da878",
+      "created_at": "2026-08-17T20:34:13.563611",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "14870001-45c7-4ad1-b226-211768064f32": {
+      "id": "14870001-45c7-4ad1-b226-211768064f32",
+      "created_at": "2026-08-17T20:34:55.414804",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2000000,
+        "budget_max_aed": 9500000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 2000000,
+        "budget_max": 9500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "d5fe1851-7816-48c1-876a-dfe316096a40": {
+      "id": "d5fe1851-7816-48c1-876a-dfe316096a40",
+      "created_at": "2026-08-17T21:11:28.691959",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2000000,
+        "budget_max_aed": 6500000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 2000000,
+        "budget_max": 6500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "cded7585-4497-47b0-a77b-20f9ef62b758": {
+      "id": "cded7585-4497-47b0-a77b-20f9ef62b758",
+      "created_at": "2026-08-18T04:42:35.941092",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "ebdf8158-3562-4200-9a2f-0924c4c1e8cd": {
+      "id": "ebdf8158-3562-4200-9a2f-0924c4c1e8cd",
+      "created_at": "2026-08-18T04:43:57.965864",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "9d2fa5ed-c0de-4685-b5b5-16480cc523f8": {
+      "id": "9d2fa5ed-c0de-4685-b5b5-16480cc523f8",
+      "created_at": "2026-08-18T04:45:14.276244",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 3500000,
+        "budget_max_aed": 27000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "VILLA"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Palm Jumeirah"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 3500000,
+        "budget_max": 27000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "VILLA"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "30fe55cf-a1fe-45df-8903-68133f5bef22": {
+      "id": "30fe55cf-a1fe-45df-8903-68133f5bef22",
+      "created_at": "2026-08-18T04:47:09.356640",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 2000000,
+        "budget_max_aed": 12000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 2000000,
+        "budget_max": 12000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "0cde6fa6-2af2-42f1-b5a5-cb21e4f04a08": {
+      "id": "0cde6fa6-2af2-42f1-b5a5-cb21e4f04a08",
+      "created_at": "2026-08-18T04:52:14.590481",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1500000,
+        "budget_max_aed": 9000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1500000,
+        "budget_max": 9000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "665bf699-48ab-4eea-b9e3-684a189beec8": {
+      "id": "665bf699-48ab-4eea-b9e3-684a189beec8",
+      "created_at": "2026-08-18T04:54:26.373696",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "28928113-8611-45ff-b65b-958138c7212c": {
+      "id": "28928113-8611-45ff-b65b-958138c7212c",
+      "created_at": "2026-08-18T05:03:20.889416",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "7bf9bb5a-2f94-4ae9-9be9-a62fa02e106d": {
+      "id": "7bf9bb5a-2f94-4ae9-9be9-a62fa02e106d",
+      "created_at": "2026-08-18T05:04:00.103131",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2500000,
+        "budget_max_aed": 8500000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 2500000,
+        "budget_max": 8500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "abd4b10c-ad5c-40d0-8f89-427945bc76ab": {
+      "id": "abd4b10c-ad5c-40d0-8f89-427945bc76ab",
+      "created_at": "2026-08-18T05:18:35.945314",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "1"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "df2553fc-744c-45c4-8bf6-5c50343707d1": {
+      "id": "df2553fc-744c-45c4-8bf6-5c50343707d1",
+      "created_at": "2026-08-19T09:40:47.358634",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "6b7e859f-11aa-41fa-8125-7883860a9ced": {
+      "id": "6b7e859f-11aa-41fa-8125-7883860a9ced",
+      "created_at": "2026-08-19T14:43:03.066732",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 3000000,
+        "budget_max_aed": 11000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Business Bay"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 3000000,
+        "budget_max": 11000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "4de2f481-b912-47a2-b052-a6bb8dfd5c69": {
+      "id": "4de2f481-b912-47a2-b052-a6bb8dfd5c69",
+      "created_at": "2026-08-19T14:46:08.401031",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2500000,
+        "budget_max_aed": 12000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Downtown Dubai"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 2500000,
+        "budget_max": 12000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "4d790ee5-ff48-4a3e-a7d9-a15b2593db32": {
+      "id": "4d790ee5-ff48-4a3e-a7d9-a15b2593db32",
+      "created_at": "2026-08-19T19:16:34.600373",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "DUBAI_WIDE",
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "40b53827-a9dd-482e-b50a-285adfb68756": {
+      "id": "40b53827-a9dd-482e-b50a-285adfb68756",
+      "created_at": "2026-08-19T19:16:47.123334",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "c2d4f045-2aa1-401c-a639-14315bea110a": {
+      "id": "c2d4f045-2aa1-401c-a639-14315bea110a",
+      "created_at": "2026-08-20T18:09:33.210599",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "edcde3ab-7ae9-467d-92bf-f263d2f5f477": {
+      "id": "edcde3ab-7ae9-467d-92bf-f263d2f5f477",
+      "created_at": "2026-08-20T18:37:57.120665",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "cc76c15c-4d4e-4bab-aede-e6f11e0af76a": {
+      "id": "cc76c15c-4d4e-4bab-aede-e6f11e0af76a",
+      "created_at": "2026-08-21T04:48:54.746057",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 2000000,
+        "budget_max_aed": 5500000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 2000000,
+        "budget_max": 5500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "4e8b40a6-ae19-4602-94cd-af8c914d37bf": {
+      "id": "4e8b40a6-ae19-4602-94cd-af8c914d37bf",
+      "created_at": "2026-08-21T06:05:22.831654",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "881d610b-e745-45d2-8407-a01c44393985": {
+      "id": "881d610b-e745-45d2-8407-a01c44393985",
+      "created_at": "2026-08-21T06:05:40.728396",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "7bd0a567-5b4e-4886-bf40-aa840e23742e": {
+      "id": "7bd0a567-5b4e-4886-bf40-aa840e23742e",
+      "created_at": "2026-08-21T06:06:18.786961",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2000000,
+        "budget_max_aed": 6500000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 2000000,
+        "budget_max": 6500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "c53fd4a4-4b31-4fdb-9294-e69c683ff620": {
+      "id": "c53fd4a4-4b31-4fdb-9294-e69c683ff620",
+      "created_at": "2026-08-21T06:10:16.388120",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "9e8597a5-3e67-482d-aeea-050bc1326982": {
+      "id": "9e8597a5-3e67-482d-aeea-050bc1326982",
+      "created_at": "2026-08-21T20:51:21.000732",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE"
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "preferred_horizon_years_min": 2,
+        "preferred_horizon_years_max": 5,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "7a35ea04-8b60-45c8-9f80-8157e5b7ca2e": {
+      "id": "7a35ea04-8b60-45c8-9f80-8157e5b7ca2e",
+      "created_at": "2026-08-22T06:06:14.881768",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "58ceffc5-8ba1-4ab8-b6a3-9bd6b8f23ac0": {
+      "id": "58ceffc5-8ba1-4ab8-b6a3-9bd6b8f23ac0",
+      "created_at": "2026-08-22T06:06:15.243232",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "LT_2_YEARS",
+        "investment_horizon_years": 2.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 24
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 2.0,
+        "investment_horizon_months": 24,
+        "preferred_horizon_years_min": 2.0,
+        "preferred_horizon_years_max": 2.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "b38444cb-55ce-4660-bc3c-c078eb4a0b22": {
+      "id": "b38444cb-55ce-4660-bc3c-c078eb4a0b22",
+      "created_at": "2026-08-22T06:06:15.421606",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 2.5,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 30
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 2.5,
+        "investment_horizon_months": 30,
+        "preferred_horizon_years_min": 2.5,
+        "preferred_horizon_years_max": 2.5,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "67415644-10bf-4461-a143-55b940bc5919": {
+      "id": "67415644-10bf-4461-a143-55b940bc5919",
+      "created_at": "2026-08-22T06:06:15.425753",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 7.5,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 90
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 7.5,
+        "investment_horizon_months": 90,
+        "preferred_horizon_years_min": 7.5,
+        "preferred_horizon_years_max": 7.5,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "528bb421-3216-4062-b296-e4628cd02c68": {
+      "id": "528bb421-3216-4062-b296-e4628cd02c68",
+      "created_at": "2026-08-22T06:06:34.491218",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "4b9f18f8-16ac-45ac-a386-95e294780e0e": {
+      "id": "4b9f18f8-16ac-45ac-a386-95e294780e0e",
+      "created_at": "2026-08-22T06:07:02.045496",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "ed874f68-4754-4f5f-927c-b544443a44b3": {
+      "id": "ed874f68-4754-4f5f-927c-b544443a44b3",
+      "created_at": "2026-08-22T06:07:19.373477",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "f006e903-f6a6-4d86-9890-1420944cb2a8": {
+      "id": "f006e903-f6a6-4d86-9890-1420944cb2a8",
+      "created_at": "2026-08-22T06:08:20.486476",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "0d246c0d-f974-4aeb-914e-3afc80c82189": {
+      "id": "0d246c0d-f974-4aeb-914e-3afc80c82189",
+      "created_at": "2026-08-22T06:08:59.454336",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "LT_2_YEARS",
+        "investment_horizon_years": 2.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 24
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 2.0,
+        "investment_horizon_months": 24,
+        "preferred_horizon_years_min": 2.0,
+        "preferred_horizon_years_max": 2.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "82e31c7d-f048-4c8d-b908-4d0d37c4e3f0": {
+      "id": "82e31c7d-f048-4c8d-b908-4d0d37c4e3f0",
+      "created_at": "2026-08-22T06:08:59.632162",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 2.5,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 30
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 2.5,
+        "investment_horizon_months": 30,
+        "preferred_horizon_years_min": 2.5,
+        "preferred_horizon_years_max": 2.5,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "fb62f565-78d1-42d9-9e09-397cbbf37cb0": {
+      "id": "fb62f565-78d1-42d9-9e09-397cbbf37cb0",
+      "created_at": "2026-08-22T06:08:59.635545",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 7.5,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 90
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 7.5,
+        "investment_horizon_months": 90,
+        "preferred_horizon_years_min": 7.5,
+        "preferred_horizon_years_max": 7.5,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "498c8ade-4403-442f-bc52-23f0f8efcbde": {
+      "id": "498c8ade-4403-442f-bc52-23f0f8efcbde",
+      "created_at": "2026-08-22T06:09:47.372347",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "d43a8f10-c4d1-4d20-816f-2b581faf1f1b": {
+      "id": "d43a8f10-c4d1-4d20-816f-2b581faf1f1b",
+      "created_at": "2026-08-22T06:14:33.771185",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "5fde4a20-a756-4d46-af04-83d251e78c71": {
+      "id": "5fde4a20-a756-4d46-af04-83d251e78c71",
+      "created_at": "2026-08-22T06:14:34.862559",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "LT_2_YEARS",
+        "investment_horizon_years": 1.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 12
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 1.0,
+        "investment_horizon_months": 12,
+        "preferred_horizon_years_min": 1.0,
+        "preferred_horizon_years_max": 1.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "eff5798b-9c69-4aef-9487-55fd86a7318d": {
+      "id": "eff5798b-9c69-4aef-9487-55fd86a7318d",
+      "created_at": "2026-08-22T06:14:34.866616",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 2.5,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 30
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 2.5,
+        "investment_horizon_months": 30,
+        "preferred_horizon_years_min": 2.5,
+        "preferred_horizon_years_max": 2.5,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "3acc21e8-a59a-4ed7-970e-d1a6a3b6e33f": {
+      "id": "3acc21e8-a59a-4ed7-970e-d1a6a3b6e33f",
+      "created_at": "2026-08-22T06:17:08.617686",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "fd598163-f30e-4e6e-b8ac-0529008dc42c": {
+      "id": "fd598163-f30e-4e6e-b8ac-0529008dc42c",
+      "created_at": "2026-08-22T06:25:03.803378",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "271b9f55-263b-4dfb-a401-5fa3228a5818": {
+      "id": "271b9f55-263b-4dfb-a401-5fa3228a5818",
+      "created_at": "2026-08-22T06:25:05.291694",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 1.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 12
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 1.0,
+        "investment_horizon_months": 12,
+        "preferred_horizon_years_min": 1.0,
+        "preferred_horizon_years_max": 1.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "305a4d76-199b-41b0-a314-316a744c94e5": {
+      "id": "305a4d76-199b-41b0-a314-316a744c94e5",
+      "created_at": "2026-08-22T06:25:05.295453",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 2.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 24
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 2.0,
+        "investment_horizon_months": 24,
+        "preferred_horizon_years_min": 2.0,
+        "preferred_horizon_years_max": 2.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "2ede417a-6f22-4805-9bff-238567655c32": {
+      "id": "2ede417a-6f22-4805-9bff-238567655c32",
+      "created_at": "2026-08-22T06:25:05.299540",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "67e2508d-91ed-4a86-9ef4-11f11d442bbd": {
+      "id": "67e2508d-91ed-4a86-9ef4-11f11d442bbd",
+      "created_at": "2026-08-22T06:25:05.302816",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 4.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 48
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 4.0,
+        "investment_horizon_months": 48,
+        "preferred_horizon_years_min": 4.0,
+        "preferred_horizon_years_max": 4.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "e9b11c5b-b27f-4128-abdb-88b3b9ad6ec2": {
+      "id": "e9b11c5b-b27f-4128-abdb-88b3b9ad6ec2",
+      "created_at": "2026-08-22T06:25:05.306703",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 5.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 60
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 5.0,
+        "investment_horizon_months": 60,
+        "preferred_horizon_years_min": 5.0,
+        "preferred_horizon_years_max": 5.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "2487c7e3-b84f-4faf-9484-50594ca1dee1": {
+      "id": "2487c7e3-b84f-4faf-9484-50594ca1dee1",
+      "created_at": "2026-08-22T06:25:05.311360",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 2.5,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 30
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 2.5,
+        "investment_horizon_months": 30,
+        "preferred_horizon_years_min": 2.5,
+        "preferred_horizon_years_max": 2.5,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "77272fbb-f355-4749-8726-fc344e89ec05": {
+      "id": "77272fbb-f355-4749-8726-fc344e89ec05",
+      "created_at": "2026-08-22T06:25:05.315678",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 7.5,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 90
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 7.5,
+        "investment_horizon_months": 90,
+        "preferred_horizon_years_min": 7.5,
+        "preferred_horizon_years_max": 7.5,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "e0f471e1-5ece-4cc7-914c-d91d3853dd36": {
+      "id": "e0f471e1-5ece-4cc7-914c-d91d3853dd36",
+      "created_at": "2026-08-22T06:26:10.206494",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "db31ea88-51d4-4d74-8459-0292984e8250": {
+      "id": "db31ea88-51d4-4d74-8459-0292984e8250",
+      "created_at": "2026-08-22T06:30:12.899339",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "6dd5b437-7537-4d9b-a7dd-b5c0a4985b26": {
+      "id": "6dd5b437-7537-4d9b-a7dd-b5c0a4985b26",
+      "created_at": "2026-08-22T06:35:32.115910",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2000000,
+        "budget_max_aed": 4500000,
+        "horizon": "LT_2_YEARS",
+        "investment_horizon_years": 2.0,
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "OFFPLAN"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 24
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "investment_horizon_years": 2.0,
+        "investment_horizon_months": 24,
+        "preferred_horizon_years_min": 2.0,
+        "preferred_horizon_years_max": 2.0,
+        "budget_min": 2000000,
+        "budget_max": 4500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "bb640056-a2b9-4531-9fd2-6a91d23e6d98": {
+      "id": "bb640056-a2b9-4531-9fd2-6a91d23e6d98",
+      "created_at": "2026-08-22T06:36:07.966899",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2000000,
+        "budget_max_aed": 7000000,
+        "horizon": "LT_2_YEARS",
+        "investment_horizon_years": 2.0,
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Palm Jumeirah"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 24
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "investment_horizon_years": 2.0,
+        "investment_horizon_months": 24,
+        "preferred_horizon_years_min": 2.0,
+        "preferred_horizon_years_max": 2.0,
+        "budget_min": 2000000,
+        "budget_max": 7000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "2282ff10-26db-404b-90d6-7203cdc7f05b": {
+      "id": "2282ff10-26db-404b-90d6-7203cdc7f05b",
+      "created_at": "2026-08-22T06:36:33.509312",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2500000,
+        "budget_max_aed": 10500000,
+        "horizon": "LT_2_YEARS",
+        "investment_horizon_years": 2.0,
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Dubai Hills Estate"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 24
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "investment_horizon_years": 2.0,
+        "investment_horizon_months": 24,
+        "preferred_horizon_years_min": 2.0,
+        "preferred_horizon_years_max": 2.0,
+        "budget_min": 2500000,
+        "budget_max": 10500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "b2d845e0-3bb3-4836-9d41-4abbe4b91439": {
+      "id": "b2d845e0-3bb3-4836-9d41-4abbe4b91439",
+      "created_at": "2026-08-22T06:36:58.786553",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 3500000,
+        "budget_max_aed": 20500000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Palm Jumeirah"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 3500000,
+        "budget_max": 20500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "c371aaa5-ea6c-485d-bb16-87d5b6eb54d0": {
+      "id": "c371aaa5-ea6c-485d-bb16-87d5b6eb54d0",
+      "created_at": "2026-08-22T06:37:14.645368",
+      "answers": {
+        "investment_objective": "RENTAL_INCOME",
+        "budget_min_aed": 2000000,
+        "budget_max_aed": 6500000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "3"
+        ],
+        "locations": [
+          "Business Bay"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 2000000,
+        "budget_max": 6500000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "INCOME",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "f43a0b19-2436-4a0f-9fac-cba1e62a5db9": {
+      "id": "f43a0b19-2436-4a0f-9fac-cba1e62a5db9",
+      "created_at": "2026-08-22T06:47:25.129903",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "eef5820d-46bf-47fb-8f60-f23da0d792e3": {
+      "id": "eef5820d-46bf-47fb-8f60-f23da0d792e3",
+      "created_at": "2026-08-22T06:54:51.435309",
+      "answers": {
+        "investment_objective": "CAPITAL_APPRECIATION",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 3000000,
+        "horizon": "LT_2_YEARS",
+        "investment_horizon_years": 2.0,
+        "risk_tolerance": "CONSERVATIVE",
+        "property_status": [
+          "READY"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2"
+        ],
+        "locations": [
+          "Jumeirah Village Circle"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 24
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "LOW",
+        "investment_horizon_years": 2.0,
+        "investment_horizon_months": 24,
+        "preferred_horizon_years_min": 2.0,
+        "preferred_horizon_years_max": 2.0,
+        "budget_min": 1000000,
+        "budget_max": 3000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "GROWTH",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "68348f7a-a050-4182-ab39-0e43ef0990c9": {
+      "id": "68348f7a-a050-4182-ab39-0e43ef0990c9",
+      "created_at": "2026-08-22T06:58:53.572878",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    },
+    "74774375-b59f-4453-9cb3-5b65509fd474": {
+      "id": "74774375-b59f-4453-9cb3-5b65509fd474",
+      "created_at": "2026-08-22T07:01:09.501590",
+      "answers": {
+        "investment_objective": "BALANCED",
+        "budget_min_aed": 1000000,
+        "budget_max_aed": 5000000,
+        "horizon": "2_5_YEARS",
+        "investment_horizon_years": 3.0,
+        "risk_tolerance": "MODERATE",
+        "property_status": [
+          "EITHER"
+        ],
+        "property_types": [
+          "APARTMENT"
+        ],
+        "bedrooms": [
+          "2",
+          "3"
+        ],
+        "locations": [
+          "DUBAI_WIDE"
+        ],
+        "developer_preference": "NO_PREFERENCE",
+        "liquidity_preference": "MODERATE",
+        "investment_horizon_months": 36
+      },
+      "normalized_profile": {
+        "preferred_risk_level": "MEDIUM",
+        "investment_horizon_years": 3.0,
+        "investment_horizon_months": 36,
+        "preferred_horizon_years_min": 3.0,
+        "preferred_horizon_years_max": 3.0,
+        "budget_min": 1000000,
+        "budget_max": 5000000,
+        "preferred_developer_grade_floor": "ANY",
+        "income_vs_growth_priority": "BALANCED",
+        "property_type_preferences": [
+          "APARTMENT"
+        ],
+        "evaluable_preferences": [
+          "budget",
+          "location",
+          "risk_compatibility",
+          "horizon_compatibility",
+          "property_status",
+          "property_type",
+          "bedrooms"
+        ],
+        "not_evaluated_preferences": [],
+        "unknown_preferences": [
+          "rental_yield"
+        ]
+      }
+    }
+  }
+}

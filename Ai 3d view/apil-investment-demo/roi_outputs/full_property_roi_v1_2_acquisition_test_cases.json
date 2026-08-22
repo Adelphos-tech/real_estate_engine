@@ -1,0 +1,61 @@
+{
+  "A": {
+    "pass": true,
+    "level": "OFFICIAL_ACQUISITION_COSTS",
+    "total_cash_invested": null
+  },
+  "B": {
+    "pass": true,
+    "level": "PARTIAL_ACQUISITION_COSTS",
+    "dld_amount": 54000.0,
+    "buyer_status": "USER_CONFIRMED_DEFAULT"
+  },
+  "C": {
+    "pass": true,
+    "level": "PARTIAL_ACQUISITION_COSTS"
+  },
+  "D": {
+    "pass": true,
+    "level": "PARTIAL_ACQUISITION_COSTS"
+  },
+  "E": {
+    "pass": true,
+    "level": "COMPLETE_ACQUISITION_COSTS",
+    "tci": 2812270.0,
+    "complete": 112270.0
+  },
+  "F": {
+    "pass": true,
+    "dld_amount": 108000.0,
+    "buyer_status": "USER_OVERRIDE"
+  },
+  "G": {
+    "pass": true,
+    "broker_amount": 0.0,
+    "broker_mode": "NO_BROKER_COST"
+  },
+  "H": {
+    "pass": true,
+    "dev_amount": 0.0,
+    "dev_mode": "NO_DEVELOPER_ADMIN_FEE"
+  },
+  "I": {
+    "pass": true,
+    "level": "PARTIAL_ACQUISITION_COSTS",
+    "trustee_status": "MISSING"
+  },
+  "J": {
+    "pass": true,
+    "valid": false,
+    "errors": [
+      "trustee_fee must be >= 0, got -5000"
+    ]
+  },
+  "K": {
+    "pass": true,
+    "valid": false,
+    "errors": [
+      "DLD buyer share cannot exceed 4% (total fee), got 5.0"
+    ]
+  }
+}

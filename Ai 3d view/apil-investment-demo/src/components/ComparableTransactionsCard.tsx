@@ -12,11 +12,13 @@ const naNum = (v: any, suffix = ''): string => {
 export function ComparableTransactionsCard({ property, project }: { property: any; project?: any }) {
   const askingPrice = property.askingPrice || 0;
   const comparablePrice = property.comparablePrice || 0;
-  const hasComparables = comparablePrice != null && comparablePrice > 0;
-  const calculatedDiff = hasComparables && askingPrice > 0
+  const explicitDiff = property.priceDifference;
+  const hasExplicitDiff = explicitDiff !== null && explicitDiff !== undefined;
+  const hasComparables = (comparablePrice != null && comparablePrice > 0) || hasExplicitDiff;
+  const calculatedDiff = (comparablePrice != null && comparablePrice > 0) && askingPrice > 0
     ? Math.round(((askingPrice - comparablePrice) / comparablePrice) * 1000) / 10
     : null;
-  const priceDifference = calculatedDiff !== null ? calculatedDiff : (property.priceDifference || 0);
+  const priceDifference = hasExplicitDiff ? explicitDiff : (calculatedDiff !== null ? calculatedDiff : 0);
 
   // Price per sqft comparison
   const priceSqft = property.priceSqft || 0;

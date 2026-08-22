@@ -45,7 +45,7 @@ from config.settings import (
 )
 
 QDRANT_URL = "http://localhost:6333"
-QDRANT_COLLECTION = "Dubai_real_estate_calculation_data_"
+QDRANT_COLLECTION = "properties_collection"
 
 
 # ─── Qdrant fetch ───
@@ -56,7 +56,7 @@ def _scroll_qdrant_offplan(limit: int = 200, offset: str | None = None) -> tuple
     body: dict[str, Any] = {"limit": limit, "with_payload": True, "with_vector": False}
     if offset:
         body["offset"] = offset
-    body["filter"] = {"must": [{"key": "is_off_plan", "match": {"value": True}}]}
+    body["filter"] = {"must": [{"key": "status", "match": {"value": "Offplan"}}]}
     req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
     resp = json.loads(urllib.request.urlopen(req, timeout=60).read())
     points = resp["result"]["points"]

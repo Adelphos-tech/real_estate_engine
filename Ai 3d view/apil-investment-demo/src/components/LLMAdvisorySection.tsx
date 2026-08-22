@@ -54,7 +54,6 @@ interface LLMAdvisorySectionProps {
     timeline?: string;
     property_type?: string;
     bedrooms?: string;
-    financing?: string;
   };
 }
 
@@ -77,7 +76,7 @@ export function LLMAdvisorySection({ propertyId, propertySlug, propertyType, top
     // Otherwise fetch from advisory endpoint — pass real investor profile as query params
     const baseUrl = 'http://87.200.15.174:8090';
     const profileParams = profile
-      ? `?goal=${encodeURIComponent(profile.goal || 'balanced')}&budget=${encodeURIComponent(profile.budget || '')}&risk=${encodeURIComponent(profile.risk || 'medium')}&timeline=${encodeURIComponent(profile.timeline || '')}&property_type=${encodeURIComponent(profile.property_type || '')}&bedrooms=${encodeURIComponent(profile.bedrooms || 'any')}&financing=${encodeURIComponent(profile.financing || '')}`
+      ? `?goal=${encodeURIComponent(profile.goal || 'balanced')}&budget=${encodeURIComponent(profile.budget || '')}&risk=${encodeURIComponent(profile.risk || 'medium')}&timeline=${encodeURIComponent(profile.timeline || '')}&property_type=${encodeURIComponent(profile.property_type || '')}&bedrooms=${encodeURIComponent(profile.bedrooms || 'any')}`
       : '';
     const url = propertyType === 'ready' && propertyId
       ? `${baseUrl}/properties/ready/${propertyId}/advisory${profileParams}`

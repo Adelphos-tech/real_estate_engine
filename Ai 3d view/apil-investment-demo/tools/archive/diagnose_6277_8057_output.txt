@@ -1,0 +1,95 @@
+/Users/apple/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[FallbackDLD] Loaded 112749 transactions across 265 areas
+[DLDStore] Loaded 99391 transactions across 3065 projects
+
+================================================================================
+PROPERTY 6277
+================================================================================
+
+--- API RESPONSE ---
+canonical benchmark_method: CANONICAL_DLD
+canonical benchmark_tier: LEVEL_1
+canonical is_fallback: False
+canonical production_eligible: False
+canonical validation_status: VERIFIED_PRODUCTION
+canonical transaction_count: 0
+canonical median: None
+market_context_source: AREA_FALLBACK
+production_signal_source: NONE
+level2 from API: NO
+area_fallback from API: YES
+  area benchmark_median: 2400534.07
+  area transaction_count: 40
+  area benchmark_tier: LEVEL_3
+  area production_eligible: False
+
+--- DIRECT LEVEL 2 CALL ---
+level2 benchmark_median: None
+level2 transaction_count: 0
+level2 usable_for_investment: False
+level2 evidence_level: NO_SAME_BEDROOM_EVIDENCE
+level2 match_confidence: none
+level2 insufficient_evidence_reason: No usable DLD transactions for 'Binghatti Emerald' (no transactions matching bedroom=3)
+level2 warnings: []
+level2 total transactions: 0
+
+--- DIRECT AREA CALL ---
+area eligible: True
+area level: AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE
+area estimated_benchmark_aed: 2400534.07
+area final_transaction_count: 40
+area raw_transaction_count: 68
+area unique_project_count: 18
+area mapped_dld_area: JUMEIRAH VILLAGE CIRCLE
+area excluded_reasons: []
+area total comparables: 40
+  comp[0]: price=2690000.0, area=JUMEIRAH VILLAGE CIRCLE, project=DIAMOND VIEWS 3 - VILLAS A, status=Ready
+  comp[1]: price=2900000.0, area=JUMEIRAH VILLAGE CIRCLE, project=, status=Ready
+  comp[2]: price=2300002.68, area=JUMEIRAH VILLAGE CIRCLE, project=Luma Park Views, status=Ready
+
+================================================================================
+PROPERTY 8057
+================================================================================
+
+--- API RESPONSE ---
+canonical benchmark_method: CANONICAL_DLD
+canonical benchmark_tier: LEVEL_1
+canonical is_fallback: False
+canonical production_eligible: False
+canonical validation_status: VERIFIED_PRODUCTION
+canonical transaction_count: 1
+canonical median: 2900000.0
+market_context_source: LEVEL_2_FALLBACK
+production_signal_source: NONE
+level2 from API: YES
+  level2 benchmark_median: 2900000.0
+  level2 transaction_count: 1
+  level2 benchmark_tier: LEVEL_2
+  level2 production_eligible: False
+area_fallback from API: NO
+
+--- DIRECT LEVEL 2 CALL ---
+level2 benchmark_median: 2900000.0
+level2 transaction_count: 1
+level2 usable_for_investment: False
+level2 evidence_level: EXACT_PROJECT_SAME_BEDROOM_STATUS_BROADENED
+level2 match_confidence: low
+level2 insufficient_evidence_reason: None
+level2 warnings: ['Low sample size (1 transactions)']
+level2 total transactions: 1
+  tx[0]: price=2900000.0, area=JUMEIRAH VILLAGE CIRCLE, procedure=Sale
+
+--- DIRECT AREA CALL ---
+area eligible: True
+area level: AREA_SAME_BEDROOM_SIZE_ADJUSTED_EVIDENCE
+area estimated_benchmark_aed: 3550368.62
+area final_transaction_count: 27
+area raw_transaction_count: 68
+area unique_project_count: 19
+area mapped_dld_area: JUMEIRAH VILLAGE CIRCLE
+area excluded_reasons: []
+area total comparables: 27
+  comp[0]: price=1750000.0, area=JUMEIRAH VILLAGE CIRCLE, project=PULSE SMART RESIDENCE, status=Ready
+  comp[1]: price=3650000.0, area=JUMEIRAH VILLAGE CIRCLE, project=, status=Ready
+  comp[2]: price=2900000.0, area=JUMEIRAH VILLAGE CIRCLE, project=, status=Ready

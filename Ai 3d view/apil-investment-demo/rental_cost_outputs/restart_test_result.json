@@ -1,0 +1,8 @@
+{
+  "test": "restart_behavior",
+  "persistence_mode": "EPHEMERAL_USER_SESSION",
+  "store_type": "in-memory dict",
+  "expected_after_restart": "inputs disappear",
+  "contradicts_declared_mode": false,
+  "pass": true
+}

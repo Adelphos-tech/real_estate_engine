@@ -1,0 +1,68 @@
+{
+  "A": {
+    "pass": true,
+    "net": 120812.68
+  },
+  "B": {
+    "pass": true
+  },
+  "C": {
+    "pass": true,
+    "note": "EPHEMERAL \u2014 inputs disappear on restart (by design)"
+  },
+  "D": {
+    "pass": true
+  },
+  "E": {
+    "pass": true,
+    "net": 95892.68
+  },
+  "F": {
+    "pass": true,
+    "net": 120812.68
+  },
+  "G": {
+    "pass": true
+  },
+  "H": {
+    "pass": true,
+    "net": 115560.68
+  },
+  "I": {
+    "pass": true
+  },
+  "J": {
+    "pass": true
+  },
+  "K": {
+    "pass": true,
+    "status": 422
+  },
+  "L": {
+    "pass": true,
+    "status": 422
+  },
+  "M": {
+    "pass": true,
+    "status": 422
+  },
+  "N": {
+    "pass": true,
+    "net": -43987.32
+  },
+  "O": {
+    "pass": true
+  },
+  "P": {
+    "pass": true,
+    "note": "No user_scope \u2192 defaults to 'anonymous', no inputs \u2192 SERVICE_CHARGE_ADJUSTED"
+  },
+  "Q": {
+    "pass": true,
+    "note": "Demo mode \u2014 client can send arbitrary user_scope. Expected limitation without real auth."
+  },
+  "R": {
+    "pass": true,
+    "note": "No database \u2014 ephemeral in-memory store"
+  }
+}

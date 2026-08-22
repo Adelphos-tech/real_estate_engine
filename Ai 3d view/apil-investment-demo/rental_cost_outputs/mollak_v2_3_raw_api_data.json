@@ -1,0 +1,130 @@
+{
+  "Harbour Views": [
+    {
+      "group_name": "Harbour Views",
+      "group_id": 310544607,
+      "year": 2026,
+      "usage": "Residential",
+      "gf": 15.61,
+      "rf": 1.28,
+      "income": 0.07,
+      "gt": 16.82,
+      "reconciled": 16.82,
+      "recon_diff": 0.0,
+      "budget_start": "01/01/2026",
+      "budget_end": "31/12/2026",
+      "charge_categories": "Services=1.95; Maintenance=2.75; Improvement=0.38; Utilities Services=6.86; Management Services =1.02; Insurance=0.31; Master Community =2.34"
+    }
+  ],
+  "Marquise Square Tower": [
+    {
+      "group_name": "Marquise Square Tower",
+      "group_id": 5963582,
+      "year": 2026,
+      "usage": "Residential",
+      "gf": 15.85,
+      "rf": 1.09,
+      "income": 0.09,
+      "gt": 16.85,
+      "reconciled": 16.85,
+      "recon_diff": 0.0,
+      "budget_start": "01/01/2026",
+      "budget_end": "31/12/2026",
+      "charge_categories": "Services=3.05; Maintenance=4.03; Utilities Services=6.95; Management Services =0.66; Insurance=0.59; Master Community =0.57"
+    }
+  ],
+  "THE DUBAI CREEK RESIDENCES": [
+    {
+      "group_name": "The Dubai Creek Residences",
+      "group_id": 106778868,
+      "year": 2026,
+      "usage": "Residential",
+      "gf": 16.15,
+      "rf": 0.57,
+      "income": 0.22,
+      "gt": 16.5,
+      "reconciled": 16.5,
+      "recon_diff": 0.0,
+      "budget_start": "01/01/2026",
+      "budget_end": "31/12/2026",
+      "charge_categories": "Services=2.65; Maintenance=2.69; Improvement=0.39; Utilities Services=6.57; Management Services =1.04; Insurance=0.3; Master Community =2.51"
+    }
+  ],
+  "Canal Residence West (Phase 1)": [
+    {
+      "group_name": "Canal Residence West ( Phase 1 )",
+      "group_id": 93425,
+      "year": 2018,
+      "usage": "Residential",
+      "gf": 3.11,
+      "rf": 0,
+      "income": 0,
+      "gt": 3.11,
+      "reconciled": 3.11,
+      "recon_diff": 0.0,
+      "budget_start": "01/10/2018",
+      "budget_end": "31/12/2018",
+      "charge_categories": "Services=0.53; Maintenance=0.44; Utilities Services=1.5; Management Services =0.23; Insurance=0.06; Master Community =0.35"
+    },
+    {
+      "group_name": "Canal Residence West - Phase I - European - Residential",
+      "group_id": 372997847,
+      "year": 2026,
+      "usage": "Residential",
+      "gf": 13.34,
+      "rf": 0.76,
+      "income": 0.18,
+      "gt": 13.92,
+      "reconciled": 13.92,
+      "recon_diff": 0.0,
+      "budget_start": "01/01/2026",
+      "budget_end": "31/12/2026",
+      "charge_categories": "Services=1.77; Maintenance=2.42; Utilities Services=6.04; Management Services =0.93; Insurance=0.29; Master Community =1.89"
+    },
+    {
+      "group_name": "Canal Residence West - Phase I - Venetian - Residential",
+      "group_id": 373042254,
+      "year": 2026,
+      "usage": "Residential",
+      "gf": 13.33,
+      "rf": 0.76,
+      "income": 0.18,
+      "gt": 13.91,
+      "reconciled": 13.91,
+      "recon_diff": 0.0,
+      "budget_start": "01/01/2026",
+      "budget_end": "31/12/2026",
+      "charge_categories": "Services=1.77; Maintenance=2.39; Utilities Services=6.04; Management Services =0.93; Insurance=0.3; Master Community =1.9"
+    },
+    {
+      "group_name": "Canal Residence West - Phase I - Mediterranean - Residential",
+      "group_id": 104185015,
+      "year": 2020,
+      "usage": "Residential",
+      "gf": 14.39,
+      "rf": 0.85,
+      "income": 0.24,
+      "gt": 15.0,
+      "reconciled": 15.0,
+      "recon_diff": 0.0,
+      "budget_start": "01/01/2020",
+      "budget_end": "31/12/2020",
+      "charge_categories": "Services=2.25; Maintenance=2.65; Improvement=0.34; Utilities Services=6.12; Management Services =1; Insurance=0.27; Master Community =1.76"
+    },
+    {
+      "group_name": "Canal Residence West - Phase I - Mediterranean - Residential",
+      "group_id": 373042044,
+      "year": 2026,
+      "usage": "Residential",
+      "gf": 13.36,
+      "rf": 0.76,
+      "income": 0.18,
+      "gt": 13.94,
+      "reconciled": 13.94,
+      "recon_diff": 0.0,
+      "budget_start": "01/01/2026",
+      "budget_end": "31/12/2026",
+      "charge_categories": "Services=1.77; Maintenance=2.42; Utilities Services=6.04; Management Services =0.93; Insurance=0.3; Master Community =1.9"
+    }
+  ]
+}

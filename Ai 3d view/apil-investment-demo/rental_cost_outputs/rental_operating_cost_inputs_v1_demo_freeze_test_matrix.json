@@ -1,0 +1,75 @@
+{
+  "A": {
+    "pass": true,
+    "level": "SERVICE_CHARGE_ADJUSTED"
+  },
+  "B": {
+    "pass": true,
+    "level": "PARTIAL_OPERATING_COSTS",
+    "vac_loss": 8160.0
+  },
+  "C": {
+    "pass": true,
+    "level": "PARTIAL_OPERATING_COSTS"
+  },
+  "D": {
+    "pass": true,
+    "level": "NET_RENTAL",
+    "net": 113372.68,
+    "yield": 4.2,
+    "expected_net": 113372.68,
+    "expected_yield": 4.2
+  },
+  "E": {
+    "pass": true,
+    "mgmt_source": "SELF_MANAGED",
+    "mgmt_cost": 0,
+    "net": 125372.68,
+    "expected": 125372.68
+  },
+  "F": {
+    "pass": true,
+    "sc_eligible": false,
+    "level": "PARTIAL_OPERATING_COSTS"
+  },
+  "G": {
+    "pass": true,
+    "net": -43027.32,
+    "expected": -43027.32
+  },
+  "H": {
+    "pass": true,
+    "net_409": 125372.68,
+    "net_8201": 97582.9,
+    "exp_409": 125372.68,
+    "exp_8201": 97582.9
+  },
+  "I": {
+    "pass": true,
+    "x_net": 125372.68,
+    "y_net": 100212.68,
+    "exp_x": 125372.68,
+    "exp_y": 100212.68
+  },
+  "J": {
+    "pass": true,
+    "store_type": "dict"
+  },
+  "K": {
+    "pass": true,
+    "x_after": "MISSING",
+    "y_after": "AVAILABLE"
+  },
+  "L": {
+    "pass": true,
+    "status": 422
+  },
+  "M": {
+    "pass": true,
+    "status": 422
+  },
+  "N": {
+    "pass": true,
+    "status": 422
+  }
+}

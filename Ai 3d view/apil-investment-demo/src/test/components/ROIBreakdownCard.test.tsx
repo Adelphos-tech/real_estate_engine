@@ -45,6 +45,6 @@ describe('ROIBreakdownCard', () => {
 
   it('shows plain English explainer', () => {
     render(<ROIBreakdownCard property={mockPropertyFull} />);
-    expect(screen.getByText(/healthy rental yield|below the 5%|lose money/i)).toBeInTheDocument();
+    expect(screen.getByText(/Slightly above area average|below the 5%|lose money/i)).toBeInTheDocument();
   });
 });

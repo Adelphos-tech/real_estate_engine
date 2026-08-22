@@ -104,7 +104,7 @@ export function formatAED(n: number | null | undefined): string {
   if (n === null || n === undefined || isNaN(n)) return 'N/A';
   const abs = Math.abs(n);
   const sign = n < 0 ? '-' : '';
-  if (abs >= 1_000_000) return `AED ${sign}${(abs / 1_000_000).toFixed(2)}M`;
+  if (abs >= 1_000_000) return `AED ${sign}${(abs / 1_000_000).toFixed(1)}M`;
   if (abs >= 1_000) return `AED ${sign}${(abs / 1_000).toFixed(0)}K`;
   return `AED ${n.toLocaleString()}`;
 }

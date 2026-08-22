@@ -1,0 +1,9 @@
+property_id,property_name,resolved_status,rental_tier,annual_rent_estimate_aed,unit_size_sqft,mollak_project_name,match_method,service_charge_year,service_charge_rate_aed_sqft,annual_service_charge_aed,income_after_service_charges_aed,master_current_price_aed,gross_rental_yield_pct,yield_after_service_charges_pct,source,verification_status,arithmetic_sc_ok,arithmetic_income_ok,arithmetic_yield_ok
+4744,Ahad Residences,Ready,R4,163200.0,2308.0,Ahad Residences,EXACT,2026,20.26,46760.08,116439.92,4700000,3.47,2.48,DLD/Mollak official,VERIFIED,True,True,True
+6435,Pantheon Elysee,Ready,R2,67200.0,763.0,PANTHEON ELYSEE,EXACT,2025,14.6,11139.8,56060.2,848999,7.92,6.6,DLD/Mollak official,VERIFIED,True,True,True
+7266,Ahad Residences,Ready,R2,110400.0,894.0,Ahad Residences,EXACT,2026,20.26,18112.44,92287.56,1800000,6.13,5.13,DLD/Mollak official,VERIFIED,True,True,True
+1074,Ahad Residences,Ready,R2,76800.0,453.0,Ahad Residences,EXACT,2026,20.26,9177.78,67622.22,1250000,6.14,5.41,DLD/Mollak official,VERIFIED,True,True,True
+6217,Golf Links,Ready,R4,122880.0,4309.0,GOLF LINKS ,EXACT,2026,18.36,79113.24,43766.76,4100000,3.0,1.07,DLD/Mollak official,VERIFIED,True,True,True
+4165,Ahad Residences,Ready,R2,187200.0,1625.0,Ahad Residences,EXACT,2026,20.26,32922.5,154277.5,3270000,5.72,4.72,DLD/Mollak official,VERIFIED,True,True,True
+7842,Azizi Feirouz,Ready,R2,70560.0,1008.0,AZIZI. FEIROUZ,EXACT_AFTER_NORMALIZATION,2026,12.11,12206.88,58353.12,1020000,6.92,5.72,DLD/Mollak official,VERIFIED,True,True,True
+409,Harbour Views 1,Ready,R4,163200.0,1526.0,HARBOUR VIEWS,,2026,16.82,25667.32,137532.68,2700000,6.04,5.09,DLD/Mollak official,,True,True,True

@@ -10,7 +10,6 @@ export default defineConfig({
       '/investors': 'http://localhost:8000',
       '/opportunities': 'http://localhost:8000',
       '/properties': 'http://localhost:8000',
-      '/compare': 'http://localhost:8000',
       '/developers': 'http://localhost:8000',
     },
   },

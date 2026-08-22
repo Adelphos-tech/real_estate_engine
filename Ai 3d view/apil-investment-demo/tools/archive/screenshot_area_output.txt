@@ -1,0 +1,54 @@
+
+=== Navigating to http://127.0.0.1:5173/property/6277?debug=benchmarks ===
+[DEBUG] [vite] connecting...
+[INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[DEBUG] [vite] connected.
+Page contains 'Failed to fetch': false
+Screenshot saved: e2e/screenshots/property_6277_Binghatti_Emerald_Area_Fallback.png
+
+=== Navigating to http://127.0.0.1:5173/property/3201?debug=benchmarks ===
+[DEBUG] [vite] connecting...
+[DEBUG] [vite] connected.
+[INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+Page contains 'Failed to fetch': false
+Screenshot saved: e2e/screenshots/property_3201_Binghatti_Nova_Area_Fallback.png
+
+=== Navigating to http://127.0.0.1:5173/property/3983?debug=benchmarks ===
+[DEBUG] [vite] connecting...
+[INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[DEBUG] [vite] connected.
+Page contains 'Failed to fetch': false
+Screenshot saved: e2e/screenshots/property_3983_Sapphire_32_Area_Fallback.png
+
+=== Navigating to http://127.0.0.1:5173/property/7061?debug=benchmarks ===
+[DEBUG] [vite] connecting...
+[INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[DEBUG] [vite] connected.
+Page contains 'Failed to fetch': false
+Screenshot saved: e2e/screenshots/property_7061_Azizi_Mina_Area_Fallback.png
+
+=== Navigating to http://127.0.0.1:5173/property/8201?debug=benchmarks ===
+[DEBUG] [vite] connecting...
+[DEBUG] [vite] connected.
+[INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+Page contains 'Failed to fetch': false
+Screenshot saved: e2e/screenshots/property_8201_Marquise_Square_Area_Fallback.png
+
+=== Navigating to http://127.0.0.1:5173/property/8057?debug=benchmarks ===
+[DEBUG] [vite] connecting...
+[INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[DEBUG] [vite] connected.
+Page contains 'Failed to fetch': false
+Screenshot saved: e2e/screenshots/property_8057_Binghatti_Royale_Level2.png

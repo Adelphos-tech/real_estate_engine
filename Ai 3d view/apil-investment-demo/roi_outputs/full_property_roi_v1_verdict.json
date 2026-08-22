@@ -1,0 +1,120 @@
+{
+  "verdict": "FULL_PROPERTY_ROI_V1_INPUT_AUDIT_COMPLETE",
+  "phase": "FULL_PROPERTY_ROI_V1_INPUT_AUDIT",
+  "status": "RESEARCH_ONLY_NOT_IMPLEMENTED",
+
+  "summary": {
+    "TOTAL_PROPERTY_COUNT": 2614,
+    "READY_PROPERTY_COUNT": 321,
+    "OFFPLAN_PROPERTY_COUNT": 2293,
+    "PURCHASE_PRICE_AVAILABLE_COUNT": 2614,
+    "ANNUAL_RENT_AVAILABLE_COUNT": 300,
+    "SC_ELIGIBLE_COUNT": 12,
+    "INCOME_AFTER_SC_AVAILABLE_COUNT": 12,
+    "NET_RENTAL_INPUT_AVAILABLE_COUNT": 0,
+    "ACQUISITION_COST_VERIFIED_COUNT": 0,
+    "BROKER_PURCHASE_COST_AVAILABLE_COUNT": 0,
+    "HOLDING_PERIOD_AVAILABLE_COUNT": 0,
+    "EXIT_VALUE_AVAILABLE_COUNT": 0,
+    "SELLING_COST_AVAILABLE_COUNT": 0,
+    "FULL_ROI_CALCULABLE_COUNT": 0
+  },
+
+  "ready_only_summary": {
+    "READY_PURCHASE_PRICE_AVAILABLE": 321,
+    "READY_ANNUAL_RENT_AVAILABLE": 283,
+    "READY_SC_ELIGIBLE": 12,
+    "READY_ALL_PREREQ_MET": 12,
+    "READY_FULL_ROI_CALCULABLE": 0
+  },
+
+  "top_missing_inputs": [
+    {"input": "net_rental_income", "missing_count": 2614, "reason": "Requires user inputs (ephemeral) + verified SC (only 12 have it)"},
+    {"input": "acquisition_costs", "missing_count": 2614, "reason": "Not in system — DLD 4% is derivable but not stored"},
+    {"input": "broker_purchase_cost", "missing_count": 2614, "reason": "Not in system — USER_INPUT required"},
+    {"input": "holding_period", "missing_count": 2614, "reason": "Not in system — USER_INPUT required"},
+    {"input": "exit_value", "missing_count": 2614, "reason": "Not in system — USER_INPUT required"},
+    {"input": "selling_costs", "missing_count": 2614, "reason": "Not in system — USER_INPUT required"},
+    {"input": "verified_service_charge", "missing_count": 2602, "reason": "Only 12 properties have SC V2 eligibility"},
+    {"input": "annual_rent", "missing_count": 2314, "reason": "300 properties have rental estimates"}
+  ],
+
+  "recommended_v1_architecture": {
+    "leverage": "UNLEVERED",
+    "roi_type": "TOTAL_ROI_ONLY",
+    "annualized_return": "NOT_IMPLEMENTED_V1",
+    "irr": "NOT_IMPLEMENTED_V1",
+    "offplan_treatment": "READY_ONLY",
+    "multi_year_rental": "CONSTANT_ANNUAL_NET_RENTAL_INCOME"
+  },
+
+  "recommended_user_input_fields": [
+    "holding_period_years",
+    "broker_purchase_commission_aed or broker_purchase_commission_pct",
+    "exit_value_mode (USER_ENTERED_EXIT_PRICE | USER_ENTERED_ANNUAL_APPRECIATION_RATE | NO_EXIT_VALUE)",
+    "exit_sale_price_aed (if USER_ENTERED_EXIT_PRICE)",
+    "annual_appreciation_rate_pct (if USER_ENTERED_ANNUAL_APPRECIATION_RATE)",
+    "broker_selling_commission_aed or broker_selling_commission_pct",
+    "developer_noc_fee_aed"
+  ],
+
+  "recommended_verified_cost_fields": [
+    "dld_transfer_fee_aed = purchase_price_aed * 0.04 (OFFICIAL_VERIFIED, statutory — Executive Council Resolution No. 30 of 2013)",
+    "title_deed_fee_aed = AED 540 (OFFICIAL_VERIFIED, fixed)",
+    "trustee_office_fee_aed = AED 2000 or AED 4000 (OFFICIAL_VERIFIED, threshold-based)",
+    "knowledge_fee_aed = AED 10 (OFFICIAL_VERIFIED, fixed)",
+    "innovation_fee_aed = AED 10 (OFFICIAL_VERIFIED, fixed)"
+  ],
+
+  "recommended_roi_formula": {
+    "total_cash_invested_aed": "purchase_price_aed + acquisition_costs_aed",
+    "cumulative_net_rental_income_aed": "net_rental_income_aed * holding_period_years",
+    "net_sale_proceeds_aed": "exit_sale_price_aed - selling_costs_aed",
+    "total_return_aed": "cumulative_net_rental_income_aed + net_sale_proceeds_aed - total_cash_invested_aed",
+    "full_property_roi_pct": "total_return_aed / total_cash_invested_aed * 100"
+  },
+
+  "regression_counters": {
+    "ROI_AUDIT_CHANGED_ANNUAL_RENT": 0,
+    "ROI_AUDIT_CHANGED_GROSS_YIELD": 0,
+    "ROI_AUDIT_CHANGED_SC_ELIGIBILITY": 0,
+    "ROI_AUDIT_CHANGED_SC_RATE": 0,
+    "ROI_AUDIT_CHANGED_SC_ANNUAL": 0,
+    "ROI_AUDIT_CHANGED_INCOME_AFTER_SC": 0,
+    "ROI_AUDIT_CHANGED_YIELD_AFTER_SC": 0,
+    "ROI_AUDIT_CHANGED_NET_RENTAL_FORMULA": 0,
+    "ROI_AUDIT_CHANGED_MARKET_CONTEXT": 0,
+    "ROI_AUDIT_CHANGED_PRODUCTION_SIGNAL": 0,
+    "ROI_AUDIT_CHANGED_APIL_ADVANTAGE": 0,
+    "ROI_AUDIT_CHANGED_CONVENTIONAL_POSITION": 0,
+    "ROI_AUDIT_CHANGED_FIT_SCORE": 0,
+    "all_regression_counters_zero": true
+  },
+
+  "safety_counters": {
+    "ROI_AUDIT_AUTH_CHANGES": 0,
+    "DEFAULT_BROKER_COMMISSION_USED": 0,
+    "DEFAULT_APPRECIATION_USED": 0,
+    "MARKET_BENCHMARK_USED_AS_FUTURE_EXIT_PRICE": 0,
+    "IRR_WITHOUT_CASHFLOW_TIMING": 0,
+    "all_safety_counters_zero": true
+  },
+
+  "output_files": [
+    "roi_outputs/FULL_PROPERTY_ROI_V1_INPUT_AUDIT.md",
+    "roi_outputs/full_property_roi_v1_input_matrix.csv",
+    "roi_outputs/full_property_roi_v1_methodology.json",
+    "roi_outputs/full_property_roi_v1_verdict.json"
+  ],
+
+  "next_steps_required": [
+    "1. Build acquisition cost layer (DLD fees derivable from statutory rates; broker commission needs user input)",
+    "2. Add holding period user input field",
+    "3. Add exit value user input (exit price or appreciation rate)",
+    "4. Build selling cost layer (broker commission + NOC fee user input)",
+    "5. Expand SC V2 coverage (only 12/321 Ready properties have verified SC)",
+    "6. Persist operating cost inputs for ROI calculation (currently ephemeral)",
+    "7. Build ROI calculation engine (unlevered, total ROI only)",
+    "8. Build ROI UI card (display only, no frontend calculations)"
+  ]
+}

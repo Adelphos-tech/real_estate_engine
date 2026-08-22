@@ -1,0 +1,49 @@
+{
+  "verdict": "SERVICE_CHARGE_ADJUSTED_INCOME_V1_READY_FOR_UI",
+  "PROJECT_IDENTITY_VERIFIED_COUNT": 7,
+  "SERVICE_CHARGE_CALCULABLE_COUNT": 6,
+  "SERVICE_CHARGE_HELD_COUNT": 1,
+  "SERVICE_CHARGE_NO_MATCH_COUNT": 308,
+  "REJECTED_IDENTITY_COUNT": 1,
+  "EXACT_NAME_WITH_LOCATION_CONFLICT_USED": 0,
+  "eligible_property_ids": [
+    "4744",
+    "7842",
+    "6435",
+    "7266",
+    "1074",
+    "4165"
+  ],
+  "held_property_ids": [
+    {
+      "pid": "409",
+      "project": "Harbour Views 1",
+      "match_status": "VERIFIED_ALIAS",
+      "sc_status": "HELD_COMPONENT_MISMATCH",
+      "reason": "HELD_COMPONENT_MISMATCH: GF+RF=16.89 \u2260 GT=16.82"
+    }
+  ],
+  "rejected_property_ids": [
+    {
+      "pid": "6217",
+      "project": "Golf Links",
+      "reason": "REJECTED_IDENTITY: MASTER area='Emaar South' vs Mollak community='Dubai Sports City'"
+    }
+  ],
+  "arithmetic_counters": {
+    "SERVICE_CHARGE_ARITHMETIC_MISMATCH": 0,
+    "ADJUSTED_INCOME_ARITHMETIC_MISMATCH": 0,
+    "ADJUSTED_YIELD_ARITHMETIC_MISMATCH": 0
+  },
+  "safety_counters": {
+    "MATCH_HARDENING_CHANGED_RENT_ESTIMATE": 0,
+    "MATCH_HARDENING_CHANGED_RENT_TIER": 0,
+    "MATCH_HARDENING_CHANGED_GROSS_YIELD": 0,
+    "MATCH_HARDENING_CHANGED_MARKET_CONTEXT": 0,
+    "MATCH_HARDENING_CHANGED_PRODUCTION_SIGNAL": 0,
+    "MATCH_HARDENING_CHANGED_APIL_ADVANTAGE": 0,
+    "MATCH_HARDENING_CHANGED_CONVENTIONAL_POSITION": 0,
+    "MATCH_HARDENING_CHANGED_FIT_SCORE": 0
+  },
+  "NORMAL_RUNTIME_IMPORTS_COST_ENGINE": 0
+}

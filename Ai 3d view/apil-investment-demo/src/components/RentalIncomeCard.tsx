@@ -1,5 +1,5 @@
 import { formatAED } from './Shared';
-import type { RentalContext } from '../data/api';
+import type { RentalContext, ServiceChargeContext } from '../data/api';
 
 const EVIDENCE_BADGE: Record<string, { label: string; color: string }> = {
   STRONGEST: { label: 'Strongest Rental Evidence', color: 'bg-emerald-100 text-emerald-700 border-emerald-200' },
@@ -21,7 +21,7 @@ function formatAEDFull(n: number | null | undefined): string {
   return `AED ${n.toLocaleString()}`;
 }
 
-export function RentalIncomeCard({ rental }: { rental: RentalContext | null | undefined }) {
+export function RentalIncomeCard({ rental, serviceCharge }: { rental: RentalContext | null | undefined; serviceCharge?: ServiceChargeContext | null | undefined }) {
   if (!rental || rental.error) {
     return (
       <div className="bg-white rounded-2xl border border-apil-gray-200 p-5 md:p-6 mb-6 shadow-sm">
@@ -144,6 +144,70 @@ export function RentalIncomeCard({ rental }: { rental: RentalContext | null | un
           Gross Rental Yield is estimated annual rent divided by the property's current asking price, before service charges, vacancy, management fees, maintenance, financing and other ownership costs.
         </p>
       </div>
+
+      {/* ── Service Charge Adjusted Income (only for production_eligible properties) ── */}
+      {serviceCharge && serviceCharge.production_eligible === true && serviceCharge.annual_service_charge_aed !== null && (
+        <div className="mt-4 pt-4 border-t-2 border-apil-gray-100">
+          <div className="mb-3">
+            <p className="text-xs text-apil-gray-500 font-medium mb-1">Official Service Charges</p>
+            <p className="text-lg font-bold text-apil-gray-700">
+              {formatAEDFull(serviceCharge.annual_service_charge_aed)} <span className="text-sm font-normal text-apil-gray-400">/ year</span>
+            </p>
+            {serviceCharge.service_charge_source && (
+              <p className="text-[11px] text-apil-gray-400 mt-0.5">
+                Source: {serviceCharge.service_charge_source}
+                {serviceCharge.service_charge_year ? ` · Budget year: ${serviceCharge.service_charge_year}` : ''}
+              </p>
+            )}
+          </div>
+
+          <div className="mb-3 p-3 bg-emerald-50 rounded-xl">
+            <p className="text-xs text-apil-gray-500 font-medium mb-1">Income After Service Charges</p>
+            <p className="text-xl font-bold text-emerald-700">
+              {formatAEDFull(serviceCharge.income_after_service_charges_aed)} <span className="text-sm font-normal text-apil-gray-400">/ year</span>
+            </p>
+          </div>
+
+          <div className="mb-4 p-3 bg-emerald-50 rounded-xl">
+            <p className="text-xs text-apil-gray-500 font-medium mb-1">Yield After Service Charges</p>
+            <p className="text-xl font-bold text-emerald-700">
+              {serviceCharge.yield_after_service_charges_pct !== null ? `${serviceCharge.yield_after_service_charges_pct}%` : 'N/A'}
+            </p>
+          </div>
+
+          {/* Included / Not Included disclosure */}
+          <div className="mb-3 p-3 bg-apil-gray-50 rounded-lg">
+            {serviceCharge.included_costs && serviceCharge.included_costs.length > 0 && (
+              <div className="mb-2">
+                <p className="text-[11px] font-semibold text-apil-gray-500 mb-1">Included in this calculation:</p>
+                <ul className="space-y-0.5">
+                  {serviceCharge.included_costs.map((cost, i) => (
+                    <li key={i} className="text-[11px] text-apil-gray-600 flex items-start">
+                      <span className="text-emerald-600 mr-1.5">✓</span> {cost}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {serviceCharge.excluded_costs && serviceCharge.excluded_costs.length > 0 && (
+              <div>
+                <p className="text-[11px] font-semibold text-apil-gray-500 mb-1">Not included:</p>
+                <ul className="space-y-0.5">
+                  {serviceCharge.excluded_costs.map((cost, i) => (
+                    <li key={i} className="text-[11px] text-apil-gray-500 flex items-start">
+                      <span className="text-apil-gray-400 mr-1.5">—</span> {cost}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          <p className="text-[11px] text-apil-gray-400 leading-relaxed">
+            Income After Service Charges deducts verified official service charges only. It is not Net Rental Income.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

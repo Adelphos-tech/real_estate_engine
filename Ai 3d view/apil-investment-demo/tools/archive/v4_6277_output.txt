@@ -1,0 +1,38 @@
+[DLDStore] Loaded 99391 transactions across 3065 projects
+[V4] Building transaction index from /Users/apple/Desktop/Ai 3d view/dxb_transactions_all.csv...
+[V4] Index complete:
+  Total raw: 112,749
+  Sales included: 86,141
+  Mortgage excluded: 22,239
+  Gifts excluded: 4,369
+  Other non-sale excluded: 0
+  Unknown source excluded: 0
+  Ambiguous size excluded: 0
+  Final indexed transactions: 85,696
+
+=== Property 6277 | Binghatti Emerald ===
+OLD (all sources): eligible=False, level=EXCESSIVE_PROJECT_CONCENTRATION, tx=None, median=None
+  excluded: ['EXCESSIVE_PROJECT_CONCENTRATION:55.6%_from_Luma Park Views']
+NEW (DLD_ONLY):  eligible=False, level=EXCESSIVE_PROJECT_CONCENTRATION, tx=None, median=None
+  excluded: ['EXCESSIVE_PROJECT_CONCENTRATION:55.6%_from_Luma Park Views']
+  quality_flags: ['SIZE_BAND_APPLIED_0.2', 'PPSF_OUTLIERS_REMOVED:6(IQR_1180-2342)']
+
+=== Property 8057 | Binghatti Royale ===
+OLD (all sources): eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=18, median=3293587.71
+NEW (DLD_ONLY):  eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=18, median=3293587.71
+
+=== Property 3201 | Binghatti Nova ===
+OLD (all sources): eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=91, median=1215833.95
+NEW (DLD_ONLY):  eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=91, median=1215833.95
+
+=== Property 3983 | Sapphire 32 ===
+OLD (all sources): eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=54, median=2133225.32
+NEW (DLD_ONLY):  eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=32, median=2372449.7
+
+=== Property 7061 | azizi mina ===
+OLD (all sources): eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=72, median=3826747.08
+NEW (DLD_ONLY):  eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=72, median=3826747.08
+
+=== Property 8201 | Marquise Square ===
+OLD (all sources): eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=31, median=4090855.44
+NEW (DLD_ONLY):  eligible=True, level=AREA_SAME_BEDROOM_SAME_STATUS_SIZE_ADJUSTED, tx=31, median=4090855.44

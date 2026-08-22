@@ -1,0 +1,72 @@
+{
+  "verdict": "RENTAL_OPERATING_COST_INPUTS_V1_SHADOW_VERIFIED",
+  "all_counters": {
+    "OPERATING_COST_V1_CHANGED_SC_ELIGIBILITY": 0,
+    "OPERATING_COST_V1_CHANGED_SC_RATE": 0,
+    "OPERATING_COST_V1_CHANGED_SC_ANNUAL": 0,
+    "OPERATING_COST_V1_CHANGED_INCOME_AFTER_SC": 0,
+    "OPERATING_COST_V1_CHANGED_YIELD_AFTER_SC": 0,
+    "OPERATING_COST_V1_CHANGED_ANNUAL_RENT": 0,
+    "OPERATING_COST_V1_CHANGED_RENT_RANGE": 0,
+    "OPERATING_COST_V1_CHANGED_RENT_TIER": 0,
+    "OPERATING_COST_V1_CHANGED_GROSS_YIELD": 0,
+    "OPERATING_COST_V1_CHANGED_GROSS_YIELD_RANGE": 0,
+    "OPERATING_COST_V1_CHANGED_MARKET_CONTEXT": 0,
+    "OPERATING_COST_V1_CHANGED_PRODUCTION_SIGNAL": 0,
+    "OPERATING_COST_V1_CHANGED_APIL_ADVANTAGE": 0,
+    "OPERATING_COST_V1_CHANGED_CONVENTIONAL_POSITION": 0,
+    "OPERATING_COST_V1_CHANGED_FIT_SCORE": 0,
+    "OPERATING_COST_V1_CHANGED_RENTAL_MESSAGE_LOGIC": 0,
+    "ASSUMED_OPERATING_COST_USED": 0,
+    "DEFAULT_VACANCY_ASSUMPTION_USED": 0,
+    "AUTO_SELF_MANAGED_ASSUMPTION": 0,
+    "DEFAULT_MAINTENANCE_ASSUMPTION_USED": 0,
+    "NET_INCOME_SHOWN_WITH_MISSING_COST": 0,
+    "NET_YIELD_SHOWN_WITH_MISSING_COST": 0,
+    "USER_INPUT_OVERWROTE_MASTER": 0,
+    "USER_INPUT_OVERWROTE_MOLLAK": 0,
+    "USER_INPUT_WRITTEN_TO_QDRANT": 0,
+    "FRONTEND_VACANCY_CALCULATION": 0,
+    "FRONTEND_MANAGEMENT_CALCULATION": 0,
+    "FRONTEND_MAINTENANCE_CALCULATION": 0,
+    "FRONTEND_NET_INCOME_CALCULATION": 0,
+    "FRONTEND_NET_YIELD_CALCULATION": 0
+  },
+  "test_cases": {
+    "A": {
+      "pass": true,
+      "level": "SERVICE_CHARGE_ADJUSTED",
+      "net_income": null
+    },
+    "B": {
+      "pass": true,
+      "level": "PARTIAL_OPERATING_COSTS",
+      "net_income": null
+    },
+    "C": {
+      "pass": true,
+      "level": "PARTIAL_OPERATING_COSTS",
+      "net_income": null
+    },
+    "D": {
+      "pass": true,
+      "level": "NET_RENTAL",
+      "net_income": 112372.68,
+      "net_yield": 4.16
+    },
+    "E": {
+      "pass": true,
+      "level": "NET_RENTAL",
+      "mgmt_source": "SELF_MANAGED",
+      "net_income": 124372.68
+    },
+    "F": {
+      "pass": true,
+      "level": "PARTIAL_OPERATING_COSTS",
+      "net_income": null
+    }
+  },
+  "all_counters_zero": true,
+  "all_tests_pass": true,
+  "note": "SC regression counters verified against V2 frozen expected values (not pre-V2.5 baseline)"
+}

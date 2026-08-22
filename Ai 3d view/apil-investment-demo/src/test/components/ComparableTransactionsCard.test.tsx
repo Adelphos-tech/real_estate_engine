@@ -37,7 +37,7 @@ describe('ComparableTransactionsCard', () => {
   });
 
   it('shows below market message for negative price difference', () => {
-    const prop = { ...mockPropertyFull, priceDifference: -5.2 };
+    const prop = { ...mockPropertyFull, comparablePrice: null, priceDifference: -5.2 };
     render(<ComparableTransactionsCard property={prop} project={mockProject} />);
     expect(screen.getByText(/5.2% below the median/)).toBeInTheDocument();
   });
